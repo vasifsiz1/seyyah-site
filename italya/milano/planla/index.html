@@ -16,7 +16,7 @@
 /* Layout: Roma tatil kartpostalı; çizgili tente, güneşli kapakta mavi gökyüzü paneli ve kartpostal harita, her bölüm kendi dondurma rengiyle açılır */
 :root{
   --paper:#FFFFFF; --paper-2:#EEF5FF; --card:#FFFFFF; --ink:#16233F; --muted:#57627A; --rule:#DDE5F0; --guil:#DDE5F0;
-  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22);
+  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22); --bgop:.11;
   --sky:#1F6FD6; --sky-ink:#1F6FD6;
   --aperol:#FF7A2F; --aperol-ink:#C2410C;
   --sun:#FFC233; --sun-ink:#9A6A00;
@@ -41,7 +41,7 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -53,7 +53,7 @@
   --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -144,7 +144,10 @@ button{font:inherit;color:inherit}
 .nav .badge{font-family:var(--f-mono);font-size:.64rem;font-weight:600;background:var(--ochre);color:var(--on-ochre);padding:0 6px;border-radius:9px;line-height:17px}
 
 /* bölümler */
-.ch{padding-block:clamp(18px,3vw,30px) 72px}
+.ch{padding-block:clamp(18px,3vw,30px) 72px;position:relative;isolation:isolate}
+/* Bölüm arka planı: şehrin başka bir fotoğrafı, soluk ve aşağı doğru zemine eriyerek (BGIMG) */
+html{overflow-x:clip}
+.ch::before{content:"";position:absolute;z-index:-1;top:0;left:50%;width:100vw;margin-left:-50vw;height:min(1100px,100%);background:var(--bgimg,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%)}
 .ch-head{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(240px,32vw,400px);padding:clamp(20px,3.5vw,40px);border-radius:6px;overflow:hidden;color:var(--on-photo);background:linear-gradient(180deg,rgba(12,9,6,.02) 18%,rgba(12,9,6,.84) 100%),var(--img,none) center/cover no-repeat,#1C1813;margin-bottom:8px}
 .ch-head .lab{color:var(--on-photo-2)}
 .ch h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1;letter-spacing:-.02em;margin-top:6px;color:var(--on-photo)}
@@ -1049,67 +1052,67 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 
 <!-- 07 YEREL YAŞAM -->
 <section class="ch wrap" data-sec="yerel" aria-labelledby="h-yerel" hidden>
-  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Milanolu gibi yaşamak</h2><p class="ch-lead">Sabah ayakta cappuccino, akşamüstü aperitivo, Pazar öğlesi risotto. Hızlı yaşayan ama yemeği ciddiye alan bir şehir.</p></div></header>
+  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Milanolu gibi yaşamak</h2><p class="ch-lead">Milano hızlı yaşayan bir şehirdir ama yemeği ciddiye alır. Sabah ayakta bir cappuccino, akşamüstü aperitivo ve Pazar öğlesi bir tabak risotto, Milanolu gibi bir günün iskeletini oluşturur.</p></div></header>
 
-  <div class="sub"><h3>Milano sofrasının dört yıldızı</h3><p class="sub-lead">Tereyağı, pirinç ve safran: Milano mutfağı güneyden daha ağır ve kuzeyli. Bir de aperitivo: içki alana atıştırmalık, bazen bütün bir büfe.</p>
+  <div class="sub"><h3>Milano sofrasının dört yıldızı</h3><p class="sub-lead">Milano mutfağı tereyağı, pirinç ve safran üzerine kuruludur; güneyin zeytinyağlı mutfağından daha ağır ve daha kuzeylidir. Şehrin bir de aperitivo geleneği var: içki alana atıştırmalık, bazen de koca bir büfe ikram edilir.</p>
     <div class="pasta">
-      <div><h4>Risotto alla milanese</h4><p>Safranla altın sarısına boyanan risotto; et suyu ve iliğiyle pişer.</p><span class="pork safe">Dana suyu</span></div>
-      <div><h4>Cotoletta alla milanese</h4><p>Kemikli, tereyağında kızarmış pane dana pirzola; inceltilmiş hâline 'fil kulağı' denir.</p><span class="pork safe">Dana eti</span></div>
-      <div><h4>Ossobuco</h4><p>Dana incik, sebze ve şarapla yavaş pişer; yanında risotto alla milanese gelir.</p><span class="pork safe">Dana eti</span></div>
-      <div><h4>Panettone</h4><p>Kuru üzüm ve şekerlenmiş portakallı Noel keki; Aralık'ta her vitrinde, ama yıl boyu bulunur.</p><span class="pork safe">Et içermez</span></div>
+      <div><h4>Risotto alla milanese</h4><p>Safranla altın sarısına boyanan, şehrin simgesi olmuş bir risotto. Geleneksel tarifte et suyu ve dana iliğiyle pişirilir.</p><span class="pork safe">Dana suyu</span></div>
+      <div><h4>Cotoletta alla milanese</h4><p>Kemikli dana pirzolası galeta ununa bulanır ve tereyağında kızartılır. Dövülerek inceltilmiş, tabağa sığmayan hâline Milanolular 'fil kulağı' der.</p><span class="pork safe">Dana eti</span></div>
+      <div><h4>Ossobuco</h4><p>Dana incik, sebze ve beyaz şarapla saatlerce yavaş pişirilir. Klasik olarak yanında risotto alla milanese gelir.</p><span class="pork safe">Dana eti</span></div>
+      <div><h4>Panettone</h4><p>Kuru üzüm ve şekerlenmiş portakal kabuğuyla yapılan, yumuşak ve yüksek bir Noel kekidir. Aralık'ta bütün vitrinleri doldurur ama pastanelerde yıl boyu bulunur.</p><span class="pork safe">Et içermez</span></div>
     </div>
-    <p class="note">Duomo'nun arkasında Luini'nin kızarmış panzerotti'si için kuyruk olur; mozzarella ve domatesli olanı dene. Cassoeula (domuz ve lahana yahnisi) kış yemeğidir. Porta Venezia, Sarpi ve Loreto gibi çok kültürlü semtlerde helal ve Türk restoranları var; restoranda "senza maiale" diye sor.</p>
+    <p class="note">Duomo'nun arkasındaki Luini'nin önünde kızarmış panzerotti için her gün kuyruk olur; mozzarella ve domatesli olanı dene. Kışın sofraya gelen cassoeula ise domuz eti ve lahanayla yapılan ağır bir yahnidir. Porta Venezia, Paolo Sarpi ve Loreto gibi çok kültürlü semtlerde helal ve Türk restoranları var; restoranda domuz eti istemiyorsan 'senza maiale' de.</p>
   </div>
 
   <div class="sub g2">
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Restoranda</h3>
       <ul class="ticks">
-        <li>Menü sırası: antipasto, primo (risotto, makarna), secondo (et, balık), contorno, dolce. Hepsini sipariş etmek zorunda değilsin.</li>
-        <li><b>Aperitivo:</b> 18:00–21:00 arası bir kokteyl (≈ 10–15 €) alana atıştırmalık ya da büfe; bazıları akşam yemeğinin yerini tutar ('apericena').</li>
-        <li><b>Coperto:</b> kişi başı ≈ 2–4 € masa ücreti. Yasal, menüde yazılı olmalı.</li>
-        <li>Su şişeyle gelir ve ücretlidir: "naturale" ya da "frizzante".</li>
-        <li>Hesap kendiliğinden gelmez; "Il conto, per favore" de.</li>
-        <li>Öğle 12:30–14:30, akşam 19:30–22:30. Milano iş şehri; öğle yemeği hızlı yenir.</li>
+        <li>İtalyan menüsü sırayla ilerler: antipasto (başlangıç), primo (risotto ya da makarna), secondo (et ya da balık), contorno (garnitür) ve dolce (tatlı). Hepsini sipariş etmek zorunda değilsin; secondo'nun yanında garnitür gelmediği için onu ayrıca istemen gerekir.</li>
+        <li>Milano'nun en sevilen geleneği aperitivodur. 18:00 ile 21:00 arasında 10–15 € civarındaki bir kokteyl sipariş ettiğinde yanında atıştırmalık ya da açık büfe gelir; büfesi akşam yemeğinin yerini tutan yerlere 'apericena' denir.</li>
+        <li>Hesapta kişi başı 2–4 € 'coperto' görürsen şaşırma: bu ekmek ve masa ücretidir, yasaldır ve menüde yazılı olmak zorundadır.</li>
+        <li>Su masaya şişeyle gelir ve ücretlidir. Gazsız için 'naturale', maden suyu için 'frizzante' demen yeterli.</li>
+        <li>Hesap sen istemeden gelmez, çünkü İtalya'da müşteriyi masadan kaldırmak kabalık sayılır. Hazır olduğunda 'Il conto, per favore' de.</li>
+        <li>Öğle yemeği 12:30 ile 14:30, akşam yemeği 19:30 ile 22:30 arasında yenir. Milano bir iş şehri olduğu için öğle yemeği hızlı geçer ve birçok restoran öğlen uygun fiyatlı bir menü sunar.</li>
       </ul>
     </div>
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Kahve kültürü</h3>
       <ul class="ticks">
-        <li>"Bar" kafedir. Önce kasada öde, fişi bara uzat, ayakta iç.</li>
-        <li>Ayakta (al banco) ≈ 1,30–1,60 €; aynı kahve masada iki üç katı.</li>
-        <li>Sabah cappuccino ve brioche (kruvasan) Milano kahvaltısıdır.</li>
-        <li>Cappuccino kahvaltı içeceğidir; öğleden sonra sipariş eden turist olduğunu ilan eder.</li>
+        <li>İtalya'da 'bar' dediğin yer kafedir. Önce kasada ödeyip fişini alırsın, fişi barmene uzatır ve kahveni ayakta içersin.</li>
+        <li>Ayakta (al banco) içilen bir espresso 1,30–1,60 € civarındadır. Aynı kahveyi masada içersen iki üç katını ödersin.</li>
+        <li>Milanoluların kahvaltısı ayakta içilen bir cappuccino ile bir brioche'tur. Brioche burada kruvasanın adıdır ve içi çoğu zaman krema ya da reçel doludur.</li>
+        <li>Cappuccino kahvaltıda içilir. Öğleden sonra istemek yasak değil ama turist olduğunu hemen belli eder.</li>
       </ul>
       <h4 class="mini" style="margin-top:22px">Bahşiş</h4>
-      <ul class="ticks"><li>Zorunlu değil. Yuvarlamak ya da masaya 1–2 € bırakmak yeterli. İyi bir rehbere ≈ %10.</li></ul>
+      <ul class="ticks"><li>Bahşiş zorunlu değildir ve garsonlar beklemez. Memnun kaldıysan hesabı yuvarlamak ya da masaya 1–2 € bırakmak yeterli; iyi bir rehbere ücretin yüzde 10'u kadar bahşiş verilir.</li></ul>
     </div>
   </div>
 
   <div class="sub g3">
     <div><h4 class="mini">Günlük hayat</h4><ul class="ticks">
-        <li>Aperitivo Milano'nun icadı sayılır; Campari ve Negroni Sbagliato da buradan çıktı.</li>
-        <li>Milanolular hızlı yürür ve iyi giyinir; eşofmanla akşam yemeğine gitmek dikkat çeker.</li>
-        <li>Pazar günü bazı küçük dükkânlar kapalı; büyük mağazalar açık.</li>
-        <li>Kiliselerde kapalı kıyafet: omuz ve diz.</li>
+        <li>Aperitivo geleneğinin Milano'da doğduğu kabul edilir; Campari de Negroni Sbagliato kokteyli de bu şehirden çıkmıştır.</li>
+        <li>Milanolular hızlı yürür ve şık giyinir. Akşam yemeğine eşofmanla gitmek burada dikkat çeker.</li>
+        <li>Pazar günü bazı küçük dükkânlar kapalıdır ama büyük mağazalar ve alışveriş caddeleri açıktır.</li>
+        <li>Kiliselere girerken omuzların ve dizlerin kapalı olmalı. Duomo'nun girişinde kapıda kontrol yapılır; yanında ince bir şal taşımak işini kolaylaştırır.</li>
       </ul></div>
     <div><h4 class="mini">Alışveriş</h4><ul class="ticks">
-        <li>Lüks markalar moda dörtgeninde (Montenapoleone, Spiga); orta segment Corso Buenos Aires ve Corso Vittorio Emanuele'de.</li>
-        <li>İndirim (saldi) Ocak ve Temmuz başında başlar.</li>
-        <li>AB dışında yaşıyorsan tek fişte 70 € üzeri alışverişte KDV iadesi alabilirsin. Pasaportunu yanında taşı.</li>
-        <li>Outlet için Serravalle Designer Outlet (otobüsle ≈ 1 saat).</li>
+        <li>Lüks markalar Via Montenapoleone ile Via della Spiga'nın çevrelediği moda dörtgenindedir. Daha uygun fiyatlı mağazalar için Corso Buenos Aires ve Corso Vittorio Emanuele'ye git.</li>
+        <li>İndirim dönemi (saldi) Ocak ve Temmuz başında başlar ve birkaç hafta sürer.</li>
+        <li>AB dışında yaşıyorsan aynı mağazada tek fişte 70 €'yu aşan alışverişlerin KDV'sini geri alabilirsin. Alışveriş sırasında pasaportunu göster ve aldığın formu havalimanında onaylat.</li>
+        <li>Outlet seviyorsan Serravalle Designer Outlet'e şehir merkezinden kalkan otobüslerle yaklaşık bir saatte gidebilirsin.</li>
       </ul></div>
     <div><h4 class="mini">Pazarlar</h4><ul class="ticks">
-        <li>Her ayın son Pazarı Naviglio Grande boyunca antika pazarı.</li>
-        <li>Cumartesi Darsena'da Fiera di Senigallia: eski eşya ve el işi.</li>
-        <li>Papiniano: Salı ve Cumartesi sabahı ucuz giyim pazarı.</li>
-        <li>Oh Bej! Oh Bej!: Aralık başında Castello çevresinde Noel pazarı.</li>
+        <li>Her ayın son Pazarı Naviglio Grande boyunca kilometrelerce uzanan bir antika pazarı kurulur.</li>
+        <li>Cumartesi günleri Darsena'da kurulan Fiera di Senigallia'da eski eşya ve el işi ürünler bulunur.</li>
+        <li>Papiniano pazarı Salı ve Cumartesi sabahları kurulur ve ucuz giyimiyle bilinir.</li>
+        <li>Aralık başında Castello Sforzesco çevresinde 'Oh Bej! Oh Bej!' adlı geleneksel Noel pazarı kurulur.</li>
       </ul></div>
   </div>
 
   <div class="sub"><h3>Gece hayatı</h3>
     <div class="g3">
-      <div><h4 class="mini">Navigli</h4><p>Kanal boyunca barlar ve aperitivo; hafta sonu çok kalabalık.</p></div>
-      <div><h4 class="mini">Corso Como ve Garibaldi</h4><p>Kulüpler ve şık barlar; kapıda kıyafet seçici olabilir.</p></div>
-      <div><h4 class="mini">Isola ve Porta Venezia</h4><p>Küçük kokteyl barları, canlı caz ve LGBT dostu Porta Venezia.</p></div>
+      <div><h4 class="mini">Navigli</h4><p>Kanal boyunca dizilmiş barlar aperitivo saatinde dolmaya başlar. Hafta sonları bölge çok kalabalık olur; masa bulmak için erken git.</p></div>
+      <div><h4 class="mini">Corso Como ve Garibaldi</h4><p>Şehrin kulüpleri ve şık barları bu bölgededir. Bazı kulüplerin kapısında kıyafete göre seçim yapılır.</p></div>
+      <div><h4 class="mini">Isola ve Porta Venezia</h4><p>Küçük kokteyl barları ve canlı caz çalınan mekânlarıyla daha rahat bir gece sunar. Porta Venezia aynı zamanda şehrin LGBT dostu semtidir.</p></div>
     </div>
   </div>
 
@@ -1233,6 +1236,7 @@ var C={"id":"milano","ad":"Milano","it":"Milano","ulke":"italya","ulkeAd":"İtal
 var CATS=[["tarihi","Tarihi yerler"],["muze","Müzeler ve galeriler"],["mimari","Mimari yapılar"],["dini","Dini yapılar"],["gizli","Gizli kalmış yerler"],["doga","Parklar ve doğa"],["moda","Moda ve alışveriş"],["spor","Spor ve stadyumlar"],["gece","Gece hayatı"],["foto","Fotoğraf noktaları"],["mahalle","Yerel mahalleler"],["bilet","Bilet ve rezervasyon"]];
 var CIMG={"tarihi":"tarihi","muze":"muze","mimari":"mimari","dini":"dini","gizli":"gizli","doga":"doga","moda":"moda","spor":"spor","gece":"gece","foto":"foto","mahalle":"mahalle","bilet":"hero"};
 var SIMG={"vize":"vize","kesfet":"tarihi","planla":"planla","konaklama":"konaklama","havalimani":"havalimani","ulasim":"ulasim","yerel":"yerel","bilgi":"bilgi","rotam":"rotam"};
+var BGIMG={"vize":"hero","kesfet":"foto","planla":"mimari","konaklama":"mahalle","havalimani":"doga","ulasim":"hero","yerel":"gece","bilgi":"foto","rotam":"doga"};
 var TK={"sart":"Rezervasyon şart","oner":"Online önerilir","gise":"Gişede","free":"Ücretsiz"};
 var ATAGS=[["all","Hepsi"],["butce","Bütçe dostu"],["lux","Lüks"],["butik","Butik"],["aile","Aileler için"],["cift","Çiftler için"],["havalimani","Havalimanına yakın"]];
 var MAB=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
@@ -1609,7 +1613,7 @@ window.addEventListener("hashchange",function(){route(true);});
 /* ============ BAŞLAT ============ */
 applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMatrix();renderEvents();renderDaytrips();renderBag();calcOpts();renderCalc();
 $("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
-$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/milano/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
+$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/milano/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");var b=BGIMG[sec.getAttribute("data-sec")];if(b)sec.style.setProperty("--bgimg","url(/seyyah-site/varlik/img/milano/"+b+".jpg)");});
 update();route(false);
 try{renderWorld();}catch(err){mapFb();}
 var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});

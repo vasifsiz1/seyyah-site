@@ -16,7 +16,7 @@
 /* Layout: Roma tatil kartpostalı; çizgili tente, güneşli kapakta mavi gökyüzü paneli ve kartpostal harita, her bölüm kendi dondurma rengiyle açılır */
 :root{
   --paper:#FFFFFF; --paper-2:#EEF5FF; --card:#FFFFFF; --ink:#16233F; --muted:#57627A; --rule:#DDE5F0; --guil:#DDE5F0;
-  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22);
+  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22); --bgop:.11;
   --sky:#1F6FD6; --sky-ink:#1F6FD6;
   --aperol:#FF7A2F; --aperol-ink:#C2410C;
   --sun:#FFC233; --sun-ink:#9A6A00;
@@ -41,7 +41,7 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -53,7 +53,7 @@
   --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -144,7 +144,10 @@ button{font:inherit;color:inherit}
 .nav .badge{font-family:var(--f-mono);font-size:.64rem;font-weight:600;background:var(--ochre);color:var(--on-ochre);padding:0 6px;border-radius:9px;line-height:17px}
 
 /* bölümler */
-.ch{padding-block:clamp(18px,3vw,30px) 72px}
+.ch{padding-block:clamp(18px,3vw,30px) 72px;position:relative;isolation:isolate}
+/* Bölüm arka planı: şehrin başka bir fotoğrafı, soluk ve aşağı doğru zemine eriyerek (BGIMG) */
+html{overflow-x:clip}
+.ch::before{content:"";position:absolute;z-index:-1;top:0;left:50%;width:100vw;margin-left:-50vw;height:min(1100px,100%);background:var(--bgimg,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%)}
 .ch-head{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(240px,32vw,400px);padding:clamp(20px,3.5vw,40px);border-radius:6px;overflow:hidden;color:var(--on-photo);background:linear-gradient(180deg,rgba(12,9,6,.02) 18%,rgba(12,9,6,.84) 100%),var(--img,none) center/cover no-repeat,#1C1813;margin-bottom:8px}
 .ch-head .lab{color:var(--on-photo-2)}
 .ch h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1;letter-spacing:-.02em;margin-top:6px;color:var(--on-photo)}
@@ -1046,67 +1049,66 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 
 <!-- 07 YEREL YAŞAM -->
 <section class="ch wrap" data-sec="yerel" aria-labelledby="h-yerel" hidden>
-  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Romalı gibi yaşamak</h2><p class="ch-lead">Kahve nasıl içilir, hesap nasıl istenir, makarnanın içinde ne var. Rehberlerin çoğunun atladığı kısım.</p></div></header>
+  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Romalı gibi yaşamak</h2><p class="ch-lead">Kahvenin nasıl içildiğini, hesabın nasıl istendiğini ve makarnanın içinde ne olduğunu bu bölüm anlatıyor. Rehberlerin çoğu bu kısmı atlar, oysa Roma'da kendini turist gibi hissetmemenin yolu buradan geçer.</p></div></header>
 
-  <div class="sub"><h3>Dört Roma makarnası</h3><p class="sub-lead">Roma mutfağının omurgası. Üçünde guanciale (domuz yanağı) var; hassasiyetin varsa sipariş verirken sor.</p>
+  <div class="sub"><h3>Roma'nın dört klasik makarnası</h3><p class="sub-lead">Roma mutfağı birkaç basit malzemeyle yetinen bir halk mutfağıdır ve bu dört makarna onun omurgasını oluşturur. Üçünde guanciale, yani tuzlanıp kurutulmuş domuz yanağı kullanılır; hassasiyetin varsa sipariş verirken mutlaka sor.</p>
     <div class="pasta">
-      <div><h4>Carbonara</h4><p>Guanciale, yumurta sarısı, pecorino, karabiber. Krema yok; kremalı carbonara Romalıyı kızdırır.</p><span class="pork">Domuz eti içerir</span></div>
-      <div><h4>Cacio e pepe</h4><p>Sadece pecorino peyniri ve karabiber. En sade ve en zor yapılanı.</p><span class="pork safe">Et içermez</span></div>
-      <div><h4>Amatriciana</h4><p>Guanciale, domates, pecorino. Adını Amatrice kasabasından alır.</p><span class="pork">Domuz eti içerir</span></div>
-      <div><h4>Gricia</h4><p>Amatriciana'nın domatessiz atası: guanciale ve pecorino.</p><span class="pork">Domuz eti içerir</span></div>
+      <div><h4>Carbonara</h4><p>Guanciale, yumurta sarısı, pecorino peyniri ve bol karabiberle yapılır. İçine krema konmaz; menüde kremalı carbonara görürsen o restorandan uzak durabilirsin.</p><span class="pork">Domuz eti içerir</span></div>
+      <div><h4>Cacio e pepe</h4><p>Yalnızca pecorino peyniri, karabiber ve makarnanın kendi suyuyla hazırlanır. Malzemesi en az olan tarif olduğu hâlde kıvamını tutturmak en zor olanıdır.</p><span class="pork safe">Et içermez</span></div>
+      <div><h4>Amatriciana</h4><p>Guanciale, domates ve pecorinoyla yapılan, hafif acılı bir sostur. Adını Roma'nın kuzeydoğusundaki Amatrice kasabasından alır.</p><span class="pork">Domuz eti içerir</span></div>
+      <div><h4>Gricia</h4><p>Amatriciana'nın domatessiz hâlidir ve ondan daha eskidir. Guanciale ile pecorinonun tadını hiçbir şey örtmez.</p><span class="pork">Domuz eti içerir</span></div>
     </div>
-    <p class="note">Sokakta: supplì (içi mozzarellalı kızarmış pilav topu), pizza al taglio, trapizzino, maritozzo (kremalı tatlı çörek). Gelatoda metal kapaklı kaplarda saklananı seç; tepeleme renkli dondurmalar genelde endüstriyel. Helal restoranlar daha çok Termini ve Esquilino çevresinde.</p>
+    <p class="note">Sokakta mutlaka bir supplì dene; içinde eriyen mozzarella olan, kızartılmış bir pilav topudur. Pizza al taglio dilimle tartılarak satılır, trapizzino ise üçgen pizza ekmeğine doldurulmuş Roma yahnisidir. Kahvaltıda kremayla doldurulmuş tatlı bir çörek olan maritozzo'yu dene. Dondurmacıda dondurmasını metal kapaklı kaplarda saklayanları seç; tepeleme yığılmış, parlak renkli dondurmalar genellikle hazır karışımdan yapılır. Helal restoranlar daha çok Termini garının çevresinde ve Esquilino semtinde.</p>
   </div>
 
   <div class="sub g2">
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Restoranda</h3>
       <ul class="ticks">
-        <li>Menü sırası: antipasto, primo (makarna), secondo (et ya da balık), contorno (garnitür ayrı gelir), dolce. Hepsini sipariş etmek zorunda değilsin.</li>
-        <li><b>Coperto:</b> kişi başı ≈ 1–3 € masa ücreti. Yasal, menüde yazılı olmalı.</li>
-        <li><b>Servizio:</b> bazı yerler %10–15 servis ekler. Ekliyse bahşiş bırakma.</li>
-        <li>Su şişeyle gelir ve ücretlidir: "naturale" ya da "frizzante".</li>
-        <li>Hesap kendiliğinden gelmez; "Il conto, per favore" de.</li>
-        <li>Öğle 12:30–15:00, akşam 19:30–23:00. Aradaki saatlerde mutfaklar kapalı.</li>
+        <li>İtalyan menüsü sırayla ilerler: antipasto (başlangıç), primo (makarna ya da çorba), secondo (et ya da balık), contorno (garnitür) ve dolce (tatlı). Hepsini sipariş etmek zorunda değilsin; secondo'nun yanında garnitür gelmediği için onu ayrıca istemen gerekir.</li>
+        <li>Hesapta kişi başı 1–3 € 'coperto' görürsen şaşırma: bu ekmek ve masa ücretidir, yasaldır ve menüde yazılı olmak zorundadır.</li>
+        <li>Bazı restoranlar hesaba yüzde 10–15 servis ücreti (servizio) ekler. Hesapta servizio yazıyorsa ayrıca bahşiş bırakmana gerek yok.</li>
+        <li>Su masaya şişeyle gelir ve ücretlidir. Gazsız için 'naturale', maden suyu için 'frizzante' demen yeterli.</li>
+        <li>Hesap sen istemeden gelmez, çünkü İtalya'da müşteriyi masadan kaldırmak kabalık sayılır. Hazır olduğunda 'Il conto, per favore' de.</li>
+        <li>Romalılar öğle yemeğini 12:30 ile 15:00, akşam yemeğini 19:30 ile 23:00 arasında yer. Aradaki saatlerde çoğu restoranın mutfağı kapalıdır; o boşlukta bir pizza al taglio dükkânı işini görür.</li>
       </ul>
     </div>
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Kahve kültürü</h3>
       <ul class="ticks">
-        <li>"Bar" kafedir. Önce kasada öde, fişi bara uzat, ayakta iç.</li>
-        <li>Ayakta (al banco) ≈ 1,30 €; aynı kahve masada (al tavolo) iki üç katı.</li>
-        <li>"Un caffè" espresso demektir. "Latte" dersen bir bardak süt gelir.</li>
-        <li>Cappuccino kahvaltı içeceğidir; öğleden sonra sipariş eden turist olduğunu ilan eder.</li>
+        <li>İtalya'da 'bar' dediğin yer kafedir. Önce kasada ödeyip fişini alırsın, fişi barmene uzatır ve kahveni ayakta içersin.</li>
+        <li>Ayakta (al banco) içilen bir espresso yaklaşık 1,30 €'dur. Aynı kahveyi masada (al tavolo) içersen, özellikle turistik meydanlarda, iki üç katını ödersin.</li>
+        <li>'Un caffè' dediğinde espresso gelir. 'Latte' istersen bir bardak süt verirler; sütlü kahve için 'caffè latte' demelisin.</li>
+        <li>Cappuccino kahvaltıda içilir. Öğleden sonra istemek yasak değil ama turist olduğunu hemen belli eder.</li>
       </ul>
       <h4 class="mini" style="margin-top:22px">Bahşiş</h4>
-      <ul class="ticks"><li>Zorunlu değil. Yuvarlamak ya da masaya 1–2 € bırakmak yeterli. İyi bir rehbere ≈ %10.</li></ul>
+      <ul class="ticks"><li>Bahşiş zorunlu değildir ve garsonlar beklemez. Memnun kaldıysan hesabı yuvarlamak ya da masaya 1–2 € bırakmak yeterli; iyi bir rehbere ücretin yüzde 10'u kadar bahşiş verilir.</li></ul>
     </div>
   </div>
 
   <div class="sub g3">
     <div><h4 class="mini">Günlük hayat</h4><ul class="ticks">
-      <li>Akşamüstü passeggiata: herkes sokakta yürür.</li>
-      <li>Aperitivo 18:00–20:00: içki alana atıştırmalık.</li>
-      <li>Pazar öğlesi aile yemeği; mahalleler sakinleşir.</li>
-      <li>Kiliselerde sessizlik ve kapalı kıyafet.</li>
-    </ul></div>
-    <div><h4 class="mini">Alışveriş saatleri</h4><ul class="ticks">
-      <li>Mağazalar ≈ 10:00–19:30. Küçük dükkanlar 13:00–16:00 arası kapanabilir.</li>
-      <li>Merkezde Pazar günü çoğu mağaza açık.</li>
-      <li>AB dışında yaşıyorsan tek fişte 70 € üzeri alışverişte KDV iadesi alabilirsin. Pasaportunu yanında taşı, havalimanında onaylat.</li>
-    </ul></div>
+        <li>Akşamüstü Romalılar 'passeggiata' için sokağa çıkar: meydanlarda ve caddelerde hiçbir yere gitmeden yürürler. Şehir bu saatte en canlı hâlindedir.</li>
+        <li>Akşamüstü 18:00 ile 20:00 arası aperitivo saatidir. Bir içki sipariş ettiğinde yanında çoğu zaman ücretsiz atıştırmalıklar gelir.</li>
+        <li>Pazar öğlesi aileler uzun bir yemek için toplanır. Mahalleler sakinleşir, bazı küçük dükkânlar ve restoranlar kapalı olur.</li>
+        <li>Kiliselere girerken omuzların ve dizlerin kapalı olmalı. Vatikan'da ve büyük bazilikalarda kapıda kontrol yapılır; yanında ince bir şal taşımak işini kolaylaştırır.</li>
+      </ul></div>
+    <div><h4 class="mini">Alışveriş</h4><ul class="ticks">
+        <li>Mağazalar genellikle 10:00 ile 19:30 arasında açıktır. Mahalledeki küçük dükkânlar ise 13:00 ile 16:00 arasında kapanabilir.</li>
+        <li>Şehir merkezindeki mağazaların çoğu Pazar günü de açıktır; dış semtlerde Pazar sessiz geçer.</li>
+        <li>AB dışında yaşıyorsan aynı mağazada tek fişte 70 €'yu aşan alışverişlerin KDV'sini geri alabilirsin. Alışveriş sırasında pasaportunu göster ve aldığın formu havalimanında onaylat.</li>
+      </ul></div>
     <div><h4 class="mini">Pazarlar</h4><ul class="ticks">
-      <li>Campo de' Fiori: Pazartesi–Cumartesi sabah.</li>
-      <li>Testaccio Pazarı: Pazartesi–Cumartesi, yemek tezgahları.</li>
-      <li>Mercato Trionfale: Prati'de, şehrin en büyüğü.</li>
-      <li>Porta Portese: Pazar sabahı bit pazarı, Trastevere.</li>
-    </ul></div>
+        <li>Campo de' Fiori'deki pazar Pazartesiden Cumartesiye sabahları kurulur. Turistikleşmiş olsa da sabah erken saatte hâlâ güzeldir.</li>
+        <li>Testaccio Pazarı da Pazartesiden Cumartesiye açıktır ve içindeki yemek tezgâhlarıyla ünlüdür; öğle yemeği için iyi bir adres.</li>
+        <li>Prati'deki Mercato Trionfale şehrin en büyük kapalı pazarıdır ve Vatikan'dan sonra uğraması kolaydır.</li>
+        <li>Porta Portese, Pazar sabahları Trastevere'de kurulan büyük bir bit pazarıdır. Erken git ve cüzdanına dikkat et.</li>
+      </ul></div>
   </div>
 
   <div class="sub"><h3>Gece hayatı</h3>
     <div class="g3">
-      <div><h4 class="mini">Trastevere</h4><p>Sokaklar barlarla dolu; en kalabalık ve en turistik gece.</p></div>
-      <div><h4 class="mini">Monti</h4><p>Şarap barları ve küçük kokteyl mekanları; daha yetişkin kalabalık.</p></div>
-      <div><h4 class="mini">Testaccio</h4><p>Monte Testaccio'nun dibinde kulüpler; gece yarısından sonra dolar.</p></div>
-      <div><h4 class="mini">Pigneto ve San Lorenzo</h4><p>Öğrenciler ve bohem kalabalık; ucuz ve turistsiz.</p></div>
+      <div><h4 class="mini">Trastevere</h4><p>Dar sokakları akşam olunca barlarla dolar. Şehrin en kalabalık ve en turistik gece hayatı buradadır ama bir akşam görmeye değer.</p></div>
+      <div><h4 class="mini">Monti</h4><p>Kolezyum'un hemen arkasındaki bu semtte şarap barları ve küçük kokteyl mekânları var. Kalabalığı daha yetişkin ve daha sakindir.</p></div>
+      <div><h4 class="mini">Testaccio, Pigneto ve San Lorenzo</h4><p>Testaccio'nun kulüpleri gece yarısından sonra dolar. Pigneto ve San Lorenzo ise öğrencilerin ve bohem bir kalabalığın semtleridir; hem ucuz hem turistsiz.</p></div>
     </div>
   </div>
 
@@ -1233,6 +1235,7 @@ var C={"id":"roma","ad":"Roma","ulke":"italya","ulkeAd":"İtalya","bolge":"Lazio
 var CATS=[["tarihi","Tarihi yerler"],["muze","Müzeler ve galeriler"],["mimari","Mimari yapılar"],["dini","Dini yapılar"],["gizli","Gizli kalmış yerler"],["doga","Parklar ve doğa"],["moda","Moda ve alışveriş"],["spor","Spor ve stadyumlar"],["gece","Gece hayatı"],["foto","Fotoğraf noktaları"],["mahalle","Yerel mahalleler"],["bilet","Bilet ve rezervasyon"]];
 var CIMG={"tarihi":"tarihi","muze":"muze","mimari":"mimari","dini":"dini","gizli":"gizli","doga":"doga","moda":"moda","spor":"spor","gece":"gece","foto":"foto","mahalle":"mahalle","bilet":"hero"};
 var SIMG={"vize":"vize","kesfet":"tarihi","planla":"planla","konaklama":"konaklama","havalimani":"havalimani","ulasim":"ulasim","yerel":"yerel","bilgi":"bilgi","rotam":"rotam"};
+var BGIMG={"vize":"hero","kesfet":"foto","planla":"mimari","konaklama":"mahalle","havalimani":"doga","ulasim":"hero","yerel":"gece","bilgi":"foto","rotam":"doga"};
 var TK={"sart":"Rezervasyon şart","oner":"Online önerilir","gise":"Gişede","free":"Ücretsiz"};
 var ATAGS=[["all","Hepsi"],["butce","Bütçe dostu"],["lux","Lüks"],["butik","Butik"],["aile","Aileler için"],["cift","Çiftler için"],["havalimani","Havalimanına yakın"]];
 var MAB=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
@@ -1609,7 +1612,7 @@ window.addEventListener("hashchange",function(){route(true);});
 /* ============ BAŞLAT ============ */
 applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMatrix();renderEvents();renderDaytrips();renderBag();calcOpts();renderCalc();
 $("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
-$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/roma/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
+$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/roma/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");var b=BGIMG[sec.getAttribute("data-sec")];if(b)sec.style.setProperty("--bgimg","url(/seyyah-site/varlik/img/roma/"+b+".jpg)");});
 update();route(false);
 try{renderWorld();}catch(err){mapFb();}
 var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});

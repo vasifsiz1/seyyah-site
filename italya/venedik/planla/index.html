@@ -16,7 +16,7 @@
 /* Layout: Roma tatil kartpostalı; çizgili tente, güneşli kapakta mavi gökyüzü paneli ve kartpostal harita, her bölüm kendi dondurma rengiyle açılır */
 :root{
   --paper:#FFFFFF; --paper-2:#EEF5FF; --card:#FFFFFF; --ink:#16233F; --muted:#57627A; --rule:#DDE5F0; --guil:#DDE5F0;
-  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22);
+  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22); --bgop:.11;
   --sky:#1F6FD6; --sky-ink:#1F6FD6;
   --aperol:#FF7A2F; --aperol-ink:#C2410C;
   --sun:#FFC233; --sun-ink:#9A6A00;
@@ -41,7 +41,7 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -53,7 +53,7 @@
   --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -144,7 +144,10 @@ button{font:inherit;color:inherit}
 .nav .badge{font-family:var(--f-mono);font-size:.64rem;font-weight:600;background:var(--ochre);color:var(--on-ochre);padding:0 6px;border-radius:9px;line-height:17px}
 
 /* bölümler */
-.ch{padding-block:clamp(18px,3vw,30px) 72px}
+.ch{padding-block:clamp(18px,3vw,30px) 72px;position:relative;isolation:isolate}
+/* Bölüm arka planı: şehrin başka bir fotoğrafı, soluk ve aşağı doğru zemine eriyerek (BGIMG) */
+html{overflow-x:clip}
+.ch::before{content:"";position:absolute;z-index:-1;top:0;left:50%;width:100vw;margin-left:-50vw;height:min(1100px,100%);background:var(--bgimg,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%)}
 .ch-head{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(240px,32vw,400px);padding:clamp(20px,3.5vw,40px);border-radius:6px;overflow:hidden;color:var(--on-photo);background:linear-gradient(180deg,rgba(12,9,6,.02) 18%,rgba(12,9,6,.84) 100%),var(--img,none) center/cover no-repeat,#1C1813;margin-bottom:8px}
 .ch-head .lab{color:var(--on-photo-2)}
 .ch h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1;letter-spacing:-.02em;margin-top:6px;color:var(--on-photo)}
@@ -1038,65 +1041,65 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 
 <!-- 07 YEREL YAŞAM -->
 <section class="ch wrap" data-sec="yerel" aria-labelledby="h-yerel" hidden>
-  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Venedikli gibi yaşamak</h2><p class="ch-lead">Bacaroda ayakta bir 'ombra' şarap, Rialto'da sabah balığı, akşamüstü spritz. Günübirlikçilerin hiç görmediği Venedik.</p></div></header>
+  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Venedikli gibi yaşamak</h2><p class="ch-lead">Venedik'i günübirlik gezenler San Marco ile Rialto arasında kalır. Bacaroda ayakta bir kadeh 'ombra' içmek, sabah Rialto'da balık pazarını görmek ve akşamüstü bir spritz'in tadına varmak, şehri gerçekten yaşamanın yoludur.</p></div></header>
 
-  <div class="sub"><h3>Lagün mutfağının dört yıldızı</h3><p class="sub-lead">Deniz ürünü, pirinç ve mısır unu: Venedik mutfağı İtalya'nın geri kalanından farklı. Bir de cicchetti, barda ayakta yenen küçük atıştırmalıklar.</p>
+  <div class="sub"><h3>Lagün mutfağının dört yıldızı</h3><p class="sub-lead">Venedik mutfağı deniz ürünü, pirinç ve mısır unu üzerine kuruludur ve İtalya'nın geri kalanından belirgin biçimde ayrılır. Bir de cicchetti var: barda ayakta, bir kadeh şarapla yenen küçük atıştırmalıklar.</p>
     <div class="pasta">
-      <div><h4>Sarde in saor</h4><p>Kızarmış sardalya; tatlı ekşi soğan, kuru üzüm ve çam fıstığıyla marine edilir. Denizcilerin bozulmayan yemeği.</p><span class="pork safe">Balık</span></div>
-      <div><h4>Risotto al nero di seppia</h4><p>Mürekkep balığının mürekkebiyle simsiyah risotto; Venedik'te 'nero' yemeden dönülmez.</p><span class="pork safe">Deniz ürünü</span></div>
-      <div><h4>Bigoli in salsa</h4><p>Kalın, tam buğday makarna; ançüez ve uzun pişmiş soğan sosuyla.</p><span class="pork safe">Balık</span></div>
-      <div><h4>Fegato alla veneziana</h4><p>Dana ciğeri ince doğranmış soğanla sotelenir, yanında polenta gelir.</p><span class="pork safe">Dana sakatat</span></div>
+      <div><h4>Sarde in saor</h4><p>Kızarmış sardalyalar tatlı ekşi soğan, kuru üzüm ve çam fıstığıyla marine edilir. Uzun deniz yolculuklarında bozulmasın diye denizcilerin icat ettiği bir yemektir.</p><span class="pork safe">Balık</span></div>
+      <div><h4>Risotto al nero di seppia</h4><p>Mürekkep balığının kendi mürekkebiyle pişen, simsiyah bir risotto. Görüntüsü tuhaf gelebilir ama Venedik'ten bunu denemeden dönülmez.</p><span class="pork safe">Deniz ürünü</span></div>
+      <div><h4>Bigoli in salsa</h4><p>Bigoli, tam buğday unundan yapılan kalın bir makarnadır. Ançüez ve saatlerce pişirilmiş soğandan yapılan bir sosla servis edilir.</p><span class="pork safe">Balık</span></div>
+      <div><h4>Fegato alla veneziana</h4><p>İnce dilimlenmiş dana ciğeri bol soğanla birlikte sotelenir. Yanında genellikle ızgara ya da yumuşak polenta gelir.</p><span class="pork safe">Dana sakatat</span></div>
     </div>
-    <p class="note">Cicchetti'nin klasiği baccalà mantecato: köpürtülmüş morina, ekmek ya da polenta üstünde. Tatlıda tiramisu'nun komşu Treviso'da doğduğu söylenir; Burano'nun tereyağlı bussolà kurabiyelerini dene. Spritz Venedik'in icadı: Aperol ya da daha acı Select ile. Bazı cicchetti'lerde salam ve sopressa var; "senza maiale" diye sor.</p>
+    <p class="note">Cicchetti'nin en klasiği baccalà mantecato'dur: köpürene kadar çırpılmış morina balığı, bir dilim ekmek ya da polentanın üstünde gelir. Tiramisu'nun Venedik'e komşu Treviso'da doğduğu söylenir; Burano'ya gidersen tereyağlı bussolà kurabiyelerini de dene. Spritz bir Venedik icadıdır ve Aperol ya da daha acı olan Select ile hazırlanır. Bazı cicchetti'lerde salam ve sopressa bulunur; domuz eti istemiyorsan 'senza maiale' diye sor.</p>
   </div>
 
   <div class="sub g2">
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Restoranda</h3>
       <ul class="ticks">
-        <li>Menü sırası: antipasto, primo (makarna, risotto), secondo (balık, et), contorno (garnitür ayrı gelir), dolce. Hepsini sipariş etmek zorunda değilsin.</li>
-        <li>Fiyatın yerine 'S.Q.' ya da 'all'etto' yazan balık 100 gram fiyatıyla satılır; sipariş verirken ağırlığı sor.</li>
-        <li><b>Coperto ve servis:</b> kişi başı ≈ 2–4 € masa ücreti, bazen %10–12 servis ücreti eklenir. İkisi de menüde yazılı olmalı.</li>
-        <li>Su şişeyle gelir ve ücretlidir: "naturale" ya da "frizzante".</li>
-        <li>Hesap kendiliğinden gelmez; "Il conto, per favore" de.</li>
-        <li>Mutfaklar erken kapanır: öğle 12:00–14:30, akşam 19:00–22:00. Venedik geceleri erken uyur.</li>
+        <li>İtalyan menüsü sırayla ilerler: antipasto (başlangıç), primo (makarna ya da risotto), secondo (balık ya da et), contorno (garnitür) ve dolce (tatlı). Hepsini sipariş etmek zorunda değilsin; secondo'nun yanında garnitür gelmediği için onu ayrıca istemen gerekir.</li>
+        <li>Menüde balığın fiyatı yerine 'S.Q.' ya da 'all'etto' yazıyorsa balık 100 gram fiyatıyla satılıyor demektir. Sipariş verirken ağırlığı ve toplam fiyatı sor; Venedik'teki hesap sürprizlerinin çoğu buradan çıkar.</li>
+        <li>Hesaba kişi başı 2–4 € 'coperto' (masa ücreti) ve bazen yüzde 10–12 servis ücreti eklenir. İkisi de yasaldır ama menüde yazılı olmak zorundadır.</li>
+        <li>Su masaya şişeyle gelir ve ücretlidir. Gazsız için 'naturale', maden suyu için 'frizzante' demen yeterli.</li>
+        <li>Hesap sen istemeden gelmez, çünkü İtalya'da müşteriyi masadan kaldırmak kabalık sayılır. Hazır olduğunda 'Il conto, per favore' de.</li>
+        <li>Venedik erken uyuyan bir şehirdir. Mutfaklar öğlen 12:00 ile 14:30, akşam 19:00 ile 22:00 arasında açıktır; akşam yemeğini geç saate bırakırsan açık restoran bulmakta zorlanabilirsin.</li>
       </ul>
     </div>
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Kahve kültürü</h3>
       <ul class="ticks">
-        <li>"Bar" kafedir. Önce kasada öde, fişi bara uzat, ayakta iç.</li>
-        <li>Ayakta (al banco) ≈ 1,30–1,60 €; aynı kahve masada iki üç katı.</li>
-        <li>San Marco'daki tarihi kafelerde (Florian, Quadri) orkestra çalarken hesaba müzik ücreti eklenir.</li>
-        <li>Cappuccino kahvaltı içeceğidir; öğleden sonra sipariş eden turist olduğunu ilan eder.</li>
+        <li>İtalya'da 'bar' dediğin yer kafedir. Önce kasada ödeyip fişini alırsın, fişi barmene uzatır ve kahveni ayakta içersin.</li>
+        <li>Ayakta içilen bir espresso 1,30–1,60 € civarındadır. Aynı kahveyi masada içersen iki üç katını ödersin.</li>
+        <li>San Marco Meydanı'ndaki Florian ve Quadri gibi tarihi kafelerde orkestra çalarken masada oturursan hesaba ayrıca müzik ücreti eklenir. Bu ücret menüde yazar; oturmadan önce bakarsan hesapta şaşırmazsın.</li>
+        <li>Cappuccino kahvaltıda içilir. Öğleden sonra istemek yasak değil ama turist olduğunu hemen belli eder.</li>
       </ul>
       <h4 class="mini" style="margin-top:22px">Bahşiş</h4>
-      <ul class="ticks"><li>Zorunlu değil, servis ücreti yazıyorsa hiç gerekmez. Yuvarlamak ya da masaya 1–2 € bırakmak yeterli; gondolcuya bahşiş beklenmez.</li></ul>
+      <ul class="ticks"><li>Bahşiş zorunlu değildir; hesapta servis ücreti varsa hiç gerekmez. Memnun kaldıysan hesabı yuvarlamak ya da masaya 1–2 € bırakmak yeterli. Gondolcular bahşiş beklemez.</li></ul>
     </div>
   </div>
 
   <div class="sub g3">
     <div><h4 class="mini">Bacaro turu</h4><ul class="ticks">
-        <li>Bacaro: ayakta şarap ve cicchetti satan küçük bar. Akşamüstü bir bacarodan ötekine geçmeye 'giro d'ombra' denir.</li>
-        <li>Bir 'ombra' (küçük kadeh şarap) ≈ 1,50–3 €, cicchetto ≈ 1,50–3 €.</li>
-        <li>En iyi bölgeler Rialto pazarı çevresi ve Cannaregio'da Misericordia.</li>
+        <li>Bacaro, ayakta şarap ve cicchetti satan küçük, eski usul bir bardır. Akşamüstü bir bacarodan ötekine geçerek yapılan bu tura Venedikliler 'giro d'ombra' der.</li>
+        <li>Küçük bir kadeh şaraba 'ombra' (gölge) denir ve 1,50 ile 3 € arasındadır. Bir cicchetto da aşağı yukarı aynı fiyata satılır, yani birkaç bacaroda akşam yemeğini rahatça çıkarabilirsin.</li>
+        <li>En iyi bacarolar Rialto pazarının çevresinde ve Cannaregio'da Fondamenta della Misericordia boyunca sıralanır.</li>
       </ul></div>
     <div><h4 class="mini">Kurallar ve cezalar</h4><ul class="ticks">
-        <li>San Marco'da güvercin beslemek yasak; cezası yüksek.</li>
-        <li>Köprü ve anıt basamaklarında oturup yemek, kanalda yüzmek, mayoyla ya da üstsüz dolaşmak cezalı.</li>
-        <li>Sağdan yürü; köprünün ortasında fotoğraf için durup yolu kesme.</li>
+        <li>San Marco Meydanı'nda güvercinleri beslemek yasaktır ve cezası yüksektir.</li>
+        <li>Köprülerin ve anıtların basamaklarında oturup yemek yemek, kanallarda yüzmek ve şehirde mayoyla ya da üstsüz dolaşmak para cezası gerektirir.</li>
+        <li>Dar sokaklarda sağdan yürü ve fotoğraf çekmek için köprünün ortasında durma. Venedikliler işine giderken bu sokakları kullanır.</li>
       </ul></div>
     <div><h4 class="mini">Alışveriş</h4><ul class="ticks">
-        <li>Murano camında 'Vetro Artistico Murano' etiketine bak; ucuz 'Murano' boncukların çoğu ithal.</li>
-        <li>Burano danteli el işiyse pahalıdır; ucuzu makine işi ve ithal.</li>
-        <li>Karnaval maskesinde kâğıt hamuru (cartapesta) ve el boyaması olanı atölyesinden al.</li>
-        <li>AB dışında yaşıyorsan tek fişte 70 € üzeri alışverişte KDV iadesi alabilirsin. Pasaportunu yanında taşı.</li>
+        <li>Murano camı alacaksan 'Vetro Artistico Murano' etiketine bak. Ucuza satılan Murano boncuk ve biblolarının çoğu ithaldir.</li>
+        <li>El işi Burano danteli pahalıdır. Çok ucuza satılan dantellerin büyük kısmı makine işidir ve yurt dışından gelir.</li>
+        <li>Karnaval maskesi alacaksan kâğıt hamurundan (cartapesta) yapılmış ve elle boyanmış olanı doğrudan atölyesinden al.</li>
+        <li>AB dışında yaşıyorsan aynı mağazada tek fişte 70 €'yu aşan alışverişlerin KDV'sini geri alabilirsin. Alışveriş sırasında pasaportunu göster ve aldığın formu havalimanında onaylat.</li>
       </ul></div>
   </div>
 
   <div class="sub"><h3>Gece hayatı</h3>
     <div class="g3">
-      <div><h4 class="mini">Misericordia ve Ormesini</h4><p>Cannaregio'da kanal boyu barlar; Venediklilerin akşam buluşması.</p></div>
-      <div><h4 class="mini">Campo Santa Margherita</h4><p>Öğrencilerin meydanı; ucuz spritz ve geç saate kadar açık barlar.</p></div>
-      <div><h4 class="mini">Rialto ve Campo Bella Vienna</h4><p>Pazar kapandıktan sonra Rialto'nun bacarileri dolar; erken başlar, erken biter.</p></div>
+      <div><h4 class="mini">Misericordia ve Ormesini</h4><p>Cannaregio'da kanal boyunca dizilmiş barlar, Venediklilerin akşam buluşma yeridir. Kanal kenarına oturup bir spritz içmek için şehrin en güzel köşesi.</p></div>
+      <div><h4 class="mini">Campo Santa Margherita</h4><p>Dorsoduro'daki bu geniş meydan öğrencilerin mekânıdır. Spritz ucuzdur ve barlar Venedik ölçüsüne göre geç saate kadar açık kalır.</p></div>
+      <div><h4 class="mini">Rialto ve Campo Bella Vienna</h4><p>Pazar tezgâhları kapandıktan sonra Rialto'nun bacarileri dolmaya başlar. Burada gece erken başlar ve erken biter.</p></div>
     </div>
   </div>
 
@@ -1242,6 +1245,7 @@ var C={"id":"venedik","ad":"Venedik","it":"Venezia","ulke":"italya","ulkeAd":"İ
 var CATS=[["tarihi","Tarihi yerler"],["muze","Müzeler ve galeriler"],["mimari","Mimari yapılar"],["dini","Dini yapılar"],["gizli","Gizli kalmış yerler"],["doga","Parklar ve doğa"],["moda","Moda ve alışveriş"],["spor","Spor ve stadyumlar"],["gece","Gece hayatı"],["foto","Fotoğraf noktaları"],["mahalle","Yerel mahalleler"],["bilet","Bilet ve rezervasyon"]];
 var CIMG={"tarihi":"tarihi","muze":"muze","mimari":"mimari","dini":"dini","gizli":"gizli","doga":"doga","moda":"moda","spor":"spor","gece":"gece","foto":"foto","mahalle":"mahalle","bilet":"hero"};
 var SIMG={"vize":"vize","kesfet":"tarihi","planla":"planla","konaklama":"konaklama","havalimani":"havalimani","ulasim":"ulasim","yerel":"yerel","bilgi":"bilgi","rotam":"rotam"};
+var BGIMG={"vize":"hero","kesfet":"foto","planla":"mimari","konaklama":"mahalle","havalimani":"doga","ulasim":"hero","yerel":"gece","bilgi":"foto","rotam":"doga"};
 var TK={"sart":"Rezervasyon şart","oner":"Online önerilir","gise":"Gişede","free":"Ücretsiz"};
 var ATAGS=[["all","Hepsi"],["butce","Bütçe dostu"],["lux","Lüks"],["butik","Butik"],["aile","Aileler için"],["cift","Çiftler için"],["havalimani","Havalimanına yakın"]];
 var MAB=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
@@ -1618,7 +1622,7 @@ window.addEventListener("hashchange",function(){route(true);});
 /* ============ BAŞLAT ============ */
 applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMatrix();renderEvents();renderDaytrips();renderBag();calcOpts();renderCalc();
 $("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
-$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/venedik/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
+$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/venedik/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");var b=BGIMG[sec.getAttribute("data-sec")];if(b)sec.style.setProperty("--bgimg","url(/seyyah-site/varlik/img/venedik/"+b+".jpg)");});
 update();route(false);
 try{renderWorld();}catch(err){mapFb();}
 var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});
