@@ -173,7 +173,7 @@ h4.mini{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.09em;text-tra
 .next{display:inline-flex;align-items:center;gap:10px;margin-top:56px;font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.35rem;text-decoration:none;border-bottom:2px solid var(--line-a);padding-bottom:2px}
 .next:hover{color:var(--line-a)}
 .note{font-size:.86rem;color:var(--muted);margin-top:10px;max-width:70ch}
-.tmp{display:inline-block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);border:1px dashed var(--warn);padding:1px 6px;margin-left:6px;vertical-align:middle}
+.tmp{display:inline-block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:1px 8px;margin-left:6px;vertical-align:middle}
 
 /* sekmeler */
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
@@ -196,8 +196,17 @@ h4.mini{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.09em;text-tra
 .kv dt,.kv dd{padding:10px 0;border-bottom:1px solid var(--rule);margin:0}
 .kv dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;padding-left:16px}
 .bars{display:grid;gap:10px}
-.brow{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;align-items:center;font-size:.92rem}
-.bfill{height:14px;background:repeating-linear-gradient(45deg,var(--muted) 0 2px,transparent 2px 7px);opacity:.55}
+.brow{display:grid;grid-template-columns:96px minmax(0,1fr) 3.4em;gap:10px;align-items:center;font-size:.92rem}
+.brow b{text-align:right;font-variant-numeric:tabular-nums}
+.btrack{height:14px;border-radius:999px;background:color-mix(in srgb,var(--muted) 18%,transparent);overflow:hidden}
+.bfill{display:block;height:100%;border-radius:999px;background:color-mix(in srgb,var(--muted) 70%,transparent)}
+.brow.it{font-weight:700}.brow.it .bfill{background:var(--line-b)}
+.vstat{width:100%;border-collapse:collapse;margin-top:18px;font-size:.9rem;font-variant-numeric:tabular-nums}
+.vstat caption{text-align:left;font-weight:700;margin-bottom:6px}
+.vstat th,.vstat td{padding:6px 8px;border-bottom:1px solid var(--rule);text-align:right}
+.vstat th:first-child,.vstat td:first-child{text-align:left}
+.vstat th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vstat tr.top td{font-weight:700;border-bottom:0}
 .links{list-style:none;padding:0;border-top:1px solid var(--rule)}
 .links li{border-bottom:1px solid var(--rule)}
 .links a{display:flex;justify-content:space-between;gap:12px;padding:12px 0;text-decoration:none;flex-wrap:wrap}
@@ -660,7 +669,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
     <div>
       <div class="mapbox">
         <svg id="world" viewBox="0 -61 900 562.5" role="img" aria-label="Dünya haritası. İtalya işaretli, İstanbul'dan Milano'ya uçuş rotası çizili."></svg>
-        <p id="mapFallback" class="mapfb" hidden>Harita yüklenemedi. Gideceğin şehri varış alanından seçebilirsin.</p>
+        <p id="mapFallback" class="mapfb" hidden></p>
         <button class="maptoggle" id="mapToggle" type="button">Dünyayı gör</button>
         <div class="stamp" id="stamp" aria-live="polite"><span class="s1">İtalya · Schengen</span><span class="s2">Vize gerekli</span><span class="s3">C tipi · iDATA</span></div>
       </div>
@@ -730,7 +739,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
           <dt>iDATA hizmet bedeli</dt><dd>Ayrıca ödenir</dd>
           <dt>Seyahat sağlık sigortası (en az 30.000 € teminat)</dt><dd>≈ 10–25 €</dd>
         </dl>
-        <p class="note">Hizmet bedelinin güncel tutarı iDATA sitesinde yazar. Sigorta fiyatı temsilidir.</p>
+        <p class="note">Hizmet bedelinin güncel tutarı iDATA sitesinde yazar. Sigorta fiyatı yaklaşıktır, poliçeye göre değişir.</p>
       </div>
       <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Tek giriş mi, çok giriş mi?</h3>
         <ul class="ticks">
@@ -743,17 +752,11 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
     </div>
 
     <div class="sub g2">
-      <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:6px">Vize istatistikleri <span class="tmp">temsili</span></h3>
-        <p class="sub-lead">Türkiye'deki konsolosluklarda ret oranı, ülkelere göre.</p>
-        <div class="bars" aria-label="Temsili grafik, gerçek veri değil">
-          <div class="brow"><span>İtalya</span><span class="bfill" style="width:38%"></span></div>
-          <div class="brow"><span>Yunanistan</span><span class="bfill" style="width:30%"></span></div>
-          <div class="brow"><span>Almanya</span><span class="bfill" style="width:55%"></span></div>
-          <div class="brow"><span>Fransa</span><span class="bfill" style="width:62%"></span></div>
-          <div class="brow"><span>Hollanda</span><span class="bfill" style="width:74%"></span></div>
-          <div class="brow"><span>İspanya</span><span class="bfill" style="width:48%"></span></div>
-        </div>
-        <p class="note">Çizgili çubuklar yer tutucu. Yayında AB Komisyonu'nun her yıl yayımladığı resmi Schengen istatistikleri gelecek: İstanbul, Ankara ve İzmir için ayrı ayrı başvuru sayısı, ret oranı ve çok girişli vize payı.</p>
+      <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:6px">Vize istatistikleri</h3>
+<p class="sub-lead">Türkiye'deki konsolosluklarda 2025 yılı ret oranı. Türk başvurucuların en çok gittiği yedi ülke; ortalama %14,6.</p>
+<div class="bars" role="img" aria-label="2025 Schengen vize ret oranları, Türkiye'deki konsolosluklar"><div class="brow"><span>Yunanistan</span><span class="btrack"><span class="bfill" style="width:50.9%"></span></span><b>%10,8</b></div><div class="brow"><span>Almanya</span><span class="btrack"><span class="bfill" style="width:100.0%"></span></span><b>%21,2</b></div><div class="brow"><span>Fransa</span><span class="btrack"><span class="bfill" style="width:73.0%"></span></span><b>%15,5</b></div><div class="brow"><span>Hollanda</span><span class="btrack"><span class="bfill" style="width:42.7%"></span></span><b>%9,0</b></div><div class="brow"><span>Bulgaristan</span><span class="btrack"><span class="bfill" style="width:47.8%"></span></span><b>%10,1</b></div><div class="brow it"><span>İtalya</span><span class="btrack"><span class="bfill" style="width:69.7%"></span></span><b>%14,8</b></div><div class="brow"><span>İspanya</span><span class="btrack"><span class="bfill" style="width:35.1%"></span></span><b>%7,4</b></div></div>
+<table class="vstat"><caption>İtalya'nın Türkiye'deki konsoloslukları, 2025</caption><thead><tr><th>Konsolosluk</th><th>Başvuru</th><th>Ret</th><th>Çok giriş</th></tr></thead><tbody><tr><td>İstanbul</td><td>41.615</td><td>%17,1</td><td>%65,7</td></tr><tr><td>Ankara</td><td>17.134</td><td>%16,2</td><td>%50,1</td></tr><tr><td>İzmir</td><td>20.721</td><td>%8,8</td><td>%82,4</td></tr><tr class="top"><td>Toplam</td><td>79.470</td><td>%14,8</td><td>%67,1</td></tr></tbody></table>
+<p class="note">Kaynak: <a href="https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/statistics-short-stay-visas-issued-schengen-states_en" target="_blank" rel="noopener">AB Komisyonu, 2025 Schengen vize istatistikleri</a> (yayın 28 Mayıs 2026). Ret oranı, sonuçlanan başvurular içinde verilmeyenlerin payı; çok giriş, verilen vizeler içinde çok girişli olanların payı. Bir ülkenin ret oranı tek başına senin dosyanın sonucunu belirlemez.</p>
       </div>
       <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Resmi bağlantılar</h3>
         <ul class="links">
@@ -819,7 +822,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
     <div id="typeBody"></div>
   </div>
 
-  <div class="sub"><h3>Günlük bütçe</h3><p class="sub-lead">Uçak bileti hariç tahmini harcama. TL karşılığı yayında canlı kurla gösterilecek.</p>
+  <div class="sub"><h3>Günlük bütçe</h3><p class="sub-lead">Uçak bileti hariç tahmini harcama, Euro olarak.</p>
     <div class="g2">
       <div>
         <div class="calcf">
@@ -834,7 +837,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
       </div>
       <div id="budgetOut" aria-live="polite"></div>
     </div>
-    <h4 class="mini" style="margin-top:30px">Ortalama fiyatlar <span class="tmp">2026 fiyatları</span></h4>
+    <h4 class="mini" style="margin-top:30px">Ortalama fiyatlar <span class="tmp">son kontrol 7 Kasım 2026</span></h4>
     <div class="prices">
       <div><span>Espresso, barda ayakta</span><b>≈ 1,30–1,60 €</b></div>
       <div><span>Cappuccino ve brioche</span><b>≈ 3–4 €</b></div>
@@ -884,7 +887,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
   <div class="sub"><h3>Bölgeler</h3>
     <div class="tabs" role="tablist" aria-label="Konaklama türü" id="areaTabs"></div>
     <ul class="areas" id="areas"></ul>
-    <p class="note">Gecelik fiyatlar iki kişilik oda için temsili aralıklardır. "Otelleri gör" bağlantıları yayında ortaklık bağlantısı olacak.</p>
+    <p class="note">Gecelik fiyatlar iki kişilik oda için yaklaşık aralıklardır; sezona ve etkinliklere göre değişir. Son kontrol 7 Kasım 2026.</p>
   </div>
 
   <div class="sub g2">
@@ -941,7 +944,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
           <tr><td><b>Taksi</b></td><td>Milano merkezi</td><td>≈ 50 dk</td><td>≈ 100 €+</td><td>Gece geç, kalabalık grup</td></tr>
         </tbody></table></div>
     </div>
-    <p class="note">Metro tek bileti 2,20 € (90 dk); Linate M4 ile şehir tarifesine dahil. Malpensa Express fiyatı 2025 tarife artışından sonra kaynaklarda 13–15 € arası; binmeden Trenord uygulamasına bak. Otobüs ve taksi fiyatları yaklaşık. Son kontrol Kasım 2026.</p>
+    <p class="note">Metro tek bileti 2,20 € (90 dk); Linate M4 ile şehir tarifesine dahil. Malpensa Express fiyatı 2025 tarife artışından sonra kaynaklarda 13–15 € arası; binmeden Trenord uygulamasına bak. Otobüs ve taksi fiyatları yaklaşık. Son kontrol 7 Kasım 2026.</p>
   </div>
   <div class="sub g2">
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Varınca</h3>
@@ -1011,7 +1014,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
           <tr><td><b>24 saat</b></td><td>sınırsız</td><td>≈ 7,60 €</td></tr>
           <tr><td><b>72 saat</b></td><td>sınırsız</td><td>≈ 13 €</td></tr>
         </tbody></table></div>
-      <p class="note">1 Ocak 2026'dan beri kâğıt bilet yok: RicaricaMi kartı, ATM uygulaması ya da temassız banka kartı. Turnikeye girerken okut; şehir dışındaki istasyonlarda çıkarken de. Günlük ve 3 günlük bilet fiyatları yaklaşık. Son kontrol Kasım 2026.</p>
+      <p class="note">1 Ocak 2026'dan beri kâğıt bilet yok: RicaricaMi kartı, ATM uygulaması ya da temassız banka kartı. Turnikeye girerken okut; şehir dışındaki istasyonlarda çıkarken de. Günlük ve 3 günlük bilet fiyatları yaklaşık. Son kontrol 7 Kasım 2026.</p>
     </div>
     <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Tramvaylar ve otobüsler</h3>
       <dl class="kv">
@@ -1208,12 +1211,12 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 
 <footer class="wrap">
   <p><b>Seyyah</b> · Milano dosyası · "Seyyah" geçici bir isim.</p>
-  <p>Fiyatlar, saatler ve kurallar 2025–2026 bilgisine göre yaklaşık değerlerdir ve yayından önce tek tek doğrulanacak. "Temsili" işaretli alanlar yer tutucudur. Otel, bilet ve transfer bağlantıları yayında ortaklık bağlantısı olacak.</p>
+  <p>Fiyatlar, saatler ve kurallar yaklaşık değerlerdir; son kontrol 7 Kasım 2026. Yola çıkmadan önce resmi sitelerden teyit et.</p>
   <p class="credits">Fotoğraflar Wikimedia Commons'tan, serbest lisanslı: <a href="https://commons.wikimedia.org/wiki/File:Milano,_Duomo_with_Milan_Cathedral_and_Galleria_Vittorio_Emanuele_II,_2016.jpg" target="_blank" rel="noopener">Milano, Duomo with Milan Cathedral and Galleria Vittorio Emanuele II, 2016</a>: Steffen Schmitz, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Milano,_Galleria_Vittorio_Emanuele_II,_2016-06_CN-01.jpg" target="_blank" rel="noopener">Milano, Galleria Vittorio Emanuele II, 2016-06 CN-01</a>: Steffen Schmitz, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Castello_Sforzesco,_fontana_e_torre_del_Filarete.jpg" target="_blank" rel="noopener">Castello Sforzesco, fontana e torre del Filarete</a>: Rik82, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B9%CE%BD%CE%B1%CE%BA%CE%BF%CE%B8%CE%AE%CE%BA%CE%B7_%CE%9C%CF%80%CF%81%CE%AD%CF%81%CE%B1_-_2023-10-29_4331.jpg" target="_blank" rel="noopener">Πινακοθήκη Μπρέρα - 2023-10-29 4331</a>: C messier, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Milan_skyline_with_Unicredit_Tower_and_Bosco_Verticale.jpg" target="_blank" rel="noopener">Milan skyline with Unicredit Tower and Bosco Verticale</a>: Daniel Case, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Milano_-_Basilica_di_Sant%27Ambrogio_-_2025-09-30_22-19-25_001.jpg" target="_blank" rel="noopener">Milano - Basilica di Sant'Ambrogio - 2025-09-30 22-19-25 001</a>: Maurizio Moro5153, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:San_Maurizio_al_Monastero_Maggiore_(Milano)_Coro.jpg" target="_blank" rel="noopener">San Maurizio al Monastero Maggiore (Milano) Coro</a>: Paolobon140, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Parco_Sempione_-_Milano,_2023.jpg" target="_blank" rel="noopener">Parco Sempione - Milano, 2023</a>: Terragio67, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Via_Monte_Napoleone,_Milan,_Italy.jpg" target="_blank" rel="noopener">Via Monte Napoleone, Milan, Italy</a>: FlavMi, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Milano_-_stadio_Giuseppe_Meazza_-_202209050049.jpeg" target="_blank" rel="noopener">Milano - stadio Giuseppe Meazza - 202209050049</a>: POAN68, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Milano_Naviglio_Grande_bei_Nacht_3.jpg" target="_blank" rel="noopener">Milano Naviglio Grande bei Nacht 3</a>: Zairon, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Terrazze_del_Duomo_di_Milano_(30704294272).jpg" target="_blank" rel="noopener">Terrazze del Duomo di Milano (30704294272)</a>: Dimitris Kamaras from Athens, Greece, CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Brera_-_panoramio.jpg" target="_blank" rel="noopener">Brera - panoramio</a>: Gianluca Cogoli, CC BY 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Skyline_of_the_financial_center,_in_the_foreground,_the_Milano_Porta_Garibaldi_railway_station,_Milan,_Italy.jpg" target="_blank" rel="noopener">Skyline of the financial center, in the foreground, the Milano Porta Garibaldi railway station, Milan, Italy</a>: FlavMi, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Milano,_Corso_Magenta_(30736667101).jpg" target="_blank" rel="noopener">Milano, Corso Magenta (30736667101)</a>: Dimitris Kamaras from Athens, Greece, CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Malpensa_Express_at_Milano_Cadorna.jpg" target="_blank" rel="noopener">Malpensa Express at Milano Cadorna</a>: Chris Down, CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Tram_along_south_side_of_Piazza_Duca_d%27Aosta,_Milan.jpg" target="_blank" rel="noopener">Tram along south side of Piazza Duca d'Aosta, Milan</a>: Daniel Case, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Risotto_alla_milanese_con_ossobuco_di_vitello_piemontese_(4520611482).jpg" target="_blank" rel="noopener">Risotto alla milanese con ossobuco di vitello piemontese (4520611482)</a>: Micaela &amp;amp; Massimo from Vaprio d'Adda (MI), Italy, CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Milano_-_Stazione_di_Milano_Centrale_-_3.jpg" target="_blank" rel="noopener">Milano - Stazione di Milano Centrale - 3</a>: Benjamin Smith, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:20110724_Milan_Cathedral_5299.jpg" target="_blank" rel="noopener">20110724 Milan Cathedral 5299</a>: Jakub Hałun, CC BY-SA 4.0</p>
 </footer>
 
 <script>window.jsVectorMap={addMap:function(n,d){window.__WORLD=d;}};</script>
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"></script>
+<script src="/seyyah-site/varlik/dunya.js"></script>
 <script>
 (function(){
 "use strict";
@@ -1415,9 +1418,10 @@ var TRN={IT:"İtalya",TR:"Türkiye",FR:"Fransa",ES:"İspanya",DE:"Almanya",GR:"Y
 var VW=[0,-61,900,562.5],VE=[386,112,170,106.25],curVB=VE.slice(),zoomed=true;
 function setVB(v){curVB=v;var w=$("#world");if(w)w.setAttribute("viewBox",v.map(function(n){return n.toFixed(2);}).join(" "));}
 function animVB(to,ms){var from=curVB.slice();if(reduce){setVB(to);return;}var t0=performance.now();function f(t){var k=Math.min(1,(t-t0)/ms),e=k<0.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;setVB(from.map(function(a,i){return a+(to[i]-a)*e;}));if(k<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+function mapFb(){var f=$("#mapFallback");f.textContent="Harita yüklenemedi. Gideceğin şehri varış alanından seçebilirsin.";f.hidden=false;}
 function renderWorld(){
   var W=window.__WORLD,svg=$("#world");
-  if(!W||!W.paths){$("#mapFallback").hidden=false;$("#mapToggle").hidden=true;return;}
+  if(!W||!W.paths){mapFb();$("#mapToggle").hidden=true;return;}
   var ins=W.insets[0],bb=ins.bbox,Rr=6381372,c=(W.projection&&W.projection.centralMeridian)||11.5,dg=Math.PI/180;
   function proj(lat,lng){var x=Rr*(lng-c)*dg,y=-Rr*Math.log(Math.tan((45+0.4*lat)*dg))/0.8;return [(x-bb[0].x)/(bb[1].x-bb[0].x)*ins.width+(ins.left||0),(y-bb[0].y)/(bb[1].y-bb[0].y)*ins.height+(ins.top||0)];}
   var s="";Object.keys(W.paths).forEach(function(code){var p=W.paths[code];s+='<path class="cty'+(code==="IT"?" it":"")+(code==="TR"?" tr":"")+'" data-c="'+code+'" data-n="'+esc(TRN[code]||p.name)+'" d="'+p.path+'"/>';});
@@ -1496,7 +1500,7 @@ function renderBudget(st){
   var parts={},tot=0;Object.keys(B).forEach(function(k){var v=B[k]*days*ppl;if(k==="konak"&&ppl===1)v*=1.6;parts[k]=v;tot+=v;});
   $("#budgetOut").innerHTML='<div class="btot"><div><span class="lab">Toplam</span><br><b>'+eur(tot)+'</b></div><div><span class="lab">Kişi başı</span><br><b style="font-size:1.8rem">'+eur(tot/ppl)+'</b></div><div><span class="lab">Kişi başı günlük</span><br><b style="font-size:1.8rem">'+eur(tot/ppl/days)+'</b></div></div>'+
     '<div class="stack" aria-hidden="true">'+Object.keys(parts).map(function(k){return '<span style="width:'+(parts[k]/tot*100).toFixed(1)+'%;background:'+BLAB[k][1]+'"></span>';}).join("")+'</div>'+
-    '<div class="bl">'+Object.keys(parts).map(function(k){return '<i style="background:'+BLAB[k][1]+'"></i><span>'+BLAB[k][0]+'</span><span class="v">'+eur(parts[k])+'</span>';}).join("")+'</div><p class="note">'+days+' gün, '+ppl+' kişi. Tutarlar temsilidir; yayında güncel otel ve fiyat verisiyle hesaplanacak.</p>';
+    '<div class="bl">'+Object.keys(parts).map(function(k){return '<i style="background:'+BLAB[k][1]+'"></i><span>'+BLAB[k][0]+'</span><span class="v">'+eur(parts[k])+'</span>';}).join("")+'</div><p class="note">'+days+' gün, '+ppl+' kişi. Tutarlar yaklaşık: konaklama, yemek, şehir içi ulaşım, giriş ücretleri ve konaklama vergisi.</p>';
 }
 function renderMatrix(){
   var ids=C.matris.map(function(x){return x[0];}),sh={};C.matris.forEach(function(x){sh[x[0]]=x[1];});
@@ -1513,7 +1517,7 @@ function renderAreas(){
   $("#areaTabs").innerHTML=ATAGS.map(function(t){return '<button class="tab" type="button" role="tab" data-atag="'+t[0]+'" aria-selected="'+(t[0]===aTag)+'">'+t[1]+'</button>';}).join("");
   var list=AREAS.filter(function(a){return aTag==="all"||a.tags.indexOf(aTag)>-1;});
   var tl={};ATAGS.forEach(function(t){tl[t[0]]=t[1];});
-  $("#areas").innerHTML=list.map(function(a){var here=S.base===a.id;return '<li class="ar'+(here?" here":"")+'"><div><h4>'+a.n+'</h4><p class="for">'+a.fr+'</p><div class="tags">'+a.tags.map(function(t){return "<span>"+tl[t]+"</span>";}).join("")+'</div></div><div class="pm"><div><h4 class="mini">Artıları</h4><ul class="ticks ok">'+a.plus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div><div><h4 class="mini">Eksileri</h4><ul class="ticks bad">'+a.minus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div></div><div class="side"><span class="lab">Gecelik, temsili</span><span class="price">'+a.price+'</span><span class="lab">'+a.metro+'</span><a class="btn" href="https://www.booking.com/searchresults.tr.html?ss='+encodeURIComponent(a.q)+'" target="_blank" rel="noopener">Otelleri gör ↗</a>'+(a.far?"":'<button class="btn ghost" type="button" data-base="'+a.id+'">'+(here?"Burada kalıyorum ✓":"Burada kalacağım")+'</button>')+'</div></li>';}).join("");
+  $("#areas").innerHTML=list.map(function(a){var here=S.base===a.id;return '<li class="ar'+(here?" here":"")+'"><div><h4>'+a.n+'</h4><p class="for">'+a.fr+'</p><div class="tags">'+a.tags.map(function(t){return "<span>"+tl[t]+"</span>";}).join("")+'</div></div><div class="pm"><div><h4 class="mini">Artıları</h4><ul class="ticks ok">'+a.plus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div><div><h4 class="mini">Eksileri</h4><ul class="ticks bad">'+a.minus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div></div><div class="side"><span class="lab">Gecelik, yaklaşık</span><span class="price">'+a.price+'</span><span class="lab">'+a.metro+'</span><a class="btn" href="https://www.booking.com/searchresults.tr.html?ss='+encodeURIComponent(a.q)+'" target="_blank" rel="noopener">Otelleri gör ↗</a>'+(a.far?"":'<button class="btn ghost" type="button" data-base="'+a.id+'">'+(here?"Burada kalıyorum ✓":"Burada kalacağım")+'</button>')+'</div></li>';}).join("");
 }
 function renderRank(){
   var plan=S.plan.map(function(id){return byId[id];}).filter(function(p){return p&&!p.far;});
@@ -1607,7 +1611,7 @@ applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMa
 $("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
 $$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/milano/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
 update();route(false);
-try{renderWorld();}catch(err){$("#mapFallback").hidden=false;}
+try{renderWorld();}catch(err){mapFb();}
 var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});
 try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",drawGuil);}catch(e){}
 new MutationObserver(drawGuil).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});

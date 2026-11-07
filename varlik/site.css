@@ -169,7 +169,7 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .yer{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px;align-items:start}
 @media (max-width:860px){.yer{grid-template-columns:minmax(0,1fr)}}
 .yer>div{display:grid;gap:16px;min-width:0}
-.kutu{background:var(--card);border:2px solid var(--rule);border-radius:22px;padding:18px 20px;display:grid;gap:10px;min-width:0}
+.kutu{background:var(--card);border:2px solid var(--rule);border-radius:22px;padding:18px 20px;display:grid;gap:10px;align-content:start;min-width:0}
 .kutu h2{font-size:1.35rem;font-weight:800}
 .kutu.not{background:color-mix(in srgb,var(--sun) var(--tint),var(--card));border-color:transparent}
 .kutu.foto-not{background:color-mix(in srgb,var(--pink) var(--tint),var(--card));border-color:transparent}
@@ -214,3 +214,19 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .alt a{color:var(--muted)}
 .kart .foto.bos{display:grid;place-items:center;font-family:var(--f-hand);font-weight:700;font-size:2.4rem;color:var(--kc);background:color-mix(in srgb,var(--kc) var(--tint),var(--card))}
 .kart.yakinda .foto.bos{filter:none}
+/* Vize istatistikleri (ULKE.vizeStatHtml) */
+.vize-stat .sub-lead{color:var(--muted)}
+.vize-stat .note{font-size:.84rem;color:var(--muted)}
+.vize-stat .note a{color:inherit}
+.bars{display:grid;gap:10px}
+.brow{display:grid;grid-template-columns:96px minmax(0,1fr) 3.4em;gap:10px;align-items:center;font-size:.92rem}
+.brow b{text-align:right;font-variant-numeric:tabular-nums}
+.btrack{height:14px;border-radius:999px;background:color-mix(in srgb,var(--muted) 18%,transparent);overflow:hidden}
+.bfill{display:block;height:100%;border-radius:999px;background:color-mix(in srgb,var(--muted) 70%,transparent)}
+.brow.it{font-weight:700}.brow.it .bfill{background:var(--line-b)}
+.vstat{width:100%;border-collapse:collapse;font-size:.9rem;font-variant-numeric:tabular-nums}
+.vstat caption{text-align:left;font-weight:700;margin-bottom:6px}
+.vstat th,.vstat td{padding:6px 8px;border-bottom:1px solid var(--rule);text-align:right}
+.vstat th:first-child,.vstat td:first-child{text-align:left}
+.vstat th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vstat tr.top td{font-weight:700;border-bottom:0}
