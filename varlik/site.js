@@ -35,12 +35,13 @@
   }
   if (saatler.length) { tik(); setInterval(tik, 30000); }
 
-  /* Rotama ekle: planlayıcıyla aynı kayıt (localStorage "seyyah-roma-v1") */
-  var KEY = "seyyah-roma-v1";
+  /* Rotama ekle: planlayıcıyla aynı kayıt (localStorage "seyyah-<şehir>-v1"; şehir ve varsayılan bölge düğmede) */
+  var KEY = "";
   function oku() { try { var s = JSON.parse(localStorage.getItem(KEY)); if (s && Array.isArray(s.plan)) return s; } catch (e) {} return null; }
   function yaz(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); return true; } catch (e) { return false; } }
   document.querySelectorAll("[data-rota]").forEach(function (b) {
-    var id = b.getAttribute("data-rota"), msg = document.querySelector("[data-rota-mesaj]");
+    KEY = "seyyah-" + b.getAttribute("data-sehir") + "-v1";
+    var id = b.getAttribute("data-rota"), us = b.getAttribute("data-us"), msg = document.querySelector("[data-rota-mesaj]");
     function goster() {
       var s = oku(), on = !!(s && s.plan.indexOf(id) > -1);
       b.setAttribute("aria-pressed", on ? "true" : "false");
@@ -48,7 +49,7 @@
     }
     b.hidden = false; goster();
     b.addEventListener("click", function () {
-      var s = oku() || { plan: [], visited: [], base: "monti", sample: false, bag: [] };
+      var s = oku() || { plan: [], visited: [], base: us, sample: false, bag: [] };
       if (s.sample) { s.plan = []; s.sample = false; }
       var i = s.plan.indexOf(id);
       if (i > -1) s.plan.splice(i, 1); else s.plan.push(id);

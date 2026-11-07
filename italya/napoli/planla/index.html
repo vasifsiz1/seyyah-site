@@ -1,0 +1,1632 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Napoli rota planlayıcı: yerleri seç, kaldığın bölgeye göre günlere bölünsün. Konaklama, havalimanı, toplu taşıma ve yerel ipuçları.">
+<link rel="canonical" href="https://vasifsiz1.github.io/seyyah-site/italya/napoli/planla/">
+<meta name="robots" content="noindex,nofollow">
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Napoli rota planlayıcı · Seyyah</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@500..700&family=Figtree:ital,wght@0,400..800;1,400..600&display=swap">
+<style>
+/* Layout: Roma tatil kartpostalı; çizgili tente, güneşli kapakta mavi gökyüzü paneli ve kartpostal harita, her bölüm kendi dondurma rengiyle açılır */
+:root{
+  --paper:#FFFFFF; --paper-2:#EEF5FF; --card:#FFFFFF; --ink:#16233F; --muted:#57627A; --rule:#DDE5F0; --guil:#DDE5F0;
+  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22);
+  --sky:#1F6FD6; --sky-ink:#1F6FD6;
+  --aperol:#FF7A2F; --aperol-ink:#C2410C;
+  --sun:#FFC233; --sun-ink:#9A6A00;
+  --pink:#FF6F9C; --pink-ink:#C92D62;
+  --teal:#0A7C82; --teal-ink:#0A7C82;
+  --pista:#7BC74D; --pista-ink:#2F7D17;
+  --campari:#D7263D; --campari-ink:#C51F35;
+  --glicine:#9B7BFF; --glicine-ink:#6145D6;
+  --hero-bg:#1F6FD6; --awning-1:#FF7A2F; --awning-2:#FFE9B8;
+  --stamp:#1F5FD1; --ochre:#FFC233; --ochre-soft:#FFF1C9; --on-ochre:#16233F; --on-line:#FFFFFF;
+  --on-photo:#FFFFFF; --on-photo-2:rgba(255,255,255,.88); --sea:#BFE3FF;
+  --river:#86C8F2; --land:#FFFFFF; --land-2:#FFE08A;
+  --day-1:#E0337A; --day-2:#7A4FE0; --day-3:#0A8C8C; --day-4:#E8A200; --on-day:#FFFFFF; --on-day-4:#16233F; --park:#D3EDC4; --park-ink:#3D7A28;
+  --line-a:#F57A1F; --line-b:#1F5FD1; --line-c:#2FA84F;
+  --ok:#1E8A4C; --warn:#A86200; --bad:#D0263B;
+  --blend:multiply;
+  --cc:var(--aperol); --on-cc:var(--navy); --cc-ink:var(--aperol-ink); --tint:15%;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"Figtree","Segoe UI",system-ui,sans-serif;
+  --f-hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
+  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
+  --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
+  --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
+  --hero-bg:#1A4F9E; --awning-1:#FF8A45; --awning-2:#FFE7B0;
+  --stamp:#8FB4FF; --ochre:#FFC94D; --ochre-soft:#3A3114;
+  --sea:#12304F; --river:#2F6A9C; --land:#24406A; --land-2:#3A5C8F;
+  --day-1:#FF6FA5; --day-2:#A98BFF; --day-3:#3CC8C2; --day-4:#FFC233; --on-day:#0D1A2E; --on-day-4:#0D1A2E; --park:#1C4434; --park-ink:#8FD69A;
+  --line-a:#FF8A3D; --line-b:#5A93F0; --line-c:#45C26B;
+  --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
+  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
+  --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
+  --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
+  --hero-bg:#1A4F9E; --awning-1:#FF8A45; --awning-2:#FFE7B0;
+  --stamp:#8FB4FF; --ochre:#FFC94D; --ochre-soft:#3A3114;
+  --sea:#12304F; --river:#2F6A9C; --land:#24406A; --land-2:#3A5C8F;
+  --day-1:#FF6FA5; --day-2:#A98BFF; --day-3:#3CC8C2; --day-4:#FFC233; --on-day:#0D1A2E; --on-day-4:#0D1A2E; --park:#1C4434; --park-ink:#8FD69A;
+  --line-a:#FF8A3D; --line-b:#5A93F0; --line-c:#45C26B;
+  --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--stamp);outline-offset:2px}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+p{margin:0}
+ul,ol{margin:0}
+button{font:inherit;color:inherit}
+.lab{font-family:var(--f-mono);font-size:.7rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* üst bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--f-display);font-style:italic;font-weight:700;font-size:1.7rem;letter-spacing:-.01em;line-height:1}
+.proto{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--muted);color:var(--muted);padding:3px 8px}
+
+/* hero */
+.hero{position:relative;color:var(--on-photo);background:linear-gradient(100deg,rgba(16,11,6,.88) 0%,rgba(16,11,6,.6) 42%,rgba(16,11,6,.15) 100%),url(/seyyah-site/varlik/img/napoli/hero.jpg) center 45%/cover no-repeat,#1C1813}
+@media (max-width:900px){.hero{background:linear-gradient(180deg,rgba(16,11,6,.45) 0%,rgba(16,11,6,.88) 50%),url(/seyyah-site/varlik/img/napoli/hero.jpg) center top/cover no-repeat,#1C1813}}
+.hero-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);padding-block:clamp(40px,7vw,96px);align-items:center}
+@media (max-width:900px){.hero-in{grid-template-columns:minmax(0,1fr)}}
+.hero .lab{color:var(--on-photo-2)}
+.h-title{font-family:var(--f-display);font-weight:800;font-size:clamp(5.2rem,14vw,10.5rem);line-height:.8;letter-spacing:-.04em;font-variation-settings:"opsz" 96;margin-block:14px 12px;color:var(--on-photo);text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.h-coord{font-family:var(--f-mono);font-size:.78rem;color:var(--on-photo-2);letter-spacing:.04em}
+.h-lead{font-size:1.12rem;max-width:36ch;margin-top:16px;color:var(--on-photo)}
+.pfields{display:grid;grid-template-columns:1fr 1fr;margin-top:26px;background:var(--card);color:var(--ink);border-radius:6px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.pf{padding:10px 14px 8px;min-width:0}
+.pf+.pf{border-left:1px solid var(--rule)}
+.pf-wide{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--rule)}
+.pf label{display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.pf label i{font-style:italic;text-transform:none;letter-spacing:.02em}
+.sel{position:relative}
+.sel::after{content:"▾";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:.8rem}
+.pf select,.pf input{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:600 1.05rem var(--f-body);color:var(--ink);width:100%;padding:3px 18px 3px 0;border-radius:0;min-width:0}
+.pf select:disabled{color:var(--muted)}
+.pf input:focus,.pf select:focus{outline:none}
+.pf:focus-within{background:var(--ochre-soft)}
+.mapbox{position:relative;aspect-ratio:16/10;max-width:100%;background:var(--sea);overflow:hidden;border-radius:6px;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+#world{width:100%;height:100%;display:block}
+.cty{fill:var(--land);stroke:var(--sea);stroke-width:.7;vector-effect:non-scaling-stroke;cursor:pointer;transition:fill .15s}
+.cty:hover{fill:var(--land-2)}
+.cty.it{fill:var(--ochre)}
+.cty.tr{fill:var(--land-2);stroke:var(--ink);stroke-width:1}
+.arc{fill:none;stroke:var(--stamp);stroke-width:1.8;stroke-dasharray:6 5;vector-effect:non-scaling-stroke}
+.cdot{fill:var(--ink);stroke:var(--sea);stroke-width:1;vector-effect:non-scaling-stroke}
+.cdot.rm{fill:var(--stamp)}
+.clab{font-family:var(--f-mono);font-size:3.4px;font-weight:600;letter-spacing:.06em;fill:var(--ink);opacity:0;transition:opacity .4s}
+#world.z .clab{opacity:1}
+.maptoggle{position:absolute;right:10px;top:10px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:6px 10px;cursor:pointer}
+.maptoggle:hover{border-color:var(--ink)}
+.mapfb{position:absolute;inset:auto 12px 12px 12px;color:var(--muted);font-size:.9rem}
+.mapcap{margin-top:10px;font-family:var(--f-mono);font-size:.74rem;color:var(--on-photo-2);min-height:1.3em}
+.stamp{position:absolute;left:5%;bottom:8%;transform:rotate(-9deg);color:var(--stamp);border:3px solid currentColor;border-radius:14px;padding:10px 16px 9px;text-align:center;font-family:var(--f-mono);text-transform:uppercase;mix-blend-mode:var(--blend);filter:url(#ink);line-height:1.15;box-shadow:inset 0 0 0 3px var(--paper-2),inset 0 0 0 5px currentColor;display:flex;flex-direction:column;align-items:center;pointer-events:none}
+.mapbox .stamp{box-shadow:inset 0 0 0 3px var(--sea),inset 0 0 0 5px currentColor}
+.stamp .s1{font-size:.6rem;letter-spacing:.18em;font-weight:600}
+.stamp .s2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.3rem,3vw,2rem);letter-spacing:.01em;margin:3px 0 2px;text-transform:none;font-style:italic}
+.stamp .s3{font-size:.58rem;letter-spacing:.12em;font-weight:600}
+.stamp.thump{animation:thump .5s cubic-bezier(.2,.9,.3,1.25)}
+@keyframes thump{0%{transform:rotate(-9deg) scale(1.45);opacity:.35}60%{transform:rotate(-9deg) scale(.97);opacity:1}100%{transform:rotate(-9deg) scale(1)}}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0 18px;padding-block:14px}
+.fact{padding-block:6px;min-width:0}
+.fact b{display:block;font-weight:600;font-size:.97rem}
+
+/* sekme çubuğu */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--paper);border-block:1px solid var(--rule)}
+.nav-in{overflow-x:auto;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav ol{list-style:none;margin:0;padding:0;display:flex;gap:2px;width:max-content;min-width:100%}
+.nav li.mine{margin-left:auto}
+.nav a{display:flex;align-items:center;gap:7px;padding:15px 12px 12px;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ochre)}
+.nav .badge{font-family:var(--f-mono);font-size:.64rem;font-weight:600;background:var(--ochre);color:var(--on-ochre);padding:0 6px;border-radius:9px;line-height:17px}
+
+/* bölümler */
+.ch{padding-block:clamp(18px,3vw,30px) 72px}
+.ch-head{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(240px,32vw,400px);padding:clamp(20px,3.5vw,40px);border-radius:6px;overflow:hidden;color:var(--on-photo);background:linear-gradient(180deg,rgba(12,9,6,.02) 18%,rgba(12,9,6,.84) 100%),var(--img,none) center/cover no-repeat,#1C1813;margin-bottom:8px}
+.ch-head .lab{color:var(--on-photo-2)}
+.ch h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1;letter-spacing:-.02em;margin-top:6px;color:var(--on-photo)}
+.ch-lead{max-width:60ch;color:var(--on-photo-2);margin-top:10px;font-size:1.06rem}
+.ctiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:26px 0 24px}
+@media (min-width:640px){.ctiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1000px){.ctiles{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.ctile{position:relative;aspect-ratio:4/3;max-width:100%;border:0;padding:0;cursor:pointer;border-radius:5px;overflow:hidden;background:linear-gradient(180deg,rgba(12,9,6,0) 30%,rgba(12,9,6,.82) 100%),var(--img,none) center/cover no-repeat,#1C1813;color:var(--on-photo);text-align:left;display:flex;align-items:flex-end;transition:transform .2s}
+.ctile span{padding:9px 11px;font-weight:600;font-size:.88rem;line-height:1.2}
+.ctile:hover{transform:translateY(-2px)}
+.ctile[aria-selected="true"]{outline:3px solid var(--ochre);outline-offset:3px}
+.sub{margin-top:48px;min-width:0}
+.sub>h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.5rem,2.6vw,1.9rem);line-height:1.1;margin-bottom:6px}
+.sub-lead{color:var(--muted);max-width:64ch;margin-bottom:18px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
+.g2>*,.g3>*{min-width:0}
+.panel{background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+.ticks{list-style:none;padding:0;display:grid;gap:8px}
+.ticks li{position:relative;padding-left:20px;max-width:68ch}
+.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;background:var(--line-a);border-radius:2px}
+.ticks.b li::before{background:var(--line-b)}
+.ticks.bad li::before{background:var(--bad)}
+.ticks.ok li::before{background:var(--ok)}
+h4.mini{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+.next{display:inline-flex;align-items:center;gap:10px;margin-top:56px;font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.35rem;text-decoration:none;border-bottom:2px solid var(--line-a);padding-bottom:2px}
+.next:hover{color:var(--line-a)}
+.note{font-size:.86rem;color:var(--muted);margin-top:10px;max-width:70ch}
+.tmp{display:inline-block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);border:1px dashed var(--warn);padding:1px 6px;margin-left:6px;vertical-align:middle}
+
+/* sekmeler */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.tab{font-size:.88rem;font-weight:500;padding:7px 13px;border:1px solid var(--rule);background:transparent;border-radius:999px;cursor:pointer;color:var(--ink)}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* vize */
+.vp{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding:22px 24px;border:1px solid var(--ink);background:var(--card);margin-top:28px}
+@media (max-width:640px){.vp{grid-template-columns:minmax(0,1fr)}}
+.vp .stamp{position:static;transform:rotate(-6deg);align-self:center;justify-self:start;box-shadow:inset 0 0 0 3px var(--card),inset 0 0 0 5px currentColor}
+.vp h3{font-family:var(--f-display);font-weight:700;font-size:1.6rem;line-height:1.15;margin-bottom:8px}
+.vp p{max-width:64ch;margin-bottom:12px}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:0;counter-reset:s;border-top:1px solid var(--ink)}
+.steps li{counter-increment:s;padding:16px 18px 18px 0;border-bottom:1px solid var(--rule);min-width:0}
+.steps li::before{content:counter(s);display:block;font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--ochre);margin-bottom:6px}
+.steps b{display:block;margin-bottom:4px}
+.steps p{font-size:.94rem;color:var(--muted)}
+.kv{display:grid;grid-template-columns:minmax(0,1fr) auto;margin:0;border-top:1px solid var(--rule)}
+.kv dt,.kv dd{padding:10px 0;border-bottom:1px solid var(--rule);margin:0}
+.kv dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;padding-left:16px}
+.bars{display:grid;gap:10px}
+.brow{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;align-items:center;font-size:.92rem}
+.bfill{height:14px;background:repeating-linear-gradient(45deg,var(--muted) 0 2px,transparent 2px 7px);opacity:.55}
+.links{list-style:none;padding:0;border-top:1px solid var(--rule)}
+.links li{border-bottom:1px solid var(--rule)}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:12px 0;text-decoration:none;flex-wrap:wrap}
+.links a:hover b{text-decoration:underline}
+.links span{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* keşfet */
+.catsum{margin-bottom:12px;color:var(--muted)}
+.catsum b{color:var(--ink)}
+.places{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.pl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px) auto;gap:14px 28px;padding-block:18px;border-bottom:1px solid var(--rule);align-items:start}
+@media (max-width:860px){.pl{grid-template-columns:minmax(0,1fr)}}
+.pl h4{font-family:var(--f-display);font-weight:600;font-size:1.4rem;line-height:1.15}
+.pl .it{display:block;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin:3px 0 8px}
+.pl p{max-width:62ch}
+.pl .ph{font-size:.92rem;margin-top:8px;color:var(--muted)}
+.pl .ph b{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;color:var(--stamp);margin-right:6px}
+.meta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:5px 12px;margin:0;font-size:.9rem}
+.meta dt{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.meta dd{margin:0}
+.tk{display:inline-block;font-family:var(--f-mono);font-size:.64rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border:1px solid currentColor;border-radius:3px;margin-right:4px}
+.tk-sart{color:var(--bad)}.tk-oner{color:var(--warn)}.tk-gise{color:var(--muted)}.tk-free{color:var(--ok)}
+.add{font-size:.86rem;font-weight:600;padding:9px 14px;border:1.5px solid var(--ink);background:transparent;cursor:pointer;white-space:nowrap;border-radius:2px;color:var(--ink)}
+.add:hover{background:var(--ochre-soft)}
+.add[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:var(--on-ochre)}
+.planbar{position:sticky;bottom:0;margin-top:22px;background:var(--ink);color:var(--paper);display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));z-index:4}
+.planbar a{color:var(--paper);font-weight:600}
+.planbar .lab{color:var(--paper);opacity:.75}
+.tbl{overflow-x:auto;border-top:1px solid var(--ink)}
+.tbl table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+.tbl th{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:left;padding:10px 12px 8px 0;border-bottom:1px solid var(--rule)}
+.tbl td{padding:11px 12px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.tbl td b{font-weight:600}
+.tbl .rec td{background:var(--ochre-soft)}
+
+/* planla */
+.howlong{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));border-top:1px solid var(--ink)}
+.hl{padding:16px 18px 18px 0;border-bottom:1px solid var(--rule);min-width:0}
+.hl b{display:block;font-family:var(--f-display);font-weight:800;font-size:3rem;line-height:1;font-variant-numeric:lining-nums}
+.hl.you b{color:var(--ochre)}
+.hl p{font-size:.93rem;color:var(--muted);margin-top:6px}
+.wx{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:28px;align-items:end}
+@media (max-width:820px){.wx{grid-template-columns:minmax(0,1fr)}}
+.months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end;border-bottom:1px solid var(--ink)}
+.mo{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;background:none;border:0;cursor:pointer;padding:0 0 6px;min-width:0}
+.mo .t{font-family:var(--f-mono);font-size:.68rem;color:var(--muted)}
+.mo .bar{width:100%;max-width:34px;background:var(--land-2);border-radius:2px 2px 0 0;transition:background .2s}
+.mo:hover .bar{background:var(--muted)}
+.mo.on .bar{background:var(--ochre)}
+.mo.on .t{color:var(--ink);font-weight:600}
+.mo .cr{display:flex;gap:2px;height:5px}
+.mo .cr i{width:4px;height:5px;background:var(--stamp);opacity:.7}
+.mo .ab{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.04em;text-transform:uppercase}
+.mo.on .ab{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.mod h4{font-family:var(--f-display);font-weight:700;font-size:2.3rem;line-height:1}
+.mod dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:12px 0}
+.mod dt{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.mod dd{margin:0}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.day{border-top:4px solid var(--line-a);padding-top:12px;min-width:0}
+.day:nth-child(2){border-color:var(--line-b)}.day:nth-child(3){border-color:var(--line-c)}.day:nth-child(4){border-color:var(--stamp)}.day:nth-child(5){border-color:var(--ochre)}.day:nth-child(6){border-color:var(--ink)}
+.day h4{font-family:var(--f-display);font-weight:600;font-size:1.25rem;line-height:1.15;margin:4px 0 10px}
+.day ol{padding-left:20px;display:grid;gap:4px;font-size:.94rem}
+.day .x{font-size:.9rem;color:var(--muted)}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}
+.btn{font-size:.9rem;font-weight:600;padding:10px 16px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer;border-radius:2px;text-decoration:none;display:inline-block}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ochre-soft)}
+.toast{font-family:var(--f-mono);font-size:.74rem;color:var(--ok)}
+.calcf{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;margin-bottom:16px}
+.fld label{display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fld select,.fld input{width:100%;font:500 1rem var(--f-body);color:var(--ink);background:var(--card);border:1px solid var(--rule);padding:9px 10px;border-radius:2px;min-width:0}
+.seg{display:flex;border:1px solid var(--rule);background:var(--card)}
+.seg label{flex:1;text-align:center;padding:9px 6px;cursor:pointer;font-size:.9rem;border-right:1px solid var(--rule);margin:0;text-transform:none;letter-spacing:0;font-family:var(--f-body);color:var(--ink)}
+.seg label:last-child{border-right:0}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:var(--ink);color:var(--paper)}
+.seg label:has(input:focus-visible){outline:2px solid var(--stamp);outline-offset:-2px}
+.btot{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline;margin-bottom:14px}
+.btot b{font-family:var(--f-display);font-weight:800;font-size:3rem;line-height:1}
+.stack{display:flex;height:14px;margin:6px 0 12px;overflow:hidden;border-radius:2px}
+.stack span{display:block;height:100%}
+.bl{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 10px;align-items:center;font-size:.92rem}
+.bl i{width:10px;height:10px;display:inline-block}
+.bl .v{font-variant-numeric:tabular-nums;font-weight:600;text-align:right}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));border-top:1px solid var(--rule)}
+.prices div{display:flex;justify-content:space-between;gap:10px;padding:9px 14px 9px 0;border-bottom:1px solid var(--rule);font-size:.92rem}
+.prices b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.mx{border-collapse:collapse;font-size:.86rem;min-width:560px;width:100%}
+.mx th,.mx td{padding:9px 8px;border:1px solid var(--rule);text-align:center;font-variant-numeric:tabular-nums}
+.mx th{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mx td.d{color:var(--muted)}
+.ev{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.ev li{display:grid;grid-template-columns:90px 120px minmax(0,1fr) auto;gap:6px 16px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+@media (max-width:700px){.ev li{grid-template-columns:minmax(0,1fr) auto}.ev .em,.ev .ed{grid-column:1/2}}
+.ev li.now{background:var(--ochre-soft)}
+.ev .em{font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ev .ed{font-weight:600;font-size:.92rem}
+.ev .en b{display:block}
+.ev .en span{font-size:.9rem;color:var(--muted)}
+.ev .et{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;color:var(--stamp);border:1px solid currentColor;padding:1px 6px;border-radius:3px}
+.dt{border-top:1px solid var(--ink);padding-top:12px;min-width:0}
+.dt h4{font-family:var(--f-display);font-weight:700;font-size:1.45rem;line-height:1.1}
+.dt p{margin:4px 0 10px;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.84rem;padding:5px 10px;border:1px solid var(--rule);background:var(--card);border-radius:999px;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:var(--on-ochre)}
+
+/* konaklama ve haritalar */
+.rmap{width:100%;height:auto;display:block;max-width:100%;border:1px solid var(--rule)}
+.rm-bg{fill:var(--paper-2)}
+.rm-bg.su,.rr-bg.su,.rm-deniz,.rr-deniz{fill:var(--river)}
+.rm-kara,.rr-kara{fill:var(--paper-2)}
+.rm-river{fill:none;stroke:var(--river);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.rm-line{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.rm-a{stroke:var(--line-a)}.rm-b{stroke:var(--line-b)}.rm-c{stroke:var(--line-c)}
+.rm-dash{stroke-dasharray:6 5}
+.rm-st{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+.rm-stl{font:500 10px var(--f-mono);fill:var(--ink)}
+.rm-lm{font:600 9px var(--f-mono);letter-spacing:.12em;fill:var(--muted);text-anchor:middle}
+.rm-p{fill:var(--muted);opacity:.55}
+.rm-area{fill:var(--stamp);fill-opacity:.1;stroke:var(--stamp);stroke-width:1.2;cursor:pointer}
+.rm-area.on{fill-opacity:.25;stroke-width:2.6}
+.rm-al{font:600 10px var(--f-body);fill:var(--ink);text-anchor:middle;pointer-events:none}
+.rm-spoke{stroke:var(--stamp);stroke-width:1.2;stroke-opacity:.6;stroke-dasharray:3 3}
+.rm-pl{fill:var(--ochre);stroke:var(--ink);stroke-width:1.4}
+.rm-n{font:700 9px var(--f-mono);fill:var(--on-ochre);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.rm-route{fill:none;stroke-width:2.4;stroke-dasharray:5 4;stroke-linejoin:round}
+.rm-base{fill:var(--ink);stroke:var(--paper);stroke-width:2}
+.rm-ft{stroke:var(--ink);stroke-width:2.2;stroke-dasharray:5 4}
+.rm-f{fill:var(--ink)}.rm-t{fill:var(--stamp)}
+.rm-ftl{font:600 11px var(--f-body);fill:var(--ink)}
+.kmap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.kmap{grid-template-columns:minmax(0,1fr)}}
+.rank{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.rank li{border-bottom:1px solid var(--rule)}
+.rank button{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) auto;gap:12px;align-items:center;width:100%;background:none;border:0;padding:11px 0;cursor:pointer;text-align:left}
+.rank button:hover{background:var(--ochre-soft)}
+.rank .on button{background:var(--ochre-soft)}
+.rank .nm{font-weight:600;font-size:.95rem}
+.rank .best{display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.08em;color:var(--stamp);text-transform:uppercase}
+.rank .tr{height:8px;background:var(--paper-2);position:relative}
+.rank .tr i{position:absolute;inset:0 auto 0 0;background:var(--stamp);opacity:.75}
+.rank .v{font-variant-numeric:tabular-nums;font-size:.9rem;white-space:nowrap}
+.areas{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.ar{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) minmax(0,220px);gap:14px 28px;padding-block:20px;border-bottom:1px solid var(--rule)}
+@media (max-width:900px){.ar{grid-template-columns:minmax(0,1fr)}}
+.ar h4{font-family:var(--f-display);font-weight:700;font-size:1.45rem;line-height:1.1}
+.ar .for{font-size:.9rem;color:var(--muted);margin-top:4px}
+.ar .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.ar .tags span{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--rule);padding:1px 6px}
+.ar .pm{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.ar .side{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.ar .price{font-family:var(--f-display);font-weight:700;font-size:1.3rem}
+.ar.here{background:linear-gradient(90deg,var(--ochre-soft),transparent 70%)}
+
+/* ulaşım */
+.verdicts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:22px;margin-top:30px}
+.vd{border-top:1px solid var(--ink);padding-top:12px;min-width:0}
+.vd .stamp{position:static;transform:rotate(-4deg);display:inline-flex;margin:10px 0 10px 4px;padding:6px 12px;box-shadow:none;border-width:2.5px;border-radius:8px}
+.vd .stamp .s2{font-size:1.35rem}
+.vd p{font-size:.93rem;color:var(--muted)}
+.cout{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));border-top:1px solid var(--ink)}
+.cm{padding:12px 14px 14px 0;border-bottom:1px solid var(--rule);min-width:0}
+.cm b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1.1;font-variant-numeric:lining-nums}
+.cm small{display:block;font-size:.84rem;color:var(--muted);margin-top:4px}
+.cm.win b{color:var(--ochre)}
+.rec{margin-top:14px;font-size:1rem}
+.rec b{font-weight:700}
+.lines{display:grid;gap:14px}
+.ln{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.ln .sq{width:44px;height:44px;display:grid;place-items:center;color:var(--on-line);font-family:var(--f-mono);font-weight:700;font-size:1.2rem;border-radius:4px}
+.ln p{font-size:.94rem}
+.ln b{display:block}
+
+/* yerel */
+.pasta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0;border-top:1px solid var(--ink)}
+.pasta div{padding:14px 18px 16px 0;border-bottom:1px solid var(--rule);min-width:0}
+.pasta h4{font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.4rem}
+.pasta p{font-size:.92rem;color:var(--muted);margin-top:4px}
+.pasta .pork{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--bad);margin-top:8px;display:block}
+.pasta .safe{color:var(--ok)}
+.phr{width:100%;border-collapse:collapse;min-width:520px}
+.phr td{padding:10px 12px 10px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+.phr td:first-child{font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.15rem}
+.phr td:nth-child(2){font-family:var(--f-mono);font-size:.82rem;color:var(--stamp)}
+
+/* bilgi */
+.chk{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px}
+.chk>div{min-width:0}
+.chk label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--rule);cursor:pointer;font-size:.95rem}
+.chk input{accent-color:var(--ochre);width:17px;height:17px;margin-top:2px;flex:none}
+.chk label:has(input:checked) span{text-decoration:line-through;color:var(--muted)}
+.scams{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 28px;counter-reset:sc}
+.scams li{padding:14px 0 16px;border-top:1px solid var(--rule);min-width:0;counter-increment:sc}
+.scams b{display:block;font-size:1.02rem;margin-bottom:4px}
+.scams b::before{content:counter(sc,decimal-leading-zero);font-family:var(--f-mono);font-size:.7rem;color:var(--bad);margin-right:10px;letter-spacing:.06em}
+.scams p{font-size:.93rem;color:var(--muted)}
+.scams .do{color:var(--ink);margin-top:6px}
+.emg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));border-top:1px solid var(--ink)}
+.emg div{padding:12px 14px 14px 0;border-bottom:1px solid var(--rule)}
+.emg b{display:block;font-family:var(--f-display);font-weight:800;font-size:2rem;line-height:1.1;font-variant-numeric:lining-nums;user-select:all}
+
+/* benim roma'm */
+.rsum{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline;margin-top:24px;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.rsum b{font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1}
+.rsum span{color:var(--muted)}
+.rgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:24px;align-items:start}
+@media (max-width:900px){.rgrid{grid-template-columns:minmax(0,1fr)}}
+.dline{--c:var(--line-a);margin-bottom:26px}
+.dline.l-b{--c:var(--line-b)}.dline.l-c{--c:var(--line-c)}.dline.l-s{--c:var(--stamp)}
+.dline header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px}
+.dline header .dn{display:inline-grid;place-items:center;min-width:30px;height:24px;padding:0 6px;background:var(--c);color:var(--on-line);font-family:var(--f-mono);font-size:.74rem;font-weight:700;border-radius:3px;margin-right:8px}
+.dline header .dh{font-family:var(--f-display);font-weight:600;font-size:1.2rem}
+.dline ol{list-style:none;padding:0 0 0 22px;position:relative}
+.dline ol::before{content:"";position:absolute;left:7px;top:18px;bottom:18px;width:5px;background:var(--c);border-radius:3px}
+.dline li{position:relative;padding:6px 0}
+.dline li::before{content:"";position:absolute;left:-21px;top:16px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3.5px solid var(--c);box-sizing:border-box}
+.dline li.done::before{background:var(--c)}
+.dline .leg{display:block;font-family:var(--f-mono);font-size:.68rem;color:var(--muted);letter-spacing:.03em;min-height:1em}
+.dline .st{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.dline .st label{display:flex;gap:8px;align-items:baseline;cursor:pointer;font-weight:600}
+.dline .st input{accent-color:var(--ochre)}
+.dline li.done .nm{text-decoration:line-through;color:var(--muted)}
+.dline .rm{margin-left:auto;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;background:none;border:0;color:var(--muted);cursor:pointer;padding:4px 0;text-decoration:underline}
+.empty{padding:28px;border:1px dashed var(--muted);text-align:left}
+.empty b{display:block;font-family:var(--f-display);font-size:1.4rem;margin-bottom:6px}
+
+footer{border-top:1px solid var(--rule);padding-block:28px 40px;font-size:.86rem;color:var(--muted)}
+footer p{max-width:80ch;margin-bottom:6px}
+.credits{font-size:.76rem;margin-top:14px;max-width:none!important}
+
+/* ===== v4 · canlı tatil katmanı ===== */
+[data-sec="vize"],[data-nav="vize"]{--cc:var(--sky);--on-cc:var(--white);--cc-ink:var(--sky-ink)}
+[data-sec="kesfet"],[data-nav="kesfet"]{--cc:var(--aperol);--on-cc:var(--navy);--cc-ink:var(--aperol-ink)}
+[data-sec="planla"],[data-nav="planla"]{--cc:var(--sun);--on-cc:var(--navy);--cc-ink:var(--sun-ink)}
+[data-sec="konaklama"],[data-nav="konaklama"]{--cc:var(--pink);--on-cc:var(--navy);--cc-ink:var(--pink-ink)}
+[data-sec="havalimani"],[data-nav="havalimani"]{--cc:var(--teal);--on-cc:var(--white);--cc-ink:var(--teal-ink)}
+[data-sec="ulasim"],[data-nav="ulasim"]{--cc:var(--pista);--on-cc:var(--navy);--cc-ink:var(--pista-ink)}
+[data-sec="yerel"],[data-nav="yerel"]{--cc:var(--campari);--on-cc:var(--white);--cc-ink:var(--campari-ink)}
+[data-sec="bilgi"],[data-nav="bilgi"]{--cc:var(--glicine);--on-cc:var(--navy);--cc-ink:var(--glicine-ink)}
+[data-sec="rotam"],[data-nav="rotam"]{--cc:var(--aperol);--on-cc:var(--navy);--cc-ink:var(--aperol-ink)}
+body{font-size:16.5px}
+:focus-visible{outline:3px solid var(--sky-ink);outline-offset:2px}
+.lab{font-family:var(--f-body);font-weight:700;letter-spacing:.08em}
+
+/* tente */
+.awning{height:30px;background:repeating-linear-gradient(90deg,var(--awning-1) 0 40px,var(--awning-2) 40px 80px);
+  -webkit-mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x;
+  mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x}
+.top{padding-block:12px 14px;flex-wrap:wrap;row-gap:8px}
+.brand{flex-wrap:wrap;row-gap:0}
+.brand b{font-family:var(--f-display);font-style:normal;font-weight:800;font-size:1.8rem;letter-spacing:-.035em}
+.brand b::after{content:"";display:inline-block;width:.3em;height:.3em;border-radius:50%;background:var(--sun);margin-left:.06em}
+.brand .lab{font-family:var(--f-hand);font-size:1.3rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--aperol-ink)}
+.proto{font-family:var(--f-body);font-weight:700;border:0;background:var(--ochre-soft);color:var(--ink);border-radius:999px;padding:5px 12px}
+
+/* kapak */
+.hero{isolation:isolate;overflow:hidden;background:linear-gradient(180deg,rgba(8,22,48,.22),rgba(8,22,48,0) 35%),url(/seyyah-site/varlik/img/napoli/hero.jpg) center 42%/cover no-repeat,var(--hero-bg)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24px;background:var(--paper);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 12Q24 0 48 12T96 12V24H0Z'/%3E%3C/svg%3E") 0 0/96px 24px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 12Q24 0 48 12T96 12V24H0Z'/%3E%3C/svg%3E") 0 0/96px 24px repeat-x;z-index:1}
+.hero-in{padding-block:clamp(30px,5vw,64px) clamp(52px,7vw,84px)}
+@media (max-width:900px){.hero-in{padding-top:150px}}
+.hero-in>div:first-child{position:relative;background:var(--hero-bg);color:var(--on-photo);border-radius:28px;padding:clamp(22px,3.4vw,40px);box-shadow:0 24px 60px rgba(8,25,60,.35)}
+.hero-in>div:first-child::before{content:"";position:absolute;z-index:-1;top:-58px;right:-58px;width:156px;height:156px;border-radius:50%;
+  background:radial-gradient(circle,var(--sun) 0 33%,transparent 34%),repeating-conic-gradient(var(--sun) 0 7deg,transparent 7deg 20deg);animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+.hello{font-family:var(--f-hand);font-weight:700;font-size:clamp(1.8rem,3.2vw,2.4rem);line-height:1;color:var(--sun);transform:rotate(-5deg);transform-origin:left bottom;margin-bottom:8px}
+.h-title{font-family:var(--f-display);font-weight:800;font-size:clamp(4.8rem,12.5vw,9.4rem);line-height:.82;letter-spacing:-.055em;color:var(--white);text-shadow:.045em .045em 0 var(--aperol);margin-block:10px 14px;animation:pop .8s cubic-bezier(.2,.9,.3,1.35) both}
+@keyframes pop{0%{transform:scale(.88) rotate(-3deg)}100%{transform:none}}
+.h-coord{font-family:var(--f-body);font-weight:600;font-size:.84rem;letter-spacing:.02em}
+.h-lead{color:var(--white)}
+.now{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.now span{background:var(--glass);border-radius:999px;padding:6px 13px;font-size:.88rem;font-weight:600;color:var(--white)}
+.now b{color:var(--sun);font-variant-numeric:tabular-nums}
+.pfields{border-radius:18px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--sun)}
+.pf label{font-family:var(--f-body);font-weight:700}
+.mapbox{border:8px solid var(--card);border-radius:18px;transform:rotate(1.4deg);box-shadow:0 24px 50px rgba(8,25,60,.35)}
+.maptoggle{font-family:var(--f-body);font-weight:700;letter-spacing:.02em;text-transform:none;font-size:.82rem;background:var(--sun);color:var(--navy);border:2px solid var(--navy);border-radius:999px;padding:6px 12px}
+.mapcap{display:inline-block;background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font-family:var(--f-body);font-weight:600;font-size:.84rem;margin-top:18px;box-shadow:0 6px 18px rgba(8,25,60,.25)}
+.cty.it{fill:var(--aperol)}
+.arc{stroke:var(--pink-ink);stroke-width:2.2}
+.cdot.rm{fill:var(--campari)}
+.clab{font-family:var(--f-body);font-weight:800}
+.stamp .s2{font-family:var(--f-display);font-style:normal;font-weight:800}
+.stamp .s1,.stamp .s3{font-family:var(--f-body);font-weight:800}
+.facts{gap:10px;padding-block:20px 6px}
+.fact{border-radius:16px;padding:11px 14px;background:color-mix(in srgb,var(--fc) var(--tint),var(--paper))}
+.fact:nth-child(6n+1){--fc:var(--sky)}.fact:nth-child(6n+2){--fc:var(--sun)}.fact:nth-child(6n+3){--fc:var(--pink)}.fact:nth-child(6n+4){--fc:var(--pista)}.fact:nth-child(6n+5){--fc:var(--aperol)}.fact:nth-child(6n){--fc:var(--glicine)}
+
+/* sekmeler */
+.nav{border-block:0;box-shadow:0 1px 0 var(--rule),0 10px 22px -16px var(--shadow)}
+.nav ol{gap:4px;padding-block:8px}
+.nav a{padding:9px 15px;border-radius:999px;border-bottom:0;color:var(--ink);font-weight:700;font-size:.92rem;transition:background .2s}
+.nav a::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--cc);flex:none}
+.nav a:hover{background:color-mix(in srgb,var(--cc) 18%,transparent);color:var(--ink)}
+.nav a[aria-current="page"]{background:var(--cc);color:var(--on-cc)}
+.nav a[aria-current="page"]::before{background:var(--on-cc)}
+.nav .badge{font-family:var(--f-body);background:var(--campari);color:var(--white)}
+
+/* bölüm kapakları */
+.ch-head{min-height:clamp(270px,34vw,430px);border-radius:28px;padding:clamp(14px,2.4vw,28px);align-items:flex-start;
+  background:linear-gradient(180deg,rgba(8,20,40,0) 55%,rgba(8,20,40,.25) 100%),var(--img,none) center/cover no-repeat,var(--cc)}
+.ch-head>div{background:var(--cc);color:var(--on-cc);border-radius:22px;padding:clamp(16px,2.4vw,26px) clamp(18px,2.8vw,30px);max-width:min(100%,660px);box-shadow:0 18px 40px rgba(8,20,40,.3);transform:rotate(-.8deg)}
+.ch-head .lab{font-family:var(--f-hand);font-size:1.6rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--on-cc);line-height:1}
+.ch h2{font-weight:800;letter-spacing:-.04em;font-size:clamp(2.1rem,5vw,3.8rem);color:var(--on-cc)}
+.ch-lead{color:var(--on-cc)}
+.ctile{border-radius:18px;background:var(--img,none) center/cover no-repeat,var(--paper-2);box-shadow:0 8px 18px -10px var(--shadow);transition:transform .25s cubic-bezier(.2,.9,.3,1.4),box-shadow .25s}
+.ctile span{margin:8px;padding:5px 11px 5px 9px;background:var(--card);color:var(--ink);border-radius:12px;font-size:.8rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.ctile span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tc);flex:none}
+.ctile:nth-child(6n+1){--tc:var(--sky)}.ctile:nth-child(6n+2){--tc:var(--aperol)}.ctile:nth-child(6n+3){--tc:var(--pista)}.ctile:nth-child(6n+4){--tc:var(--pink)}.ctile:nth-child(6n+5){--tc:var(--sun)}.ctile:nth-child(6n){--tc:var(--glicine)}
+.ctile:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 16px 26px -12px var(--shadow)}
+.ctile:nth-child(even):hover{transform:translateY(-4px) rotate(1.5deg)}
+.ctile[aria-selected="true"]{outline:4px solid var(--cc);outline-offset:3px}
+.ctile[aria-selected="true"] span{background:var(--cc);color:var(--on-cc)}
+.ctile[aria-selected="true"] span::before{background:var(--on-cc)}
+
+/* başlıklar, sekmeler, düğmeler */
+.sub>h3{font-weight:800;letter-spacing:-.03em;display:table;padding-inline:3px;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--cc) 40%,transparent) 58% 94%,transparent 94%)}
+h4.mini{font-family:var(--f-body);font-weight:800;color:var(--cc-ink)}
+.tab{border:2px solid var(--rule);font-weight:600}
+.tab:hover{border-color:var(--cc)}
+.tab[aria-selected="true"]{background:var(--cc);color:var(--on-cc);border-color:var(--cc)}
+.btn{background:var(--sun);color:var(--navy);border:2px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font-weight:700;transition:transform .15s,box-shadow .15s}
+.btn:hover{background:var(--sun);color:var(--navy);transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.ghost{background:var(--card);color:var(--ink)}
+.btn.ghost:hover{background:var(--ochre-soft);color:var(--ink)}
+.add{border:2px solid var(--ink);border-radius:999px;font-weight:700}
+.add:hover{background:var(--ochre-soft)}
+.add[aria-pressed="true"]{background:var(--pista);border-color:var(--ink);color:var(--navy)}
+.next{font-family:var(--f-display);font-style:normal;font-weight:800;font-size:1.2rem;border:2px solid var(--ink);border-radius:999px;padding:12px 22px;background:var(--cc);color:var(--on-cc);box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.next:hover{color:var(--on-cc);transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.chip{border-width:2px;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--cc);border-color:var(--cc);color:var(--on-cc)}
+.tk{font-family:var(--f-body);font-weight:800;border-radius:999px;border-width:1.5px;padding:1px 8px}
+.tmp{font-family:var(--f-body);font-weight:700;border-radius:999px}
+
+/* renkli çizgiler ve kutular */
+.places,.tbl,.howlong,.ev,.rank,.areas,.cout,.pasta,.emg,.links,.vd,.dt,.rsum{border-color:var(--cc)}
+.places,.tbl,.howlong,.ev,.rank,.areas,.cout,.pasta,.emg,.vd,.dt{border-top-width:3px}
+.tbl th{font-family:var(--f-body);font-weight:800;color:var(--ink);background:color-mix(in srgb,var(--cc) 13%,var(--card))}
+.tbl th:first-child,.tbl td:first-child{padding-left:12px}
+.tbl .rec td{background:color-mix(in srgb,var(--sun) 22%,var(--card))}
+.vp{border:2px solid var(--ink);border-radius:24px;box-shadow:7px 7px 0 var(--cc)}
+.vp h3{font-weight:800;letter-spacing:-.02em}
+.panel{border-radius:20px;border:2px solid color-mix(in srgb,var(--cc) 35%,var(--rule))}
+.steps{border-top:0;gap:12px}
+.steps li{border:0;border-radius:20px;padding:16px 18px;background:color-mix(in srgb,var(--cc) 11%,var(--card))}
+.steps li::before{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--cc);color:var(--on-cc);font-size:1.35rem;margin-bottom:10px}
+.pl h4{font-weight:750;letter-spacing:-.02em}
+.pl .it,.meta dt,.tbl th,.mx th,.ev .em,.mo .t,.mo .ab,.links span,.rank .best,.ar .tags span,.dline .leg,.dline .rm,.fld label,.pf label{font-family:var(--f-body)}
+.pl .ph b{color:var(--cc-ink)}
+.hl b,.btot b,.rsum b,.cm b,.emg b,.mod h4{letter-spacing:-.03em}
+.hl.you b,.cm.win b,.emg b,.rsum b,.btot b{color:var(--cc-ink)}
+.mo .bar{background:color-mix(in srgb,var(--sky) 28%,var(--paper))}
+.mo:hover .bar{background:color-mix(in srgb,var(--sky) 55%,var(--paper))}
+.mo.on .bar{background:var(--aperol)}
+.ev li.now{background:color-mix(in srgb,var(--sun) 22%,var(--card))}
+.ev .et{font-family:var(--f-body);font-weight:800;border-radius:999px;color:var(--cc-ink)}
+.rmap{border:2px solid var(--rule);border-radius:20px}
+.ar.here{background:linear-gradient(90deg,color-mix(in srgb,var(--cc) 20%,var(--card)),transparent 75%)}
+.rank button:hover,.rank .on button{background:color-mix(in srgb,var(--cc) 16%,var(--card))}
+.vd .stamp .s2{font-style:normal}
+.pasta h4{font-family:var(--f-hand);font-style:normal;font-weight:700;font-size:2rem;line-height:1;color:var(--cc-ink)}
+.phr td:first-child{font-family:var(--f-hand);font-style:normal;font-weight:700;font-size:1.55rem}
+.phr td:nth-child(2){font-family:var(--f-body);font-weight:600;color:var(--cc-ink)}
+.chk input,.dline .st input{accent-color:var(--aperol)}
+.planbar{background:var(--hero-bg);color:var(--white);border-radius:18px 18px 0 0;box-shadow:0 -10px 30px -18px var(--shadow)}
+.planbar a,.planbar .lab{color:var(--white)}
+.empty{border:2px dashed var(--cc);border-radius:20px;background:color-mix(in srgb,var(--cc) 8%,var(--card))}
+footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin-top:24px;padding-block:30px 40px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* v5: net rota haritası */
+.dline{--c:var(--day-1);--on-c:var(--on-day)}
+.dline.l-b{--c:var(--day-2)}.dline.l-c{--c:var(--day-3)}.dline.l-s{--c:var(--day-4);--on-c:var(--on-day-4)}
+.dline header .dn{color:var(--on-c);border-radius:999px;padding:0 10px;font-family:var(--f-body);font-weight:800}
+.dline ol{padding-left:36px}
+.dline ol::before{left:9.5px}
+.dline li::before{content:attr(data-n);left:-36px;top:11px;width:24px;height:24px;border:0;background:var(--c);color:var(--on-c);display:grid;place-items:center;font:800 .72rem/1 var(--f-body);box-shadow:0 0 0 3px var(--paper)}
+.dline li.done::before{content:"✓";background:var(--paper);color:var(--c);box-shadow:inset 0 0 0 2.5px var(--c),0 0 0 3px var(--paper)}
+.dline li.hl .nm{background:color-mix(in srgb,var(--c) 24%,transparent);border-radius:4px;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 24%,transparent)}
+@media (min-width:901px){#rmapBox{position:sticky;top:72px}}
+.rmapw{display:grid;gap:12px;min-width:0}
+.rchips{display:flex;flex-wrap:wrap;gap:6px}
+.rchip{--c:var(--ink);--on-c:var(--paper);display:inline-flex;align-items:center;gap:7px;font:700 .84rem/1 var(--f-body);padding:8px 13px;border-radius:999px;border:2px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer}
+.rchip i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.rchip:hover{border-color:var(--c)}
+.rchip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--on-c)}
+.rchip[aria-pressed="true"] i{background:currentColor}
+.rr-bg{fill:var(--paper-2)}
+.rr-park{fill:var(--park)}
+.rr-parkl{font:italic 600 11px var(--f-body);fill:var(--park-ink);text-anchor:middle}
+.rr-river{fill:none;stroke:var(--river);stroke-width:13;stroke-linecap:round;stroke-linejoin:round}
+.rr-riverl{font:italic 700 11px var(--f-body);fill:var(--sky-ink)}
+.rr-metro{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.35}
+.rr-hood{font:700 9.5px var(--f-body);letter-spacing:.16em;fill:var(--muted);text-anchor:middle}
+.rr-case{fill:none;stroke:var(--paper-2);stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.rr-leg{fill:none;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}
+.rr-arw{fill:none;stroke:var(--paper-2);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rr-day,.rr-mk,.rr-lbl{transition:opacity .2s}
+.rr .dim{opacity:.18}
+.rr-pin{stroke:var(--paper-2);stroke-width:3}
+.rr-num{font:800 12px var(--f-body);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.rr-mk.hl .rr-pin{stroke:var(--ink);stroke-width:3.5}
+.rr-lbl{font:700 12.5px var(--f-body);fill:var(--ink);paint-order:stroke;stroke:var(--paper-2);stroke-width:4px;stroke-linejoin:round}
+.rr-lbl.hl{text-decoration:underline}
+.rr-hb{fill:var(--ink)}.rr-hi{fill:var(--paper)}
+.rr-scb{fill:var(--paper);fill-opacity:.92;stroke:var(--rule)}
+.rr-scl{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.rr-sct{font:700 10.5px var(--f-body);fill:var(--ink)}
+.rleg{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--muted)}
+.rleg li{display:flex;align-items:center;gap:7px}
+.rleg .sw{width:22px;height:6px;border-radius:3px;background:var(--c)}
+.rleg .sw.far{background:repeating-linear-gradient(90deg,var(--c) 0 5px,transparent 5px 9px)}
+.rleg .hs{width:14px;height:14px;border-radius:4px;background:var(--ink)}
+.rleg .mt{width:22px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--line-a) 0 33%,var(--line-b) 33% 66%,var(--line-c) 66%);opacity:.5}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.4" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="c"/><feDisplacementMap in="c" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+
+<div class="awning" aria-hidden="true"></div>
+<header class="wrap top">
+  <a class="brand" href="/seyyah-site/"><b>Seyyah</b><span class="lab">seyahat dosyaları</span></a>
+  <span class="proto">Napoli dosyası</span>
+</header>
+
+<section class="hero" aria-label="Napoli dosyası">
+  <div class="wrap hero-in">
+    <div>
+      <p class="lab">Seyahat dosyası · İtalya · Campania</p>
+      <p class="hello">Ciao! Benvenuto a</p>
+      <h1 class="h-title">Napoli</h1>
+      <p class="h-coord">40°51′ K · 14°15′ D · ≈ 2.500 yaşında</p>
+      <p class="h-lead">Pizzanın, Vezüv'ün ve İtalya'nın en canlı sokaklarının şehri için gereken her şey tek dosyada: Pompeii, Capri ve Amalfi günleri, yeraltı turları, metro ve füniküler, nerede kalınır.</p>
+      <p class="now" id="romeNow"><span>Napoli'de saat <b id="rnT">--:--</b></span><span id="rnV">Kışın İstanbul'dan 2 saat geri</span><span>Gün batımı <b id="rnS">--:--</b></span></p>
+      <div class="pfields" role="group" aria-label="Pasaport bilgileri">
+        <div class="pf"><label for="nat">Uyruğu <i>/ Nationality</i></label><div class="sel"><select id="nat">
+          <option value="TR" selected>Türkiye</option>
+          <option value="EU">AB ülkesi vatandaşı</option>
+          <option value="AZ">Azerbaycan</option>
+          <option value="XX">Diğer ülkeler</option>
+        </select></div></div>
+        <div class="pf"><label for="ptype">Pasaport türü <i>/ Type</i></label><div class="sel"><select id="ptype">
+          <option value="bordo" selected>Bordo · umuma mahsus</option>
+          <option value="yesil">Yeşil · hususi</option>
+          <option value="gri">Gri · hizmet</option>
+          <option value="siyah">Siyah · diplomatik</option>
+        </select></div></div>
+        <div class="pf pf-wide"><label for="dest">Varış <i>/ Destination</i></label>
+          <input id="dest" list="cities" value="Napoli, İtalya" autocomplete="off" spellcheck="false">
+          <datalist id="cities"><option value="Roma, İtalya"><option value="Floransa, İtalya"><option value="Venedik, İtalya"><option value="Milano, İtalya"><option value="Napoli, İtalya"><option value="Paris, Fransa"><option value="Barselona, İspanya"><option value="Amsterdam, Hollanda"><option value="Prag, Çekya"><option value="Viyana, Avusturya"><option value="Atina, Yunanistan"><option value="Londra, Birleşik Krallık"><option value="Belgrad, Sırbistan"><option value="Tokyo, Japonya"><option value="New York, ABD"></datalist>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="mapbox">
+        <svg id="world" viewBox="0 -61 900 562.5" role="img" aria-label="Dünya haritası. İtalya işaretli, İstanbul'dan Napoli'ye uçuş rotası çizili."></svg>
+        <p id="mapFallback" class="mapfb" hidden>Harita yüklenemedi. Gideceğin şehri varış alanından seçebilirsin.</p>
+        <button class="maptoggle" id="mapToggle" type="button">Dünyayı gör</button>
+        <div class="stamp" id="stamp" aria-live="polite"><span class="s1">İtalya · Schengen</span><span class="s2">Vize gerekli</span><span class="s3">C tipi · iDATA</span></div>
+      </div>
+      <p class="mapcap" id="mapCap" aria-live="polite">İstanbul → Napoli · uçuş ≈ 2 sa 15 dk · haritada bir ülkeye dokun</p>
+    </div>
+  </div>
+</section>
+<div class="wrap"><div class="facts">
+      <div class="fact"><span class="lab">Uçuş</span><b>İstanbul ≈ 2 sa 15 dk</b></div>
+      <div class="fact"><span class="lab">Saat farkı</span><b>2 sa geri · yazın 1</b></div>
+      <div class="fact"><span class="lab">Para</span><b>Euro (€)</b></div>
+      <div class="fact"><span class="lab">Priz</span><b>C · F · L, 230 V</b></div>
+      <div class="fact"><span class="lab">Dil</span><b>İtalyanca, Napolice</b></div>
+      <div class="fact"><span class="lab">Acil</span><b>112</b></div>
+    </div></div>
+
+<nav class="nav" aria-label="Napoli dosyası bölümleri">
+  <div class="wrap nav-in" id="metroIn">
+    <ol>
+      <li><a href="#vize" data-nav="vize">Vize ve giriş</a></li>
+      <li><a href="#kesfet" data-nav="kesfet">Keşfet</a></li>
+      <li><a href="#planla" data-nav="planla">Planla</a></li>
+      <li><a href="#konaklama" data-nav="konaklama">Konaklama</a></li>
+      <li><a href="#havalimani" data-nav="havalimani">Havalimanı</a></li>
+      <li><a href="#ulasim" data-nav="ulasim">Ulaşım</a></li>
+      <li><a href="#yerel" data-nav="yerel">Yerel yaşam</a></li>
+      <li><a href="#bilgi" data-nav="bilgi">Bilmen gerekenler</a></li>
+      <li class="mine"><a href="#rotam" data-nav="rotam">Benim Napoli'm <span class="badge" id="navBadge">0</span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<main id="chapters">
+
+<!-- 01 VİZE -->
+<section class="ch wrap" data-sec="vize" aria-labelledby="h-vize">
+  <header class="ch-head"><div><p class="lab">Vize ve giriş</p><h2 id="h-vize">Napoli'ye giriş izni</h2><p class="ch-lead">Uyruğunu ve pasaport türünü yukarıdaki pasaport alanından seç; bu bölüm sana göre değişir.</p></div></header>
+  <div class="vp" id="visaPanel"></div>
+
+  <div id="visaProc">
+    <div class="sub"><h3>Başvuru adım adım</h3><p class="sub-lead">Bordo pasaportlu Türk vatandaşları İtalya vizesini Türkiye'de iDATA üzerinden alır.</p>
+      <ol class="steps">
+        <li><b>Randevu al</b><p>iDATA sitesinden online. Yoğun dönemlerde randevular haftalar önceden doluyor; seyahatten 6–8 hafta önce bakmaya başla. Başvuru en erken 6 ay, en geç 15 gün önce yapılabilir.</p></li>
+        <li><b>Belgeleri hazırla</b><p>Liste aşağıda. Banka dökümü, sigorta ve rezervasyonlardaki tarihler birbiriyle tutarlı olmalı.</p></li>
+        <li><b>Başvuru günü</b><p>iDATA ofisinde belgeler teslim edilir, parmak izi ve fotoğraf alınır. Son 59 ayda parmak izi verdiysen tekrar gerekmeyebilir.</p></li>
+        <li><b>Değerlendirme</b><p>Konsolosluk genelde 15 gün içinde karar verir, gerekirse 45 güne uzar. Durumu iDATA takip sayfasından izle.</p></li>
+        <li><b>Pasaportu teslim al</b><p>Ofisten ya da kargoyla. Vizedeki tarihleri, giriş sayısını (01 ya da MULT) ve kalış gününü hemen kontrol et.</p></li>
+      </ol>
+    </div>
+
+    <div class="sub"><h3>Gerekli belgeler</h3><p class="sub-lead">Herkes için ortak liste ve mesleğine göre ek belgeler. Konsolosluğun güncel listesi esastır.</p>
+      <div class="tabs" role="tablist" aria-label="Meslek" id="docTabs">
+        <button class="tab" type="button" role="tab" data-doc="calisan" aria-selected="true">Çalışan</button>
+        <button class="tab" type="button" role="tab" data-doc="isveren" aria-selected="false">İşveren</button>
+        <button class="tab" type="button" role="tab" data-doc="ogrenci" aria-selected="false">Öğrenci</button>
+        <button class="tab" type="button" role="tab" data-doc="emekli" aria-selected="false">Emekli</button>
+      </div>
+      <div class="g2"><div><h4 class="mini">Herkes için</h4><ul class="ticks" id="docCommon"></ul></div><div><h4 class="mini" id="docProfTitle">Çalışanlar için ek</h4><ul class="ticks b" id="docProf"></ul></div></div>
+    </div>
+
+    <div class="sub g2">
+      <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Başvuru ücretleri</h3>
+        <dl class="kv">
+          <dt>Schengen vize ücreti, yetişkin</dt><dd>90 €</dd>
+          <dt>6–12 yaş</dt><dd>45 €</dd>
+          <dt>6 yaş altı</dt><dd>Ücretsiz</dd>
+          <dt>iDATA hizmet bedeli</dt><dd>Ayrıca ödenir</dd>
+          <dt>Seyahat sağlık sigortası (en az 30.000 € teminat)</dt><dd>≈ 10–25 €</dd>
+        </dl>
+        <p class="note">Hizmet bedelinin güncel tutarı iDATA sitesinde yazar. Sigorta fiyatı temsilidir.</p>
+      </div>
+      <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Tek giriş mi, çok giriş mi?</h3>
+        <ul class="ticks">
+          <li><b>Tek giriş (01):</b> Schengen'e bir kez girersin. Çıktığın an vize biter, günlerin dolmamış olsa bile.</li>
+          <li><b>Çok giriş (MULT):</b> Geçerlilik süresince istediğin kadar girip çıkabilirsin.</li>
+          <li><b>90/180 kuralı:</b> Hangisi olursa olsun, son 180 gün içinde Schengen'de en fazla 90 gün kalabilirsin.</li>
+          <li><b>Kademeli sistem:</b> Önceki vizelerini kurallara uygun kullananlara daha uzun süreli çok girişli vize verilme ihtimali artar. Eski vizelerinin fotokopisini mutlaka ekle.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub g2">
+      <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:6px">Vize istatistikleri <span class="tmp">temsili</span></h3>
+        <p class="sub-lead">Türkiye'deki konsolosluklarda ret oranı, ülkelere göre.</p>
+        <div class="bars" aria-label="Temsili grafik, gerçek veri değil">
+          <div class="brow"><span>İtalya</span><span class="bfill" style="width:38%"></span></div>
+          <div class="brow"><span>Yunanistan</span><span class="bfill" style="width:30%"></span></div>
+          <div class="brow"><span>Almanya</span><span class="bfill" style="width:55%"></span></div>
+          <div class="brow"><span>Fransa</span><span class="bfill" style="width:62%"></span></div>
+          <div class="brow"><span>Hollanda</span><span class="bfill" style="width:74%"></span></div>
+          <div class="brow"><span>İspanya</span><span class="bfill" style="width:48%"></span></div>
+        </div>
+        <p class="note">Çizgili çubuklar yer tutucu. Yayında AB Komisyonu'nun her yıl yayımladığı resmi Schengen istatistikleri gelecek: İstanbul, Ankara ve İzmir için ayrı ayrı başvuru sayısı, ret oranı ve çok girişli vize payı.</p>
+      </div>
+      <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Resmi bağlantılar</h3>
+        <ul class="links">
+          <li><a href="https://www.idata.com.tr" target="_blank" rel="noopener"><b>iDATA · randevu ve başvuru takibi</b><span>idata.com.tr ↗</span></a></li>
+          <li><a href="https://vistoperitalia.esteri.it" target="_blank" rel="noopener"><b>İtalya Dışişleri vize portalı</b><span>vistoperitalia.esteri.it ↗</span></a></li>
+          <li><a href="https://ambankara.esteri.it" target="_blank" rel="noopener"><b>İtalya Ankara Büyükelçiliği</b><span>ambankara.esteri.it ↗</span></a></li>
+          <li><a href="https://consistanbul.esteri.it" target="_blank" rel="noopener"><b>İtalya İstanbul Başkonsolosluğu</b><span>consistanbul.esteri.it ↗</span></a></li>
+          <li><a href="https://home-affairs.ec.europa.eu" target="_blank" rel="noopener"><b>AB Göç ve İçişleri · vize istatistikleri</b><span>home-affairs.ec.europa.eu ↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Pasaport ve sınırda giriş</h3><p class="sub-lead">Vize gereksin ya da gerekmesin, sınırda bunlar geçerli.</p>
+    <ul class="ticks">
+      <li>Pasaport son 10 yıl içinde verilmiş, Schengen'den çıkış tarihinden sonra en az 3 ay geçerli olmalı ve en az 2 boş sayfası bulunmalı.</li>
+      <li>Schengen sınırlarında artık pasaporta damga basılmıyor. Yeni giriş-çıkış sistemi (EES) ilk girişte parmak izini ve yüz fotoğrafını kaydediyor; ilk seferde pasaport sırasına fazladan zaman ayır.</li>
+      <li>Polis dönüş biletini, otel rezervasyonunu, sigortayı ve yeterli parayı sorabilir. Çıktılarını el bagajında tut.</li>
+      <li>90/180 kuralını aşmak sonraki vize başvurularını yakar. Kalış günlerini kendin say.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 KEŞFET -->
+<section class="ch wrap" data-sec="kesfet" aria-labelledby="h-kesfet" hidden>
+  <header class="ch-head"><div><p class="lab" id="kesfetCat">Şehri keşfet</p><h2 id="h-kesfet">Napoli'de nereye gidilir</h2><p class="ch-lead">Her yer için ziyaret süresi, bilet durumu ve en iyi saat. Beğendiğin yeri rotana ekle; kaç gün süreceğini biz hesaplarız.</p></div></header>
+  <div class="sub" style="margin-top:0">
+    <div class="ctiles" role="tablist" aria-label="Kategoriler" id="catTabs"></div>
+    <div id="catBody"></div>
+    <div class="planbar" id="planbar"></div>
+  </div>
+</section>
+
+<!-- 03 PLANLA -->
+<section class="ch wrap" data-sec="planla" aria-labelledby="h-planla" hidden>
+  <header class="ch-head"><div><p class="lab">Seyahatini planla</p><h2 id="h-planla">Ne zaman, kaç gün, ne kadara</h2><p class="ch-lead">Mevsim, gün sayısı, hazır planlar, bütçe ve etkinlikler.</p></div></header>
+
+  <div class="sub"><h3>Napoli kaç günde gezilir?</h3>
+    <div class="howlong">
+      <div class="hl"><span class="lab">Temel</span><b>3 gün</b><p>Tarihi merkez ve yeraltı, Arkeoloji Müzesi, sahil; bir gün Pompeii.</p></div>
+      <div class="hl"><span class="lab">Rahat</span><b>5 gün</b><p>Capri ya da Amalfi kıyısı, Vezüv, Sanità ve Vomero.</p></div>
+      <div class="hl"><span class="lab">Derin</span><b>7+ gün</b><p>Amalfi'de iki gece, Procida ya da Ischia, Paestum tapınakları.</p></div>
+      <div class="hl you" id="hlYou"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Hangi ayda gidilmeli?</h3><p class="sub-lead">En iyi dönemler Nisan–Haziran ile Eylül–Ekim. Temmuz ve Ağustos çok sıcak, Amalfi kıyısı tıklım tıklım; Kasım–Mart arası Amalfi'de otellerin çoğu kapalı. Bir aya dokun: sıcaklık, yağış, kalabalık ve ne giyileceği.</p>
+    <div class="wx">
+      <div><div class="months" id="months" role="group" aria-label="Aylar"></div>
+        <div class="legend"><span><i style="background:var(--land-2)"></i>Ortalama en yüksek sıcaklık</span><span><i style="background:var(--stamp);opacity:.7;width:4px"></i>Turist yoğunluğu (1–5)</span></div></div>
+      <div class="mod" id="moDetail" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Hazır gezi planları</h3><p class="sub-lead">Günler coğrafi olarak gruplanmış; aynı gün içinde yürüyerek ilerlersin.</p>
+    <div class="tabs" role="tablist" aria-label="Gün sayısı" id="tripTabs"></div>
+    <div class="days" id="tripDays"></div>
+    <div class="btnrow"><button class="btn" type="button" id="tripAdd">Bu planı rotama ekle</button><span class="toast" id="tripToast" aria-live="polite"></span></div>
+  </div>
+
+  <div class="sub"><h3>Seyahat tarzına göre</h3>
+    <div class="tabs" role="tablist" aria-label="Seyahat tarzı" id="typeTabs"></div>
+    <div id="typeBody"></div>
+  </div>
+
+  <div class="sub"><h3>Günlük bütçe</h3><p class="sub-lead">Uçak bileti hariç tahmini harcama. TL karşılığı yayında canlı kurla gösterilecek.</p>
+    <div class="g2">
+      <div>
+        <div class="calcf">
+          <div class="fld"><label for="bDays">Gün</label><input id="bDays" type="number" min="1" max="21" value="3"></div>
+          <div class="fld"><label for="bPeople">Kişi</label><input id="bPeople" type="number" min="1" max="8" value="2"></div>
+        </div>
+        <div class="fld"><label>Tarz</label><div class="seg" id="bStyle">
+          <label><input type="radio" name="bstyle" value="eko">Ekonomik</label>
+          <label><input type="radio" name="bstyle" value="orta" checked>Orta</label>
+          <label><input type="radio" name="bstyle" value="konfor">Konforlu</label>
+        </div></div>
+      </div>
+      <div id="budgetOut" aria-live="polite"></div>
+    </div>
+    <h4 class="mini" style="margin-top:30px">Ortalama fiyatlar <span class="tmp">2026 fiyatları</span></h4>
+    <div class="prices">
+      <div><span>Espresso, barda ayakta</span><b>≈ 1,20–1,50 €</b></div>
+      <div><span>Sfogliatella</span><b>≈ 1,50–2,50 €</b></div>
+      <div><span>Pizza margherita</span><b>≈ 6–9 €</b></div>
+      <div><span>Pizza a portafoglio</span><b>≈ 2–3 €</b></div>
+      <div><span>Cuoppo (kızartma külahı)</span><b>≈ 5–8 €</b></div>
+      <div><span>Trattoria'da makarna</span><b>≈ 10–14 €</b></div>
+      <div><span>Capri teknesi, tek yön</span><b>≈ 22–28 €</b></div>
+      <div><span>Metro tek bilet</span><b>1,50 €</b></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Turistik yerler arası yürüme süreleri</h3><p class="sub-lead">Dakika cinsinden. Metro ve taksiyle karşılaştırmak için Ulaşım bölümündeki hesaplayıcıyı kullan.</p>
+    <div class="tbl" id="matrix"></div>
+  </div>
+
+  <div class="sub"><h3>Etkinlik takvimi</h3><p class="sub-lead">Her yıl tekrarlanan etkinlikler. Kesin tarihler her yıl değişir; bulunduğun ay vurgulu.</p>
+    <ul class="ev" id="events"></ul>
+  </div>
+
+  <div class="sub"><h3>Napoli'den günübirlik geziler</h3>
+    <div class="g3" id="daytrips"></div>
+  </div>
+
+  <div class="sub"><h3>Kaçınılması gerekenler</h3>
+    <ul class="ticks bad">
+      <li>Garibaldi meydanı ve garın çevresinde gece geç saatte dolaşmak; ana caddeden ayrılma.</li>
+      <li>Pompeii'ye Temmuz–Ağustos öğle saatinde gitmek: gölge yok, taş sıcak. Açılışta gir.</li>
+      <li>Amalfi kıyısına yazın arabayla gitmek: dar yolda saatlerce trafik ve çok pahalı otopark.</li>
+      <li>Taksimetresiz taksi ya da sabit tarifenin üstünde pazarlık.</li>
+    </ul>
+    <p class="note">Tam liste: <a href="#bilgi">Bilmen gerekenler → Dolandırıcılıklar ve turist tuzakları</a></p>
+  </div>
+</section>
+
+<!-- 04 KONAKLAMA -->
+<section class="ch wrap" data-sec="konaklama" aria-labelledby="h-konak" hidden>
+  <header class="ch-head"><div><p class="lab">Konaklama</p><h2 id="h-konak">Nerede kalınır</h2><p class="ch-lead">Otelin yeri, rotanın kaç saatini yolda geçireceğini belirler. Aşağıdaki sıralama senin rotana göre hesaplanıyor.</p></div></header>
+
+  <div class="sub"><h3>Rotana göre en iyi bölge</h3><p class="sub-lead" id="rankLead"></p>
+    <div class="kmap">
+      <ul class="rank" id="rank"></ul>
+      <div id="kMap"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Bölgeler</h3>
+    <div class="tabs" role="tablist" aria-label="Konaklama türü" id="areaTabs"></div>
+    <ul class="areas" id="areas"></ul>
+    <p class="note">Gecelik fiyatlar iki kişilik oda için temsili aralıklardır. "Otelleri gör" bağlantıları yayında ortaklık bağlantısı olacak.</p>
+  </div>
+
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Hangi bölgede kalınmamalı?</h3>
+      <ul class="ticks bad">
+        <li><b>Garibaldi garının hemen çevresi ve Corso Umberto'nun doğu ucu:</b> Ucuz ve pratik ama geceleri tekinsiz. Kalacaksan ana caddede, iyi yorumlu bir otel seç.</li>
+        <li><b>Forcella ve Porta Nolana'nın arka sokakları:</b> Gündüz pazar havası, gece ıssız.</li>
+        <li><b>Fuorigrotta ve dış semtler:</b> Ucuz ama turistik değil; her gün metroya bağımlı kalırsın.</li>
+      </ul>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Otel seçerken</h3>
+      <ul class="ticks">
+        <li>Tarihi merkezde scooter gürültüsü gece de sürer; avluya bakan oda iste.</li>
+        <li>Eski binalarda asansör olmayabilir ya da jetonla çalışabilir; ilanda "ascensore" ara.</li>
+        <li>Capri ve Amalfi'ye teknelerle gideceksen Municipio ve liman çevresi pratik.</li>
+        <li>Konaklama vergisi kişi başı gecelik ≈ 2–5 € ve otelde ayrıca ödenir.</li>
+        <li>Yazın klima şart.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 HAVALİMANI -->
+<section class="ch wrap" data-sec="havalimani" aria-labelledby="h-hav" hidden>
+  <header class="ch-head"><div><p class="lab">Havalimanı transferi</p><h2 id="h-hav">Havalimanından şehre</h2><p class="ch-lead">Capodichino Havalimanı (NAP) şehrin içinde, merkeze 6 km. Türkiye'den doğrudan uçuşlar buraya iner. Alibus otobüsü gara ve limana gider; taksinin sabit tarifesi var.</p></div></header>
+  <div class="sub" style="margin-top:28px">
+    <div class="tabs" role="tablist" aria-label="Havalimanı" id="apTabs">
+      <button class="tab" type="button" role="tab" data-ap="nap" aria-selected="true">Napoli (NAP)</button>
+      <button class="tab" type="button" role="tab" data-ap="roma" aria-selected="false">Roma'dan trenle</button>
+    </div>
+    <div data-apsec="nap">
+      <div class="tbl"><table>
+        <thead><tr><th>Seçenek</th><th>Nereye</th><th>Süre</th><th>Ücret</th><th>Kime uygun</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td><b>Alibus</b><br><span class="lab">Önerimiz</span></td><td>Garibaldi garı ve Molo Beverello limanı</td><td>≈ 20–35 dk</td><td>5 €</td><td>Herkes; 15–20 dakikada bir</td></tr>
+          <tr><td><b>Beyaz taksi, sabit tarife</b></td><td>Merkez, gar ya da liman</td><td>≈ 15–30 dk</td><td>≈ 18–25 €</td><td>Bavullu aile, gece varış; binmeden sabit tarifeyi söyle</td></tr>
+          <tr><td><b>Sorrento otobüsü</b></td><td>Sorrento</td><td>≈ 1 sa 15 dk</td><td>≈ 10 €</td><td>Doğrudan Sorrento ya da Amalfi'ye gidenler</td></tr>
+        </tbody></table></div>
+    </div>
+    <div data-apsec="roma" hidden>
+      <div class="tbl"><table>
+        <thead><tr><th>Seçenek</th><th>Nereye</th><th>Süre</th><th>Ücret</th><th>Kime uygun</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td><b>Hızlı tren Roma Termini → Napoli Centrale</b><br><span class="lab">Önerimiz</span></td><td>Napoli Centrale (Garibaldi)</td><td>≈ 1 sa 10 dk</td><td>≈ 20–50 €</td><td>Roma'ya indiysen; Fiumicino'dan önce Leonardo Express</td></tr>
+        </tbody></table></div>
+    </div>
+    <p class="note">Alibus bileti 5 €; şoförden alırsan daha pahalı. Taksi sabit tarifeleri belediyenin 2024 listesinden, bölgeye göre değişir. Sorrento otobüsü ve tren fiyatları yaklaşık. Son kontrol Kasım 2026.</p>
+  </div>
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Varınca</h3>
+      <ul class="ticks">
+        <li>Pasaport kontrolünde ilk girişte EES biyometrik kaydı yapılıyor; sıra uzun olabilir.</li>
+        <li>Alibus biletini terminaldeki makineden ya da tütüncüden al.</li>
+        <li>Taksiye binerken 'tariffa predeterminata' de ve varış bölgesini söyle; taksimetre yerine sabit ücret uygulanır.</li>
+        <li>Aynı gün Capri ya da Amalfi'ye geçeceksen Alibus'la doğrudan Molo Beverello limanına in.</li>
+      </ul>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Bölgene göre en kolay yol</h3>
+      <dl class="kv">
+        <dt>Tarihi merkez, Toledo</dt><dd>Alibus → Garibaldi, sonra Linea 1; ya da taksi</dd>
+        <dt>Chiaia, sahil, Municipio</dt><dd>Alibus → Molo Beverello, sonra yürüme ya da taksi</dd>
+        <dt>Vomero</dt><dd>Taksi ya da Linea 1 → Vanvitelli</dd>
+        <dt>Sorrento ve Amalfi</dt><dd>Doğrudan otobüs ya da Garibaldi'den Circumvesuviana</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ULAŞIM -->
+<section class="ch wrap" data-sec="ulasim" aria-labelledby="h-ul" hidden>
+  <header class="ch-head"><div><p class="lab">Şehirde ulaşım</p><h2 id="h-ul">Napoli'de nasıl dolaşılır</h2><p class="ch-lead">Kısa cevap: tarihi merkezde yürü, tepelere fünikülerle çık, uzağa metroyla git. Trafik yoğun; taksiyi akşam ve bavulla kullan.</p></div></header>
+  <div class="verdicts">
+    <div class="vd"><span class="lab">Araç kiralamak</span><br><span class="stamp"><span class="s2">Napoli'de hayır</span></span><p>Trafik zorlu, tarihi merkez kameralı ZTL. Amalfi için de araç yerine tekne ya da otobüs.</p></div>
+    <div class="vd"><span class="lab">Ulaşım kartı</span><br><span class="stamp"><span class="s2">Şart değil</span></span><p>Tek bilet 1,50 €; günlük bilet ≈ 4,50 €.</p></div>
+    <div class="vd"><span class="lab">En iyi yol</span><br><span class="stamp"><span class="s2">Yürü + füniküler</span></span><p>Spaccanapoli'den Plebiscito 20 dakika; Vomero'ya fünikülerle 5 dakika.</p></div>
+    <div class="vd"><span class="lab">Taksi</span><br><span class="stamp"><span class="s2">Sabit tarife sor</span></span><p>Havalimanı, gar ve liman arasında sabit ücret var; diğerlerinde taksimetre.</p></div>
+  </div>
+
+  <div class="sub"><h3>Mesafe ve süre hesaplayıcı</h3><p class="sub-lead">Arkeoloji Müzesi'nden Piazza del Plebiscito'ya kaç kilometre? Yürüyerek, metroyla ya da taksiyle kaç dakika?</p>
+    <div class="kmap">
+      <div>
+        <div class="calcf">
+          <div class="fld"><label for="cFrom">Nereden</label><select id="cFrom"></select></div>
+          <div class="fld"><label for="cTo">Nereye</label><select id="cTo"></select></div>
+        </div>
+        <div id="calcOut" aria-live="polite"></div>
+        <p class="note">Süreler tahminidir: yürüme 4,8 km/sa ve sokak dolambacı, metro bekleme ve aktarma payı, taksi ortalama trafik. Yayında gerçek rota verisi kullanılacak.</p>
+      </div>
+      <div id="calcMap"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Linea 1, Linea 2 ve fünikülerler</h3><p class="sub-lead">Linea 1 sabah 6'dan gece 23 civarına kadar, 8–10 dakikada bir. Fünikülerler Vomero tepesine çıkar. Linea 2 daha seyrek ama Mergellina ve Pozzuoli için hızlı.</p>
+    <div class="kmap">
+      <div class="lines">
+        <div class="ln"><span class="sq" style="background:var(--line-a)">1</span><p><b>Linea 1 · Garibaldi – Piscinola</b>Sanat istasyonları hattı: Toledo, Università, Municipio, Dante ve Museo; Vomero'da Vanvitelli.</p></div>
+        <div class="ln"><span class="sq" style="background:var(--line-b)">2</span><p><b>Linea 2 · Gianturco – Pozzuoli</b>Banliyö treni gibi çalışır: Garibaldi, Piazza Cavour, Montesanto, Piazza Amedeo, Mergellina ve Campi Flegrei.</p></div>
+        <div class="ln"><span class="sq" style="background:var(--line-c)">F</span><p><b>Fünikülerler</b>Centrale (Augusteo–Piazza Fuga), Chiaia (Parco Margherita–Cimarosa) ve Montesanto (Montesanto–Morghen): şehirden Vomero'ya ≈ 5 dakika.</p></div>
+      </div>
+      <div id="metroMap"></div>
+    </div>
+  </div>
+
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Biletler ve kartlar</h3>
+      <div class="tbl"><table style="min-width:0">
+        <thead><tr><th>Bilet</th><th>Geçerlilik</th><th>Ücret</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td><b>Tek bilet</b></td><td>metro, füniküler ve otobüs</td><td>1,50 €</td></tr>
+          <tr><td><b>Günlük bilet</b></td><td>şehir içi, sınırsız</td><td>≈ 4,50 €</td></tr>
+          <tr><td><b>Alibus</b></td><td>havalimanı otobüsü</td><td>5 €</td></tr>
+          <tr><td><b>Circumvesuviana, Pompeii</b></td><td>tek yön</td><td>≈ 3,30 €</td></tr>
+          <tr><td><b>Capri hızlı teknesi</b></td><td>tek yön, ≈ 50 dk</td><td>≈ 22–28 €</td></tr>
+        </tbody></table></div>
+      <p class="note">Bileti binince onayla; turnikelerde temassız kartla ödeme yaygınlaşıyor. Pompeii için 'Pompei Scavi–Villa dei Misteri' durağında in. Günlük bilet ve tekne fiyatları yaklaşık. Son kontrol Kasım 2026.</p>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Trenler ve tekneler</h3>
+      <dl class="kv">
+        <dt><b>Circumvesuviana</b> · Porta Nolana, Garibaldi</dt><dd>Herculaneum ≈ 20 dk, Pompeii ≈ 35 dk, Sorrento ≈ 1 sa 10 dk</dd>
+        <dt><b>Campania Express</b> · turist treni</dt><dd>Aynı hat; daha az durak, klimalı ve koltuklu; sezonluk</dd>
+        <dt><b>Molo Beverello</b> · hızlı tekneler</dt><dd>Capri, Ischia, Procida, Sorrento; yazın Positano ve Amalfi</dd>
+        <dt><b>Calata Porta di Massa</b> · yavaş feribotlar</dt><dd>Capri ve Ischia'ya daha ucuz, arabalı feribot</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="sub g3">
+    <div><h4 class="mini">Taksi ve uygulamalar</h4><ul class="ticks">
+        <li>Resmi taksiler beyazdır; kapıda belediye amblemi ve numara yazar.</li>
+        <li>Sabit tarifeli güzergâhlarda binmeden 'tariffa predeterminata' de; diğerlerinde taksimetre açılsın.</li>
+        <li>Uygulamalar: itTaxi, appTaxi. Gece ve Pazar ek ücret uygulanır.</li>
+      </ul></div>
+    <div><h4 class="mini">Trafik ve yaya</h4><ul class="ticks">
+        <li>Napoli'de kırmızı ışık bir öneri gibidir; karşıya geçerken scooterlara dikkat.</li>
+        <li>Tarihi merkez kameralı ZTL; araç kiralamak gereksiz.</li>
+        <li>Dar sokaklarda scooterlar yaya yolunu da kullanır; kenardan yürü.</li>
+      </ul></div>
+    <div><h4 class="mini">Amalfi'ye ulaşım</h4><ul class="ticks">
+        <li>Nisan–Ekim arası Molo Beverello'dan Positano ve Amalfi'ye doğrudan tekne (≈ 2 sa).</li>
+        <li>Kışın Circumvesuviana ile Sorrento, oradan SITA otobüsü.</li>
+        <li>Kıyı yolu çok dar ve virajlı; midesi hassas olan tekneyi seçsin.</li>
+      </ul></div>
+  </div>
+</section>
+
+<!-- 07 YEREL YAŞAM -->
+<section class="ch wrap" data-sec="yerel" aria-labelledby="h-yerel" hidden>
+  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Napolili gibi yaşamak</h2><p class="ch-lead">Ayakta şekerli kahve, sokakta kızartma, pizzacıda sıra numarası. İtalya'nın en ucuz ve en lezzetli sokak mutfağı.</p></div></header>
+
+  <div class="sub"><h3>Napoli sofrasının dört yıldızı</h3><p class="sub-lead">Pizzanın doğduğu şehir: Napoli pizzacılığı 2017'den beri UNESCO listesinde. Sokakta yenen kızartmalar ve tatlılarla İtalya'nın en zengin halk mutfağı.</p>
+    <div class="pasta">
+      <div><h4>Pizza margherita</h4><p>Domates, mozzarella ve fesleğen; ince, yumuşak ve kenarı kabarık. Kraliçe Margherita'ya adandığı anlatılır.</p><span class="pork safe">Et içermez</span></div>
+      <div><h4>Babà</h4><p>Mantar biçimli, roma batırılmış yumuşak kek; Mergellina şaletlerinin klasiği.</p><span class="pork safe">Romlu şurup</span></div>
+      <div><h4>Pasta e patate con provola</h4><p>Patates ve is aromalı peynirle koyu makarna. Çoğu tarifte domuz pastırması (pancetta) da var.</p><span class="pork">Domuz eti içerir</span></div>
+      <div><h4>Ragù napoletano</h4><p>Etlerin saatlerce domates sosunda piştiği Pazar sosu; içinde sığır ve domuz eti olabilir.</p><span class="pork">Domuz eti içerir</span></div>
+    </div>
+    <p class="note">Sokakta 'cuoppo' (kâğıt külahta kızartma), pizza fritta ve katlanmış 'pizza a portafoglio' dene. Sfogliatella'nın hamurunda geleneksel olarak domuz yağı (strutto) kullanılır; sor. Garibaldi çevresinde helal dükkânlar var; restoranda "senza maiale" diye sor.</p>
+  </div>
+
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Restoranda</h3>
+      <ul class="ticks">
+        <li>Pizzacılarda sıra numarası alınır; Da Michele ve Sorbillo'da 30–60 dakika beklemek normal.</li>
+        <li>Pizza bütün gelir ve kişi başı bir tane sipariş edilir.</li>
+        <li><b>Coperto:</b> kişi başı ≈ 1–3 € masa ücreti; menüde yazılı olmalı.</li>
+        <li>Su şişeyle gelir ve ücretlidir: "naturale" ya da "frizzante".</li>
+        <li>Hesap kendiliğinden gelmez; "Il conto, per favore" de.</li>
+        <li>Napoli geç yer: öğle 13:00–15:00, akşam 20:00–23:00.</li>
+      </ul>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Kahve kültürü</h3>
+      <ul class="ticks">
+        <li>Napoli kahvesi kısa, koyu ve şekerli gelir; şekersiz istiyorsan "senza zucchero" de.</li>
+        <li>Ayakta (al banco) ≈ 1,20–1,50 €; yanında bir bardak su gelir.</li>
+        <li><b>Caffè sospeso:</b> iki kahve ödeyip birini sonradan gelecek tanımadığın biri için 'askıda' bırakma geleneği.</li>
+        <li>Cappuccino kahvaltı içeceğidir; öğleden sonra sipariş eden turist olduğunu ilan eder.</li>
+      </ul>
+      <h4 class="mini" style="margin-top:22px">Bahşiş</h4>
+      <ul class="ticks"><li>Zorunlu değil. Yuvarlamak ya da masaya 1–2 € bırakmak yeterli.</li></ul>
+    </div>
+  </div>
+
+  <div class="sub g3">
+    <div><h4 class="mini">Günlük hayat</h4><ul class="ticks">
+        <li>Napolililer sesli konuşur, el kol hareketi çoktur; kavga sanma.</li>
+        <li>Balkonlardan sepetle (panaro) alışveriş hâlâ görülür.</li>
+        <li>Maradona bir aziz gibi sevilir; Quartieri Spagnoli'deki duvar resmi bir tapınak gibidir.</li>
+        <li>Kiliselerde kapalı kıyafet: omuz ve diz.</li>
+      </ul></div>
+    <div><h4 class="mini">Alışveriş</h4><ul class="ticks">
+        <li>San Gregorio Armeno'da el yapımı presepe figürleri; yıl boyu açık, Aralık'ta en kalabalık.</li>
+        <li>Via Toledo ve Via Chiaia ana alışveriş caddeleri; lüks markalar Via dei Mille'de.</li>
+        <li>Kırmızı boynuz biçimli 'cornicello' tılsımı, hediye olarak alınırsa uğur getirdiğine inanılır.</li>
+        <li>AB dışında yaşıyorsan tek fişte 70 € üzeri alışverişte KDV iadesi alabilirsin.</li>
+      </ul></div>
+    <div><h4 class="mini">Pazarlar</h4><ul class="ticks">
+        <li>Pignasecca: her sabah balık, sebze ve sokak yemeği.</li>
+        <li>Porta Nolana: Napoli'nin en canlı balık pazarı, sabah erken.</li>
+        <li>Port'Alba: sahaflar ve ikinci el kitaplar.</li>
+      </ul></div>
+  </div>
+
+  <div class="sub"><h3>Gece hayatı</h3>
+    <div class="g3">
+      <div><h4 class="mini">Piazza Bellini</h4><p>Tarihi merkezde, antik Yunan surlarının yanında edebiyat kafeleri ve barlar.</p></div>
+      <div><h4 class="mini">Chiaia</h4><p>Vico Belledonne ve çevresindeki küçük barlar; şık ve kalabalık.</p></div>
+      <div><h4 class="mini">Lungomare ve Mergellina</h4><p>Deniz kenarında yürüyüş, kioskta buzlu limonata ve gece yarısı pizza.</p></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Temel İtalyanca</h3>
+    <div class="tbl"><table class="phr">
+      <tbody>
+        <tr><td>Buongiorno</td><td>buonciorno</td><td>Günaydın, iyi günler</td></tr>
+        <tr><td>Buonasera</td><td>buonasera</td><td>İyi akşamlar</td></tr>
+        <tr><td>Grazie</td><td>gratsiye</td><td>Teşekkürler</td></tr>
+        <tr><td>Per favore</td><td>per favore</td><td>Lütfen</td></tr>
+        <tr><td>Scusi</td><td>skuzi</td><td>Affedersiniz</td></tr>
+        <tr><td>Quanto costa?</td><td>kuanto kosta</td><td>Ne kadar?</td></tr>
+        <tr><td>Il conto, per favore</td><td>il konto per favore</td><td>Hesap lütfen</td></tr>
+        <tr><td>Un caffè</td><td>un kaffe</td><td>Bir espresso</td></tr>
+        <tr><td>Senza carne di maiale</td><td>senza karne di mayale</td><td>Domuz eti olmadan</td></tr>
+        <tr><td>Dov'è la fermata della metropolitana?</td><td>dove la fermata della metropolitana</td><td>Metro durağı nerede?</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<!-- 08 BİLGİ -->
+<section class="ch wrap" data-sec="bilgi" aria-labelledby="h-bilgi" hidden>
+  <header class="ch-head"><div><p class="lab">Bilmen gerekenler</p><h2 id="h-bilgi">Yola çıkmadan</h2><p class="ch-lead">İnternet, para, priz, sağlık, güvenlik ve bavul listesi.</p></div></header>
+  <div class="sub"><h3>Acil numaralar</h3>
+    <div class="emg">
+      <div><span class="lab">Tek acil numara</span><b>112</b><span class="muted">Polis, ambulans, itfaiye</span></div>
+      <div><span class="lab">Taksi</span><b style="font-size:1.2rem;line-height:1.5">itTaxi · appTaxi</b><span class="muted">Uygulamadan çağır; sabit tarifeyi sor</span></div>
+      <div><span class="lab">Türk vatandaşları</span><b style="font-size:1.2rem;line-height:1.5">konsolosluk.gov.tr</b><span class="muted">İtalya'daki temsilciliklerimizin iletişim bilgileri</span></div>
+    </div>
+  </div>
+
+  <div class="sub g3">
+    <div><h4 class="mini">İnternet, eSIM ve SIM kart</h4><ul class="ticks">
+        <li>Türk hattıyla dolaşım pahalı. Telefonun destekliyorsa bir haftalık eSIM paketi (≈ 5–10 €) en kolayı.</li>
+        <li>Yerel SIM: TIM, Vodafone, WindTre, Iliad. Pasaportla alınır, turist paketleri ≈ 15–25 €.</li>
+      </ul></div>
+    <div><h4 class="mini">Elektrik prizi</h4><ul class="ticks">
+        <li>230 V; C, F ve L tipi prizler.</li>
+        <li>İnce uçlu (C tipi) fişler her yere girer. Kalın uçlu (F tipi) şarj aletleri L tipi prize girmez; ucuz bir adaptör al.</li>
+      </ul></div>
+    <div><h4 class="mini">Para ve ödeme</h4><ul class="ticks">
+        <li>Kart ve temassız ödeme her yerde. Küçük kafeler için biraz nakit euro.</li>
+        <li>Kartla öderken "TL ile mi?" sorusuna hep "Euro" de; diğeri kötü kurdan çevirir.</li>
+        <li>Euronet ATM'leri yüksek komisyon alır; banka ATM'si (Bancomat) kullan.</li>
+        <li>Kartının yurt dışı kullanıma açık olduğunu bankandan kontrol et.</li>
+        <li>Yurt dışı çıkış harcını e-Devlet'ten önceden öde.</li>
+      </ul></div>
+    <div><h4 class="mini">Hastane ve eczane</h4><ul class="ticks">
+        <li>Acil servis: Pronto Soccorso. Merkezde Pellegrini Hastanesi (Montesanto); büyük hastane Cardarelli (Vomero-Arenella).</li>
+        <li>Eczane yeşil haçla işaretli; Garibaldi garındaki eczane geç saate kadar açık.</li>
+      </ul></div>
+    <div><h4 class="mini">Seyahat sigortası</h4><ul class="ticks">
+        <li>Vize için zaten zorunlu: en az 30.000 € teminat, tüm Schengen geçerli.</li>
+        <li>Vizesiz gidiyorsan da al; İtalya'da özel hastane masrafı yüksek.</li>
+        <li>Poliçenin çıktısı ve acil hattı telefonunda olsun.</li>
+      </ul></div>
+    <div><h4 class="mini">Erişilebilirlik ve çocuklar</h4><ul class="ticks">
+        <li>Tarihi merkezin sokakları dar ve kalabalık; bebek arabası yerine kanguru.</li>
+        <li>Linea 1'in yeni istasyonlarında asansör var.</li>
+        <li>Pompeii'nin taş yolları engebeli; tekerlekli sandalye için işaretli bir güzergâh var.</li>
+        <li>18 yaş altı devlet müzelerine çoğunlukla ücretsiz girer.</li>
+      </ul></div>
+  </div>
+
+  <div class="sub"><h3>Bavul listesi</h3><p class="sub-lead">İşaretlediklerin bu cihazda hatırlanır.</p>
+    <div class="chk" id="bag"></div>
+  </div>
+
+  <div class="sub" id="scams"><h3>Dolandırıcılıklar ve turist tuzakları</h3><p class="sub-lead">Napoli'nin kötü şöhreti abartılı; ama kalabalıkta yankesicilik ve küçük oyunlar gerçek.</p>
+    <ul class="scams">
+      <li><b>Scooterla kapkaç</b><p>Yola yakın yürürken omuz çantası ya da elindeki telefon kapılır.</p><p class="do">Çantayı duvar tarafında taşı, telefonu kaldırım kenarında kullanma.</p></li>
+      <li><b>Sahte telefon kutusu</b><p>Garibaldi'de ucuz telefon satan biri, parayı alınca içi taş dolu kutuyu verir.</p><p class="do">Sokakta elektronik alma.</p></li>
+      <li><b>Taksi pazarlığı</b><p>Taksimetre 'bozuk' ya da sabit tarifenin üstünde fiyat.</p><p class="do">Sabit tarifeyi binmeden söyle; olmazsa başka taksiye geç.</p></li>
+      <li><b>Pompeii'de sahte rehber</b><p>Kapıda 'kuyruğu atlatırım' diyen ruhsatsız rehberler.</p><p class="do">Bileti resmi siteden al; rehberi resmi gişeden kirala.</p></li>
+      <li><b>Bilet makinesinde 'yardım'</b><p>Garda yardım teklif edip para isteyen ya da paranın üstünü vermeyenler.</p><p class="do">Makinede işlemi kendin yap.</p></li>
+      <li><b>Kalabalıkta yankesicilik</b><p>Circumvesuviana, Linea 1 ve Garibaldi meydanı en riskli yerler.</p><p class="do">Çantayı öne al, cüzdanı ön cepte taşı.</p></li>
+      <li><b>Sahte markalı ürünler</b><p>Yere serilen çanta ve gözlükler; alıcıya da ceza kesilebilir.</p><p class="do">Satın alma.</p></li>
+      <li><b>Amalfi'de tekne turu</b><p>Limanda 'özel tur' teklif edip fiyatı sonradan artıranlar.</p><p class="do">Fiyatı yazılı al ya da ofisi olan şirketi seç.</p></li>
+      <li><b>Kur dönüştürme oyunu</b><p>Kart makinesinin "kendi para biriminle öde" seçeneği.</p><p class="do">Her zaman Euro seç.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CAPOLINEA: KİŞİSEL ROTA -->
+<section class="ch wrap" data-sec="rotam" aria-labelledby="h-rotam" hidden>
+  <header class="ch-head"><div><p class="lab">Kişisel rota</p><h2 id="h-rotam">Benim Napoli'm</h2><p class="ch-lead">Kaydettiğin yerler, konaklama bölgene göre en kısa sırayla günlere bölündü. Gittiğin yeri işaretle.</p></div></header>
+  <div class="rsum" id="rsum"></div>
+  <div class="calcf" style="margin-top:18px;max-width:640px">
+    <div class="fld"><label for="baseSel">Konakladığım bölge</label><select id="baseSel"></select></div>
+    <div class="fld" style="align-self:end"><button class="btn ghost" type="button" id="clearPlan">Rotayı temizle</button></div>
+  </div>
+  <div class="rgrid">
+    <div id="rdays"></div>
+    <div id="rmapBox"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p><b>Seyyah</b> · Napoli dosyası · "Seyyah" geçici bir isim.</p>
+  <p>Fiyatlar, saatler ve kurallar 2025–2026 bilgisine göre yaklaşık değerlerdir ve yayından önce tek tek doğrulanacak. "Temsili" işaretli alanlar yer tutucudur. Otel, bilet ve transfer bağlantıları yayında ortaklık bağlantısı olacak.</p>
+  <p class="credits">Fotoğraflar Wikimedia Commons'tan, serbest lisanslı: <a href="https://commons.wikimedia.org/wiki/File:Bay_of_Naples_and_Volcano_Vesuvius_-_Italy_-_panoramio.jpg" target="_blank" rel="noopener">Bay of Naples and Volcano Vesuvius - Italy - panoramio</a>: Sergey Ashmarin, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:7K5A3060Piazza_del_Plebiscito_Naples_lateral_view_2025.jpg" target="_blank" rel="noopener">7K5A3060Piazza del Plebiscito Naples lateral view 2025</a>: Lucia Montanaro, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Castel_dell%27_Ovo.jpg" target="_blank" rel="noopener">Castel dell' Ovo</a>: PaestumPaestum, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:MANNapoli_6705_creation_of_the_man_sarcophagus.jpg" target="_blank" rel="noopener">MANNapoli 6705 creation of the man sarcophagus</a>: Jebulon, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Galleria_Umberto_I,_Interior,_Naples_(5263).jpg" target="_blank" rel="noopener">Galleria Umberto I, Interior, Naples (5263)</a>: Marco Ober, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Ges%C3%B9_nuovo_esterno.JPG" target="_blank" rel="noopener">Gesù nuovo esterno</a>: Baku, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_023.jpg" target="_blank" rel="noopener">Catacombe di San Gennaro 023</a>: Dominik Matus, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Positano_(Italy)_02.jpg" target="_blank" rel="noopener">Positano (Italy) 02</a>: Bernard Gagnon, CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:ViaChiaiaNapoli.jpg" target="_blank" rel="noopener">ViaChiaiaNapoli</a>: IlSistemone, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Stadio_Maradona_Serie_A.jpg" target="_blank" rel="noopener">Stadio Maradona Serie A</a>: Gaetano Capaldo, CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg" target="_blank" rel="noopener">Naples from the Castello Sant Elmo with Abbazia San Martino the port and the Vesuv</a>: This Photo was taken by Wolfgang Moroder.  
+
+Feel free to use my photos, but ple, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Quartieri_Spagnoli_(Napoli)_04.jpg" target="_blank" rel="noopener">Quartieri Spagnoli (Napoli) 04</a>: Superchilum, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Napoli_-_Panorama_dal_Vomero_2.JPG" target="_blank" rel="noopener">Napoli - Panorama dal Vomero 2</a>: Luca Aless, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Spaccanapoli_verso_Castel_Sant%27Elmo.jpg" target="_blank" rel="noopener">Spaccanapoli verso Castel Sant'Elmo</a>: TatsuoTabei, Public domain · <a href="https://commons.wikimedia.org/wiki/File:Aeroporto_Napoli_Esterno.JPG" target="_blank" rel="noopener">Aeroporto Napoli Esterno</a>: Sabbo91 at Italian Wikipedia, Public domain · <a href="https://commons.wikimedia.org/wiki/File:Toledo_Station_Platform_01.jpg" target="_blank" rel="noopener">Toledo Station Platform 01</a>: Mint0ri, CC0 · <a href="https://commons.wikimedia.org/wiki/File:L%27Oro_di_Napoli_-_January_2025_-_Sarah_Stierch_17.jpg" target="_blank" rel="noopener">L'Oro di Napoli - January 2025 - Sarah Stierch 17</a>: Missvain, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg" target="_blank" rel="noopener">Forum (Pompeii) and the Vesuvio</a>: Commonists, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Capri_Portrait.jpg" target="_blank" rel="noopener">Capri Portrait</a>: Mайкл Гиммельфарб, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Certosa_di_San_Martino_and_Spanish_Quarter_seen_from_Renaissance_Mediterraneo_at_night_-_Naples_-_Italy_2015.JPG" target="_blank" rel="noopener">Certosa di San Martino and Spanish Quarter seen from Renaissance Mediterraneo at night - Naples - Italy 2015</a>: José Luiz, CC BY-SA 4.0</p>
+</footer>
+
+<script>window.jsVectorMap={addMap:function(n,d){window.__WORLD=d;}};</script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s);};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ============ VERİ TABLOLARI ============
+   Her tablo ayrı: yerler, bölgeler, aylar, etkinlikler, günübirlikler, hazır planlar, metro hatları.
+   Gerçek sitede her biri veritabanında ayrı tablo olacak; yeni şehir = aynı tabloları doldurmak. */
+
+var C={"id":"napoli","ad":"Napoli","it":"Napoli","ulke":"italya","ulkeAd":"İtalya","bolge":"Campania","tz":"Europe/Rome","la":40.8518,"lo":14.2681,"koordinat":"40°51′ K · 14°15′ D","yas":"≈ 2.500 yaşında","merhaba":"Ciao! Benvenuto a","oneCikan":["spaccanapoli","cappella","archeologico","pompei","capri","amalfi"],"ozet":"40 yer, Pompeii, Capri ve Amalfi günleri, yeraltı turları, rota planlayıcı","aciklama":"Napoli ve Amalfi kıyısı için tek dosya: 40 yer, Pompeii, Herculaneum, Vezüv, Capri ve Amalfi günleri, rota planlayıcı, nerede kalınır, havalimanından ve limandan ulaşım, metro, füniküler ve yerel ipuçları.","gizliLead":"Sokakların altında, kiliselerin arka odalarında ve halk mahallelerinde Napolililerin sakladığı Napoli.","ek":{"da":"Napoli'de","ya":"Napoli'ye","yi":"Napoli'yi","m":"Napoli'm","nin":"Napoli'nin","dan":"Napoli'den"},"ucus":"≈ 2 sa 15 dk","harita":{"la0":40.873,"la1":40.82,"lo0":14.188,"lo1":14.285},"us":"centro","hesap":["archeologico","plebiscito"],"ornekPlan":["spaccanapoli","cappella","sangregorio","sottosuolo","archeologico","plebiscito"],"aktarma":[["L1","L2","Garibaldi","Garibaldi'de",6]],"taksi":{"ad":"Taksi","acilis":3.5,"km":1.1,"min":7,"hiz":14,"ek":5},"toplu":{"ad":"Metro","kisa":"metro","fiil":"Metroya bin","bilet":"1,50 €","harita":"metro ve füniküler hatları","yok":"Yürü. Tarihi merkez, Toledo, Plebiscito ve sahil yürüme mesafesinde; Vomero'ya füniküler, Capodimonte'ye otobüs ya da taksi."},"deniz":[[[40.79889,14.17469],[40.79839,14.17556],[40.79732,14.17601],[40.79694,14.17555],[40.79672,14.17595],[40.79703,14.1768],[40.79681,14.17707],[40.79649,14.17691],[40.79646,14.1774],[40.79704,14.1788],[40.79684,14.17902],[40.7964,14.1788],[40.79589,14.17918],[40.79576,14.1789],[40.79544,14.17892],[40.7958,14.17912],[40.79598,14.17996],[40.79574,14.18037],[40.79609,14.18163],[40.79544,14.18181],[40.7945,14.18093],[40.79398,14.18096],[40.79483,14.18181],[40.79634,14.18206],[40.79655,14.18278],[40.79636,14.18348],[40.79591,14.18389],[40.79523,14.18373],[40.79474,14.18394],[40.79428,14.18372],[40.79315,14.18539],[40.79254,14.18539],[40.79243,14.18579],[40.79181,14.18579],[40.79241,14.18644],[40.79251,14.1869],[40.79221,14.18779],[40.79266,14.18813],[40.79283,14.18862],[40.79255,14.18785],[40.79269,14.18761],[40.79328,14.18767],[40.7933,14.18834],[40.79395,14.1886],[40.79376,14.18895],[40.79349,14.1888],[40.79335,14.18897],[40.79451,14.19125],[40.79426,14.1918],[40.79446,14.1926],[40.79462,14.1925],[40.79446,14.19169],[40.79472,14.19152],[40.79514,14.1918],[40.79544,14.19316],[40.79542,14.19229],[40.7956,14.19328],[40.79586,14.19327],[40.79588,14.19432],[40.79649,14.19511],[40.79561,14.19507],[40.7956,14.19625],[40.79584,14.19618],[40.79591,14.19679],[40.79657,14.19725],[40.7963,14.19743],[40.79725,14.19829],[40.79727,14.19882],[40.79799,14.19895],[40.79773,14.19941],[40.79718,14.19927],[40.79771,14.20041],[40.79746,14.20036],[40.79738,14.20065],[40.79836,14.20137],[40.79831,14.20166],[40.79881,14.20215],[40.7987,14.2033],[40.79877,14.20315],[40.79911,14.20365],[40.79943,14.20477],[40.79922,14.20506],[40.79953,14.20486],[40.8001,14.2054],[40.80027,14.20684],[40.80103,14.20773],[40.80096,14.20748],[40.80183,14.20759],[40.80203,14.2073],[40.80233,14.20746],[40.80309,14.20731],[40.80304,14.20707],[40.80241,14.20729],[40.80216,14.2071],[40.80263,14.20653],[40.80311,14.20641],[40.80382,14.20696],[40.80459,14.20713],[40.804,14.20685],[40.80412,14.20626],[40.80486,14.20614],[40.8049,14.20665],[40.80546,14.20689],[40.80635,14.20615],[40.80686,14.20534],[40.80734,14.20531],[40.80767,14.20555],[40.80766,14.20611],[40.80822,14.20627],[40.80851,14.20562],[40.80891,14.2062],[40.80879,14.20575],[40.8092,14.20575],[40.80945,14.20601],[40.80929,14.2063],[40.80907,14.20607],[40.80902,14.20623],[40.80949,14.20706],[40.81002,14.2067],[40.81031,14.20678],[40.81061,14.20741],[40.81083,14.20739],[40.81116,14.2068],[40.8115,14.20781],[40.81231,14.2081],[40.81263,14.20759],[40.81281,14.20771],[40.81335,14.20845],[40.81333,14.20929],[40.81405,14.20921],[40.81414,14.20947],[40.81388,14.20985],[40.81421,14.21008],[40.81473,14.20986],[40.81497,14.21012],[40.81475,14.21073],[40.81537,14.21089],[40.81544,14.21045],[40.81612,14.21067],[40.81627,14.21118],[40.81629,14.21081],[40.81652,14.21092],[40.81644,14.2116],[40.81703,14.21211],[40.817,14.21177],[40.81722,14.21189],[40.81767,14.21268],[40.81774,14.21228],[40.81806,14.21266],[40.81853,14.21253],[40.81847,14.21286],[40.8182,14.21282],[40.81842,14.21331],[40.81903,14.21393],[40.8191,14.21375],[40.81938,14.21388],[40.81938,14.21436],[40.82001,14.21491],[40.82052,14.2142],[40.82109,14.21466],[40.82196,14.2162],[40.82181,14.21694],[40.82194,14.21663],[40.82237,14.21718],[40.82183,14.21735],[40.82163,14.21766],[40.8221,14.21981],[40.82178,14.21771],[40.8221,14.21747],[40.82233,14.21841],[40.82242,14.21794],[40.82268,14.21781],[40.82293,14.21844],[40.82283,14.21862],[40.82252,14.21846],[40.8224,14.21918],[40.82256,14.2193],[40.82268,14.21908],[40.82301,14.22021],[40.82302,14.21934],[40.82476,14.22125],[40.82476,14.22171],[40.82681,14.22614],[40.82704,14.22626],[40.82715,14.22592],[40.82689,14.22585],[40.82515,14.22157],[40.82646,14.22046],[40.82707,14.22059],[40.82781,14.22111],[40.82795,14.22154],[40.82707,14.22276],[40.82804,14.2217],[40.82853,14.22246],[40.82748,14.22366],[40.82874,14.22235],[40.8301,14.2247],[40.83123,14.22752],[40.83173,14.22957],[40.83147,14.23034],[40.83126,14.23034],[40.83149,14.23169],[40.83201,14.23164],[40.83208,14.23296],[40.83128,14.24314],[40.83106,14.24391],[40.82986,14.24501],[40.82977,14.24782],[40.82849,14.24747],[40.82836,14.24713],[40.82659,14.249],[40.82622,14.24991],[40.8266,14.25028],[40.82722,14.25007],[40.82892,14.25027],[40.8294,14.2514],[40.82903,14.25012],[40.82696,14.2497],[40.82716,14.24939],[40.82704,14.24911],[40.82737,14.24925],[40.82753,14.24888],[40.82868,14.24894],[40.82881,14.24769],[40.82941,14.24797],[40.82959,14.25037],[40.82996,14.25036],[40.83147,14.25116],[40.83165,14.25152],[40.83199,14.25148],[40.83318,14.25221],[40.83382,14.25569],[40.83401,14.25542],[40.8335,14.25313],[40.83435,14.25202],[40.83505,14.25281],[40.83432,14.25374],[40.8347,14.25435],[40.83445,14.25451],[40.83473,14.25445],[40.83493,14.25531],[40.834,14.25948],[40.8342,14.26118],[40.83278,14.27053],[40.83219,14.27155],[40.83088,14.27512],[40.83013,14.27621],[40.83028,14.27636],[40.83112,14.27515],[40.83225,14.27237],[40.83318,14.27247],[40.83302,14.27184],[40.83475,14.26118],[40.83456,14.26025],[40.83521,14.25833],[40.83477,14.25815],[40.83551,14.25477],[40.83598,14.25467],[40.8363,14.25489],[40.83639,14.25465],[40.83595,14.25375],[40.83572,14.25391],[40.83587,14.25361],[40.83544,14.25304],[40.8362,14.25209],[40.83664,14.25321],[40.83636,14.2542],[40.83793,14.25514],[40.83785,14.2555],[40.83808,14.25561],[40.83755,14.25778],[40.83781,14.25788],[40.837,14.26127],[40.83804,14.2617],[40.83909,14.25732],[40.8393,14.25741],[40.83943,14.25715],[40.8414,14.25875],[40.84078,14.25979],[40.84099,14.26002],[40.84052,14.26089],[40.84092,14.26128],[40.84047,14.26208],[40.8406,14.26222],[40.84183,14.26],[40.84207,14.26024],[40.8423,14.25997],[40.8438,14.26222],[40.84194,14.26377],[40.84225,14.26477],[40.84461,14.26444],[40.8446,14.26641],[40.84325,14.26638],[40.84459,14.26653],[40.84459,14.26872],[40.84145,14.2687],[40.84144,14.26928],[40.84022,14.26932],[40.8399,14.26891],[40.83991,14.26601],[40.83968,14.26599],[40.83976,14.26898],[40.84048,14.26988],[40.84334,14.26978],[40.84309,14.27218],[40.8412,14.27214],[40.84078,14.27191],[40.8392,14.26991],[40.83828,14.27088],[40.8401,14.27394],[40.84035,14.27398],[40.84103,14.2733],[40.84085,14.2728],[40.8411,14.27321],[40.84447,14.27307],[40.84432,14.27385],[40.84462,14.27384],[40.84443,14.27471],[40.84406,14.2746],[40.84318,14.27792],[40.83996,14.27612],[40.8401,14.27516],[40.83995,14.2752],[40.83961,14.27802],[40.84253,14.27963],[40.84175,14.28188],[40.8392,14.28107],[40.83876,14.28216],[40.8413,14.28299],[40.84049,14.28505],[40.83792,14.28418],[40.83721,14.28592],[40.83999,14.28681],[40.8387,14.28987],[40.83912,14.29019],[40.83905,14.29034],[40.83866,14.29005],[40.83832,14.29089],[40.83594,14.28915],[40.83583,14.28944],[40.83623,14.28971],[40.83591,14.29048],[40.83536,14.29009],[40.83519,14.29047],[40.83773,14.2923],[40.83615,14.29527],[40.83392,14.29318],[40.82976,14.29897],[40.8304,14.29981],[40.83142,14.29843],[40.83242,14.29969],[40.83163,14.30078],[40.83241,14.30176],[40.83373,14.29961],[40.83391,14.29979],[40.83193,14.30325],[40.83122,14.30335],[40.83182,14.30458],[40.83169,14.30541],[40.8297,14.30839],[40.82913,14.30847],[40.82935,14.30895],[40.8289,14.30868],[40.82882,14.30891],[40.82912,14.30914],[40.82781,14.31124],[40.82714,14.3111],[40.82592,14.31268],[40.82579,14.31306],[40.8261,14.31353],[40.82571,14.31329],[40.82552,14.31347],[40.82485,14.31341],[40.82443,14.31483],[40.82491,14.31367],[40.82514,14.31365],[40.82572,14.31418],[40.82581,14.31508],[40.82469,14.31681],[40.82435,14.31669],[40.8245,14.31617],[40.82418,14.31662],[40.82393,14.31657],[40.82427,14.31708],[40.82356,14.31845],[40.8235,14.31826],[40.82296,14.31825],[40.82219,14.31884],[40.82138,14.32005],[40.821,14.32032],[40.82101,14.32001],[40.82077,14.32028],[40.78,14.32028],[40.78,14.17469]]],"etiket":[["VOMERO",40.8492,14.2305],["CHIAIA",40.8352,14.2305],["SANITÀ",40.8618,14.2425],["NAPOLİ KÖRFEZİ",40.8235,14.262]],"ekAlan":[],"matris":[["spaccanapoli","Spaccanapoli"],["archeologico","Arkeoloji M."],["plebiscito","Plebiscito"],["castelovo","Castel dell'Ovo"],["sanmartino","San Martino"],["catacombe","Katakomblar"]],"sehirler":[{"id":"roma","ad":"Roma","url":"/seyyah-site/italya/roma/planla/"},{"id":"floransa","ad":"Floransa","url":"/seyyah-site/italya/floransa/planla/"},{"id":"venedik","ad":"Venedik","url":"/seyyah-site/italya/venedik/planla/"},{"id":"milano","ad":"Milano","url":"/seyyah-site/italya/milano/planla/"},{"id":"napoli","ad":"Napoli","url":"/seyyah-site/italya/napoli/planla/"}]};
+var CATS=[["tarihi","Tarihi yerler"],["muze","Müzeler ve galeriler"],["mimari","Mimari yapılar"],["dini","Dini yapılar"],["gizli","Gizli kalmış yerler"],["doga","Parklar ve doğa"],["moda","Moda ve alışveriş"],["spor","Spor ve stadyumlar"],["gece","Gece hayatı"],["foto","Fotoğraf noktaları"],["mahalle","Yerel mahalleler"],["bilet","Bilet ve rezervasyon"]];
+var CIMG={"tarihi":"tarihi","muze":"muze","mimari":"mimari","dini":"dini","gizli":"gizli","doga":"doga","moda":"moda","spor":"spor","gece":"gece","foto":"foto","mahalle":"mahalle","bilet":"hero"};
+var SIMG={"vize":"vize","kesfet":"tarihi","planla":"planla","konaklama":"konaklama","havalimani":"havalimani","ulasim":"ulasim","yerel":"yerel","bilgi":"bilgi","rotam":"rotam"};
+var TK={"sart":"Rezervasyon şart","oner":"Online önerilir","gise":"Gişede","free":"Ücretsiz"};
+var ATAGS=[["all","Hepsi"],["butce","Bütçe dostu"],["lux","Lüks"],["butik","Butik"],["aile","Aileler için"],["cift","Çiftler için"],["havalimani","Havalimanına yakın"]];
+var MAB=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+var LEVEL=["","çok az","az","orta","yüksek","en yüksek"];
+var BLAB={"konak":["Konaklama","var(--stamp)"],"yemek":["Yeme içme","var(--ochre)"],"ulasim":["Şehir içi ulaşım","var(--line-b)"],"giris":["Müze ve girişler","var(--line-c)"],"vergi":["Konaklama vergisi","var(--muted)"]};
+var BAG=[["Belgeler",["Pasaport ve vize","Sigorta poliçesi çıktısı","Uçak ve otel rezervasyonları","Kimlik kartı","Yurt dışı çıkış harcı ödendi"]],["Elektronik",["F'den L tipine priz adaptörü","Powerbank (el bagajında)","eSIM yüklendi ve denendi","Kulaklık"]],["Giyim",["Rahat yürüyüş ayakkabısı","Omuz ve dizi kapatan kıyafet","Şal ya da ince hırka","Mevsime göre şemsiye ya da şapka"]],["Pratik",["Matara","Önde taşınacak küçük çanta","Biraz nakit euro","İlaçlar ve reçeteleri"]]];
+var PLACES=[{"id":"archeologico","n":"Ulusal Arkeoloji Müzesi","it":"Museo Archeologico Nazionale (MANN)","t":["muze","tarihi"],"la":40.8536,"lo":14.2506,"h":3,"tk":"oner","p":"≈ 22 €","url":"https://mann-napoli.it","best":"Açılışta, Pompeii'den önce","tip":"Pompeii ve Herculaneum'dan çıkan her şey burada: dev İskender mozaiği, freskler, Farnese heykelleri ve yetişkinlere yönelik 'Gizli Oda'. Pompeii'ye gitmeden önce gör; harabeler gözünde canlanır. Salı kapalı. M1 Museo."},{"id":"cappella","n":"Sansevero Şapeli ve Örtülü İsa","it":"Museo Cappella Sansevero","t":["muze","dini","gizli"],"la":40.84919,"lo":14.25488,"h":0.75,"tk":"sart","p":"≈ 12–13 €","url":"https://www.museosansevero.it","best":"Rezervasyonlu ilk seans","tip":"Giuseppe Sanmartino'nun mermerden oyduğu Örtülü İsa: tül, mermer değil kumaş gibi durur. Alt kattaki iki 'anatomik makine' iskeleti şapelin gizemli prensinin efsanelerini besler. İçeride fotoğraf yasak. Salı kapalı; biletler hızlı biter."},{"id":"spaccanapoli","n":"Spaccanapoli ve Via dei Tribunali","it":"Spaccanapoli · Decumano","t":["tarihi","mahalle","foto"],"la":40.84936,"lo":14.25826,"h":1.5,"tk":"free","p":"Ücretsiz","best":"Sabah ya da akşamüstü","tip":"Antik Yunan şehrinin cetvelle çizilmiş ana caddeleri hâlâ yerinde; Spaccanapoli şehri ikiye 'yarar'. Kiliseler, sunaklar, çamaşır ipleri ve scooterlar. Paralel Via dei Tribunali pizzacıların sokağı.","ph":"San Martino'nun terasından; caddenin şehri ikiye böldüğü düz çizgi."},{"id":"sangregorio","n":"San Gregorio Armeno (presepe sokağı)","it":"Via San Gregorio Armeno","t":["mahalle","moda"],"la":40.85026,"lo":14.25774,"h":0.5,"tk":"free","p":"Ücretsiz","best":"Kasım–Ocak; yıl boyu açık","tip":"Noel sahnesi (presepe) figürleri yapan atölyelerin dar sokağı. Kutsal ailenin yanında futbolcular, politikacılar ve ünlüler de el yapımı figür olarak satılır. Aralık'ta yürümek zor; sabah erken git."},{"id":"sottosuolo","n":"Napoli Sotterranea","it":"Napoli Sotterranea","t":["gizli","tarihi"],"la":40.851,"lo":14.2575,"h":1.5,"tk":"oner","p":"≈ 15 € (rehberli)","url":"https://www.napolisotterranea.org","best":"Öğle sıcağında","tip":"40 metre altta Yunanlıların taş ocakları, Roma su sarnıçları ve İkinci Dünya Savaşı sığınakları. Rehberli tur ≈ 90 dakika; bir bölümünde mum ışığında daracık bir geçitten geçilir. Klostrofobin varsa o kısmı atla. Çocuklar bayılır."},{"id":"duomo","n":"Napoli Katedrali (San Gennaro)","it":"Duomo di Napoli","t":["dini","tarihi"],"la":40.8525,"lo":14.2596,"h":0.75,"tk":"free","p":"Katedral ücretsiz · hazine müzesi ayrı","best":"Öğleden önce","tip":"Şehrin koruyucu azizi San Gennaro'nun şapeli burada. Kurutulmuş kanı yılda üç kez sıvılaşır (Mayıs'ın ilk Cumartesisi, 19 Eylül, 16 Aralık); sıvılaşmazsa şehre kötülük geleceğine inanılır. İçerideki Santa Restituta, Napoli'nin en eski kilisesi."},{"id":"santachiara","n":"Santa Chiara ve majolika avlusu","it":"Complesso Monumentale di Santa Chiara","t":["dini","foto"],"la":40.84649,"lo":14.25305,"h":1,"tk":"gise","p":"Kilise ücretsiz · avlu ≈ 7 €","url":"https://www.monasterodisantachiara.it","best":"Öğleden sonra","tip":"Sade gotik kilisenin arkasında, sütunları ve bankları sarı-mavi majolika çinilerle kaplı bir manastır avlusu: limon ağaçları, üzüm asmaları ve gündelik hayat sahneleri. Şehrin gürültüsünden kaçış."},{"id":"gesu","n":"Gesù Nuovo Kilisesi","it":"Chiesa del Gesù Nuovo","t":["dini","mimari"],"la":40.8473,"lo":14.2518,"h":0.5,"tk":"free","p":"Ücretsiz","best":"Gündüz","tip":"Dışı elmas uçlu taşlarla kaplı bir Rönesans sarayı cephesi, içi altın ve mermer dolu barok kilise. Taşlardaki işaretlerin aslında müzik notası olduğu söylenir. Doktor aziz Giuseppe Moscati'nin odası ve adak eşyaları içeride."},{"id":"plebiscito","n":"Piazza del Plebiscito","it":"Piazza del Plebiscito","t":["tarihi","foto"],"la":40.8359,"lo":14.24878,"h":0.5,"tk":"free","p":"Ücretsiz","best":"Akşamüstü","tip":"Şehrin en büyük meydanı: bir yanda Kraliyet Sarayı, öbür yanda Roma Pantheonu'nu taklit eden San Francesco di Paola. Gözü kapalı iki at heykelinin arasından geçebilirsen şans getirdiğine inanılır; kimse başaramaz. Köşede 1860'tan beri Gran Caffè Gambrinus."},{"id":"palazzoreale","n":"Napoli Kraliyet Sarayı","it":"Palazzo Reale di Napoli","t":["muze","tarihi"],"la":40.8362,"lo":14.2496,"h":1.5,"tk":"gise","p":"≈ 10–15 €","url":"https://palazzorealedinapoli.org","best":"Öğleden önce","tip":"Burbon krallarının sarayı: dev mermer merdiven, saray tiyatrosu ve taht odası. Cephedeki nişlerde Napoli'yi yöneten sekiz hanedanın kralları sırayla durur. Arkadaki bahçeden limana bakılır."},{"id":"sancarlo","n":"San Carlo Operası","it":"Teatro di San Carlo","t":["muze","gece"],"la":40.8375,"lo":14.24944,"h":1,"tk":"oner","p":"Rehberli tur ≈ 10 € · opera bileti ayrı","url":"https://www.teatrosancarlo.it","best":"Akşam bir temsil","tip":"1737'den beri kesintisiz çalışan dünyanın en eski opera binası; Scala'dan 41 yaş büyük. Kırmızı-altın salon ve kraliyet locası. Gündüz rehberli turla gezilir; en güzeli bir akşam temsili."},{"id":"galleria","n":"Galleria Umberto I","it":"Galleria Umberto I","t":["mimari","foto"],"la":40.83863,"lo":14.24957,"h":0.25,"tk":"free","p":"Ücretsiz","best":"Gündüz","tip":"Milano'dakinin kardeşi: cam ve demir kubbeli 19. yüzyıl pasajı, San Carlo'nun tam karşısında. Zemindeki burç mozaiğine ve kubbenin altındaki ışığa bak."},{"id":"castelovo","n":"Castel dell'Ovo ve Borgo Marinari","it":"Castel dell'Ovo","t":["tarihi","foto"],"la":40.82778,"lo":14.24806,"h":1,"tk":"free","p":"Ücretsiz","best":"Gün batımı","tip":"Denize uzanan adacıktaki en eski kale. Efsaneye göre şair Vergilius temellerine sihirli bir yumurta sakladı; yumurta kırılırsa şehre felaket gelir. Teraslarından Vezüv ve körfez. Altındaki balıkçı köyü Borgo Marinari'de deniz kenarında restoranlar.","ph":"Kalenin üst terasından, Vezüv ve körfez arkada."},{"id":"lungomare","n":"Lungomare (Via Caracciolo)","it":"Lungomare Caracciolo","t":["foto","doga"],"la":40.8305,"lo":14.238,"h":1,"tk":"free","p":"Ücretsiz","best":"Gün batımı ve akşam","tip":"Araç trafiğine kapalı sahil yolu: bir yanda Vezüv ve Capri, öbür yanda Villa Comunale parkı. Napolililerin akşam yürüyüşü ve koşu yolu. Yazın kayalıklarda güneşlenenler."},{"id":"maschio","n":"Castel Nuovo (Maschio Angioino)","it":"Castel Nuovo","t":["tarihi","muze"],"la":40.8384,"lo":14.25267,"h":1,"tk":"gise","p":"≈ 6 €","best":"Öğleden sonra","tip":"Limanın önündeki beş kuleli kale; iki kule arasına sıkıştırılmış beyaz mermer zafer takı Aragon kralının girişini anlatır. İçeride şehir müzesi ve camlı zeminden görülen Roma kalıntıları."},{"id":"quartieri","n":"Quartieri Spagnoli ve Maradona duvarı","it":"Quartieri Spagnoli · Largo Maradona","t":["mahalle","foto","spor"],"la":40.84083,"lo":14.24639,"h":1,"tk":"free","p":"Ücretsiz","best":"Gündüz","tip":"16. yüzyılda İspanyol askerleri için kurulan dik ve dar sokaklar; balkonlardan sepetle alışveriş, sunaklar, çamaşır ipleri. Largo Maradona'daki dev duvar resmi bir hac yeri gibi. Gündüz güvenli ve canlı; gece ara sokaklara dalma."},{"id":"toledo","n":"Toledo metro istasyonu","it":"Stazione Toledo","t":["mimari","gizli","foto"],"la":40.8425,"lo":14.2489,"h":0.25,"tk":"gise","p":"Metro bileti 1,50 €","best":"Gündüz","tip":"Avrupa'nın en güzel metro istasyonları listelerinin başında: yürüyen merdivenlerle denizin altına iner gibi mavi mozaik bir 'ışık kraterine' girersin. Bir bilet al ve aşağı in; Università ve Municipio istasyonları da birer sanat galerisi.","ph":"En alt kattan yukarı, mavi kraterin içinden."},{"id":"santelmo","n":"Castel Sant'Elmo","it":"Castel Sant'Elmo","t":["foto","tarihi"],"la":40.84362,"lo":14.23933,"h":1,"tk":"gise","p":"≈ 5 €","best":"Öğleden sonra, açık havada","tip":"Vomero tepesindeki yıldız biçimli kale. Surlarından bütün şehir, körfez, Vezüv ve Capri 360 derece. Fünikülerle Vomero'ya çık, kaleye 10 dakika yürü."},{"id":"sanmartino","n":"San Martino Manastırı ve Müzesi","it":"Certosa e Museo di San Martino","t":["muze","dini","foto"],"la":40.8431,"lo":14.2411,"h":1.5,"tk":"gise","p":"≈ 6 €","best":"Öğleden sonra","tip":"Kartuziyen manastırı; barok kilise, avlular ve binlerce figürlü dev Cuciniello presepesi. Asma bahçenin terasından Spaccanapoli'nin şehri ikiye böldüğü manzara."},{"id":"vomero","n":"Vomero ve Villa Floridiana","it":"Vomero","t":["mahalle","moda","doga"],"la":40.8437,"lo":14.2306,"h":1,"tk":"free","p":"Ücretsiz","best":"Akşamüstü","tip":"Tepedeki sakin ve düzenli semt: Via Scarlatti ve Piazza Vanvitelli'de alışveriş, kafeler. Villa Floridiana parkından körfeze bakan gizli bir teras. Aşağı inmek için füniküler."},{"id":"capodimonte","n":"Capodimonte Müzesi ve ormanı","it":"Museo e Real Bosco di Capodimonte","t":["muze","doga"],"la":40.86701,"lo":14.25053,"h":2.5,"tk":"gise","p":"Müze ≈ 15 € · orman ücretsiz","url":"https://capodimonte.cultura.gov.it","best":"Hafta içi sabah","tip":"Burbon kralının av köşkü: Caravaggio'nun Kırbaçlanma'sı, Tiziano, Bruegel ve Capodimonte porselenleri. Müze çoğu zaman bomboş. Arkasındaki dev Real Bosco parkı ücretsiz. Otobüsle ya da taksiyle çıkılır."},{"id":"catacombe","n":"San Gennaro Katakombları","it":"Catacombe di San Gennaro","t":["gizli","tarihi","dini"],"la":40.8622,"lo":14.2469,"h":1.25,"tk":"oner","p":"≈ 12 € (San Gaudioso dahil)","url":"https://www.catacombedinapoli.it","best":"Rehberli tur saatlerinde","tip":"İki kat yeraltı mezarı, 2.–10. yüzyıl freskleri ve San Gennaro'nun ilk mezarı. Turları Sanità'nın gençlerinin kurduğu kooperatif yürütür; bilet mahalleye iş olarak döner. Turdan sonra Sanità'ya yürüyerek in."},{"id":"sanita","n":"Rione Sanità","it":"Rione Sanità","t":["mahalle","gizli"],"la":40.8593,"lo":14.2491,"h":1.25,"tk":"free","p":"Ücretsiz","best":"Gündüz","tip":"Kötü şöhretini sanatla aşan halk mahallesi: Palazzo dello Spagnuolo'nun 'şahin kanadı' merdiveni, sokak sanatı, Totò'nun doğduğu ev ve Concettina ai Tre Santi'nin pizzası. Gündüz git, katakomblarla birleştir."},{"id":"fontanelle","n":"Fontanelle Mezarlığı","it":"Cimitero delle Fontanelle","t":["gizli"],"la":40.85914,"lo":14.24193,"h":0.75,"tk":"free","p":"Ücretsiz","best":"Sabah","tip":"Tüf kayasına oyulmuş eski bir taş ocağında binlerce kafatası. Napolililer bu isimsiz ölüleri 'evlat edinip' bakımını üstlenir, karşılığında rüyalarında dilek isterdi. Ürkütücü değil, dokunaklı. Açılış saatleri ve rezervasyon için belediyeye bak."},{"id":"pignasecca","n":"Pignasecca pazarı","it":"Mercato della Pignasecca","t":["mahalle","gizli"],"la":40.84536,"lo":14.24834,"h":0.75,"tk":"free","p":"Ücretsiz","best":"Sabah 8–13","tip":"Şehrin en eski sokak pazarı: balık tezgâhları, sebze, ev eşyası ve kızartmacılar. Bir 'cuoppo' (kâğıt külahta kızartma) ya da makarna kızartması frittatina al, yürürken ye. Montesanto fünikülerinin dibinde."},{"id":"portaalba","n":"Port'Alba ve Piazza Bellini","it":"Port'Alba · Piazza Bellini","t":["mahalle","gece"],"la":40.8494,"lo":14.2518,"h":0.75,"tk":"free","p":"Ücretsiz","best":"Akşam","tip":"17. yüzyıldan kalma kapının altında sahaf tezgâhları. Hemen yanındaki Piazza Bellini'de antik Yunan surlarının kalıntıları çevresinde edebiyat kafeleri ve öğrenci barları; gece hayatının başladığı yer."},{"id":"chiaia","n":"Chiaia ve Via dei Mille","it":"Chiaia","t":["moda","gece"],"la":40.836,"lo":14.242,"h":1.25,"tk":"free","p":"Ücretsiz","best":"Akşamüstü","tip":"Napoli'nin şık semti: Via Chiaia ve Via dei Mille'de mağazalar, Piazza dei Martiri'de lüks markalar. Akşam Vico Belledonne çevresindeki küçük barlar ('baretti') gençlerle dolar."},{"id":"mergellina","n":"Mergellina","it":"Mergellina","t":["foto","mahalle"],"la":40.82833,"lo":14.22056,"h":0.75,"tk":"free","p":"Ücretsiz","best":"Gün batımı","tip":"Balıkçı teknelerinin limanı; buradan Napoli'nin kartpostal manzarası: Castel dell'Ovo, Vezüv ve şehir aynı karede. Kıyıdaki şaletlerde buzlu kahve ve babà. Ischia ve Procida tekneleri de buradan kalkar."},{"id":"maradona","n":"Stadio Diego Armando Maradona","it":"Stadio Diego Armando Maradona","t":["spor"],"la":40.828,"lo":14.193,"h":2.5,"tk":"sart","p":"Maça göre değişir","url":"https://sscnapoli.it","best":"Maç günü","tip":"Napoli'nin stadı; 2020'de Maradona'nın adı verildi. Napoli 2023 ve 2025'te şampiyon oldu; maç günü atmosferi İtalya'nın en ateşlisi. Bilet isme kayıtlı, kapıda pasaport istenir; büyük maçlarda satış kısıtlanabilir. Linea 2 Campi Flegrei durağı."},{"id":"pizza","n":"Da Michele ve Tribunali pizzacıları","it":"L'Antica Pizzeria da Michele","t":["mahalle"],"la":40.8497,"lo":14.263,"h":1,"tk":"free","p":"Margherita ≈ 6–9 €","best":"Açılışta ya da öğleden sonra 15:00 gibi","tip":"1870'ten beri yalnız iki çeşit pizza: margherita ve marinara. Kapıda sıra numarası al; 30–60 dakika bekleme normal. Via dei Tribunali'deki Sorbillo ve Di Matteo da efsane; Di Matteo'nun pizza fritta'sını dene."},{"id":"sanlorenzo","n":"San Lorenzo Maggiore ve yeraltı","it":"Complesso di San Lorenzo Maggiore","t":["tarihi","gizli","dini"],"la":40.85093,"lo":14.25812,"h":1,"tk":"gise","p":"Kilise ücretsiz · kazılar ≈ 10 €","best":"Öğleden önce","tip":"Gotik kilisenin altında Roma dönemi Napoli'sinin pazar sokağı: fırınlar, dükkânlar ve hazine binası taş taş yerinde. Petrarca'nın bir süre kaldığı manastır da burada."},{"id":"piomonte","n":"Pio Monte della Misericordia","it":"Pio Monte della Misericordia","t":["gizli","muze"],"la":40.85187,"lo":14.26043,"h":0.5,"tk":"gise","p":"≈ 10 €","url":"https://www.piomontedellamisericordia.it","best":"Öğleden önce","tip":"Küçük bir yardım kurumunun kilisesinde, yapıldığı yerde duran bir Caravaggio: Merhametin Yedi Eseri. Üst kattaki pencereden tabloya yukarıdan da bakılır. Duomo'nun hemen yanında, turistlerin çoğu bilmez."},{"id":"borbonica","n":"Galleria Borbonica","it":"Galleria Borbonica","t":["gizli","tarihi"],"la":40.83547,"lo":14.24627,"h":1.25,"tk":"oner","p":"≈ 15 €","url":"https://www.galleriaborbonica.com","best":"Öğle sıcağında","tip":"Burbon kralının sarayından kışlaya kaçış için kazdırdığı 1853 yapımı tünel; İkinci Dünya Savaşı'nda sığınak, sonra el konulan araçların deposu oldu. İçeride paslı eski arabalar ve vespalar. Rehberli tur."},{"id":"echia","n":"Monte Echia","it":"Belvedere di Monte Echia","t":["foto","gizli"],"la":40.8341,"lo":14.2468,"h":0.5,"tk":"free","p":"Ücretsiz","best":"Gün batımı","tip":"Napoli'nin doğduğu tepe: Yunanlıların ilk yerleşimi Parthenope burada kuruldu. Pizzofalcone'nin üstündeki küçük seyir terasından Castel dell'Ovo'ya ve körfeze tepeden bakılır. Turistlerin çoğu aşağıdaki sahilde kalır."},{"id":"pompei","n":"Pompeii","it":"Parco Archeologico di Pompei","t":["tarihi","foto"],"la":40.75,"lo":14.48611,"h":6,"tk":"sart","p":"≈ 18–20 €","url":"https://pompeiisites.org","far":true,"best":"Açılışta, özellikle yazın","tip":"MS 79'da Vezüv'ün küllerine gömülen Roma şehri: forum, evler, freskler, fırınlar ve alçı insan kalıpları. Circumvesuviana ile Garibaldi'den ≈ 35 dakika; 'Pompei Scavi–Villa dei Misteri' durağında in. Bilet isme kayıtlı ve günlük ziyaretçi sınırı var; önceden al. Gölge yok: şapka, su, rahat ayakkabı.","ph":"Forumun kuzey ucundan, Jüpiter Tapınağı ve arkada Vezüv."},{"id":"ercolano","n":"Herculaneum","it":"Parco Archeologico di Ercolano","t":["tarihi","gizli"],"la":40.806,"lo":14.3482,"h":3,"tk":"oner","p":"≈ 13–15 €","url":"https://ercolano.cultura.gov.it","far":true,"best":"Sabah","tip":"Pompeii'nin küçük ve çok daha iyi korunmuş kardeşi: sıcak çamurla gömüldüğü için ahşap kapılar, kirişler ve ikinci katlar ayakta. Yarım günde rahat gezilir. Circumvesuviana ile ≈ 20 dakika, Ercolano Scavi durağı. Çarşamba kapalı."},{"id":"vesuvio","n":"Vezüv krateri","it":"Parco Nazionale del Vesuvio · Gran Cono","t":["doga","foto"],"la":40.82139,"lo":14.42611,"h":4,"tk":"sart","p":"≈ 12 € (yalnız online, saatli)","url":"https://www.parconazionaledelvesuvio.it","far":true,"best":"Açık ve rüzgârsız bir sabah","tip":"Hâlâ aktif yanardağın krater ağzına 30–40 dakikalık yokuş patika. Bilet yalnız internetten ve saatli satılır; kötü havada patika kapanır. Ercolano ya da Pompei'den kalkan otobüslerle park yerine çıkılır. Pompeii ile aynı güne sığar."},{"id":"capri","n":"Capri","it":"Isola di Capri","t":["doga","foto","moda"],"la":40.55,"lo":14.23333,"h":8,"tk":"oner","p":"Hızlı tekne ≈ 22–28 € (tek yön) · Mavi Mağara ayrı","far":true,"best":"Mayıs–Haziran ya da Eylül, ilk tekneyle","tip":"Molo Beverello'dan hızlı tekneyle ≈ 50 dakika; ada giriş vergisi bilete dahil. Füniküler ile Capri kasabasına çık, Augusto bahçelerinden Faraglioni kayalıklarına bak. Anacapri'den teleferikle Monte Solaro. Mavi Mağara dalgalı havada kapanır. Günübirlikçiler gidince ada sakinleşir.","ph":"Augusto bahçelerinden Faraglioni ve Via Krupp'un kıvrımları."},{"id":"amalfi","n":"Amalfi kıyısı (Positano, Amalfi, Ravello)","it":"Costiera Amalfitana","t":["doga","foto"],"la":40.63367,"lo":14.60262,"h":9,"tk":"free","p":"Tekne ≈ 20–25 € · otobüs birkaç €","far":true,"best":"Mayıs, Haziran, Eylül","tip":"Uçurumlara tutunmuş renkli köyler. Nisan–Ekim arası Molo Beverello'dan Positano ve Amalfi'ye doğrudan tekne (≈ 2 sa); kışın Circumvesuviana ile Sorrento, oradan SITA otobüsü. Ravello'nun bahçeleri ve yürüyüşçüler için 'Tanrıların Yolu' (Sentiero degli Dei). Tek günde yorucu; bir gece kalmak çok daha iyi."}];
+var AREAS=[{"id":"centro","n":"Tarihi merkez","la":40.8495,"lo":14.257,"q":"Centro Storico, Napoli","tags":["butce","butik"],"price":"≈ 90–180 €","fr":"İlk kez gelenler, yemek meraklıları","plus":["Pizzacılar, kiliseler ve yeraltı turları kapıda","Fiyatlar uygun"],"minus":["Dar sokaklarda scooter gürültüsü gece de sürer","Bazı ara sokaklar gece ıssız"],"metro":"M1 · Dante, Duomo, Università"},{"id":"toledo","n":"Toledo ve Quartieri Spagnoli","la":40.841,"lo":14.248,"q":"Via Toledo, Napoli","tags":["butce","butik"],"price":"≈ 90–170 €","fr":"Hem merkeze hem denize yakın olmak isteyenler","plus":["Plebiscito, sahil ve tarihi merkez yürüme mesafesinde","Toledo istasyonu ve füniküler yanında"],"minus":["Quartieri'nin dik sokakları bavulla zor","Gece Via Toledo dışına dalma"],"metro":"M1 · Toledo · füniküler Augusteo"},{"id":"chiaia","n":"Chiaia ve sahil","la":40.834,"lo":14.242,"q":"Chiaia, Napoli","tags":["lux","cift"],"price":"≈ 150–300 €","fr":"Çiftler, sakin ve şık bir üs isteyenler","plus":["Napoli'nin en güvenli ve zarif semti","Deniz kenarı, akşam barları"],"minus":["Pahalı","Tarihi merkeze 25 dakika yürüme"],"metro":"L2 Piazza Amedeo · füniküler Chiaia"},{"id":"municipio","n":"Municipio ve liman","la":40.8395,"lo":14.2525,"q":"Piazza Municipio, Napoli","tags":["aile","havalimani"],"price":"≈ 120–220 €","fr":"Capri ve Amalfi'ye teknelerle gidecekler","plus":["Molo Beverello limanı ve Alibus durağı kapıda","Plebiscito ve San Carlo yanında"],"minus":["Büyük cadde trafiği","Akşam ofis semti gibi"],"metro":"M1 · Municipio"},{"id":"vomero","n":"Vomero","la":40.844,"lo":14.232,"q":"Vomero, Napoli","tags":["aile","butce"],"price":"≈ 100–180 €","fr":"Aileler, sakin uyumak isteyenler","plus":["Güvenli, düzenli, manzaralı","Yerel kafeler ve alışveriş"],"minus":["Merkeze inip çıkmak için füniküler ya da metro","Tarihi havası az"],"metro":"M1 Vanvitelli · füniküler"},{"id":"garibaldi","n":"Garibaldi garı çevresi","la":40.852,"lo":14.271,"q":"Piazza Garibaldi, Napoli","tags":["butce","havalimani"],"price":"≈ 70–130 €","fr":"Sıkı bütçe, erken treni olanlar","plus":["Pompeii ve Sorrento trenleri, Alibus kapıda","En ucuz bölge"],"minus":["Geceleri tekinsiz; ana caddeden ayrılma","Turistik değil"],"metro":"M1 · L2 · Garibaldi"},{"id":"sorrento","n":"Sorrento","la":40.6263,"lo":14.3757,"far":true,"q":"Sorrento","tags":["cift","aile"],"price":"≈ 150–300 €","fr":"Amalfi, Capri ve Pompeii'yi tek üsten görmek isteyenler","plus":["Capri ve Amalfi'ye tekne, Pompeii'ye tren","Sakin ve deniz manzaralı"],"minus":["Napoli'ye trenle 1 sa 10 dk","Yazın çok kalabalık ve pahalı"],"metro":"Circumvesuviana · Sorrento"}];
+var MONTHS=[{"m":"Ocak","hi":13,"lo":5,"rain":9,"crowd":2,"price":2,"wear":"Mont, şemsiye","note":"6 Ocak Befana. Şehir sakin, müzeler boş; Amalfi'de otellerin çoğu kapalı."},{"m":"Şubat","hi":14,"lo":5,"rain":8,"crowd":2,"price":2,"wear":"Mont, katmanlı kıyafet","note":"Karnaval; chiacchiere ve migliaccio tatlıları vitrinlerde."},{"m":"Mart","hi":16,"lo":7,"rain":8,"crowd":3,"price":3,"wear":"Ceket, şemsiye","note":"Bahar başlıyor; Pompeii'yi kalabalıksız görmek için iyi."},{"m":"Nisan","hi":19,"lo":9,"rain":7,"crowd":4,"price":4,"wear":"Ceket ve tişört, katmanlı","note":"Paskalya'da pastiera tatlısı. Amalfi otelleri ve teknelerin yaz seferleri başlar."},{"m":"Mayıs","hi":23,"lo":13,"rain":5,"crowd":5,"price":4,"wear":"Tişört, akşam için hırka","note":"Maggio dei Monumenti: kapalı saraylar açılır. Ayın ilk Cumartesisi San Gennaro mucizesi."},{"m":"Haziran","hi":27,"lo":17,"rain":3,"crowd":5,"price":5,"wear":"İnce kıyafet, mayo, şapka","note":"Deniz mevsimi; Capri ve Amalfi için en güzel ay ama kalabalık başlar."},{"m":"Temmuz","hi":30,"lo":20,"rain":2,"crowd":4,"price":5,"wear":"İnce kıyafet, güneş kremi, matara","note":"Sıcak; Pompeii'yi açılışta gez. 16 Temmuz'da Carmine'de çan kulesinin 'yanması'."},{"m":"Ağustos","hi":30,"lo":20,"rain":3,"crowd":4,"price":5,"wear":"İnce kıyafet, şapka, matara","note":"Ferragosto: Napolililer kıyıda, şehirde dükkânlar kapalı. Amalfi'de fiyatlar zirvede."},{"m":"Eylül","hi":27,"lo":17,"rain":5,"crowd":5,"price":5,"wear":"Tişört, mayo, ince ceket","note":"19 Eylül San Gennaro bayramı. Deniz ılık, hava yumuşak; en iyi aylardan."},{"m":"Ekim","hi":22,"lo":13,"rain":8,"crowd":4,"price":4,"wear":"Ceket, şemsiye","note":"Amalfi'de sezon sonu; kıyı yolu rahatlar, tekne seferleri azalır."},{"m":"Kasım","hi":17,"lo":9,"rain":10,"crowd":2,"price":2,"wear":"Mont, su geçirmez ayakkabı","note":"Yılın en yağışlı ayı. San Gregorio Armeno'da presepe sezonu başlar."},{"m":"Aralık","hi":14,"lo":6,"rain":9,"crowd":3,"price":3,"wear":"Mont, atkı","note":"Presepe sokağı en kalabalık hâlinde; 16 Aralık San Gennaro mucizesi, Lungomare'de yılbaşı."}];
+var EVENTS=[[0,"6 Ocak","Befana","Çocuklara şeker dolu çoraplar; Plebiscito'da şenlik","FESTİVAL"],[1,"Şubat","Karnaval","Çocuk kostümleri, chiacchiere ve migliaccio tatlıları","FESTİVAL"],[4,"Mayıs","Maggio dei Monumenti","Normalde kapalı saraylar ve kiliseler halka açılır","SANAT"],[4,"Mayıs'ın ilk Cumartesisi","San Gennaro mucizesi","Azizin kanının sıvılaştığı tören ve alay","DİNİ"],[5,"Haziran–Temmuz","Napoli Teatro Festival","Tiyatro ve dans, şehrin dört bir yanında","SANAT"],[6,"16 Temmuz","Madonna del Carmine","Piazza del Mercato'da çan kulesinin havai fişekle 'yanması'","DİNİ"],[6,"Haziran–Eylül","Capri ve Amalfi sezonu","Tekneler tam sefer; kıyı yolu ve adalar çok kalabalık","SEZON"],[8,"19 Eylül","Festa di San Gennaro","Şehrin koruyucu azizi; Duomo'da mucize ve sokak şenlikleri","DİNİ"],[8,"Ağustos–Mayıs","Napoli maçları","Stadio Maradona'da Serie A","MAÇ"],[10,"Kasım–Ocak","Presepe sezonu","San Gregorio Armeno'da el yapımı Noel sahnesi figürleri","FESTİVAL"],[11,"16 Aralık","San Gennaro mucizesi","Yılın üçüncü sıvılaşma töreni","DİNİ"],[11,"31 Aralık","Yılbaşı","Lungomare'de konser ve körfezde havai fişek","FESTİVAL"]];
+var DAYTRIPS=[{"n":"Procida","w":"Pastel renkli balıkçı evleri, Marina Corricella ve turistsiz ara sokaklar.","how":"Molo Beverello ya da Calata Porta di Massa'dan tekne","t":"≈ 40 dk – 1 sa","c":"Tekne ≈ 15–25 €"},{"n":"Ischia","w":"Termal bahçeler, Aragon kalesi ve kumsallar.","how":"Molo Beverello ya da Mergellina'dan tekne","t":"≈ 1 saat","c":"Tekne ≈ 20–25 €"},{"n":"Caserta Sarayı","w":"Versay'a rakip Burbon sarayı ve 3 km'lik çeşmeli bahçe.","how":"Napoli Centrale'den tren","t":"≈ 40 dk","c":"Tren ≈ 4 € · saray ≈ 15–20 €"},{"n":"Sorrento","w":"Limon bahçeleri, uçurum üstü meydanlar; Capri ve Amalfi'ye geçiş kapısı.","how":"Circumvesuviana ya da yazın tekne","t":"≈ 1 sa 10 dk","c":"Tren ≈ 4–5 €"},{"n":"Paestum","w":"İtalya'nın en iyi korunmuş Yunan tapınakları ve dalgıç mezarı freski.","how":"Napoli Centrale'den bölgesel tren","t":"≈ 1 sa 15 dk","c":"Tren ≈ 6–8 € · giriş ≈ 15 €"},{"n":"Pozzuoli ve Campi Flegrei","w":"Volkanik 'yanan tarlalar', Roma amfitiyatrosu ve Serapeum.","how":"Linea 2 metrosu","t":"≈ 25 dk","c":"Metro 1,50 €"}];
+var TRIPS={"1":[{"t":"Napoli tek günde","s":["spaccanapoli","cappella","sangregorio","archeologico","toledo","plebiscito","castelovo"]}],"2":[{"t":"Tarihi merkez","s":["duomo","sangregorio","sottosuolo","cappella","santachiara","gesu","portaalba"]},{"t":"Müze, saray ve deniz","s":["archeologico","toledo","quartieri","plebiscito","palazzoreale","castelovo","lungomare"]}],"3":[{"t":"Tarihi merkez ve yeraltı","s":["duomo","piomonte","sangregorio","sottosuolo","cappella","santachiara","gesu"]},{"t":"Arkeoloji ve Sanità","s":["archeologico","catacombe","sanita","fontanelle","capodimonte"]},{"t":"Toledo'dan denize","s":["toledo","quartieri","plebiscito","sancarlo","galleria","castelovo","lungomare"]}],"5":[{"t":"Tarihi merkez ve yeraltı","s":["duomo","piomonte","sangregorio","sottosuolo","cappella","santachiara","gesu"]},{"t":"Arkeoloji ve Sanità","s":["archeologico","catacombe","sanita","fontanelle","capodimonte"]},{"t":"Toledo'dan denize","s":["toledo","quartieri","plebiscito","sancarlo","galleria","castelovo","lungomare"]},{"t":"Pompeii ve Vezüv","s":["pompei","vesuvio"]},{"t":"Capri","s":["capri"]}],"7":[{"t":"Tarihi merkez ve yeraltı","s":["duomo","piomonte","sangregorio","sottosuolo","cappella","santachiara","gesu"]},{"t":"Arkeoloji ve Sanità","s":["archeologico","catacombe","sanita","fontanelle","capodimonte"]},{"t":"Toledo'dan denize","s":["toledo","quartieri","plebiscito","sancarlo","galleria","castelovo","lungomare"]},{"t":"Pompeii ve Vezüv","s":["pompei","vesuvio"]},{"t":"Capri","s":["capri"]},{"t":"Amalfi kıyısı","s":["amalfi"]},{"t":"Vomero ve manzara","s":["sanmartino","santelmo","vomero","echia","borbonica"]}]};
+var TYPES={"aile":{"n":"Aile","area":"vomero","tips":["18 yaş altı devlet müzelerine çoğunlukla ücretsiz girer.","Napoli Sotterranea'nın mumlu geçidi ve Galleria Borbonica'nın eski arabaları çocukların favorisi.","Dar sokaklarda scooterlara karşı çocuğun elini bırakma.","Pompeii'de taşlar engebeli; bebek arabası yerine kanguru."],"p":["sottosuolo","borbonica","castelovo","pompei"]},"cift":{"n":"Romantik","area":"chiaia","tips":["Gün batımında Castel dell'Ovo ya da Mergellina.","Capri'de bir gece kal; günübirlikçiler gidince ada başkalaşır.","Ravello'nun bahçeleri ve Positano'da akşam yemeği.","San Carlo'da bir opera gecesi."],"p":["castelovo","mergellina","capri","amalfi"]},"solo":{"n":"Solo","area":"centro","tips":["Sokak yemeği tek başına yemenin en doğal yolu: cuoppo, pizza a portafoglio, sfogliatella.","Pizzacılarda tek kişi sıra daha çabuk gelir.","Katakomb ve yeraltı turlarında grupla gezersin.","Gece Piazza Bellini'de, ana caddelerde kal."],"p":["spaccanapoli","catacombe","pignasecca","portaalba"]},"grup":{"n":"Arkadaş grubu","area":"toledo","tips":["Dört kişi ve üstü için daire kiralamak otelden ucuz.","Bir Napoli maçı için biletleri kulübün resmi kanalından erken al.","Pizza turu: Tribunali'de üç pizzacı, üç farklı pizza.","Amalfi için tekne kiralamak grupta kişi başı ucuzlar."],"p":["quartieri","pizza","maradona","portaalba"]},"butce":{"n":"Düşük bütçe","area":"centro","tips":["Pizza margherita ≈ 6–9 €; katlanmış pizza a portafoglio ≈ 2–3 €.","Kiliselerin çoğu, Castel dell'Ovo ve sahil ücretsiz.","Ayın ilk Pazarı devlet müzeleri ücretsiz (kuyruk uzun).","Pompeii'ye tur yerine Circumvesuviana ile ≈ 3,30 €."],"p":["spaccanapoli","gesu","duomo","pizza"]}};
+var BUDGET={"eko":{"konak":45,"yemek":28,"ulasim":4,"giris":15,"vergi":3},"orta":{"konak":90,"yemek":50,"ulasim":6,"giris":25,"vergi":5},"konfor":{"konak":200,"yemek":95,"ulasim":20,"giris":40,"vergi":6}};
+var HATLAR=[{"id":"L1","sq":"1","et":"Linea 1 metrosu","etA":"Linea 1 metrosuna","renk":"var(--line-a)","bekle":6,"dk":2,"d":[["Centro Direzionale",40.85806,14.28164,4],["Garibaldi",40.85184,14.27005],["Duomo",40.84758,14.26165],["Università",40.84356,14.25557],["Municipio",40.83965,14.25248,0],["Toledo",40.84244,14.2488,1],["Dante",40.84895,14.25006],["Museo",40.85346,14.25152],["Materdei",40.85496,14.24243,4],["Salvator Rosa",40.85132,14.23696],["Quattro Giornate",40.8463,14.22529,4],["Vanvitelli",40.84392,14.23172,1],["Montedonzelli",40.85582,14.22502,4],["Rione Alto",40.86119,14.22006,4],["Policlinico",40.86529,14.22118,4],["Colli Aminei",40.86985,14.22856,4]]},{"id":"L2","sq":"2","et":"Linea 2 metrosu","etA":"Linea 2 metrosuna","renk":"var(--line-b)","bekle":10,"dk":2.5,"d":[["Campi Flegrei",40.82237,14.19453],["Piazza Leopardi",40.82408,14.19969,4],["Mergellina",40.83158,14.21869],["Piazza Amedeo",40.8385,14.23312,1],["Montesanto",40.84761,14.2439,1],["Piazza Cavour",40.85519,14.25457,2],["Garibaldi",40.85184,14.27005],["Gianturco",40.85391,14.2878,4]]},{"id":"FC","sq":"F","et":"Centrale füniküleri","etA":"Centrale füniküleri","renk":"var(--line-c)","bekle":8,"dk":1.5,"d":[["Augusteo",40.83894,14.24769,4],["Corso V. Emanuele (Centrale)",40.84012,14.24316,4],["Petraio",40.84125,14.23879,4],["Piazza Fuga",40.84249,14.2337,4]]},{"id":"FB","sq":"F","et":"Chiaia füniküleri","etA":"Chiaia füniküleri","renk":"var(--line-c)","bekle":8,"dk":1.5,"d":[["Parco Margherita",40.83812,14.2347,4],["Corso V. Emanuele (Chiaia)",40.83893,14.23418,4],["Palazzolo",40.84119,14.23278,4],["Cimarosa",40.84232,14.23202,4]]},{"id":"FM","sq":"F","et":"Montesanto füniküleri","etA":"Montesanto füniküleri","renk":"var(--line-c)","bekle":8,"dk":1.5,"d":[["Montesanto",40.84761,14.2439],["Corso V. Emanuele (Montesanto)",40.8461,14.24179,4],["Morghen",40.84428,14.23618,4]]}];
+var SU=[];
+var PARKS=[{"n":"Villa Comunale","c":[40.8324,14.2335],"p":[[40.83242,14.22659],[40.83338,14.23053],[40.83351,14.23333],[40.83297,14.24071],[40.83188,14.24065],[40.83266,14.23307],[40.83288,14.23204],[40.83279,14.22964],[40.83222,14.22713],[40.83242,14.22659]]},{"n":"Floridiana","c":[40.8406,14.2307],"p":[[40.84236,14.22894],[40.84252,14.2289],[40.84258,14.23041],[40.8423,14.23042],[40.8423,14.23125],[40.84201,14.23132],[40.84181,14.23206],[40.84089,14.2323],[40.83984,14.23214],[40.83973,14.23241],[40.8394,14.23154],[40.83874,14.23116],[40.83858,14.23071],[40.83893,14.22917],[40.84006,14.22965],[40.84236,14.22894]]},{"n":"Real Bosco","c":[40.8725,14.2535],"p":[[40.87803,14.26104],[40.87726,14.26017],[40.87685,14.26004],[40.87458,14.26053],[40.87426,14.25841],[40.87326,14.25774],[40.87286,14.25691],[40.87088,14.25612],[40.87017,14.25444],[40.86928,14.25456],[40.86873,14.25398],[40.86813,14.25381],[40.86754,14.25295],[40.8663,14.25271],[40.86542,14.25107],[40.8655,14.24969],[40.86582,14.24937],[40.86686,14.24914],[40.86967,14.25034],[40.87176,14.24977],[40.87424,14.2486],[40.87907,14.24876],[40.87902,14.24938],[40.87954,14.24963],[40.88161,14.24962],[40.88223,14.25049],[40.88198,14.2514],[40.88313,14.2521],[40.88252,14.25242],[40.88222,14.25311],[40.88229,14.25359],[40.88273,14.25355],[40.88283,14.25379],[40.88202,14.25452],[40.88237,14.25513],[40.88202,14.25685],[40.88161,14.25765],[40.88189,14.25985],[40.88134,14.26051],[40.88149,14.26161],[40.88235,14.26264],[40.8821,14.26307],[40.87937,14.26176],[40.87933,14.26083],[40.87869,14.26075],[40.87803,14.26104]]}];
+var VISA={"bordo":{"s1":"İtalya · Schengen","s2":"Vize gerekli","s3":"C tipi · iDATA","h":"Bordo pasaportla Schengen vizesi gerekiyor.","b":"İtalya vizesi Türkiye'de iDATA üzerinden alınır. Kısa süreli (C tipi) vize, 180 günde 90 güne kadar kalmana izin verir ve bütün Schengen ülkelerinde geçerlidir.","pts":["Başvuru: en erken 6 ay, en geç 15 gün önce","Karar: genelde 15 gün","Ücret: 90 € + iDATA hizmet bedeli"],"proc":true,"mrz":"TUR"},"yesil":{"s1":"İtalya · Schengen","s2":"Vizesiz","s3":"90 gün / 180 gün","h":"Yeşil (hususi) pasaportla vize gerekmez.","b":"Hususi pasaport sahipleri Schengen bölgesine vizesiz girer. Yine de 180 günde 90 gün kuralı ve sınırdaki biyometrik kayıt geçerli.","pts":["Pasaportun son 10 yılda verilmiş ve dönüşten sonra 3 ay geçerli olmalı","Sınırda dönüş bileti ve konaklama sorulabilir","Seyahat sigortası zorunlu değil ama şiddetle önerilir"],"proc":false,"mrz":"TUR"},"gri":{"s1":"İtalya · Schengen","s2":"Vizesiz","s3":"90 gün / 180 gün","h":"Gri (hizmet) pasaportla vize gerekmez.","b":"Hizmet pasaportu sahipleri Schengen bölgesine vizesiz girer. Görev seyahatinde kurum yazısını yanında taşı; durumu seyahat öncesi konsolosluktan teyit et.","pts":["180 günde en fazla 90 gün","Sınırda seyahat amacı sorulabilir","Biyometrik giriş kaydı (EES) yapılır"],"proc":false,"mrz":"TUR"},"siyah":{"s1":"İtalya · Schengen","s2":"Vizesiz","s3":"Diplomatik","h":"Diplomatik pasaportla vize gerekmez.","b":"Diplomatik pasaport sahipleri vizesiz girer. Görevli olarak gidiyorsan ayrıca akreditasyon kuralları uygulanır.","pts":["180 günde en fazla 90 gün","Görev seyahatinde nota ve akreditasyon","Biyometrik giriş kaydı (EES) yapılır"],"proc":false,"mrz":"TUR"},"EU":{"s1":"İtalya · AB","s2":"Vize yok","s3":"Kimlik kartı yeterli","h":"AB vatandaşı olarak vize gerekmez.","b":"Geçerli kimlik kartı ya da pasaportla serbestçe girersin; kalış süresi sınırı yoktur. Avrupa Sağlık Sigortası Kartını (EHIC) yanına al.","pts":["Kimlik kartı ya da pasaport yeterli","EES kaydı AB vatandaşlarına uygulanmaz","Çifte vatandaşsan AB belgenle gir"],"proc":false,"mrz":"EUE"},"AZ":{"s1":"Dosya hazırlanıyor","s2":"Yakında","s3":"Azerbaycan pasaportu","h":"Azerbaycan pasaportu için dosya hazırlanıyor.","b":"Bu prototipte vize süreci yalnızca Türk vatandaşları ve AB vatandaşları için hazır. Sitede her uyruk için ayrı bir sayfa olacak.","pts":["Azerbaycan vatandaşları Schengen vizesine tabidir","Başvuru merkezi ve evrak listesi eklenecek"],"proc":false,"mrz":"AZE"},"XX":{"s1":"Dosya hazırlanıyor","s2":"Yakında","s3":"Diğer uyruklar","h":"Bu uyruk için dosya hazırlanıyor.","b":"Bu prototipte vize süreci yalnızca Türk vatandaşları ve AB vatandaşları için hazır. Sitede her uyruk için ayrı bir sayfa olacak.","pts":[],"proc":false,"mrz":"XXX"}};
+var DOCS={"common":["Vize başvuru formu, eksiksiz ve imzalı","2 biyometrik fotoğraf, 3,5 × 4,5 cm, beyaz fon, son 6 ay","Pasaport ve önceki vizelerin fotokopileri","Tam vukuatlı nüfus kayıt örneği (e-Devlet)","Gidiş-dönüş uçak rezervasyonu","Otel rezervasyonu ya da davet mektubu","Seyahat sağlık sigortası: en az 30.000 €, tüm Schengen","Son 3 aylık banka hesap dökümü, kaşeli"],"calisan":["İşveren yazısı: görev, maaş, izin tarihleri","Barkodlu SGK hizmet dökümü","Son 3 aylık maaş bordrosu"],"isveren":["Vergi levhası","Son 3 ay içinde alınmış faaliyet belgesi","Ticaret sicil gazetesi","İmza sirküleri"],"ogrenci":["Öğrenci belgesi","Sponsor dilekçesi","Sponsorun gelir belgesi ve banka dökümü"],"emekli":["Emekli belgesi (e-Devlet)","Emekli maaş dökümü"]};
+var DOCT={"calisan":"Çalışanlar için ek","isveren":"İşverenler için ek","ogrenci":"Öğrenciler için ek","emekli":"Emekliler için ek"};
+
+var HAT={};HATLAR.forEach(function(L){HAT[L.id]=L;});
+var byId={};PLACES.forEach(function(p){byId[p.id]=p;});
+var areaById={};AREAS.forEach(function(a){areaById[a.id]=a;});
+
+/* ============ DURUM ============ */
+var LS="seyyah-"+C.id+"-v1";
+var S={plan:C.ornekPlan.slice(),visited:[],base:C.us,sample:true,bag:[]};
+try{var saved=JSON.parse(localStorage.getItem(LS));if(saved&&Array.isArray(saved.plan)){S=Object.assign(S,saved);}}catch(e){}
+function save(){try{localStorage.setItem(LS,JSON.stringify(S));}catch(e){}}
+function inPlan(id){return S.plan.indexOf(id)>-1;}
+function togglePlan(id){var i=S.plan.indexOf(id);if(i>-1){S.plan.splice(i,1);S.visited=S.visited.filter(function(v){return v!==id;});}else{S.plan.push(id);}S.sample=false;save();update();}
+
+/* ============ BİÇİMLEME ============ */
+function fmtMin(m){m=Math.round(m);if(m<60)return m+" dk";var h=Math.floor(m/60),r=m%60;return r?h+" sa "+r+" dk":h+" sa";}
+function fmtH(h){return fmtMin(h*60);}
+function dec(n,d){return n.toFixed(d==null?1:d).replace(".",",");}
+function fmtDays(d){return d<=0.5?"yarım gün":dec(d,d%1?1:0)+" gün";}
+function eur(n){return Math.round(n).toLocaleString("tr-TR")+" €";}
+
+/* ============ COĞRAFYA VE SÜRE HESABI ============ */
+function km(a,b){var R=6371,d=Math.PI/180,dla=(b.la-a.la)*d,dlo=(b.lo-a.lo)*d;var x=Math.pow(Math.sin(dla/2),2)+Math.cos(a.la*d)*Math.cos(b.la*d)*Math.pow(Math.sin(dlo/2),2);return 2*R*Math.asin(Math.sqrt(x));}
+function walkMin(k){return k*(C.dolam||1.3)/4.8*60;}
+function nearest(L,pt){var best=null;HAT[L].d.forEach(function(s,i){var k=km(pt,{la:s[1],lo:s[2]});if(!best||k<best.k)best={i:i,k:k,name:s[0]};});return best;}
+function stIdx(L,ad){var d=HAT[L].d;for(var i=0;i<d.length;i++)if(d[i][0]===ad)return i;return -1;}
+function travel(a,b){
+  var k=km(a,b),walk=walkMin(k),opts=[];
+  HATLAR.forEach(function(L){if(!L.d.length)return;var sa=nearest(L.id,a),sb=nearest(L.id,b);if(sa.i!==sb.i){opts.push({min:walkMin(sa.k)+(L.bekle||4)+Math.abs(sa.i-sb.i)*(L.dk||2)+walkMin(sb.k),w:Math.max(walkMin(sa.k),walkMin(sb.k)),desc:sa.name+" → "+L.et+" → "+sb.name});}});
+  (C.aktarma||[]).forEach(function(t){[[t[0],t[1]],[t[1],t[0]]].forEach(function(pr){var A=HAT[pr[0]],B=HAT[pr[1]],ia=stIdx(pr[0],t[2]),ib=stIdx(pr[1],t[2]);if(ia<0||ib<0)return;var sa=nearest(pr[0],a),sb=nearest(pr[1],b);if(sa.i!==ia&&sb.i!==ib){opts.push({min:walkMin(sa.k)+(A.bekle||4)+Math.abs(sa.i-ia)*(A.dk||2)+(t[4]||5)+Math.abs(sb.i-ib)*(B.dk||2)+walkMin(sb.k),w:Math.max(walkMin(sa.k),walkMin(sb.k)),desc:sa.name+" → "+A.et+" → "+t[3]+" "+B.etA+" aktarma → "+sb.name});}});});
+  var ok=opts.filter(function(o){return o.w<=18;}).sort(function(x,y){return x.min-y.min;});
+  var metro=(ok.length&&ok[0].min<walk-5)?ok[0]:null;
+  var T=C.taksi,road=k*1.35,taxi=road/(T.hiz||17)*60+(T.ek||4),fare=T.acilis+road*T.km;
+  return {k:k,walk:walk,metro:metro,taxi:taxi,fareLo:Math.max(T.min,Math.round(fare)),fareHi:Math.round(fare*1.3)+2,best:Math.min(walk,metro?metro.min:Infinity)};
+}
+function itinerary(ids,baseId){
+  var pts=ids.map(function(id){return byId[id];}).filter(Boolean);
+  var near=pts.filter(function(p){return !p.far;}),far=pts.filter(function(p){return p.far;});
+  var start=areaById[baseId]&&!areaById[baseId].far?areaById[baseId]:areaById[C.us];
+  var cur=start,rest=near.slice(),order=[];
+  while(rest.length){var bi=0,bd=Infinity;rest.forEach(function(p,i){var d=km(cur,p);if(d<bd){bd=d;bi=i;}});cur=rest.splice(bi,1)[0];order.push(cur);}
+  var days=[],day=[],hrs=0,prev=start;
+  order.forEach(function(p){var leg=travel(prev,p);if(day.length&&hrs+leg.best/60+p.h>8){days.push(day);day=[];hrs=0;prev=start;leg=travel(prev,p);}day.push({p:p,leg:leg});hrs+=leg.best/60+p.h;prev=p;});
+  if(day.length)days.push(day);
+  far.forEach(function(p){days.push([{p:p,leg:null}]);});
+  return days;
+}
+
+/* ============ ŞEHİR ŞEMATİK HARİTASI ============ */
+var RB=(function(g){var W=546;return {la0:g.la0,la1:g.la1,lo0:g.lo0,lo1:g.lo1,W:W,H:Math.round(W*(g.la0-g.la1)/((g.lo1-g.lo0)*Math.cos(C.la*Math.PI/180)))};})(C.harita);
+function xy(la,lo){return [(lo-RB.lo0)/(RB.lo1-RB.lo0)*RB.W,(RB.la0-la)/(RB.la0-RB.la1)*RB.H];}
+function cxy(la,lo){var p=xy(la,lo);return [Math.min(RB.W-10,Math.max(10,p[0])),Math.min(RB.H-10,Math.max(10,p[1]))];}
+function pts(arr){return arr.map(function(q){var p=xy(q[0],q[1]);return p[0].toFixed(1)+","+p[1].toFixed(1);}).join(" ");}
+var DAYC=["var(--line-a)","var(--line-b)","var(--line-c)","var(--stamp)"];
+function zemin(P,cls){var s="";(C.kara||[]).forEach(function(k){s+='<polygon class="'+cls+'-kara" points="'+P(k)+'"/>';});(C.deniz||[]).forEach(function(k){s+='<polygon class="'+cls+'-deniz" points="'+P(k)+'"/>';});return s;}
+function sular(P,cls){var s="";SU.forEach(function(r){s+='<polyline class="'+cls+'"'+(r.w?' style="stroke-width:'+r.w+'"':'')+' points="'+P(r.p)+'"/>';});return s;}
+function hatlar(P,cls){var s="";HATLAR.forEach(function(L){var st=' style="stroke:'+L.renk+'"';if(L.d.length)s+='<polyline class="'+cls+'"'+st+' points="'+P(L.d.map(function(x){return [x[1],x[2]];}))+'"/>';(L.yol||[]).forEach(function(y){s+='<polyline class="'+cls+(L.kesik?' rm-dash':'')+'"'+st+' points="'+P(y)+'"/>';});});return s;}
+function romeMap(o){
+  o=o||{};
+  var s='<svg class="rmap" viewBox="0 0 '+RB.W+' '+RB.H+'" role="img" aria-label="'+esc(o.label||C.ad+" merkezinin şematik haritası")+'">';
+  s+='<rect class="rm-bg'+(C.kara?' su':'')+'" x="0" y="0" width="'+RB.W+'" height="'+RB.H+'"/>';
+  s+=zemin(pts,"rm")+sular(pts,"rm-river");
+  s+=hatlar(pts,"rm-line");
+  if(o.stations){var seen={};HATLAR.forEach(function(L){L.d.forEach(function(st){if(seen[st[0]])return;seen[st[0]]=1;var p=xy(st[1],st[2]);var right=st[3]==null?p[0]>RB.W*0.66:st[3]===1,dik=st[3]===2?-9:st[3]===3?14:0;s+='<circle class="rm-st" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="5"/>'+(st[3]===4?'':'<text class="rm-stl" x="'+(p[0]+(dik?0:right?-9:9)).toFixed(1)+'" y="'+(p[1]+(dik||3.5)).toFixed(1)+'" text-anchor="'+(dik?"middle":right?"end":"start")+'">'+esc(st[0])+'</text>');});});}
+  if(o.landmarks!==false){C.etiket.forEach(function(l){var p=xy(l[1],l[2]);s+='<text class="rm-lm" x="'+p[0].toFixed(1)+'" y="'+p[1].toFixed(1)+'">'+l[0]+'</text>';});}
+  if(o.all){PLACES.forEach(function(p){if(p.far)return;var q=xy(p.la,p.lo);if(q[0]<0||q[1]<0||q[0]>RB.W||q[1]>RB.H)return;s+='<circle class="rm-p" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="2.8"/>';});}
+  if(o.areas){o.areas.forEach(function(a){var p=xy(a.la,a.lo);s+='<circle class="rm-area'+(a.id===o.sel?" on":"")+'" data-area="'+a.id+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="24"><title>'+esc(a.n)+'</title></circle>';});}
+  if(o.spoke&&o.plan){var c=xy(o.spoke.la,o.spoke.lo);o.plan.forEach(function(p){if(p.far)return;var q=cxy(p.la,p.lo);s+='<line class="rm-spoke" x1="'+c[0].toFixed(1)+'" y1="'+c[1].toFixed(1)+'" x2="'+q[0].toFixed(1)+'" y2="'+q[1].toFixed(1)+'"/>';});}
+  if(o.areas){o.areas.forEach(function(a){var p=xy(a.la,a.lo);s+='<text class="rm-al" x="'+p[0].toFixed(1)+'" y="'+(p[1]+3.5).toFixed(1)+'">'+esc(a.n.split(" ")[0])+'</text>';});}
+  if(o.plan&&!o.route){o.plan.forEach(function(p){if(p.far)return;var q=cxy(p.la,p.lo);s+='<circle class="rm-pl" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="6"><title>'+esc(p.n)+'</title></circle>';});}
+  if(o.route){
+    var b=o.base?xy(o.base.la,o.base.lo):null,num=0,marks="";
+    o.route.forEach(function(d,i){var line=b?[b[0].toFixed(1)+","+b[1].toFixed(1)]:[];d.forEach(function(x){if(x.p.far)return;var q=cxy(x.p.la,x.p.lo);line.push(q[0].toFixed(1)+","+q[1].toFixed(1));});if(line.length>1)s+='<polyline class="rm-route" style="stroke:'+DAYC[i%4]+'" points="'+line.join(" ")+'"/>';d.forEach(function(x){num++;if(x.p.far)return;var q=cxy(x.p.la,x.p.lo);marks+='<circle class="rm-pl" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="9"><title>'+esc(x.p.n)+'</title></circle><text class="rm-n" x="'+q[0].toFixed(1)+'" y="'+q[1].toFixed(1)+'">'+num+'</text>';});});
+    s+=marks;
+    if(b)s+='<rect class="rm-base" x="'+(b[0]-7).toFixed(1)+'" y="'+(b[1]-7).toFixed(1)+'" width="14" height="14"><title>Konaklama</title></rect>';
+  }
+  if(o.from&&o.to){var f=cxy(o.from.la,o.from.lo),t=cxy(o.to.la,o.to.lo);s+='<line class="rm-ft" x1="'+f[0].toFixed(1)+'" y1="'+f[1].toFixed(1)+'" x2="'+t[0].toFixed(1)+'" y2="'+t[1].toFixed(1)+'"/><circle class="rm-f" cx="'+f[0].toFixed(1)+'" cy="'+f[1].toFixed(1)+'" r="8"/><circle class="rm-t" cx="'+t[0].toFixed(1)+'" cy="'+t[1].toFixed(1)+'" r="8"/>';
+    var lf=f[0]>RB.W*0.6,lt=t[0]>RB.W*0.6;s+='<text class="rm-ftl" x="'+(f[0]+(lf?-13:13)).toFixed(1)+'" y="'+(f[1]+4).toFixed(1)+'" text-anchor="'+(lf?"end":"start")+'">'+esc(o.from.n)+'</text><text class="rm-ftl" x="'+(t[0]+(lt?-13:13)).toFixed(1)+'" y="'+(t[1]+4).toFixed(1)+'" text-anchor="'+(lt?"end":"start")+'">'+esc(o.to.n)+'</text>';}
+  return s+"</svg>";
+}
+
+/* ============ ROTA HARİTASI: NET GÖRÜNÜM ============ */
+var DAYV=["var(--day-1)","var(--day-2)","var(--day-3)","var(--day-4)"],DAYON=["var(--on-day)","var(--on-day)","var(--on-day)","var(--on-day-4)"];
+var rFocus=-1;
+function shortN(p){var n=p.n.split(" ve ")[0];return n.length>22?n.slice(0,21)+"…":n;}
+function routeMap(o){
+  var days=o.route||[],fx=o.focus==null?-1:o.focus,vis=o.visited||{},OW=440,OH=500,asp=OW/OH,FW=RB.W,FH=RB.H;
+  var fit=[];if(o.base)fit.push(xy(o.base.la,o.base.lo));
+  days.forEach(function(d,i){if(fx>-1&&i!==fx)return;d.forEach(function(x){if(!x.p.far)fit.push(xy(x.p.la,x.p.lo));});});
+  var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9,w,h,cx,cy;
+  fit.forEach(function(p){x0=Math.min(x0,p[0]);x1=Math.max(x1,p[0]);y0=Math.min(y0,p[1]);y1=Math.max(y1,p[1]);});
+  if(fit.length<2){cx=fit.length?fit[0][0]:FW/2;cy=fit.length?fit[0][1]:FH/2;w=FW*.62;h=w/asp;}
+  else{cx=(x0+x1)/2;cy=(y0+y1)/2;w=Math.max((x1-x0)*1.25+120,210);h=Math.max((y1-y0)*1.25+100,210/asp);if(w/h<asp)w=h*asp;else h=w/asp;}
+  if(w>FW){w=FW;h=w/asp;}if(h>FH){h=FH;w=h*asp;}
+  var vx=Math.min(Math.max(cx-w/2,0),FW-w),vy=Math.min(Math.max(cy-h/2,0),FH-h),k=OW/w;
+  function L(la,lo){var p=xy(la,lo);return [(p[0]-vx)*k,(p[1]-vy)*k];}
+  function LC(la,lo){var p=L(la,lo);return [Math.min(OW-18,Math.max(18,p[0])),Math.min(OH-18,Math.max(18,p[1]))];}
+  function LP(a){return a.map(function(q){var p=L(q[0],q[1]);return p[0].toFixed(1)+","+p[1].toFixed(1);}).join(" ");}
+  function inV(p,m){return p[0]>m&&p[1]>m&&p[0]<OW-m&&p[1]<OH-m;}
+  function f1(n){return n.toFixed(1);}
+  var s='<svg class="rmap rr" viewBox="0 0 '+OW+' '+OH+'" role="img" aria-label="'+esc(o.label||"Rota haritası")+'"><rect class="rr-bg'+(C.kara?' su':'')+'" width="'+OW+'" height="'+OH+'"/>';
+  s+=zemin(LP,"rr");PARKS.forEach(function(pk){s+='<polygon class="rr-park" points="'+LP(pk.p)+'"/>';});
+  s+=sular(LP,"rr-river");
+  s+=hatlar(LP,"rr-metro");
+  // günler: çizgi, yön oku, işaret
+  var B=o.base?LC(o.base.la,o.base.lo):null,lines="",mk=[],num=0,samp=[];
+  days.forEach(function(d,i){
+    var dim=fx>-1&&fx!==i,col=DAYV[i%4],pp=B?[B]:[],arw="";
+    d.forEach(function(x){num++;if(x.p.far)return;var q=LC(x.p.la,x.p.lo);pp.push(q);mk.push({x:q[0],y:q[1],n:num,p:x.p,i:i,dim:dim});});
+    if(pp.length<2)return;
+    for(var si=1;si<pp.length;si++){var sa=pp[si-1],sb=pp[si],sn=Math.ceil(Math.hypot(sb[0]-sa[0],sb[1]-sa[1])/6);for(var sk=0;sk<=sn;sk++)samp.push([sa[0]+(sb[0]-sa[0])*sk/sn,sa[1]+(sb[1]-sa[1])*sk/sn]);}
+    for(var j=1;j<pp.length;j++){var a=pp[j-1],b=pp[j],dx=b[0]-a[0],dy=b[1]-a[1];if(Math.sqrt(dx*dx+dy*dy)<48)continue;arw+='<path class="rr-arw" d="M-3.5 -4 L2 0 L-3.5 4" transform="translate('+f1((a[0]+b[0])/2)+','+f1((a[1]+b[1])/2)+') rotate('+f1(Math.atan2(dy,dx)*180/Math.PI)+')"/>';}
+    var str=pp.map(function(q){return f1(q[0])+","+f1(q[1]);}).join(" ");
+    lines+='<g class="rr-day'+(dim?" dim":"")+'"><polyline class="rr-case" points="'+str+'"/><polyline class="rr-leg" style="stroke:'+col+'" points="'+str+'"/>'+arw+'</g>';
+  });
+  var marks="";mk.forEach(function(m){var done=vis[m.p.id];marks+='<g class="rr-mk'+(m.dim?" dim":"")+(done?" done":"")+'" data-pid="'+m.p.id+'" transform="translate('+f1(m.x)+','+f1(m.y)+')"><circle class="rr-pin" r="13" style="fill:'+DAYV[m.i%4]+'"/><text class="rr-num" style="fill:'+DAYON[m.i%4]+'">'+(done?"✓":m.n)+'</text><title>'+m.n+'. '+esc(m.p.n)+'</title></g>';});
+  var home=B?'<g transform="translate('+f1(B[0])+','+f1(B[1])+')"><rect class="rr-hb" x="-14" y="-14" width="28" height="28" rx="8"/><path class="rr-hi" d="M0 -8 L8.5 -0.5 H5.5 V7.5 H-5.5 V-0.5 H-8.5 Z"/><rect class="rr-hb" x="-1.9" y="2.2" width="3.8" height="5.3"/><title>Konaklama: '+esc(o.base.n)+'</title></g>':"";
+  // ölçek çubuğu
+  var pxkm=k*FW/((RB.lo1-RB.lo0)*111.32*Math.cos(C.la*Math.PI/180)),opts=[[2,"2 km"],[1,"1 km"],[.5,"500 m"],[.25,"250 m"],[.1,"100 m"]],sc=opts[opts.length-1];
+  for(var oi=0;oi<opts.length;oi++){if(opts[oi][0]*pxkm<=120){sc=opts[oi];break;}}
+  var sl=sc[0]*pxkm,sbar='<g transform="translate(16,'+(OH-14)+')"><rect class="rr-scb" x="-7" y="-27" width="'+f1(sl+14)+'" height="34" rx="9"/><path class="rr-scl" d="M0 -6 V0 H'+f1(sl)+' V-6"/><text class="rr-sct" x="0" y="-11">'+sc[1]+'</text></g>';
+  // etiketler: çakışmayan yere yerleştir
+  var boxes=[[6,OH-44,f1(sl+30)*1,OH-4]],lbl="",bg="";
+  mk.forEach(function(m){boxes.push([m.x-15,m.y-15,m.x+15,m.y+15]);});
+  if(B)boxes.push([B[0]-16,B[1]-16,B[0]+16,B[1]+16]);
+  function cost(r){if(r[0]<6||r[1]<6||r[2]>OW-6||r[3]>OH-6)return 1e9;var c=0,i;for(i=0;i<boxes.length;i++){var b=boxes[i];if(r[0]<b[2]&&r[2]>b[0]&&r[1]<b[3]&&r[3]>b[1])c+=20;}for(i=0;i<samp.length;i++){var p=samp[i];if(p[0]>r[0]-3&&p[0]<r[2]+3&&p[1]>r[1]-3&&p[1]<r[3]+3)c+=1;}return c;}
+  function hit(r){return cost(r)>0;}
+  function place(x,y,t,cls,attr){var tw=t.length*6.8+2,th=14,c=[[x+18,y-th/2],[x-18-tw,y-th/2],[x-tw/2,y+17],[x-tw/2,y-17-th],[x+13,y-th-9],[x+13,y+9],[x-13-tw,y-th-9],[x-13-tw,y+9]],r=null;
+    var best=1e12;for(var i=0;i<c.length;i++){var q=[c[i][0],c[i][1],c[i][0]+tw,c[i][1]+th],v=cost(q)+i*.01;if(v<best){best=v;r=q;}if(v<1)break;}
+    boxes.push(r);return '<text class="'+cls+'"'+(attr||"")+' x="'+f1(r[0])+'" y="'+f1(r[3]-3)+'">'+esc(t)+'</text>';}
+  if(B)lbl+=place(B[0],B[1],"Otelin · "+o.base.n.split(" ve ")[0],"rr-lbl");
+  mk.forEach(function(m){lbl+=place(m.x,m.y,shortN(m.p),"rr-lbl"+(m.dim?" dim":""),' data-pid="'+m.p.id+'"');});
+  function bgText(t,x,y,cls,cw){var tw=t.length*cw,r=[x-tw/2,y-10,x+tw/2,y+3];if(!inV([x,y],24)||hit(r))return;boxes.push(r);bg+='<text class="'+cls+'" x="'+f1(x)+'" y="'+f1(y)+'">'+esc(t)+'</text>';}
+  PARKS.forEach(function(pk){if(pk.n){var c=L(pk.c[0],pk.c[1]);bgText(pk.n,c[0],c[1],"rr-parkl",6.2);}});
+  AREAS.concat(C.ekAlan||[]).forEach(function(a){if(a.far||(o.base&&a.id===o.base.id))return;var c=L(a.la,a.lo);bgText(a.n.split(" ve ")[0].toUpperCase(),c[0],c[1],"rr-hood",8.3);});
+  SU.forEach(function(r){if(!r.ad)return;var tv=r.p.map(function(q){return L(q[0],q[1]);}).filter(function(p){return inV(p,50);});if(tv.length){var tp=tv[Math.floor(tv.length/2)];bgText(r.ad,tp[0]+26,tp[1]+4,"rr-riverl",6.4);}});
+  return s+bg+lines+home+marks+lbl+sbar+"</svg>";
+}
+function drawRotaMap(st){
+  var vis={};S.visited.forEach(function(v){vis[v]=1;});
+  var it=st.n?st.it:[],bA=areaById[S.base]&&!areaById[S.base].far?areaById[S.base]:areaById[C.us],mapDays=[];
+  it.forEach(function(d,i){if(d.some(function(x){return !x.p.far;}))mapDays.push(i);});
+  if(mapDays.indexOf(rFocus)<0)rFocus=-1;
+  var chips=mapDays.length>1?'<div class="rchips" role="group" aria-label="Haritada gün seç"><button class="rchip" type="button" data-rday="-1" aria-pressed="'+(rFocus<0)+'">Tüm günler</button>'+mapDays.map(function(i){return '<button class="rchip" type="button" data-rday="'+i+'" aria-pressed="'+(rFocus===i)+'" style="--c:'+DAYV[i%4]+';--on-c:'+DAYON[i%4]+'"><i></i>'+(i+1)+'. gün</button>';}).join("")+'</div>':"";
+  var leg='<ul class="rleg">'+it.map(function(d,i){var far=d.every(function(x){return x.p.far;});return '<li style="--c:'+DAYV[i%4]+'"><span class="sw'+(far?" far":"")+'"></span>'+(i+1)+'. gün'+(far?': '+esc(d.map(function(x){return shortN(x.p);}).join(", "))+' (şehir dışı, haritada yok)':' · '+d.length+' yer')+'</li>';}).join("")+'<li><span class="hs"></span>Otelin: '+esc(bA.n)+'</li><li><span class="mt"></span>'+esc(C.toplu.harita.charAt(0).toLocaleUpperCase("tr")+C.toplu.harita.slice(1))+'</li></ul>';
+  $("#rmapBox").innerHTML='<div class="rmapw">'+chips+routeMap({base:bA,route:it,focus:rFocus,visited:vis,label:st.n?"Rotanın haritası; numaralar ziyaret sırası, renkler günler":"Rota haritası"})+leg+'</div>';
+}
+function rHl(e,on){var t=e.target.closest&&e.target.closest("[data-pid]");if(!t)return;var id=t.getAttribute("data-pid");$$('#rdays [data-pid="'+id+'"],#rmapBox [data-pid="'+id+'"]').forEach(function(g){g.classList.toggle("hl",on);});}
+
+/* ============ HERO: GÜVENLİK DESENİ ============ */
+function drawGuil(){
+  var c=$("#guil");if(!c||!c.getContext)return;var r=c.getBoundingClientRect();if(!r.width)return;
+  var dpr=Math.min(2,window.devicePixelRatio||1);c.width=Math.round(r.width*dpr);c.height=Math.round(r.height*dpr);
+  var g=c.getContext("2d");g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,r.width,r.height);
+  g.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue("--guil").trim()||"#BFD4C9";g.lineWidth=0.7;
+  var W=r.width,H=r.height,y0=H*0.84,i,x,y,t;
+  for(i=0;i<24;i++){g.beginPath();for(x=0;x<=W;x+=4){y=y0+Math.sin(x/58+i*0.26)*16*Math.sin(x/320+i*0.05)+(i-12)*1.7;if(x)g.lineTo(x,y);else g.moveTo(x,y);}g.stroke();}
+  var cx=Math.min(W*0.2,220),cy=Math.min(170,H*0.28),R=100,rr=29,d=66;g.lineWidth=0.5;g.beginPath();
+  for(t=0;t<=Math.PI*2*29;t+=0.035){x=cx+(R-rr)*Math.cos(t)+d*Math.cos((R-rr)/rr*t);y=cy+(R-rr)*Math.sin(t)-d*Math.sin((R-rr)/rr*t);if(t)g.lineTo(x,y);else g.moveTo(x,y);}g.stroke();
+}
+
+/* ============ HERO: DÜNYA HARİTASI ============ */
+var TRN={IT:"İtalya",TR:"Türkiye",FR:"Fransa",ES:"İspanya",DE:"Almanya",GR:"Yunanistan",NL:"Hollanda",GB:"Birleşik Krallık",US:"ABD",JP:"Japonya",PT:"Portekiz",AT:"Avusturya",CZ:"Çekya",CH:"İsviçre",HU:"Macaristan",PL:"Polonya",RS:"Sırbistan",BA:"Bosna-Hersek",GE:"Gürcistan",AZ:"Azerbaycan",EG:"Mısır",AE:"BAE",TH:"Tayland",BE:"Belçika",HR:"Hırvatistan",BG:"Bulgaristan",RO:"Romanya",RU:"Rusya",UA:"Ukrayna",CN:"Çin",BR:"Brezilya",CA:"Kanada",MA:"Fas",TN:"Tunus",SE:"İsveç",NO:"Norveç",DK:"Danimarka",FI:"Finlandiya",IE:"İrlanda",AL:"Arnavutluk",MK:"Kuzey Makedonya",ME:"Karadağ",SI:"Slovenya",SK:"Slovakya",CY:"Kıbrıs",IR:"İran",IQ:"Irak",SY:"Suriye",SA:"Suudi Arabistan",IN:"Hindistan",MX:"Meksika",AR:"Arjantin",AU:"Avustralya",KR:"Güney Kore",ID:"Endonezya",QA:"Katar",LB:"Lübnan",JO:"Ürdün",IL:"İsrail",DZ:"Cezayir",LY:"Libya",KZ:"Kazakistan",UZ:"Özbekistan",TM:"Türkmenistan",AM:"Ermenistan",MD:"Moldova",BY:"Belarus",LT:"Litvanya",LV:"Letonya",EE:"Estonya",IS:"İzlanda",LU:"Lüksemburg",ZA:"Güney Afrika"};
+var VW=[0,-61,900,562.5],VE=[386,112,170,106.25],curVB=VE.slice(),zoomed=true;
+function setVB(v){curVB=v;var w=$("#world");if(w)w.setAttribute("viewBox",v.map(function(n){return n.toFixed(2);}).join(" "));}
+function animVB(to,ms){var from=curVB.slice();if(reduce){setVB(to);return;}var t0=performance.now();function f(t){var k=Math.min(1,(t-t0)/ms),e=k<0.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;setVB(from.map(function(a,i){return a+(to[i]-a)*e;}));if(k<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+function renderWorld(){
+  var W=window.__WORLD,svg=$("#world");
+  if(!W||!W.paths){$("#mapFallback").hidden=false;$("#mapToggle").hidden=true;return;}
+  var ins=W.insets[0],bb=ins.bbox,Rr=6381372,c=(W.projection&&W.projection.centralMeridian)||11.5,dg=Math.PI/180;
+  function proj(lat,lng){var x=Rr*(lng-c)*dg,y=-Rr*Math.log(Math.tan((45+0.4*lat)*dg))/0.8;return [(x-bb[0].x)/(bb[1].x-bb[0].x)*ins.width+(ins.left||0),(y-bb[0].y)/(bb[1].y-bb[0].y)*ins.height+(ins.top||0)];}
+  var s="";Object.keys(W.paths).forEach(function(code){var p=W.paths[code];s+='<path class="cty'+(code==="IT"?" it":"")+(code==="TR"?" tr":"")+'" data-c="'+code+'" data-n="'+esc(TRN[code]||p.name)+'" d="'+p.path+'"/>';});
+  var a=proj(41.01,28.97),b=proj(C.la,C.lo),mx=(a[0]+b[0])/2,my=Math.min(a[1],b[1])-12;
+  s+='<path class="arc" id="arc" d="M'+a[0].toFixed(2)+","+a[1].toFixed(2)+" Q"+mx.toFixed(2)+","+my.toFixed(2)+" "+b[0].toFixed(2)+","+b[1].toFixed(2)+'"/>';
+  s+='<circle class="cdot" cx="'+a[0].toFixed(2)+'" cy="'+a[1].toFixed(2)+'" r="1.3"/><circle class="cdot rm" cx="'+b[0].toFixed(2)+'" cy="'+b[1].toFixed(2)+'" r="1.6"/>';
+  s+='<text class="clab" x="'+(a[0]+2).toFixed(2)+'" y="'+(a[1]+4.2).toFixed(2)+'">İSTANBUL</text><text class="clab" x="'+(b[0]-2.5).toFixed(2)+'" y="'+(b[1]+5).toFixed(2)+'" text-anchor="end">'+esc(C.ad.toLocaleUpperCase("tr"))+'</text>';
+  svg.innerHTML=s;
+  if(!reduce){zoomed=false;setVB(VW);svg.classList.remove("z");$("#mapToggle").textContent=C.ek.ya+" yakınlaş";setTimeout(function(){zoomTo(true);},700);}else{svg.classList.add("z");}
+}
+function zoomTo(z){zoomed=z;animVB(z?VE:VW,1500);var svg=$("#world");if(z)setTimeout(function(){svg.classList.add("z");},900);else svg.classList.remove("z");$("#mapToggle").textContent=z?"Dünyayı gör":C.ek.ya+" yakınlaş";}
+
+/* ============ PASAPORT KİŞİSELLEŞTİRME ============ */
+function visaKey(){var n=$("#nat").value;return n==="TR"?$("#ptype").value:n;}
+function applyPassport(anim){
+  var n=$("#nat").value;$("#ptype").disabled=n!=="TR";
+  var v=VISA[visaKey()],st=$("#stamp");
+  st.innerHTML='<span class="s1">'+v.s1+'</span><span class="s2">'+v.s2+'</span><span class="s3">'+v.s3+'</span>';
+  if(anim&&!reduce){st.classList.remove("thump");void st.offsetWidth;st.classList.add("thump");}
+  $("#visaPanel").innerHTML='<div class="stamp"><span class="s1">'+v.s1+'</span><span class="s2">'+v.s2+'</span><span class="s3">'+v.s3+'</span></div><div><h3>'+v.h+'</h3><p>'+v.b+'</p>'+(v.pts.length?'<ul class="ticks">'+v.pts.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul>':"")+'</div>';
+  $("#visaProc").hidden=!v.proc;
+}
+
+/* ============ KEŞFET ============ */
+var cat="tarihi";
+function placeRow(p){
+  var on=inPlan(p.id);
+  return '<li class="pl"><div><h4>'+esc(p.n)+'</h4><span class="it">'+esc(p.it)+'</span><p>'+esc(p.tip)+'</p>'+(p.ph&&cat==="foto"?'<p class="ph"><b>KARE</b>'+esc(p.ph)+'</p>':"")+'</div>'+
+  '<dl class="meta"><dt>Süre</dt><dd>'+fmtH(p.h)+'</dd><dt>Bilet</dt><dd><span class="tk tk-'+p.tk+'">'+TK[p.tk]+'</span> '+esc(p.p)+'</dd><dt>En iyi</dt><dd>'+esc(p.best)+'</dd></dl>'+
+  '<div><button class="add" type="button" data-add="'+p.id+'" aria-pressed="'+on+'">'+(on?"Rotanda ✓":"+ Rotama ekle")+'</button></div></li>';
+}
+function renderKesfet(){
+  $("#catTabs").innerHTML=CATS.map(function(c){return '<button class="ctile" type="button" role="tab" data-cat="'+c[0]+'" aria-selected="'+(c[0]===cat)+'" style="--img:url(/seyyah-site/varlik/img/napoli/'+CIMG[c[0]]+'.jpg)"><span>'+c[1]+'</span></button>';}).join("");
+  var hd=$('[data-sec="kesfet"] .ch-head');if(hd)hd.style.setProperty("--img","url(/seyyah-site/varlik/img/napoli/"+CIMG[cat]+".jpg)");
+  var cn=CATS.filter(function(c){return c[0]===cat;})[0];$("#kesfetCat").textContent="Şehri keşfet · "+cn[1];
+  var box=$("#catBody");
+  if(cat==="bilet"){
+    var ord={sart:0,oner:1,gise:2};
+    var rows=PLACES.filter(function(p){return p.tk!=="free";}).sort(function(a,b){return ord[a.tk]-ord[b.tk];});
+    box.innerHTML='<p class="catsum">Hangi yer için önceden bilet almalısın? <b>'+rows.filter(function(p){return p.tk==="sart";}).length+' yerde rezervasyon şart.</b></p><div class="tbl"><table><thead><tr><th>Yer</th><th>Durum</th><th>Ücret</th><th>Süre</th><th>Resmi bilet</th><th></th></tr></thead><tbody>'+
+      rows.map(function(p){var on=inPlan(p.id);return '<tr><td><b>'+esc(p.n)+'</b></td><td><span class="tk tk-'+p.tk+'">'+TK[p.tk]+'</span></td><td>'+esc(p.p)+'</td><td>'+fmtH(p.h)+'</td><td>'+(p.url?'<a href="'+p.url+'" target="_blank" rel="noopener">'+p.url.replace(/^https?:\/\/(www\.)?/,"")+' ↗</a>':'<span class="muted">Gişede</span>')+'</td><td><button class="add" type="button" data-add="'+p.id+'" aria-pressed="'+on+'">'+(on?"✓":"+")+'</button></td></tr>';}).join("")+'</tbody></table></div><p class="note">Ücretler 2025 tarifelerine göre yaklaşık; resmi siteden kontrol et.</p>';
+    return;
+  }
+  var list=PLACES.filter(function(p){return p.t.indexOf(cat)>-1;});
+  var hrs=list.reduce(function(a,p){return a+p.h;},0);
+  var days=Math.max(0.5,Math.ceil(hrs*1.3/7*2)/2);
+  box.innerHTML='<p class="catsum"><b>'+list.length+' yer</b> · toplam ziyaret süresi '+fmtH(hrs)+' · hepsini gezmek ≈ <b>'+fmtDays(days)+'</b></p><ul class="places">'+list.map(placeRow).join("")+'</ul>';
+}
+function planStats(){var days=itinerary(S.plan,S.base);var hrs=S.plan.reduce(function(a,id){return a+(byId[id]?byId[id].h:0);},0);return {n:S.plan.length,hrs:hrs,days:days.length,it:days};}
+function renderPlanbar(st){
+  $("#planbar").innerHTML=st.n?'<span><span class="lab">Rotan</span>&nbsp; <b>'+st.n+' yer</b> · ziyaret '+fmtH(st.hrs)+' · ≈ <b>'+st.days+' gün</b>'+(S.sample?' <span class="lab">(örnek)</span>':"")+'</span><a href="#rotam">Rotamı gör →</a>':'<span>Rotan boş. Beğendiğin yerleri ekle, kaç gün süreceğini hesaplayalım.</span>';
+  $("#navBadge").textContent=st.n;$("#navBadge").hidden=!st.n;
+}
+
+/* ============ PLANLA ============ */
+var mo=new Date().getMonth(),tripN=3,ttype="aile",budgetTouched=false;
+function renderMonths(){
+  $("#months").innerHTML=MONTHS.map(function(m,i){var cr="";for(var k=0;k<m.crowd;k++)cr+="<i></i>";return '<button type="button" class="mo'+(i===mo?" on":"")+'" data-mo="'+i+'" aria-pressed="'+(i===mo)+'" aria-label="'+m.m+', en yüksek '+m.hi+' derece"><span class="t">'+m.hi+'°</span><span class="bar" style="height:'+Math.round(m.hi/33*150)+'px"></span><span class="cr">'+cr+'</span><span class="ab">'+MAB[i]+'</span></button>';}).join("");
+  var m=MONTHS[mo];
+  $("#moDetail").innerHTML='<span class="lab">'+(mo===new Date().getMonth()?"Bu ay":"Seçilen ay")+'</span><h4>'+m.m+'</h4><dl><dt>Sıcaklık</dt><dd>'+m.hi+'° / '+m.lo+'° ortalama</dd><dt>Yağış</dt><dd>Ayda ≈ '+m.rain+' yağışlı gün</dd><dt>Kalabalık</dt><dd>'+LEVEL[m.crowd]+'</dd><dt>Fiyatlar</dt><dd>'+LEVEL[m.price]+'</dd><dt>Ne giyilir</dt><dd>'+m.wear+'</dd></dl><p>'+m.note+'</p>';
+}
+function renderTrips(){
+  $("#tripTabs").innerHTML=Object.keys(TRIPS).map(Number).map(function(n){return '<button class="tab" type="button" role="tab" data-trip="'+n+'" aria-selected="'+(n===tripN)+'">'+n+' gün</button>';}).join("");
+  $("#tripDays").innerHTML=TRIPS[tripN].map(function(d,i){var h=d.s.reduce(function(a,id){return a+byId[id].h;},0);return '<div class="day"><span class="lab">'+(i+1)+'. gün'+(h?' · ziyaret ≈ '+fmtH(h):"")+'</span><h4>'+d.t+'</h4>'+(d.s.length?'<ol>'+d.s.map(function(id){return "<li>"+esc(byId[id].n)+"</li>";}).join("")+'</ol>':'<p class="x">'+d.x+'</p>')+'</div>';}).join("");
+  $("#tripToast").textContent="";
+}
+function renderTypes(){
+  $("#typeTabs").innerHTML=Object.keys(TYPES).map(function(k){return '<button class="tab" type="button" role="tab" data-type="'+k+'" aria-selected="'+(k===ttype)+'">'+TYPES[k].n+'</button>';}).join("");
+  var t=TYPES[ttype],a=areaById[t.area];
+  $("#typeBody").innerHTML='<div class="g2"><div><h4 class="mini">Önerilerimiz</h4><ul class="ticks">'+t.tips.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div><div><h4 class="mini">Kalmak için</h4><p style="margin-bottom:14px"><b style="font-family:var(--f-display);font-size:1.4rem">'+a.n+'</b><br><span class="muted">'+a.fr+'</span></p><h4 class="mini">Sana uygun yerler</h4><div class="chips">'+t.p.map(function(id){var on=inPlan(id);return '<button class="chip" type="button" data-add="'+id+'" aria-pressed="'+on+'">'+(on?"✓ ":"+ ")+esc(byId[id].n)+'</button>';}).join("")+'</div></div></div>';
+}
+function renderBudget(st){
+  if(!budgetTouched){$("#bDays").value=Math.max(1,Math.min(21,st&&st.days?st.days:3));}
+  var days=Math.max(1,Math.min(21,parseInt($("#bDays").value,10)||1)),ppl=Math.max(1,Math.min(8,parseInt($("#bPeople").value,10)||1));
+  var sty=(document.querySelector('input[name="bstyle"]:checked')||{}).value||"orta",B=BUDGET[sty];
+  var parts={},tot=0;Object.keys(B).forEach(function(k){var v=B[k]*days*ppl;if(k==="konak"&&ppl===1)v*=1.6;parts[k]=v;tot+=v;});
+  $("#budgetOut").innerHTML='<div class="btot"><div><span class="lab">Toplam</span><br><b>'+eur(tot)+'</b></div><div><span class="lab">Kişi başı</span><br><b style="font-size:1.8rem">'+eur(tot/ppl)+'</b></div><div><span class="lab">Kişi başı günlük</span><br><b style="font-size:1.8rem">'+eur(tot/ppl/days)+'</b></div></div>'+
+    '<div class="stack" aria-hidden="true">'+Object.keys(parts).map(function(k){return '<span style="width:'+(parts[k]/tot*100).toFixed(1)+'%;background:'+BLAB[k][1]+'"></span>';}).join("")+'</div>'+
+    '<div class="bl">'+Object.keys(parts).map(function(k){return '<i style="background:'+BLAB[k][1]+'"></i><span>'+BLAB[k][0]+'</span><span class="v">'+eur(parts[k])+'</span>';}).join("")+'</div><p class="note">'+days+' gün, '+ppl+' kişi. Tutarlar temsilidir; yayında güncel otel ve fiyat verisiyle hesaplanacak.</p>';
+}
+function renderMatrix(){
+  var ids=C.matris.map(function(x){return x[0];}),sh={};C.matris.forEach(function(x){sh[x[0]]=x[1];});
+  var max=0,M=ids.map(function(a){return ids.map(function(b){var v=a===b?0:walkMin(km(byId[a],byId[b]));if(v>max)max=v;return v;});});
+  $("#matrix").innerHTML='<table class="mx"><thead><tr><th></th>'+ids.map(function(i){return "<th>"+sh[i]+"</th>";}).join("")+'</tr></thead><tbody>'+ids.map(function(a,i){return '<tr><th>'+sh[a]+'</th>'+M[i].map(function(v,j){return i===j?'<td class="d">—</td>':'<td style="background:color-mix(in srgb,var(--ochre) '+Math.round(v/max*55)+'%,transparent)">'+Math.round(v)+'</td>';}).join("")+'</tr>';}).join("")+'</tbody></table>';
+}
+function renderEvents(){var now=new Date().getMonth();$("#events").innerHTML=EVENTS.map(function(e){return '<li'+(e[0]===now?' class="now"':"")+'><span class="em">'+MONTHS[e[0]].m+'</span><span class="ed">'+e[1]+'</span><span class="en"><b>'+e[2]+'</b><span>'+e[3]+'</span></span><span class="et">'+e[4]+'</span></li>';}).join("");}
+function renderDaytrips(){$("#daytrips").innerHTML=DAYTRIPS.map(function(d){return '<div class="dt"><h4>'+d.n+'</h4><p>'+d.w+'</p><dl class="meta"><dt>Nasıl</dt><dd>'+d.how+'</dd><dt>Süre</dt><dd>'+d.t+'</dd><dt>Maliyet</dt><dd>'+d.c+'</dd></dl></div>';}).join("");}
+function renderHowLong(st){$("#hlYou").innerHTML='<span class="lab">Senin rotan</span><b>'+(st.n?st.days+" gün":"—")+'</b><p>'+(st.n?st.n+" yer, ziyaret süresi "+fmtH(st.hrs)+". <a href=\"#rotam\">Gün gün gör</a>":"Henüz yer eklemedin. <a href=\"#kesfet\">Keşfet'ten ekle</a>")+'</p>';}
+
+/* ============ KONAKLAMA ============ */
+var aTag="all",selArea=null;
+function renderAreas(){
+  $("#areaTabs").innerHTML=ATAGS.map(function(t){return '<button class="tab" type="button" role="tab" data-atag="'+t[0]+'" aria-selected="'+(t[0]===aTag)+'">'+t[1]+'</button>';}).join("");
+  var list=AREAS.filter(function(a){return aTag==="all"||a.tags.indexOf(aTag)>-1;});
+  var tl={};ATAGS.forEach(function(t){tl[t[0]]=t[1];});
+  $("#areas").innerHTML=list.map(function(a){var here=S.base===a.id;return '<li class="ar'+(here?" here":"")+'"><div><h4>'+a.n+'</h4><p class="for">'+a.fr+'</p><div class="tags">'+a.tags.map(function(t){return "<span>"+tl[t]+"</span>";}).join("")+'</div></div><div class="pm"><div><h4 class="mini">Artıları</h4><ul class="ticks ok">'+a.plus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div><div><h4 class="mini">Eksileri</h4><ul class="ticks bad">'+a.minus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div></div><div class="side"><span class="lab">Gecelik, temsili</span><span class="price">'+a.price+'</span><span class="lab">'+a.metro+'</span><a class="btn" href="https://www.booking.com/searchresults.tr.html?ss='+encodeURIComponent(a.q)+'" target="_blank" rel="noopener">Otelleri gör ↗</a>'+(a.far?"":'<button class="btn ghost" type="button" data-base="'+a.id+'">'+(here?"Burada kalıyorum ✓":"Burada kalacağım")+'</button>')+'</div></li>';}).join("");
+}
+function renderRank(){
+  var plan=S.plan.map(function(id){return byId[id];}).filter(function(p){return p&&!p.far;});
+  var cands=AREAS.filter(function(a){return !a.far;});
+  if(!selArea)selArea=S.base;
+  if(!plan.length){$("#rankLead").textContent="Rotana yer ekleyince her bölgenin rotana ortalama uzaklığını burada hesaplarız.";$("#rank").innerHTML="";$("#kMap").innerHTML=romeMap({areas:cands,sel:selArea,all:true,landmarks:false,label:"Konaklama bölgeleri haritası"});return;}
+  var rows=cands.map(function(a){var tot=plan.reduce(function(s,p){return s+travel(a,p).best;},0);return {a:a,avg:tot/plan.length};}).sort(function(x,y){return x.avg-y.avg;});
+  var max=rows[rows.length-1].avg;
+  $("#rankLead").innerHTML="Rotandaki "+plan.length+" yere ortalama ulaşım süresi, yürüme ya da metroyla hangisi kısaysa. En iyi seçenek: <b>"+rows[0].a.n+"</b>.";
+  $("#rank").innerHTML=rows.map(function(r,i){return '<li class="'+(r.a.id===selArea?"on":"")+'"><button type="button" data-sel="'+r.a.id+'"><span><span class="nm">'+r.a.n+'</span>'+(i===0?'<span class="best">Rotana en uygun</span>':"")+(r.a.id===S.base?'<span class="best" style="color:var(--ochre)">Konaklaman</span>':"")+'</span><span class="tr"><i style="width:'+(r.avg/max*100).toFixed(1)+'%"></i></span><span class="v">ort. '+fmtMin(r.avg)+'</span></button></li>';}).join("");
+  $("#kMap").innerHTML=romeMap({areas:cands,sel:selArea,spoke:areaById[selArea],plan:plan,landmarks:false,label:areaById[selArea].n+" ile rotandaki yerler arası bağlantılar"});
+}
+
+/* ============ ULAŞIM ============ */
+function calcOpts(){var s='<optgroup label="Yerler">'+PLACES.filter(function(p){return !p.far;}).map(function(p){return '<option value="p:'+p.id+'">'+esc(p.n)+'</option>';}).join("")+'</optgroup><optgroup label="Konaklama bölgeleri">'+AREAS.filter(function(a){return !a.far;}).map(function(a){return '<option value="a:'+a.id+'">'+esc(a.n)+'</option>';}).join("")+'</optgroup>';$("#cFrom").innerHTML=s;$("#cTo").innerHTML=s;$("#cFrom").value="p:"+C.hesap[0];$("#cTo").value="p:"+C.hesap[1];}
+function pick(v){var k=v.split(":");return k[0]==="p"?byId[k[1]]:areaById[k[1]];}
+function renderCalc(){
+  var a=pick($("#cFrom").value),b=pick($("#cTo").value);if(!a||!b)return;
+  if(a===b){$("#calcOut").innerHTML='<p class="rec">Aynı yeri seçtin. Başka bir varış noktası seç.</p>';$("#calcMap").innerHTML=romeMap({stations:true,label:C.ad+" "+C.toplu.harita});return;}
+  var r=travel(a,b),w=r.walk<=22?"walk":(r.metro&&r.metro.min<=r.taxi+20?"metro":"taxi");
+  var rec=w==="walk"?"Yürü. "+fmtMin(r.walk)+" sürer ve yol boyunca "+C.ek.yi+" görürsün.":w==="metro"?C.toplu.fiil+" ("+fmtMin(r.metro.min)+", "+C.toplu.bilet+"): "+r.metro.desc+".":r.metro?C.taksi.ad+" en hızlısı ("+fmtMin(r.taxi)+"). Bütçen dar ise "+C.toplu.kisa+": "+r.metro.desc+".":C.toplu.yok;
+  $("#calcOut").innerHTML='<div class="cout"><div class="cm"><span class="lab">Kuş uçuşu</span><b>'+dec(r.k)+' km</b><small>Yürüme yolu ≈ '+dec(r.k*1.3)+' km</small></div><div class="cm'+(w==="walk"?" win":"")+'"><span class="lab">Yürüyerek</span><b>'+fmtMin(r.walk)+'</b></div><div class="cm'+(w==="metro"?" win":"")+'"><span class="lab">'+esc(C.toplu.ad)+'</span><b>'+(r.metro?fmtMin(r.metro.min):"—")+'</b><small>'+(r.metro?esc(r.metro.desc):"Yakın istasyon yok ya da yürümek daha hızlı")+'</small></div><div class="cm'+(w==="taxi"?" win":"")+'"><span class="lab">'+esc(C.taksi.ad)+'</span><b>'+fmtMin(r.taxi)+'</b><small>≈ '+r.fareLo+'–'+r.fareHi+' €</small></div></div><p class="rec"><b>Önerimiz:</b> '+rec+'</p>';
+  $("#calcMap").innerHTML=romeMap({stations:false,from:a,to:b,label:a.n+" ile "+b.n+" arası"});
+}
+
+/* ============ BİLGİ ============ */
+function renderBag(){var n=0;$("#bag").innerHTML=BAG.map(function(g){return '<div><h4 class="mini">'+g[0]+'</h4>'+g[1].map(function(x){var id="bag"+(n++),on=S.bag.indexOf(x)>-1;return '<label for="'+id+'"><input type="checkbox" id="'+id+'" data-bag="'+esc(x)+'"'+(on?" checked":"")+'><span>'+esc(x)+'</span></label>';}).join("")+'</div>';}).join("");}
+
+/* ============ BENİM ROMA'M ============ */
+function renderRotam(st){
+  var vis={};S.visited.forEach(function(v){vis[v]=1;});
+  var done=S.plan.filter(function(id){return vis[id];}).length;
+  $("#rsum").innerHTML='<div><b>'+st.n+'</b> <span>yer</span></div><div><b>'+(st.n?st.days:0)+'</b> <span>gün</span></div><div><b>'+fmtH(st.hrs)+'</b> <span>ziyaret</span></div><div><b>'+done+'/'+st.n+'</b> <span>gezildi</span></div>'+(S.sample?'<span class="tmp">örnek rota</span>':"");
+  $("#baseSel").innerHTML=AREAS.filter(function(a){return !a.far;}).map(function(a){return '<option value="'+a.id+'"'+(a.id===S.base?" selected":"")+'>'+esc(a.n)+'</option>';}).join("");
+  if(!st.n){$("#rdays").innerHTML='<div class="empty"><b>Rotan boş.</b><p>Keşfet bölümünden yer ekle ya da hazır bir planı rotana aktar.</p><div class="btnrow"><a class="btn" href="#kesfet">Keşfet\'e git</a><a class="btn ghost" href="#planla">Hazır planlar</a></div></div>';drawRotaMap(st);return;}
+  var cls=["","l-b","l-c","l-s"];
+  $("#rdays").innerHTML=st.it.map(function(d,i){var n0=st.it.slice(0,i).reduce(function(a,dd){return a+dd.length;},0);var hrs=d.reduce(function(a,x){return a+x.p.h+(x.leg?x.leg.best/60:0);},0);var title=d.length===1&&d[0].p.far?"Şehir dışı":"Gün planı";return '<section class="dline '+cls[i%4]+'"><header><span><span class="dn">'+(i+1)+'. gün</span><span class="dh">'+title+'</span></span><span class="lab">≈ '+fmtH(hrs)+'</span></header><ol>'+d.map(function(x,j){var leg="";if(x.leg){var m=x.leg.metro&&x.leg.metro.min<x.leg.walk;leg=(j===0?"Konaklamadan ":"")+(m?"metroyla "+fmtMin(x.leg.metro.min):"yürüyerek "+fmtMin(x.leg.walk));}else{leg="Yarım gün ayır";}return '<li class="'+(vis[x.p.id]?"done":"")+'" data-pid="'+x.p.id+'" data-n="'+(n0+j+1)+'"><span class="leg">'+leg+'</span><div class="st"><label><input type="checkbox" data-visit="'+x.p.id+'"'+(vis[x.p.id]?" checked":"")+'><span class="nm">'+esc(x.p.n)+'</span></label><span class="lab">'+fmtH(x.p.h)+' · '+TK[x.p.tk]+'</span><button class="rm" type="button" data-add="'+x.p.id+'">Çıkar</button></div></li>';}).join("")+'</ol></section>';}).join("");
+  drawRotaMap(st);
+}
+
+/* ============ GÜNCELLEME VE YÖNLENDİRME ============ */
+function update(){var st=planStats();renderKesfet();renderPlanbar(st);renderHowLong(st);renderTypes();renderBudget(st);renderAreas();renderRank();renderRotam(st);}
+var CH=["vize","kesfet","planla","konaklama","havalimani","ulasim","yerel","bilgi","rotam"];
+function route(scroll){
+  var h=location.hash.slice(1);if(CH.indexOf(h)<0)h="vize";
+  $$("[data-sec]").forEach(function(s){s.hidden=s.getAttribute("data-sec")!==h;});
+  $$("[data-nav]").forEach(function(a){if(a.getAttribute("data-nav")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  var a=$('[data-nav="'+h+'"]'),mi=$("#metroIn");if(a&&mi){var li=a.parentNode;mi.scrollTo({left:li.offsetLeft-mi.clientWidth/2+li.clientWidth/2,behavior:reduce?"auto":"smooth"});}
+  if(scroll){var nav=$(".metro"),y=$("#chapters").getBoundingClientRect().top+window.scrollY-nav.offsetHeight+1;if(window.scrollY>y-2||scroll==="force")window.scrollTo({top:y,behavior:reduce?"auto":"smooth"});}
+}
+
+/* ============ OLAYLAR ============ */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-add]");if(t){togglePlan(t.getAttribute("data-add"));return;}
+  t=e.target.closest("[data-rday]");if(t){rFocus=+t.getAttribute("data-rday");drawRotaMap(planStats());return;}
+  t=e.target.closest("[data-cat]");if(t){cat=t.getAttribute("data-cat");renderKesfet();return;}
+  t=e.target.closest("[data-mo]");if(t){mo=+t.getAttribute("data-mo");renderMonths();return;}
+  t=e.target.closest("[data-trip]");if(t){tripN=+t.getAttribute("data-trip");renderTrips();return;}
+  t=e.target.closest("[data-type]");if(t){ttype=t.getAttribute("data-type");renderTypes();return;}
+  t=e.target.closest("[data-atag]");if(t){aTag=t.getAttribute("data-atag");renderAreas();return;}
+  t=e.target.closest("[data-sel]");if(t){selArea=t.getAttribute("data-sel");renderRank();return;}
+  t=e.target.closest("[data-area]");if(t){selArea=t.getAttribute("data-area");renderRank();return;}
+  t=e.target.closest("[data-base]");if(t){S.base=t.getAttribute("data-base");selArea=S.base;save();update();return;}
+  t=e.target.closest("[data-doc]");if(t){renderDocs(t.getAttribute("data-doc"));return;}
+  t=e.target.closest("[data-ap]");if(t){var ap=t.getAttribute("data-ap");$$("[data-ap]").forEach(function(b){b.setAttribute("aria-selected",String(b===t));});$$("[data-apsec]").forEach(function(s){s.hidden=s.getAttribute("data-apsec")!==ap;});return;}
+  t=e.target.closest(".cty");if(t){var c=t.getAttribute("data-c"),n=t.getAttribute("data-n");$("#mapCap").textContent=c==="IT"?"İtalya · "+C.ad+" dosyası açık":c==="TR"?"Türkiye · çıkış noktası":n+" · dosya hazırlanıyor";if(c==="IT"){location.hash="vize";}return;}
+});
+$("#world").addEventListener("mouseover",function(e){var t=e.target.closest(".cty");if(!t)return;var c=t.getAttribute("data-c");$("#mapCap").textContent=t.getAttribute("data-n")+(c==="IT"?" · "+C.ad+" dosyası hazır":c==="TR"?" · çıkış":" · yakında");});
+$("#mapToggle").addEventListener("click",function(){zoomTo(!zoomed);});
+$("#nat").addEventListener("change",function(){applyPassport(true);});
+$("#ptype").addEventListener("change",function(){applyPassport(true);});
+$("#dest").addEventListener("change",function(){var v=this.value.trim().toLocaleLowerCase("tr");var hit=null;(C.sehirler||[]).forEach(function(x){if(v&&x.ad.toLocaleLowerCase("tr").indexOf(v.split(",")[0].trim())===0)hit=x;});if(!v||hit&&hit.id===C.id){$("#mapCap").textContent="İstanbul → "+C.ad+" · uçuş "+C.ucus;}else if(hit&&hit.url){$("#mapCap").textContent=hit.ad+" dosyası açılıyor…";location.href=hit.url;}else{$("#mapCap").textContent=this.value+" · bu şehrin dosyası hazırlanıyor. Şimdilik "+C.ek.nin+" dosyasına bak.";}});
+$("#tripAdd").addEventListener("click",function(){var add=[];TRIPS[tripN].forEach(function(d){d.s.forEach(function(id){if(!inPlan(id)&&add.indexOf(id)<0)add.push(id);});});S.plan=S.plan.concat(add);S.sample=false;save();update();$("#tripToast").textContent=add.length?add.length+" yer rotana eklendi.":"Bu plandaki yerler zaten rotanda.";});
+$("#bDays").addEventListener("input",function(){budgetTouched=true;renderBudget();});
+$("#bPeople").addEventListener("input",function(){renderBudget();});
+$("#bStyle").addEventListener("change",function(){renderBudget();});
+$("#cFrom").addEventListener("change",renderCalc);$("#cTo").addEventListener("change",renderCalc);
+$("#baseSel").addEventListener("change",function(){S.base=this.value;selArea=S.base;save();update();});
+["#rdays","#rmapBox"].forEach(function(q){$(q).addEventListener("mouseover",function(e){rHl(e,true);});$(q).addEventListener("mouseout",function(e){rHl(e,false);});});
+$("#clearPlan").addEventListener("click",function(){S.plan=[];S.visited=[];S.sample=false;save();update();});
+document.addEventListener("change",function(e){
+  var t=e.target;
+  if(t.hasAttribute("data-visit")){var id=t.getAttribute("data-visit");if(t.checked){if(S.visited.indexOf(id)<0)S.visited.push(id);}else S.visited=S.visited.filter(function(v){return v!==id;});save();renderRotam(planStats());}
+  if(t.hasAttribute("data-bag")){var x=t.getAttribute("data-bag");if(t.checked){if(S.bag.indexOf(x)<0)S.bag.push(x);}else S.bag=S.bag.filter(function(v){return v!==x;});save();}
+});
+function renderDocs(k){$$("[data-doc]").forEach(function(b){b.setAttribute("aria-selected",String(b.getAttribute("data-doc")===k));});$("#docCommon").innerHTML=DOCS.common.map(function(x){return "<li>"+x+"</li>";}).join("");$("#docProf").innerHTML=DOCS[k].map(function(x){return "<li>"+x+"</li>";}).join("");$("#docProfTitle").textContent=DOCT[k];}
+window.addEventListener("hashchange",function(){route(true);});
+
+/* ============ BAŞLAT ============ */
+applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMatrix();renderEvents();renderDaytrips();renderBag();calcOpts();renderCalc();
+$("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
+$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/napoli/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
+update();route(false);
+try{renderWorld();}catch(err){$("#mapFallback").hidden=false;}
+var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});
+try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",drawGuil);}catch(e){}
+new MutationObserver(drawGuil).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(drawGuil);
+})();
+</script>
+
+<script>
+(function(){
+  var V=[[2,"Napoli hâlâ uyanık; Vespalar son turunu atıyor"],[7,"Barda ayakta kısa, koyu, şekerli bir kahve"],[9,"Pignasecca'da balık tezgâhları kuruldu"],[13,"Pizzacılarda sıra numarası alma saati"],[16,"Sıcak saatler; yeraltına in, serin"],[18,"Lungomare'de akşam yürüyüşü başlıyor"],[20,"Akşam yemeği: Napoli geç yer"],[23,"Piazza Bellini ve Chiaia'nın barları dolu"]];
+  function vibe(h){var t=V[V.length-1][1];for(var i=0;i<V.length;i++){if(h>=V[i][0])t=V[i][1];}return t;}
+  function fmt(d){return new Intl.DateTimeFormat("tr-TR",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit",hour12:false}).format(d);}
+  function sunset(d){
+    var y=d.getUTCFullYear(),mo=d.getUTCMonth(),da=d.getUTCDate(),day0=Date.UTC(y,mo,da);
+    var n=Math.round((day0-Date.UTC(y,0,0))/864e5),r=Math.PI/180,lat=40.8518,lng=14.2681;
+    var dec=23.44*Math.sin(2*Math.PI*(284+n)/365),B=2*Math.PI*(n-81)/364;
+    var E=9.87*Math.sin(2*B)-7.53*Math.cos(B)-1.5*Math.sin(B);
+    var c=(Math.sin(-0.833*r)-Math.sin(lat*r)*Math.sin(dec*r))/(Math.cos(lat*r)*Math.cos(dec*r));
+    var H=Math.acos(Math.max(-1,Math.min(1,c)))/r;
+    return new Date(day0+(720-4*lng-E+4*H)*6e4);
+  }
+  function tick(){
+    try{
+      var d=new Date(),t=fmt(d),h=parseInt(t.slice(0,2),10)%24;
+      document.getElementById("rnT").textContent=t;
+      document.getElementById("rnV").textContent=vibe(h);
+      document.getElementById("rnS").textContent=fmt(sunset(d));
+    }catch(e){}
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+
+</body>
+</html>
