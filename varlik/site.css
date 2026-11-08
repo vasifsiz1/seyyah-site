@@ -425,3 +425,4 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .it-tema .ust-nav a:not(.cta):hover{background:rgba(255,255,255,.14)}
 .it-tema .ust-nav a.cta{border-color:#fff;box-shadow:2px 2px 0 rgba(0,0,0,.35)}
 .it-tema .serit div:nth-child(3n+1){--fc:var(--sky)}.it-tema .serit div:nth-child(3n+2){--fc:var(--sun)}.it-tema .serit div:nth-child(3n){--fc:var(--aperol)}
+.kunye summary{cursor:pointer;font-weight:700;width:max-content}
