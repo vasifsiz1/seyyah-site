@@ -436,3 +436,12 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .evl .kutu{scroll-margin-top:90px}
 .evl .kutu ul,.evl-kaynak{margin:0;padding-left:20px;display:grid;gap:8px}
 .evl .no{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sky);color:var(--white);font-size:1rem;margin-right:10px;vertical-align:3px}
+
+/* sıradaki şehirler: fotoğrafsız kare kartlar */
+.kareler{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr));gap:12px;margin-top:16px}
+.kareler>*:nth-child(6n+1){--kc:var(--sky)}.kareler>*:nth-child(6n+2){--kc:var(--aperol)}.kareler>*:nth-child(6n+3){--kc:var(--pista)}.kareler>*:nth-child(6n+4){--kc:var(--pink)}.kareler>*:nth-child(6n+5){--kc:var(--sun)}.kareler>*:nth-child(6n){--kc:var(--glicine)}
+.kare{aspect-ratio:1;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:22px;border:2px dashed color-mix(in srgb,var(--kc) 60%,transparent);background:color-mix(in srgb,var(--kc) var(--tint),var(--card));color:var(--ink);text-decoration:none;transition:transform .2s,border-color .2s}
+.kare .lab{color:var(--kc)}
+.kare b{margin-top:auto;font-size:1.25rem;font-weight:800;line-height:1.15}
+.kare small{color:var(--muted);font-size:.82rem;line-height:1.35}
+.kare:hover,.kare:focus-visible{transform:translateY(-3px);border-style:solid;border-color:var(--kc)}
