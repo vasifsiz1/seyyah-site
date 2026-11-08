@@ -429,3 +429,10 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .it-tema .ust-nav a.cta{border-color:#fff;box-shadow:2px 2px 0 rgba(0,0,0,.35)}
 .it-tema .serit div:nth-child(3n+1){--fc:var(--sky)}.it-tema .serit div:nth-child(3n+2){--fc:var(--sun)}.it-tema .serit div:nth-child(3n){--fc:var(--aperol)}
 .kunye summary{cursor:pointer;font-weight:700;width:max-content}
+
+/* evlilik */
+.adimlar b a{color:inherit}
+.evl{display:grid;gap:14px}
+.evl .kutu{scroll-margin-top:90px}
+.evl .kutu ul,.evl-kaynak{margin:0;padding-left:20px;display:grid;gap:8px}
+.evl .no{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sky);color:var(--white);font-size:1rem;margin-right:10px;vertical-align:3px}
