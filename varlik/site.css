@@ -1,7 +1,7 @@
 /* Renk ve yazı belirteçleri: prototipten (prototip/index.html). Açık tema :root, koyu tema iki blokta. */
 :root{
   --paper:#FFFFFF; --paper-2:#EEF5FF; --card:#FFFFFF; --ink:#16233F; --muted:#57627A; --rule:#DDE5F0; --guil:#DDE5F0;
-  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22);
+  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22); --bgop:.11;
   --sky:#1F6FD6; --sky-ink:#1F6FD6;
   --aperol:#FF7A2F; --aperol-ink:#C2410C;
   --sun:#FFC233; --sun-ink:#9A6A00;
@@ -26,7 +26,7 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -38,7 +38,7 @@
   --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
-  --shadow:rgba(0,0,0,.5); --tint:24%;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
   --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
   --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
   --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
@@ -54,6 +54,9 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+/* Soluk arka plan: sayfanın şehrinden bir fotoğrafın küçük kopyası (z-<ad>.jpg, tools/zemin.mjs), ekrana sabit, içeriğin arkasında (Sayfa.zemin). lvh: mobilde araç çubuğu açılıp kapanırken zıplamasın */
+.zemin{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:-1;background:var(--zemin,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.45));mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.45))}
+@media print,(forced-colors:active),(prefers-reduced-transparency:reduce){.zemin{display:none}}
 img{max-width:100%;display:block}
 a{color:var(--sky-ink);text-underline-offset:3px}
 h1,h2,h3{font-family:var(--f-display);line-height:1.08;letter-spacing:-.025em;text-wrap:balance;margin:0}
@@ -86,9 +89,8 @@ p{margin:0}
 
 /* kapak */
 .kapak{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,rgba(8,22,48,.22),rgba(8,22,48,0) 35%),var(--img,none) center 42%/cover no-repeat,var(--hero-bg)}
-.kapak::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24px;background:var(--paper);z-index:1;
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 12Q24 0 48 12T96 12V24H0Z'/%3E%3C/svg%3E") 0 0/96px 24px repeat-x;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 12Q24 0 48 12T96 12V24H0Z'/%3E%3C/svg%3E") 0 0/96px 24px repeat-x}
+/* Kapağın alt kenarı dalgalı ve saydam: arkadaki zemin fotoğrafı kesintisiz görünür */
+.kapak{-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 23px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 0H96V12Q72 24 48 12T0 12Z'/%3E%3C/svg%3E") left bottom/96px 24px repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - 23px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 0H96V12Q72 24 48 12T0 12Z'/%3E%3C/svg%3E") left bottom/96px 24px repeat-x}
 .kapak-in{padding-block:clamp(48px,6vw,80px) clamp(56px,7vw,92px)}
 .panel{position:relative;max-width:660px;background:var(--hero-bg);color:var(--white);border-radius:28px;padding:clamp(22px,3.4vw,40px);box-shadow:0 24px 60px rgba(8,25,60,.35)}
 .panel::before{content:"";position:absolute;z-index:-1;top:-58px;right:-58px;width:156px;height:156px;border-radius:50%;
@@ -173,7 +175,7 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .kutu h2{font-size:1.35rem;font-weight:800}
 .kutu.not{background:color-mix(in srgb,var(--sun) var(--tint),var(--card));border-color:transparent}
 .kutu.foto-not{background:color-mix(in srgb,var(--pink) var(--tint),var(--card));border-color:transparent}
-.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;margin:0}
+.kv{display:grid;grid-template-columns:fit-content(50%) minmax(0,1fr);gap:8px 16px;margin:0}
 .kv dt{color:var(--muted);font-size:.9rem}
 .kv dd{margin:0;font-weight:700}
 .yakin{list-style:none;padding:0;margin:0;display:grid;gap:8px}
@@ -191,7 +193,7 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .tik li{position:relative;padding-left:24px}
 .tik li::before{content:"";position:absolute;left:3px;top:.5em;width:10px;height:10px;border-radius:3px;background:var(--pista)}
 .g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
-.tablo{overflow-x:auto;border:2px solid var(--rule);border-radius:18px}
+.tablo{overflow-x:auto;border:2px solid var(--rule);border-radius:18px;background:var(--card)}
 .tablo table{border-collapse:collapse;width:100%;min-width:560px;font-size:.94rem}
 .tablo th,.tablo td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
 .tablo th{background:color-mix(in srgb,var(--sky) var(--tint),var(--card));font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}

@@ -144,10 +144,10 @@ button{font:inherit;color:inherit}
 .nav .badge{font-family:var(--f-mono);font-size:.64rem;font-weight:600;background:var(--ochre);color:var(--on-ochre);padding:0 6px;border-radius:9px;line-height:17px}
 
 /* bölümler */
-.ch{padding-block:clamp(18px,3vw,30px) 72px;position:relative;isolation:isolate}
-/* Bölüm arka planı: şehrin başka bir fotoğrafı, soluk ve aşağı doğru zemine eriyerek (BGIMG) */
-html{overflow-x:clip}
-.ch::before{content:"";position:absolute;z-index:-1;top:0;left:50%;width:100vw;margin-left:-50vw;height:min(1100px,100%);background:var(--bgimg,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 35%,transparent 100%)}
+.ch{padding-block:clamp(18px,3vw,30px) 72px}
+/* Soluk arka plan: şehrin bölüme göre değişen bir fotoğrafının küçük kopyası (BGIMG → img/z-<ad>.jpg, tools/zemin.mjs), ekrana sabit, içeriğin arkasında. lvh: mobilde araç çubuğu açılıp kapanırken zıplamasın */
+.zemin{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:-1;background:var(--zemin,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.45));mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.45))}
+@media print,(forced-colors:active),(prefers-reduced-transparency:reduce){.zemin{display:none}}
 .ch-head{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(240px,32vw,400px);padding:clamp(20px,3.5vw,40px);border-radius:6px;overflow:hidden;color:var(--on-photo);background:linear-gradient(180deg,rgba(12,9,6,.02) 18%,rgba(12,9,6,.84) 100%),var(--img,none) center/cover no-repeat,#1C1813;margin-bottom:8px}
 .ch-head .lab{color:var(--on-photo-2)}
 .ch h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1;letter-spacing:-.02em;margin-top:6px;color:var(--on-photo)}
@@ -472,7 +472,7 @@ body{font-size:16.5px}
 
 /* kapak */
 .hero{isolation:isolate;overflow:hidden;background:linear-gradient(180deg,rgba(8,22,48,.22),rgba(8,22,48,0) 35%),url(/seyyah-site/varlik/img/milano/hero.jpg) center 42%/cover no-repeat,var(--hero-bg)}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24px;background:var(--paper);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 12Q24 0 48 12T96 12V24H0Z'/%3E%3C/svg%3E") 0 0/96px 24px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 12Q24 0 48 12T96 12V24H0Z'/%3E%3C/svg%3E") 0 0/96px 24px repeat-x;z-index:1}
+.hero{-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 23px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 0H96V12Q72 24 48 12T0 12Z'/%3E%3C/svg%3E") left bottom/96px 24px repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - 23px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 0H96V12Q72 24 48 12T0 12Z'/%3E%3C/svg%3E") left bottom/96px 24px repeat-x} /* alt kenar dalgalı ve saydam: arkadaki zemin kesintisiz görünür */
 .hero-in{padding-block:clamp(30px,5vw,64px) clamp(52px,7vw,84px)}
 @media (max-width:900px){.hero-in{padding-top:150px}}
 .hero-in>div:first-child{position:relative;background:var(--hero-bg);color:var(--on-photo);border-radius:28px;padding:clamp(22px,3.4vw,40px);box-shadow:0 24px 60px rgba(8,25,60,.35)}
@@ -633,6 +633,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 .rleg .mt{width:22px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--line-a) 0 33%,var(--line-b) 33% 66%,var(--line-c) 66%);opacity:.5}
 </style>
 
+<div class="zemin" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.4" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="c"/><feDisplacementMap in="c" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
 
 <div class="awning" aria-hidden="true"></div>
@@ -1568,9 +1569,10 @@ var CH=["vize","kesfet","planla","konaklama","havalimani","ulasim","yerel","bilg
 function route(scroll){
   var h=location.hash.slice(1);if(CH.indexOf(h)<0)h="vize";
   $$("[data-sec]").forEach(function(s){s.hidden=s.getAttribute("data-sec")!==h;});
+  var z=$(".zemin"),b=BGIMG[h];if(z)z.style.setProperty("--zemin",b?"url(/seyyah-site/varlik/img/milano/z-"+b+".jpg)":"none");
   $$("[data-nav]").forEach(function(a){if(a.getAttribute("data-nav")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   var a=$('[data-nav="'+h+'"]'),mi=$("#metroIn");if(a&&mi){var li=a.parentNode;mi.scrollTo({left:li.offsetLeft-mi.clientWidth/2+li.clientWidth/2,behavior:reduce?"auto":"smooth"});}
-  if(scroll){var nav=$(".metro"),y=$("#chapters").getBoundingClientRect().top+window.scrollY-nav.offsetHeight+1;if(window.scrollY>y-2||scroll==="force")window.scrollTo({top:y,behavior:reduce?"auto":"smooth"});}
+  if(scroll){var nav=$(".nav"),y=$("#chapters").getBoundingClientRect().top+window.scrollY-(nav?nav.offsetHeight:0)+1;if(window.scrollY>y-2||scroll==="force")window.scrollTo({top:y,behavior:reduce?"auto":"smooth"});}
 }
 
 /* ============ OLAYLAR ============ */
@@ -1613,7 +1615,7 @@ window.addEventListener("hashchange",function(){route(true);});
 /* ============ BAŞLAT ============ */
 applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMatrix();renderEvents();renderDaytrips();renderBag();calcOpts();renderCalc();
 $("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
-$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/milano/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");var b=BGIMG[sec.getAttribute("data-sec")];if(b)sec.style.setProperty("--bgimg","url(/seyyah-site/varlik/img/milano/"+b+".jpg)");});
+$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/milano/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
 update();route(false);
 try{renderWorld();}catch(err){mapFb();}
 var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});
