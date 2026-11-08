@@ -445,3 +445,16 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .kare b{margin-top:auto;font-size:1.25rem;font-weight:800;line-height:1.15}
 .kare small{color:var(--muted);font-size:.82rem;line-height:1.35}
 .kare:hover,.kare:focus-visible{transform:translateY(-3px);border-style:solid;border-color:var(--kc)}
+/* Şehir ızgarası: 4 sütun, kalanlar "Daha fazla şehir gör" altında */
+.kartlar.dortlu{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1100px){.kartlar.dortlu{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.kartlar.dortlu{grid-template-columns:1fr}}
+.dahafazla{margin-top:16px}
+.dahafazla>summary{list-style:none;cursor:pointer;display:block;width:max-content;margin:4px auto 0;padding:12px 26px;border-radius:999px;border:2px solid var(--line,currentColor);font-weight:800;transition:background .2s}
+.dahafazla>summary::-webkit-details-marker{display:none}
+.dahafazla>summary:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.dahafazla>summary .ac::after{content:" ↓"}.dahafazla>summary .kapa::after{content:" ↑"}
+.dahafazla .kapa,.dahafazla[open] .ac{display:none}.dahafazla[open] .kapa{display:inline}
+.dahafazla[open]>summary{order:2;margin-top:16px}
+.dahafazla[open]{display:flex;flex-direction:column}
+.dahafazla>.kartlar{margin-top:0}
