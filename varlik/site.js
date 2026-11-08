@@ -61,20 +61,29 @@
   /* Ana sayfa pasaport kartı: uyruk ve pasaport türü vize damgasını, varış "dosyasını aç" düğmesini değiştirir */
   var pas = document.querySelector("[data-pasaport]"), pv = document.getElementById("pasaport-veri");
   if (pas && pv) {
-    var VZ = JSON.parse(pv.textContent), uy = pas.elements.uyruk, tr = pas.elements.tur, vr = pas.elements.varis;
+    var VZ = JSON.parse(pv.textContent), uy = pas.elements.uyruk, tr = pas.elements.tur, vr = pas.elements.varis, ul = pas.elements.ulke;
     var dg = pas.querySelector(".damga"), mt = pas.querySelector("[data-pas-metin]"), git = pas.querySelector("[data-pas-git]");
+    var alanlar = pas.querySelector(".pfields"), sehirAlan = pas.querySelectorAll(".pf-sehir");
     var sakin = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
     var pasGuncelle = function (anim) {
       tr.disabled = uy.value !== "TR";
       var v = VZ[uy.value === "TR" ? tr.value : uy.value];
       if (v) { dg.children[0].textContent = v.s1; dg.children[1].textContent = v.s2; dg.children[2].textContent = v.s3; mt.textContent = v.h; }
-      var o = vr.options[vr.selectedIndex];
-      git.href = o.value; git.textContent = o.text.split(",")[0] + " dosyasını aç";
+      // Önce ülke, sonra şehir: seçilen ülkenin şehir alanı ülkenin yanında açılır
+      var u = ul ? ul.value : "italya", acik = null;
+      for (var i = 0; i < sehirAlan.length; i++) { var a = sehirAlan[i].getAttribute("data-ulke") === u; sehirAlan[i].hidden = !a; if (a) acik = sehirAlan[i].querySelector("select"); }
+      alanlar.classList.toggle("sehirli", !!acik);
+      git.classList.toggle("pasif", !acik);
+      if (!acik) { git.href = "#"; git.textContent = "Önce ülkeni seç"; }
+      else if (u === "italya") { var o = vr.options[vr.selectedIndex]; git.href = o.value; git.textContent = o.text + " dosyasını aç"; }
+      else { git.href = acik.value; git.textContent = "Yunanistan dosyasına göz at"; }
       if (anim && !sakin) { dg.classList.remove("vur"); void dg.offsetWidth; dg.classList.add("vur"); }
     };
     // damga yalnız uyruk ya da pasaport türü değişince yeniden basılır; varış (küreden de gelir) yalnız düğmeyi değiştirir
-    pas.addEventListener("change", function (e) { pasGuncelle(e.target !== vr); });
-    pas.addEventListener("submit", function (e) { e.preventDefault(); location.href = git.href; });
+    // küreden İtalya şehri seçilince ülke de İtalya olur
+    pas.addEventListener("change", function (e) { if (e.target === vr && ul) ul.value = "italya"; pasGuncelle(e.target === uy || e.target === tr); });
+    pas.addEventListener("submit", function (e) { e.preventDefault(); if (!git.classList.contains("pasif")) location.href = git.href; else if (ul) ul.focus(); });
+    git.addEventListener("click", function (e) { if (git.classList.contains("pasif")) { e.preventDefault(); if (ul) ul.focus(); } });
     pasGuncelle(false);
   }
 

@@ -143,6 +143,7 @@ p{margin:0}
 .pf{padding:10px 14px 8px;min-width:0}
 .pf+.pf{border-left:1px solid var(--rule)}
 .pf-wide{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--rule)}
+.pf-alt{border-top:1px solid var(--rule)}.pf-ulke{border-left:0!important}.pfields:not(.sehirli) .pf-ulke{grid-column:1/-1}.btn.pasif{opacity:.55;box-shadow:none;cursor:default}
 .pf label{display:block;font-size:.66rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 .pf label i{font-style:italic;font-weight:600;text-transform:none;letter-spacing:.02em}
 .sel{position:relative}
