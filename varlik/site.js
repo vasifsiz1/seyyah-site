@@ -57,4 +57,23 @@
       if (msg) msg.textContent = !ok ? "Tarayıcın kayda izin vermiyor." : (i > -1 ? "Rotandan çıkarıldı." : "Rotana eklendi. Rotanda " + s.plan.length + " yer var.");
     });
   });
+
+  /* Ana sayfa pasaport kartı: uyruk ve pasaport türü vize damgasını, varış "dosyasını aç" düğmesini değiştirir */
+  var pas = document.querySelector("[data-pasaport]"), pv = document.getElementById("pasaport-veri");
+  if (pas && pv) {
+    var VZ = JSON.parse(pv.textContent), uy = pas.elements.uyruk, tr = pas.elements.tur, vr = pas.elements.varis;
+    var dg = pas.querySelector(".damga"), mt = pas.querySelector("[data-pas-metin]"), git = pas.querySelector("[data-pas-git]");
+    var sakin = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var pasGuncelle = function (anim) {
+      tr.disabled = uy.value !== "TR";
+      var v = VZ[uy.value === "TR" ? tr.value : uy.value];
+      if (v) { dg.children[0].textContent = v.s1; dg.children[1].textContent = v.s2; dg.children[2].textContent = v.s3; mt.textContent = v.h; }
+      var o = vr.options[vr.selectedIndex];
+      git.href = o.value; git.textContent = o.text.split(",")[0] + " dosyasını aç";
+      if (anim && !sakin) { dg.classList.remove("vur"); void dg.offsetWidth; dg.classList.add("vur"); }
+    };
+    pas.addEventListener("change", function () { pasGuncelle(true); });
+    pas.addEventListener("submit", function (e) { e.preventDefault(); location.href = git.href; });
+    pasGuncelle(false);
+  }
 })();

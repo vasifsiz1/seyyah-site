@@ -105,6 +105,28 @@ p{margin:0}
 .hap{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .hap span{background:var(--glass);border-radius:999px;padding:6px 13px;font-size:.88rem;font-weight:600;color:var(--white)}
 .hap b{color:var(--sun);font-variant-numeric:tabular-nums}
+/* Ana sayfa pasaport kartı */
+.pasaport{margin-top:24px}
+.pfields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--card);color:var(--ink);border:2px solid var(--navy);border-radius:18px;overflow:hidden;box-shadow:6px 6px 0 var(--sun)}
+.pf{padding:10px 14px 8px;min-width:0}
+.pf+.pf{border-left:1px solid var(--rule)}
+.pf-wide{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--rule)}
+.pf label{display:block;font-size:.66rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.pf label i{font-style:italic;font-weight:600;text-transform:none;letter-spacing:.02em}
+.sel{position:relative}
+.sel::after{content:"▾";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:.8rem}
+.pf select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:700 1.05rem var(--f-body);color:var(--ink);width:100%;padding:3px 18px 3px 0;min-width:0;cursor:pointer}
+.pf select:disabled{color:var(--muted);cursor:default}
+.pf select:focus{outline:none}
+.pf:focus-within{background:var(--ochre-soft)}
+.pas-sonuc{grid-column:1/-1;display:flex;align-items:center;gap:18px;padding:14px 16px;border-top:1px solid var(--rule);background:var(--paper-2)}
+.pas-sonuc p{font-weight:700;font-size:.98rem;min-width:0}
+.damga{flex:none;transform:rotate(-7deg);color:var(--stamp);border:3px solid currentColor;border-radius:12px;padding:7px 12px 6px;text-align:center;line-height:1.15;box-shadow:inset 0 0 0 3px var(--paper-2),inset 0 0 0 5px currentColor;display:flex;flex-direction:column;align-items:center}
+.damga .s1,.damga .s3{font-size:.56rem;letter-spacing:.14em;font-weight:800;text-transform:uppercase}
+.damga .s2{font-family:var(--f-display);font-weight:800;font-size:1.35rem;margin:2px 0 1px}
+.damga.vur{animation:vur .5s cubic-bezier(.2,.9,.3,1.25)}
+@keyframes vur{0%{transform:rotate(-7deg) scale(1.4);opacity:.35}60%{transform:rotate(-7deg) scale(.97);opacity:1}100%{transform:rotate(-7deg) scale(1)}}
+@media (max-width:480px){.pfields{grid-template-columns:minmax(0,1fr)}.pf+.pf{border-left:0;border-top:1px solid var(--rule)}.pas-sonuc{gap:14px}}
 .dugmeler{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 
 /* düğmeler */
