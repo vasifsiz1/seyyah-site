@@ -126,4 +126,25 @@
     });
   }
   function sakinMi() { return !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); }
+  /* Fotoğraf büyütme: <button class="buyut" data-buyuk="büyük.jpg"><img alt="..."></button> → tam ekran, dokununca ya da Esc ile kapanır */
+  var buyutler = document.querySelectorAll(".buyut");
+  if (buyutler.length && window.HTMLDialogElement) {
+    var dlg = document.createElement("dialog");
+    dlg.className = "isik";
+    dlg.innerHTML = '<button type="button" class="isik-kapat" aria-label="Kapat">×</button><img alt=""><p></p>';
+    document.body.appendChild(dlg);
+    var dImg = dlg.querySelector("img"), dYazi = dlg.querySelector("p"), son = null;
+    buyutler.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var k = b.querySelector("img");
+        son = b;
+        dImg.src = b.getAttribute("data-buyuk");
+        dImg.alt = k ? k.alt : "";
+        dYazi.textContent = k ? k.alt : "";
+        dlg.showModal();
+      });
+    });
+    dlg.addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("close", function () { dImg.removeAttribute("src"); if (son) son.focus(); });
+  }
 })();

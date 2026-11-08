@@ -388,3 +388,13 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .vstat th:first-child,.vstat td:first-child{text-align:left}
 .vstat th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .vstat tr.top td{font-weight:700;border-bottom:0}
+/* Fotoğraf büyütme */
+.buyut{display:block;width:100%;padding:0;margin:0;border:0;background:none;cursor:zoom-in;border-radius:inherit;color:inherit}
+.kapak-foto .buyut{height:100%}
+.buyut:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.isik{max-width:none;max-height:none;width:100vw;height:100dvh;margin:0;padding:16px;border:0;background:rgba(6,12,24,.94);color:#fff;cursor:zoom-out}
+.isik[open]{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px}
+.isik::backdrop{background:rgba(6,12,24,.94)}
+.isik img{max-width:100%;max-height:calc(100dvh - 120px);object-fit:contain;border-radius:10px}
+.isik p{margin:0;max-width:70ch;text-align:center;font-size:.92rem;line-height:1.45;color:rgba(255,255,255,.85)}
+.isik-kapat{position:absolute;top:10px;right:14px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
