@@ -268,6 +268,7 @@ p{margin:0}
 .serit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;padding-block:24px 0}
 .serit div{border-radius:16px;padding:11px 14px;background:color-mix(in srgb,var(--fc) var(--tint),var(--paper));min-width:0}
 .serit b{display:block;font-weight:700}
+.serit small{display:block;font-size:.78rem;line-height:1.35;color:var(--muted);margin-top:2px}
 .serit div:nth-child(6n+1){--fc:var(--sky)}.serit div:nth-child(6n+2){--fc:var(--sun)}.serit div:nth-child(6n+3){--fc:var(--pink)}.serit div:nth-child(6n+4){--fc:var(--pista)}.serit div:nth-child(6n+5){--fc:var(--aperol)}.serit div:nth-child(6n){--fc:var(--glicine)}
 
 /* kartlar */
