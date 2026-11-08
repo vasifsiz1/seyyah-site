@@ -305,6 +305,7 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .cipler{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
 .cip{font:700 .86rem/1 var(--f-body);padding:9px 14px;border-radius:999px;border:2px solid var(--rule);background:var(--card);color:var(--ink);text-decoration:none}
 .cip:hover{border-color:var(--aperol)}
+.siradaki{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:18px}.siradaki .lab{margin-right:6px}.cip.yakin{border-style:dashed;border-color:color-mix(in srgb,var(--muted) 70%,transparent);color:var(--ink);cursor:default}
 /* Maç ve spor rehberi (veri/spor.ts): Keşfet → Spor, gezilecek yerler #spor, stat sayfaları */
 .sp{display:grid;gap:16px;margin-bottom:24px;--sp:var(--pista)}
 .sp-bas{font:800 1.3rem/1.2 var(--f-display);margin:0;text-wrap:balance}
