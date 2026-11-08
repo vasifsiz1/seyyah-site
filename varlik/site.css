@@ -106,7 +106,7 @@ p{margin:0}
 .ust-nav a{font-weight:700;font-size:.92rem;color:var(--ink);text-decoration:none;padding:7px 12px;border-radius:999px}
 .ust-nav a:hover{background:var(--paper-2)}
 .ust-nav a.cta{background:var(--sun);color:var(--navy);border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
-.onizleme{background:var(--ochre-soft);color:var(--ink);font-size:.84rem;text-align:center;padding:6px 16px}
+.onizleme{background:transparent;color:var(--muted);font-size:.76rem;text-align:center;padding:4px 16px;border-bottom:1px solid var(--rule)}
 
 /* kırıntı */
 .kirinti ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;padding:0;margin:0 0 12px;font-size:.86rem}
@@ -415,3 +415,12 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .isik img{max-width:100%;max-height:calc(100dvh - 120px);object-fit:contain;border-radius:10px}
 .isik p{margin:0;max-width:70ch;text-align:center;font-size:.92rem;line-height:1.45;color:rgba(255,255,255,.85)}
 .isik-kapat{position:absolute;top:10px;right:14px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
+/* Şehir kartları üçlü sıra (5 kart 3+2, 6 kart 3+3) */
+.kartlar.uclu{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+/* İtalya teması: üst menü bayrak yeşili, bilgi şeridi yeşil-okr-kırmızı */
+.it-tema .ust-in{background:var(--hero-bg);box-shadow:0 0 0 100vmax var(--hero-bg);clip-path:inset(0 -100vmax)}
+.it-tema .logo b,.it-tema .ust-nav a:not(.cta){color:#fff}
+.it-tema .logo .el{color:var(--sun)}
+.it-tema .ust-nav a:not(.cta):hover{background:rgba(255,255,255,.14)}
+.it-tema .ust-nav a.cta{border-color:#fff;box-shadow:2px 2px 0 rgba(0,0,0,.35)}
+.it-tema .serit div:nth-child(3n+1){--fc:var(--sky)}.it-tema .serit div:nth-child(3n+2){--fc:var(--sun)}.it-tema .serit div:nth-child(3n){--fc:var(--aperol)}
