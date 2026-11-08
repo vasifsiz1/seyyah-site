@@ -195,6 +195,8 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .yer>div{display:grid;gap:16px;min-width:0}
 .kutu{background:var(--card);border:2px solid var(--rule);border-radius:22px;padding:18px 20px;display:grid;gap:10px;align-content:start;min-width:0}
 .kutu h2{font-size:1.35rem;font-weight:800}
+.kutu.hakkinda{border-color:color-mix(in srgb,var(--sky) 45%,var(--rule))}
+.kutu.hakkinda p{font-size:1.06rem;line-height:1.65;max-width:68ch}
 .kutu.not{background:color-mix(in srgb,var(--sun) var(--tint),var(--card));border-color:transparent}
 .kutu.foto-not{background:color-mix(in srgb,var(--pink) var(--tint),var(--card));border-color:transparent}
 .kv{display:grid;grid-template-columns:fit-content(50%) minmax(0,1fr);gap:8px 16px;margin:0}
