@@ -72,8 +72,58 @@
       git.href = o.value; git.textContent = o.text.split(",")[0] + " dosyasını aç";
       if (anim && !sakin) { dg.classList.remove("vur"); void dg.offsetWidth; dg.classList.add("vur"); }
     };
-    pas.addEventListener("change", function () { pasGuncelle(true); });
+    // damga yalnız uyruk ya da pasaport türü değişince yeniden basılır; varış (küreden de gelir) yalnız düğmeyi değiştirir
+    pas.addEventListener("change", function (e) { pasGuncelle(e.target !== vr); });
     pas.addEventListener("submit", function (e) { e.preventDefault(); location.href = git.href; });
     pasGuncelle(false);
   }
+
+  /* Ana sayfa kapağı: arkadaki şehir fotoğrafları 7 sn'de bir değişir (sıradaki önceden yüklenir); varış seçilince o şehrin
+     fotoğrafı kalır. Hareket azaltma ya da veri tasarrufu açıksa kendiliğinden değişmez. */
+  var sl = document.querySelector("[data-slayt]");
+  if (sl) {
+    var kat = Array.prototype.slice.call(sl.querySelectorAll(".ana-foto")), yz = sl.querySelector(".ana-yazi span");
+    var dar = window.matchMedia ? matchMedia("(max-width: 760px)") : null;
+    var tasarruf = !!(navigator.connection && navigator.connection.saveData);
+    var su = 0, sira = 0, kilit = false, temizle = 0;
+    var yukle = function (el, bitti) {
+      var a = el.getAttribute("data-img"), k = el.getAttribute("data-img-k");
+      if (!a || el.getAttribute("data-hazir")) return bitti();
+      var im = new Image();
+      im.onload = im.onerror = function () {
+        el.style.setProperty("--img", "url('" + a + "')");
+        el.style.setProperty("--img-k", "url('" + k + "')");
+        el.setAttribute("data-hazir", "1");
+        bitti();
+      };
+      im.src = dar && dar.matches && k ? k : a;
+    };
+    var gec = function (i) {
+      if (i === su || !kat[i]) return;
+      var t = ++sira;
+      yukle(kat[i], function () {
+        if (t !== sira) return; // bu arada başka bir fotoğraf istendi
+        var eski = kat[su], yeni = kat[i];
+        kat.forEach(function (el) { if (el !== eski && el !== yeni) el.classList.remove("aktif", "onceki"); });
+        eski.classList.remove("aktif"); eski.classList.add("onceki");
+        yeni.classList.remove("onceki"); yeni.classList.add("aktif");
+        su = i;
+        if (yz) yz.textContent = yeni.getAttribute("data-yazi");
+        clearTimeout(temizle);
+        temizle = setTimeout(function () { eski.classList.remove("onceki"); }, 1600);
+        if (!kilit && kat.length > 1) yukle(kat[(i + 1) % kat.length], function () {});
+      });
+    };
+    if (!sakinMi() && !tasarruf && kat.length > 1) {
+      setTimeout(function () { yukle(kat[1], function () {}); }, 2500);
+      setInterval(function () { if (!kilit && !document.hidden) gec((su + 1) % kat.length); }, 7000);
+    }
+    var pf = document.querySelector("[data-pasaport]");
+    if (pf) pf.addEventListener("change", function (e) {
+      if (e.target.name !== "varis") return;
+      var o = e.target.options[e.target.selectedIndex], id = o && o.getAttribute("data-id");
+      for (var i = 0; i < kat.length; i++) if (kat[i].getAttribute("data-sehir") === id) { kilit = true; gec(i); break; }
+    });
+  }
+  function sakinMi() { return !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); }
 })();
