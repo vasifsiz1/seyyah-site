@@ -659,12 +659,27 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 .rleg .sw.far{background:repeating-linear-gradient(90deg,var(--c) 0 5px,transparent 5px 9px)}
 .rleg .hs{width:14px;height:14px;border-radius:4px;background:var(--ink)}
 .rleg .mt{width:22px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--line-a) 0 33%,var(--line-b) 33% 66%,var(--line-c) 66%);opacity:.5}
+/* İtalya teması: italya/ altındaki sayfalarda <body class="it-tema">. Bayrak yeşili ve kırmızısı, Toskana toprağı ve okru.
+   Planlayıcıda (tek dosya) aynı bloklar seçici ':root' yapılarak eklenir (planlayici/uret.ts). */
+:root{
+  --paper-2:#F6F3EC; --rule:#E4DED2; --guil:#E4DED2;
+  --sky:#008C45; --sky-ink:#007A3D; --aperol:#CD212A; --aperol-ink:#B01C24;
+  --pink:#C8553D; --pink-ink:#A63F2A; --sun:#E2B13C; --sun-ink:#8A6400; --pista:#4FA35A; --pista-ink:#2E7A38;
+  --hero-bg:#0B6E3B; --stamp:#007A3D}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0F1A15; --paper-2:#15241C; --card:#1A2C22; --rule:#28402F; --guil:#28402F;
+  --sky:#2BB673; --sky-ink:#5CD394; --aperol:#FF5A63; --aperol-ink:#FF7B83;
+  --pink:#E07A5F; --pink-ink:#F0957C; --hero-bg:#0E5530; --stamp:#6FD49B}}
+:root[data-theme="dark"]{
+  --paper:#0F1A15; --paper-2:#15241C; --card:#1A2C22; --rule:#28402F; --guil:#28402F;
+  --sky:#2BB673; --sky-ink:#5CD394; --aperol:#FF5A63; --aperol-ink:#FF7B83;
+  --pink:#E07A5F; --pink-ink:#F0957C; --hero-bg:#0E5530; --stamp:#6FD49B}
 </style>
 
 <div class="zemin" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.4" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="c"/><feDisplacementMap in="c" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
 
-<div class="awning" aria-hidden="true"></div>
+
 <header class="wrap top">
   <a class="brand" href="/seyyah-site/"><b>Seyyah</b><span class="lab">seyahat dosyaları</span></a>
   <span class="proto">Venedik dosyası</span>

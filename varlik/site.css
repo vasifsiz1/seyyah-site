@@ -59,6 +59,22 @@
   --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}
 
 
+/* İtalya teması: italya/ altındaki sayfalarda <body class="it-tema">. Bayrak yeşili ve kırmızısı, Toskana toprağı ve okru.
+   Planlayıcıda (tek dosya) aynı bloklar seçici ':root' yapılarak eklenir (planlayici/uret.ts). */
+.it-tema{
+  --paper-2:#F6F3EC; --rule:#E4DED2; --guil:#E4DED2;
+  --sky:#008C45; --sky-ink:#007A3D; --aperol:#CD212A; --aperol-ink:#B01C24;
+  --pink:#C8553D; --pink-ink:#A63F2A; --sun:#E2B13C; --sun-ink:#8A6400; --pista:#4FA35A; --pista-ink:#2E7A38;
+  --hero-bg:#0B6E3B; --stamp:#007A3D}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .it-tema{
+  --paper:#0F1A15; --paper-2:#15241C; --card:#1A2C22; --rule:#28402F; --guil:#28402F;
+  --sky:#2BB673; --sky-ink:#5CD394; --aperol:#FF5A63; --aperol-ink:#FF7B83;
+  --pink:#E07A5F; --pink-ink:#F0957C; --hero-bg:#0E5530; --stamp:#6FD49B}}
+:root[data-theme="dark"] .it-tema{
+  --paper:#0F1A15; --paper-2:#15241C; --card:#1A2C22; --rule:#28402F; --guil:#28402F;
+  --sky:#2BB673; --sky-ink:#5CD394; --aperol:#FF5A63; --aperol-ink:#FF7B83;
+  --pink:#E07A5F; --pink-ink:#F0957C; --hero-bg:#0E5530; --stamp:#6FD49B}
+
 /* Seyyah sitesi bileşenleri: tatil kartpostalı. Belirteçler _belirtec.css'te. Derlemede ikisi birleşip site.css olur. */
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -134,6 +150,7 @@ p{margin:0}
 .pf select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:700 1.05rem var(--f-body);color:var(--ink);width:100%;padding:3px 18px 3px 0;min-width:0;cursor:pointer}
 .pf select:disabled{color:var(--muted);cursor:default}
 .pf select:focus{outline:none}
+.pf select option{background:var(--card);color:var(--ink)}
 .pf:focus-within{background:var(--ochre-soft)}
 .pas-sonuc{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;padding:14px 16px;border-top:1px solid var(--rule);background:var(--paper-2)}
 .pas-sonuc p{flex:1 1 11rem;font-weight:700;font-size:.98rem;min-width:0}
