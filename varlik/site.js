@@ -76,7 +76,7 @@
       git.classList.toggle("pasif", !acik);
       if (!acik) { git.href = "#"; git.textContent = "Önce ülkeni seç"; }
       else if (u === "italya") { var o = vr.options[vr.selectedIndex]; git.href = o.value; git.textContent = o.text + " dosyasını aç"; }
-      else { git.href = acik.value; git.textContent = "Yunanistan dosyasına göz at"; }
+      else { git.href = acik.value; git.textContent = ul.options[ul.selectedIndex].text.split(" · ")[0] + " dosyasına göz at"; }
       if (anim && !sakin) { dg.classList.remove("vur"); void dg.offsetWidth; dg.classList.add("vur"); }
     };
     // damga yalnız uyruk ya da pasaport türü değişince yeniden basılır; varış (küreden de gelir) yalnız düğmeyi değiştirir
