@@ -1,4 +1,4 @@
-/* Seyyah: sayfalardaki küçük canlı parçalar. Sayfa betiksiz de eksiksiz okunur; bunlar yalnızca süs ve kolaylık. */
+/* Road is Life: sayfalardaki küçük canlı parçalar. Sayfa betiksiz de eksiksiz okunur; bunlar yalnızca süs ve kolaylık. */
 (function () {
   "use strict";
 

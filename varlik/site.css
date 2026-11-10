@@ -75,7 +75,7 @@
   --sky:#2BB673; --sky-ink:#5CD394; --aperol:#FF5A63; --aperol-ink:#FF7B83;
   --pink:#E07A5F; --pink-ink:#F0957C; --hero-bg:#0E5530; --stamp:#6FD49B}
 
-/* Seyyah sitesi bileşenleri: tatil kartpostalı. Belirteçler _belirtec.css'te. Derlemede ikisi birleşip site.css olur. */
+/* Road is Life sitesi bileşenleri: tatil kartpostalı. Belirteçler _belirtec.css'te. Derlemede ikisi birleşip site.css olur. */
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -151,7 +151,7 @@ p{margin:0}
 .pf select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:700 1.05rem var(--f-body);color:var(--ink);width:100%;padding:3px 18px 3px 0;min-width:0;cursor:pointer}
 .pf select:disabled{color:var(--muted);cursor:default}
 .pf select:focus{outline:none}
-.pf select option{background:var(--card);color:var(--ink)}
+.pf select option{background:#fff;color:#1d1d1f}
 .pf:focus-within{background:var(--ochre-soft)}
 .pas-sonuc{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;padding:14px 16px;border-top:1px solid var(--rule);background:var(--paper-2)}
 .pas-sonuc p{flex:1 1 11rem;font-weight:700;font-size:.98rem;min-width:0}
