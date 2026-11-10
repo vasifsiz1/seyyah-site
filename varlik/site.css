@@ -494,3 +494,5 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .cipler a{padding:6px 12px;border-radius:999px;border:2px solid var(--rule);text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem}
 .cipler a:hover{border-color:var(--ink)}
 .rota-ulke h2 a{color:inherit;text-decoration:none}
+.kure-zar{align-self:center}
+.kure-zar::before{content:"";width:16px;height:16px;border:2px solid currentColor;border-radius:4px;background:radial-gradient(circle,currentColor 1.6px,transparent 2.2px) 0 0/50% 50%;transform:rotate(12deg)}

@@ -75,6 +75,7 @@
     var pasGuncelle = function (anim) {
       tr.disabled = uy.value !== "TR";
       var v = VZ[uy.value === "TR" ? tr.value : uy.value];
+      pas.querySelector(".pas-sonuc").hidden = !uy.value;
       if (v) { dg.children[0].textContent = v.s1; dg.children[1].textContent = v.s2; dg.children[2].textContent = v.s3; mt.textContent = v.h; }
       // Önce ülke, sonra şehir: seçilen ülkenin şehir alanı ülkenin yanında açılır
       var u = ul ? ul.value : "italya", acik = null;
@@ -170,7 +171,7 @@
       if (uy === "TR") return grup === "tr" ? ["Kendi ülken", "ev"] : tr === "bordo" ? ["Schengen vizesi gerekir", "vize"] : ["Vizesiz · 90 gün", "serbest"];
       if (uy === "EU") return grup === "tr" ? ["Çoğu AB uyruğuna vizesiz", "serbest"] : ["Vize yok · AB vatandaşı", "serbest"];
       if (uy === "AZ") return grup === "tr" ? ["Vizesiz · 90 gün", "serbest"] : ["Schengen vizesi gerekir", "vize"];
-      return ["Uyruğuna göre değişir", "bilinmez"];
+      return uy ? ["Uyruğuna göre değişir", "bilinmez"] : ["Vize durumu için uyruğunu seç", "bilinmez"];
     };
     var kartlar = Array.prototype.slice.call(uk.querySelectorAll("[data-vize]"));
     var ukGuncelle = function () {
