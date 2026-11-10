@@ -163,4 +163,32 @@
     dlg.addEventListener("click", function () { dlg.close(); });
     dlg.addEventListener("close", function () { dImg.removeAttribute("src"); if (son) son.focus(); });
   }
+/* Ana sayfa ülke kartları: pasaport kartındaki uyruk + tür → her ülkenin vize rozeti; vizesizler öne geçer */
+  var uk = document.querySelector("[data-ulkeler]"), pk = document.querySelector("[data-pasaport]");
+  if (uk && pk) {
+    var rozet = function (grup, uy, tr) {
+      if (uy === "TR") return grup === "tr" ? ["Kendi ülken", "ev"] : tr === "bordo" ? ["Schengen vizesi gerekir", "vize"] : ["Vizesiz · 90 gün", "serbest"];
+      if (uy === "EU") return grup === "tr" ? ["Çoğu AB uyruğuna vizesiz", "serbest"] : ["Vize yok · AB vatandaşı", "serbest"];
+      if (uy === "AZ") return grup === "tr" ? ["Vizesiz · 90 gün", "serbest"] : ["Schengen vizesi gerekir", "vize"];
+      return ["Uyruğuna göre değişir", "bilinmez"];
+    };
+    var kartlar = Array.prototype.slice.call(uk.querySelectorAll("[data-vize]"));
+    var ukGuncelle = function () {
+      var uy = pk.elements.uyruk.value, tr = pk.elements.tur.value;
+      kartlar.forEach(function (k, i) {
+        var r = rozet(k.getAttribute("data-vize"), uy, tr), e = k.querySelector("[data-vize-rozet]");
+        e.textContent = r[0]; e.className = "etiket vz-" + r[1];
+        k.style.order = r[1] === "vize" || r[1] === "bilinmez" ? 10 + i : i;
+      });
+    };
+    pk.addEventListener("change", ukGuncelle);
+    ukGuncelle();
+  }
+
+  /* Üst menü Ülkeler paneli: dışarı tıklanınca ya da Esc ile kapanır */
+  var um = document.querySelector(".ust-ulke");
+  if (um) {
+    document.addEventListener("click", function (e) { if (um.open && !um.contains(e.target)) um.open = false; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && um.open) { um.open = false; um.querySelector("summary").focus(); } });
+  }
 })();
