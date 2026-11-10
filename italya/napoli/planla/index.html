@@ -1220,6 +1220,17 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
     <div class="chk" id="bag"></div>
   </div>
 
+  <div class="sub" id="valiz"><h3>Valiz ölçüleri ve kilo sınırları</h3><p class="sub-lead">Kapıda ölçü kutusuna sığmayan çanta ücret alınarak uçak altına verilir. Uçak altı bagaj hakkı bilet paketine göre değişir ve biletinde yazar.</p>
+    <div class="tbl"><table><thead><tr><th>Havayolu</th><th>Her bilette ücretsiz</th><th>Kabin valizi</th></tr></thead><tbody>
+      <tr><td><b><a href="https://www.turkishairlines.com/tr-tr/any-questions/carry-on-baggage/" target="_blank" rel="noopener">Türk Hava Yolları</a></b></td><td>40 × 30 × 15 cm, en fazla 4 kg kişisel eşya.</td><td>Ekonomi sınıfında bir adet 55 × 40 × 23 cm, en fazla 8 kg valiz bilete dahildir. Business sınıfında iki adet dahildir.</td></tr>
+      <tr><td><b><a href="https://www.flypgs.com/pegasus-bagaj-kurallari" target="_blank" rel="noopener">Pegasus</a></b></td><td>Koltuk altına sığan 40 × 30 × 15 cm, en fazla 3 kg çanta.</td><td>55 × 40 × 23 cm, en fazla 8 kg valiz Süper Eko, Avantaj ve Comfort Flex paketlerine dahildir. Yurt dışı uçuşlardaki Light paketinde kabin valizi yoktur.</td></tr>
+      <tr><td><b><a href="https://ajet.com/" target="_blank" rel="noopener">AJet</a></b></td><td>40 × 30 × 15 cm, en fazla 4 kg kişisel eşya.</td><td>55 × 40 × 23 cm, en fazla 8 kg valiz. Yurt dışı uçuşlarda en ucuz pakette (Basic) dahil değildir; bileti alırken paket ayrıntısına bak.</td></tr>
+      <tr><td><b><a href="https://help.ryanair.com/hc/en-gb/articles/12888036565521-Ryanair-s-Bag-Policy" target="_blank" rel="noopener">Ryanair</a></b></td><td>Koltuk altına sığan 40 × 30 × 20 cm küçük çanta.</td><td>55 × 40 × 20 cm, en fazla 10 kg valiz yalnızca ücretli Priority hizmetiyle alınabilir.</td></tr>
+      <tr><td><b><a href="https://www.wizzair.com/en-gb/help-centre/booking-information-and-services/baggage/baggage-allowance/cabin-baggage" target="_blank" rel="noopener">Wizz Air</a></b></td><td>Koltuk altına sığan 40 × 30 × 20 cm küçük çanta.</td><td>55 × 40 × 23 cm, en fazla 10 kg valiz yalnızca ücretli WIZZ Priority hizmetiyle alınabilir.</td></tr>
+    </tbody></table></div>
+    <p class="sub-lead" style="margin-top:12px">THY, Pegasus, Ryanair ve Wizz Air bilgileri havayollarının kendi sayfalarından, AJet bilgisi bilet satış sitelerinden alındı. Son kontrol 10 Kasım 2026. Kurallar sık değişir; uçmadan önce bileti aldığın havayolunun sayfasına bir kez daha bak.</p>
+  </div>
+
   <div class="sub" id="scams"><h3>Dolandırıcılıklar ve turist tuzakları</h3><p class="sub-lead">Napoli'nin kötü şöhreti abartılı; ama kalabalıkta yankesicilik ve küçük oyunlar gerçek.</p>
     <ul class="scams">
       <li><b>Scooterla kapkaç</b><p>Yola yakın yürürken omuz çantası ya da elindeki telefon kapılır.</p><p class="do">Çantayı duvar tarafında taşı, telefonu kaldırım kenarında kullanma.</p></li>
@@ -1279,6 +1290,7 @@ var CIMG={"meydan":"meydan","tarihi":"tarihi","muze":"muze","mimari":"mimari","d
 var SIMG={"vize":"vize","kesfet":"tarihi","planla":"planla","konaklama":"konaklama","havalimani":"havalimani","ulasim":"ulasim","yerel":"yerel","bilgi":"bilgi","rotam":"rotam"};
 var BGIMG={"vize":"hero","kesfet":"foto","planla":"mimari","konaklama":"mahalle","havalimani":"doga","ulasim":"hero","yerel":"gece","bilgi":"foto","rotam":"doga"};
 var TK={"sart":"Rezervasyon şart","oner":"Online önerilir","gise":"Gişede","free":"Ücretsiz"};
+var TKNOT={"sart":"Bileti mutlaka internetten, günler önceden al. Giriş saatli ve kontenjanlı; gişede aynı gün için bilet çoğu zaman kalmıyor.","oner":"Bileti internetten almak daha avantajlı. Saatli bilet gişe sırasını atlatır; yoğun saatlerde gişe kuyruğu uzun olabiliyor. İnternetten alırken küçük bir rezervasyon ücreti eklenebilir.","gise":"Bileti gişeden almak yeterli. Sıra genelde kısa; önceden internetten almanın belirgin bir avantajı yok.","free":"Giriş ücretsiz, bilet gerekmez."};
 var ATAGS=[["all","Hepsi"],["butce","Bütçe dostu"],["lux","Lüks"],["butik","Butik"],["aile","Aileler için"],["cift","Çiftler için"],["havalimani","Havalimanına yakın"]];
 var MAB=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
 var LEVEL=["","çok az","az","orta","yüksek","en yüksek"];
@@ -1509,7 +1521,7 @@ function renderKesfet(){
     var ord={sart:0,oner:1,gise:2};
     var rows=PLACES.filter(function(p){return p.tk!=="free";}).sort(function(a,b){return ord[a.tk]-ord[b.tk];});
     box.innerHTML='<p class="catsum">Hangi yer için önceden bilet almalısın? <b>'+rows.filter(function(p){return p.tk==="sart";}).length+' yerde rezervasyon şart.</b></p><div class="tbl"><table><thead><tr><th>Yer</th><th>Durum</th><th>Ücret</th><th>Süre</th><th>Resmi bilet</th><th></th></tr></thead><tbody>'+
-      rows.map(function(p){var on=inPlan(p.id);return '<tr><td><b>'+esc(p.n)+'</b></td><td><span class="tk tk-'+p.tk+'">'+TK[p.tk]+'</span></td><td>'+esc(p.p)+'</td><td>'+fmtH(p.h)+'</td><td>'+(p.url?'<a href="'+p.url+'" target="_blank" rel="noopener">'+p.url.replace(/^https?:\/\/(www\.)?/,"")+' ↗</a>':'<span class="muted">Gişede</span>')+'</td><td><button class="add" type="button" data-add="'+p.id+'" aria-pressed="'+on+'">'+(on?"✓":"+")+'</button></td></tr>';}).join("")+'</tbody></table></div><p class="note">Ücretler 2025 tarifelerine göre yaklaşık; resmi siteden kontrol et.</p>';
+      rows.map(function(p){var on=inPlan(p.id);return '<tr><td><b>'+esc(p.n)+'</b></td><td><span class="tk tk-'+p.tk+'">'+TK[p.tk]+'</span><br><small class="muted">'+TKNOT[p.tk]+'</small></td><td>'+esc(p.p)+'</td><td>'+fmtH(p.h)+'</td><td>'+(p.url?'<a href="'+p.url+'" target="_blank" rel="noopener">'+p.url.replace(/^https?:\/\/(www\.)?/,"")+' ↗</a>':'<span class="muted">Gişede</span>')+'</td><td><button class="add" type="button" data-add="'+p.id+'" aria-pressed="'+on+'">'+(on?"✓":"+")+'</button></td></tr>';}).join("")+'</tbody></table></div><p class="note">Ücretler 2025 tarifelerine göre yaklaşık; resmi siteden kontrol et. Biletleri yalnızca tabloda bağlantısı verilen resmi sitelerden al; aracı sitelerde aynı bilet daha pahalıya satılabiliyor.</p>';
     return;
   }
   var list=PLACES.filter(function(p){return p.t.indexOf(cat)>-1;});
