@@ -97,9 +97,9 @@ p{margin:0}
 .awning{height:30px;background:repeating-linear-gradient(90deg,var(--awning-1) 0 40px,var(--awning-2) 40px 80px);
   -webkit-mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x;
   mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x}
-.ust-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 18px;padding-block:12px 14px}
+.ust-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 18px;padding-block:6px}
 .logo{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;text-decoration:none;color:var(--ink)}
-.logo b{font-family:var(--f-display);font-weight:800;font-size:1.8rem;letter-spacing:-.035em;line-height:1}
+.logo b{font-family:var(--f-display);font-weight:800;font-size:1.45rem;letter-spacing:-.035em;line-height:1}
 .logo b::after{content:"";display:inline-block;width:.3em;height:.3em;border-radius:50%;background:var(--sun);margin-left:.06em}
 .logo .el{font-size:1.3rem;color:var(--aperol-ink)}
 .ust-nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -180,7 +180,8 @@ p{margin:0}
 .ana-fotolar::after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(8,22,48,.3),rgba(8,22,48,.04) 32%,rgba(8,22,48,.08) 68%,rgba(8,22,48,.42))}
 @media (max-width:760px){.ana-foto{background-image:var(--img-k,var(--img,none))}}
 .ana-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,min(540px,46%));gap:clamp(28px,4vw,60px);align-items:start;padding-block:clamp(36px,5vw,64px) clamp(72px,8vw,104px)}
-.ana-in .panel{max-width:640px}
+.ana-in .panel{max-width:470px;padding:clamp(20px,2.4vw,28px);border-radius:22px;box-shadow:0 12px 32px rgba(8,25,60,.28)}.ana-in .panel::before{display:none}.ana-in .dev.orta{font-size:clamp(2rem,4.2vw,3.2rem);margin-block:0 8px}.ana-in .giris{font-size:1rem;margin-bottom:14px}
+.ana-in.wrap{max-width:none;padding-inline:clamp(16px,4vw,72px)}
 .ana-yazi{position:absolute;z-index:1;right:max(16px,env(safe-area-inset-right,0px));bottom:36px}
 .ana-yazi span{display:inline-block;background:rgba(8,22,48,.6);color:var(--on-photo);font-size:.78rem;font-weight:700;letter-spacing:.02em;padding:5px 12px;border-radius:999px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 @media (max-width:1080px){.ana-in{grid-template-columns:minmax(0,1fr);justify-items:center}.ana-in .panel{width:100%;max-width:660px}}
