@@ -112,6 +112,12 @@ p{margin:0}
 .kirinti ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;padding:0;margin:0 0 12px;font-size:.86rem}
 .kirinti li+li::before{content:"›";margin-right:8px}
 .kirinti,.kirinti a{color:rgba(255,255,255,.85)}
+/* Geri tuşu: önceki sayfaya döner (geçmiş yoksa bir üst sayfaya) */
+.kirinti{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 12px}
+.kirinti ol{margin:0}
+.kirinti .geri{display:inline-flex;align-items:center;gap:4px;min-height:36px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.55);color:#fff;font-weight:700;font-size:.86rem;text-decoration:none}
+.kirinti .geri:hover,.kirinti .geri:focus-visible{background:rgba(255,255,255,.28)}
+.gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* kapak */
 .kapak{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,rgba(8,22,48,.22),rgba(8,22,48,0) 35%),var(--img,none) center 42%/cover no-repeat,var(--hero-bg)}

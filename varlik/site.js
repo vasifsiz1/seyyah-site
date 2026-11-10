@@ -2,6 +2,13 @@
 (function () {
   "use strict";
 
+  /* Geri tuşu: siteden gelindiyse tarayıcı geçmişinde bir adım geri, yoksa bağlantıdaki üst sayfa */
+  document.querySelectorAll("[data-geri]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      try { if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) { e.preventDefault(); history.back(); } } catch (x) {}
+    });
+  });
+
   /* Canlı saat ve gün batımı: <span data-saat="Europe/Rome" data-enlem="41.9" data-boylam="12.5"> */
   function gunBatimi(d, lat, lng) {
     var rad = Math.PI / 180, n = Math.floor((Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) - Date.UTC(d.getUTCFullYear(), 0, 0)) / 864e5);

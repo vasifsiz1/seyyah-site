@@ -498,6 +498,9 @@ body{font-size:16.5px}
   mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x}
 .top{padding-block:12px 14px;flex-wrap:wrap;row-gap:8px}
 .brand{flex-wrap:wrap;row-gap:0}
+.top .geri{display:inline-flex;align-items:center;min-height:36px;padding:6px 14px;border-radius:999px;border:2px solid var(--ink);background:var(--paper,#fff);color:var(--ink);font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:2px 2px 0 var(--ink)}
+.top .geri:hover{background:var(--ochre-soft)}
+.gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .brand b{font-family:var(--f-display);font-style:normal;font-weight:800;font-size:1.8rem;letter-spacing:-.035em}
 .brand b::after{content:"";display:inline-block;width:.3em;height:.3em;border-radius:50%;background:var(--sun);margin-left:.06em}
 .brand .lab{font-family:var(--f-hand);font-size:1.3rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--aperol-ink)}
@@ -688,7 +691,7 @@ footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin
 
 <header class="wrap top">
   <a class="brand" href="/seyyah-site/"><b>Road is Life</b><span class="lab">seyahat dosyaları</span></a>
-  <span class="proto">Roma dosyası</span>
+  <a class="geri" href="/seyyah-site/italya/roma/" onclick="try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){event.preventDefault();history.back()}}catch(x){}">← Geri<span class="gizli"> · Roma</span></a><span class="proto">Roma dosyası</span>
 </header>
 
 <section class="hero" aria-label="Roma dosyası">
