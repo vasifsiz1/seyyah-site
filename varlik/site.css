@@ -149,6 +149,36 @@
 /* Yunanca selamlar uzun: -4 derecelik eğimde sağ ucu üstteki etikete biniyordu */
 .cz-tema .merhaba{transform:rotate(-1.5deg);margin-top:14px}
 
+/* Avusturya teması: avusturya/ altındaki sayfalarda <body class="at-tema">. Bayrağın kırmızı-beyaz-kırmızısı,
+   Alp ormanı yeşili ve buzul mavisi. Planlayıcıda (tek dosya) seçici ':root' yapılarak eklenir (planlayici/uret.ts).
+   Fotoğrafı henüz gelmemiş şehirlerde kapak ve kartlar fotoğrafsız: kırmızı zemin, ortada beyaz bayrak şeridi. */
+.at-tema{
+  --paper-2:#FBF2F2; --rule:#EDD5D6; --guil:#EDD5D6;
+  --sky:#C8102E; --sky-ink:#9A0C23; --aperol:#2F5D50; --aperol-ink:#1F4137;
+  --pink:#C8102E; --pink-ink:#9A0C23; --sun:#E8B33A; --sun-ink:#7F5A00; --pista:#5E8A4A; --pista-ink:#3D5E2E;
+  --campari:#C8102E; --campari-ink:#9A0C23; --glicine:#6C93B8; --glicine-ink:#3F6688;
+  --hero-bg:#C8102E; --stamp:#9A0C23}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .at-tema{
+  --paper:#1A1011; --paper-2:#241617; --card:#2B1B1D; --rule:#4A2C2F; --guil:#4A2C2F;
+  --sky:#F07783; --sky-ink:#F7A8B0; --aperol:#7FB8A4; --aperol-ink:#A9D4C4;
+  --pink:#F07783; --pink-ink:#F7A8B0; --campari:#F07783; --campari-ink:#F7A8B0; --hero-bg:#8F0F25; --stamp:#F7B5BC}}
+:root[data-theme="dark"] .at-tema{
+  --paper:#1A1011; --paper-2:#241617; --card:#2B1B1D; --rule:#4A2C2F; --guil:#4A2C2F;
+  --sky:#F07783; --sky-ink:#F7A8B0; --aperol:#7FB8A4; --aperol-ink:#A9D4C4;
+  --pink:#F07783; --pink-ink:#F7A8B0; --campari:#F07783; --campari-ink:#F7A8B0; --hero-bg:#8F0F25; --stamp:#F7B5BC}
+
+/* Fotoğrafsız kapak: kırmızı zemin, altta bayrağın beyaz şeridi */
+.at-tema .kapak:not([style]):not(.net){background:radial-gradient(120% 90% at 85% 0%,rgba(255,255,255,.16),rgba(255,255,255,0) 60%),linear-gradient(165deg,var(--hero-bg),color-mix(in srgb,var(--hero-bg) 72%,#000))}
+.at-tema .kapak:not([style]):not(.net)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:#fff;opacity:.9;z-index:-1}
+/* Fotoğrafsız kart: kırmızı, orman yeşili ve koyu kırmızı sırayla, ortada yerin adı */
+.at-tema .kart .foto.bos{background:linear-gradient(150deg,var(--sky),color-mix(in srgb,var(--sky) 65%,#000));color:#fff;font-family:var(--f-display);font-weight:700;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;text-align:center;padding:0 18px;letter-spacing:.01em;overflow:hidden}
+.at-tema .kart:nth-child(3n+2) .foto.bos{background:linear-gradient(150deg,var(--aperol),color-mix(in srgb,var(--aperol) 60%,#000))}
+.at-tema .kart:nth-child(3n) .foto.bos{background:linear-gradient(150deg,#8F0F25,#5C0A18)}
+.at-tema .kart.yakinda .foto.bos{background:var(--paper-2);color:var(--sky-ink);box-shadow:none}
+/* Fotoğrafsız döşeme: düz renk kutular */
+.at-tema .doseme a:not([style]){background:linear-gradient(150deg,var(--kc),color-mix(in srgb,var(--kc) 62%,#000))}
+.at-tema .merhaba{transform:rotate(-1.5deg);margin-top:14px}
+
 /* Road is Life sitesi bileşenleri: tatil kartpostalı. Belirteçler _belirtec.css'te. Derlemede ikisi birleşip site.css olur. */
 *{box-sizing:border-box}
 [hidden]{display:none!important}
