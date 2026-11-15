@@ -32,7 +32,7 @@
         var v = el.querySelector("[data-hal]");
         if (v) {
           var h = +new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "2-digit", hourCycle: "h23" }).format(now);
-          var hal = [[2, "Şehir uyuyor; çeşmeler sana kalıyor"], [7, "Barlarda ayakta cornetto ve cappuccino saati"], [10, "Müzeler açık; sıra uzamadan gir"], [13, "Pranzo: öğle yemeği saati"], [15, "Sıcak saatler; gelato molası zamanı"], [18, "Aperitivo saati: spritz ve atıştırmalık"], [20, "Trattorialar doluyor; masan hazır mı?"], [23, "Gece kuşları hâlâ sokakta"]];
+          var hl = el.getAttribute("data-hal-liste"), hal = hl ? JSON.parse(hl) : [[2, "Şehir uyuyor; çeşmeler sana kalıyor"], [7, "Barlarda ayakta cornetto ve cappuccino saati"], [10, "Müzeler açık; sıra uzamadan gir"], [13, "Pranzo: öğle yemeği saati"], [15, "Sıcak saatler; gelato molası zamanı"], [18, "Aperitivo saati: spritz ve atıştırmalık"], [20, "Trattorialar doluyor; masan hazır mı?"], [23, "Gece kuşları hâlâ sokakta"]];
           var t = hal[hal.length - 1][1]; for (var i = 0; i < hal.length; i++) if (h >= hal[i][0]) t = hal[i][1];
           if (h < 2) t = hal[hal.length - 1][1];
           v.textContent = t;
@@ -83,7 +83,7 @@
       alanlar.classList.toggle("sehirli", !!acik);
       git.classList.toggle("pasif", !acik);
       if (!acik) { git.href = "#"; git.textContent = "Önce ülkeni seç"; }
-      else if (u === "italya") { var o = vr.options[vr.selectedIndex]; git.href = o.value; git.textContent = o.text + " dosyasını aç"; }
+      else if (u === "italya" || acik.closest("[data-hazir]")) { var o = acik.options[acik.selectedIndex]; git.href = o.value; git.textContent = o.text + " dosyasını aç"; }
       else { git.href = acik.value; git.textContent = ul.options[ul.selectedIndex].text.split(" · ")[0] + " dosyasına göz at"; }
       if (anim && !sakin) { dg.classList.remove("vur"); void dg.offsetWidth; dg.classList.add("vur"); }
     };
@@ -192,4 +192,55 @@
     document.addEventListener("click", function (e) { if (um.open && !um.contains(e.target)) um.open = false; });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && um.open) { um.open = false; um.querySelector("summary").focus(); } });
   }
+
+  /* Şehirler arası: nereden–nereye seçilince güzergah kartı ve bilet bağlantıları */
+  var hk = document.querySelector("[data-hat-ara]");
+  if (hk) {
+    var H = JSON.parse(hk.querySelector("[data-hat-veri]").textContent);
+    var nd = hk.querySelector("[name=nereden]"), ny = hk.querySelector("[name=nereye]"), so = hk.querySelector("[data-hat-sonuc]");
+    var srt = function (x) { return x.sort(function (p, q) { return p.localeCompare(q, "tr"); }); };
+    var doldur = function (sel, adlar) {
+      sel.length = 1;
+      adlar.forEach(function (a) { sel.add(new Option(a, a)); });
+      sel.disabled = !adlar.length;
+    };
+    var el = function (etiket, metin, sinif) { var e = document.createElement(etiket); if (metin) e.textContent = metin; if (sinif) e.className = sinif; return e; };
+    var tumu = {};
+    H.forEach(function (h) { tumu[h.a] = 1; tumu[h.b] = 1; });
+    doldur(nd, srt(Object.keys(tumu)));
+    doldur(ny, []);
+    var goster = function () {
+      var x = nd.value, y = ny.value, h = null, ters = false;
+      H.forEach(function (r) { if (r.a === x && r.b === y) h = r; else if (r.a === y && r.b === x) { h = r; ters = true; } });
+      so.hidden = !h;
+      so.textContent = "";
+      if (!h) return;
+      var k = el("div", "", "hat-kart");
+      k.appendChild(el("h3", x + " – " + y));
+      k.appendChild(el("p", h.t, "hat-tur"));
+      var dl = el("dl");
+      [["Süre", h.s], [hk.getAttribute("data-gar") || "Garlar", ters ? h.g.split(" → ").join(" ↔ ") : h.g], ["Bilet", h.f]].forEach(function (s) { dl.appendChild(el("dt", s[0])); dl.appendChild(el("dd", s[1])); });
+      k.appendChild(dl);
+      k.appendChild(el("p", h.n, "hat-not"));
+      var d = el("div", "", "dugmeler");
+      h.l.forEach(function (l, i) { var a = el("a", l[0] + " →", i ? "btn ikinci" : "btn"); a.href = l[1]; a.target = "_blank"; a.rel = "noopener"; d.appendChild(a); });
+      k.appendChild(d);
+      if (h.l.length) k.appendChild(el("p", hk.getAttribute("data-not"), "dip"));
+      so.appendChild(k);
+    };
+    nd.addEventListener("change", function () {
+      var x = nd.value, b = {};
+      H.forEach(function (r) { if (r.a === x) b[r.b] = 1; if (r.b === x) b[r.a] = 1; });
+      doldur(ny, x ? srt(Object.keys(b)) : []);
+      goster();
+    });
+    ny.addEventListener("change", goster);
+  }
+
+  /* Mekân notu formu: "Listede yok, başka bir yer" seçilince yeni mekânın alanları açılır */
+  document.querySelectorAll(".not-form select[name=mekan]").forEach(function (sec) {
+    function guncelle() { sec.form.querySelectorAll("[data-yeni]").forEach(function (el) { el.hidden = sec.value !== "_yeni"; }); }
+    sec.addEventListener("change", guncelle);
+    guncelle();
+  });
 })();

@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Plzeň rota planlayıcı: yerleri seç, kaldığın bölgeye göre günlere bölünsün. Konaklama, havalimanı, toplu taşıma ve yerel ipuçları.">
+<link rel="canonical" href="https://vasifsiz1.github.io/seyyah-site/cekya/plzen/planla/">
+<meta name="robots" content="noindex,nofollow">
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Plzeň rota planlayıcı · Road is Life</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@500..700&family=Figtree:ital,wght@0,400..800;1,400..600&display=swap">
+<style>
+/* Layout: Roma tatil kartpostalı; çizgili tente, güneşli kapakta mavi gökyüzü paneli ve kartpostal harita, her bölüm kendi dondurma rengiyle açılır */
+:root{
+  --paper:#FFFFFF; --paper-2:#EEF5FF; --card:#FFFFFF; --ink:#16233F; --muted:#57627A; --rule:#DDE5F0; --guil:#DDE5F0;
+  --navy:#16233F; --white:#FFFFFF; --glass:rgba(255,255,255,.16); --shadow:rgba(22,35,63,.22); --bgop:.11;
+  --sky:#1F6FD6; --sky-ink:#1F6FD6;
+  --aperol:#FF7A2F; --aperol-ink:#C2410C;
+  --sun:#FFC233; --sun-ink:#9A6A00;
+  --pink:#FF6F9C; --pink-ink:#C92D62;
+  --teal:#0A7C82; --teal-ink:#0A7C82;
+  --pista:#7BC74D; --pista-ink:#2F7D17;
+  --campari:#D7263D; --campari-ink:#C51F35;
+  --glicine:#9B7BFF; --glicine-ink:#6145D6;
+  --hero-bg:#1F6FD6; --awning-1:#FF7A2F; --awning-2:#FFE9B8;
+  --stamp:#1F5FD1; --ochre:#FFC233; --ochre-soft:#FFF1C9; --on-ochre:#16233F; --on-line:#FFFFFF;
+  --on-photo:#FFFFFF; --on-photo-2:rgba(255,255,255,.88); --sea:#BFE3FF;
+  --river:#86C8F2; --land:#FFFFFF; --land-2:#FFE08A;
+  --day-1:#E0337A; --day-2:#7A4FE0; --day-3:#0A8C8C; --day-4:#E8A200; --on-day:#FFFFFF; --on-day-4:#16233F; --park:#D3EDC4; --park-ink:#3D7A28;
+  --line-a:#F57A1F; --line-b:#1F5FD1; --line-c:#2FA84F;
+  --ok:#1E8A4C; --warn:#A86200; --bad:#D0263B;
+  --blend:multiply;
+  --cc:var(--aperol); --on-cc:var(--navy); --cc-ink:var(--aperol-ink); --tint:15%;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"Figtree","Segoe UI",system-ui,sans-serif;
+  --f-hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
+  --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
+  --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
+  --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
+  --hero-bg:#1A4F9E; --awning-1:#FF8A45; --awning-2:#FFE7B0;
+  --stamp:#8FB4FF; --ochre:#FFC94D; --ochre-soft:#3A3114;
+  --sea:#12304F; --river:#2F6A9C; --land:#24406A; --land-2:#3A5C8F;
+  --day-1:#FF6FA5; --day-2:#A98BFF; --day-3:#3CC8C2; --day-4:#FFC233; --on-day:#0D1A2E; --on-day-4:#0D1A2E; --park:#1C4434; --park-ink:#8FD69A;
+  --line-a:#FF8A3D; --line-b:#5A93F0; --line-c:#45C26B;
+  --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0D1A2E; --paper-2:#14243D; --card:#152842; --ink:#F1F5FC; --muted:#A8B5CC; --rule:#25395A; --guil:#25395A;
+  --shadow:rgba(0,0,0,.5); --tint:24%; --bgop:.17;
+  --sky-ink:#7DB2FF; --aperol:#FF8A45; --aperol-ink:#FF9A5C; --sun:#FFC94D; --sun-ink:#FFD36B;
+  --pink:#FF7FA8; --pink-ink:#FF8FB3; --teal-ink:#4FD1D6; --pista:#86D058; --pista-ink:#9BDB72;
+  --campari-ink:#FF6B7C; --glicine:#A58BFF; --glicine-ink:#B9A4FF;
+  --hero-bg:#1A4F9E; --awning-1:#FF8A45; --awning-2:#FFE7B0;
+  --stamp:#8FB4FF; --ochre:#FFC94D; --ochre-soft:#3A3114;
+  --sea:#12304F; --river:#2F6A9C; --land:#24406A; --land-2:#3A5C8F;
+  --day-1:#FF6FA5; --day-2:#A98BFF; --day-3:#3CC8C2; --day-4:#FFC233; --on-day:#0D1A2E; --on-day-4:#0D1A2E; --park:#1C4434; --park-ink:#8FD69A;
+  --line-a:#FF8A3D; --line-b:#5A93F0; --line-c:#45C26B;
+  --ok:#5BCB8A; --warn:#F0B050; --bad:#FF6B7C; --blend:normal; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--stamp);outline-offset:2px}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+p{margin:0}
+ul,ol{margin:0}
+button{font:inherit;color:inherit}
+.lab{font-family:var(--f-mono);font-size:.7rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* üst bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--f-display);font-style:italic;font-weight:700;font-size:1.7rem;letter-spacing:-.01em;line-height:1}
+.proto{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--muted);color:var(--muted);padding:3px 8px}
+
+/* hero */
+.hero{position:relative;color:var(--on-photo);background:linear-gradient(100deg,rgba(16,11,6,.88) 0%,rgba(16,11,6,.6) 42%,rgba(16,11,6,.15) 100%),url(/seyyah-site/varlik/img/plzen/hero.jpg) center 45%/cover no-repeat,#1C1813}
+@media (max-width:900px){.hero{background:linear-gradient(180deg,rgba(16,11,6,.45) 0%,rgba(16,11,6,.88) 50%),url(/seyyah-site/varlik/img/plzen/hero.jpg) center top/cover no-repeat,#1C1813}}
+.hero-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);padding-block:clamp(40px,7vw,96px);align-items:center}
+@media (max-width:900px){.hero-in{grid-template-columns:minmax(0,1fr)}}
+.hero .lab{color:var(--on-photo-2)}
+.h-title{font-family:var(--f-display);font-weight:800;font-size:clamp(5.2rem,14vw,10.5rem);line-height:.8;letter-spacing:-.04em;font-variation-settings:"opsz" 96;margin-block:14px 12px;color:var(--on-photo);text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.h-coord{font-family:var(--f-mono);font-size:.78rem;color:var(--on-photo-2);letter-spacing:.04em}
+.h-lead{font-size:1.12rem;max-width:36ch;margin-top:16px;color:var(--on-photo)}
+.pfields{display:grid;grid-template-columns:1fr 1fr;margin-top:26px;background:var(--card);color:var(--ink);border-radius:6px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.pf{padding:10px 14px 8px;min-width:0}
+.pf+.pf{border-left:1px solid var(--rule)}
+.pf-wide{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--rule)}
+.pf label{display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.pf label i{font-style:italic;text-transform:none;letter-spacing:.02em}
+.sel{position:relative}
+.sel::after{content:"▾";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:.8rem}
+.pf select,.pf input{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:600 1.05rem var(--f-body);color:var(--ink);width:100%;padding:3px 18px 3px 0;border-radius:0;min-width:0}
+.pf select:disabled{color:var(--muted)}
+.pf input:focus,.pf select:focus{outline:none}
+.pf select option{background:#fff;color:#1d1d1f}
+.pf:focus-within{background:var(--ochre-soft)}
+.mapbox{position:relative;aspect-ratio:16/10;max-width:100%;background:var(--sea);overflow:hidden;border-radius:6px;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+#world{width:100%;height:100%;display:block}
+.cty{fill:var(--land);stroke:var(--sea);stroke-width:.7;vector-effect:non-scaling-stroke;cursor:pointer;transition:fill .15s}
+.cty:hover{fill:var(--land-2)}
+.cty.it{fill:var(--ochre)}
+.cty.tr{fill:var(--land-2);stroke:var(--ink);stroke-width:1}
+.arc{fill:none;stroke:var(--stamp);stroke-width:1.8;stroke-dasharray:6 5;vector-effect:non-scaling-stroke}
+.cdot{fill:var(--ink);stroke:var(--sea);stroke-width:1;vector-effect:non-scaling-stroke}
+.cdot.rm{fill:var(--stamp)}
+.clab{font-family:var(--f-mono);font-size:3.4px;font-weight:600;letter-spacing:.06em;fill:var(--ink);opacity:0;transition:opacity .4s}
+#world.z .clab{opacity:1}
+.maptoggle{position:absolute;right:10px;top:10px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:6px 10px;cursor:pointer}
+.maptoggle:hover{border-color:var(--ink)}
+.mapfb{position:absolute;inset:auto 12px 12px 12px;color:var(--muted);font-size:.9rem}
+.mapcap{margin-top:10px;font-family:var(--f-mono);font-size:.74rem;color:var(--on-photo-2);min-height:1.3em}
+.stamp{position:absolute;left:5%;bottom:8%;transform:rotate(-9deg);color:var(--stamp);border:3px solid currentColor;border-radius:14px;padding:10px 16px 9px;text-align:center;font-family:var(--f-mono);text-transform:uppercase;mix-blend-mode:var(--blend);filter:url(#ink);line-height:1.15;box-shadow:inset 0 0 0 3px var(--paper-2),inset 0 0 0 5px currentColor;display:flex;flex-direction:column;align-items:center;pointer-events:none}
+.mapbox .stamp{box-shadow:inset 0 0 0 3px var(--sea),inset 0 0 0 5px currentColor}
+.stamp .s1{font-size:.6rem;letter-spacing:.18em;font-weight:600}
+.stamp .s2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.3rem,3vw,2rem);letter-spacing:.01em;margin:3px 0 2px;text-transform:none;font-style:italic}
+.stamp .s3{font-size:.58rem;letter-spacing:.12em;font-weight:600}
+.stamp.thump{animation:thump .5s cubic-bezier(.2,.9,.3,1.25)}
+@keyframes thump{0%{transform:rotate(-9deg) scale(1.45);opacity:.35}60%{transform:rotate(-9deg) scale(.97);opacity:1}100%{transform:rotate(-9deg) scale(1)}}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0 18px;padding-block:14px}
+.fact{padding-block:6px;min-width:0}
+.fact b{display:block;font-weight:600;font-size:.97rem}
+.fact small{display:block;font-size:.76rem;line-height:1.35;color:var(--muted)}
+
+/* sekme çubuğu */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--paper);border-block:1px solid var(--rule)}
+.nav-in{overflow-x:auto;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav ol{list-style:none;margin:0;padding:0;display:flex;gap:2px;width:max-content;min-width:100%}
+.nav li.mine{margin-left:auto}
+.nav a{display:flex;align-items:center;gap:7px;padding:15px 12px 12px;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ochre)}
+.nav .badge{font-family:var(--f-mono);font-size:.64rem;font-weight:600;background:var(--ochre);color:var(--on-ochre);padding:0 6px;border-radius:9px;line-height:17px}
+
+/* bölümler */
+.ch{padding-block:clamp(18px,3vw,30px) 72px}
+/* Soluk arka plan: şehrin bölüme göre değişen bir fotoğrafının küçük kopyası (BGIMG → img/z-<ad>.jpg, tools/zemin.mjs), ekrana sabit, içeriğin arkasında. lvh: mobilde araç çubuğu açılıp kapanırken zıplamasın */
+.zemin{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:-1;background:var(--zemin,none) center 30%/cover no-repeat;opacity:var(--bgop);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.45));mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.45))}
+@media print,(forced-colors:active),(prefers-reduced-transparency:reduce){.zemin{display:none}}
+.ch-head{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(240px,32vw,400px);padding:clamp(20px,3.5vw,40px);border-radius:6px;overflow:hidden;color:var(--on-photo);background:linear-gradient(180deg,rgba(12,9,6,.02) 18%,rgba(12,9,6,.84) 100%),var(--img,none) center/cover no-repeat,#1C1813;margin-bottom:8px}
+.ch-head .lab{color:var(--on-photo-2)}
+.ch h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1;letter-spacing:-.02em;margin-top:6px;color:var(--on-photo)}
+.ch-lead{max-width:60ch;color:var(--on-photo-2);margin-top:10px;font-size:1.06rem}
+.ctiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:26px 0 24px}
+@media (min-width:640px){.ctiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1000px){.ctiles{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.ctile{position:relative;aspect-ratio:4/3;max-width:100%;border:0;padding:0;cursor:pointer;border-radius:5px;overflow:hidden;background:linear-gradient(180deg,rgba(12,9,6,0) 30%,rgba(12,9,6,.82) 100%),var(--img,none) center/cover no-repeat,#1C1813;color:var(--on-photo);text-align:left;display:flex;align-items:flex-end;transition:transform .2s}
+.ctile span{padding:9px 11px;font-weight:600;font-size:.88rem;line-height:1.2}
+.ctile:hover{transform:translateY(-2px)}
+.ctile[aria-selected="true"]{outline:3px solid var(--ochre);outline-offset:3px}
+.sub{margin-top:48px;min-width:0}
+.sub>h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.5rem,2.6vw,1.9rem);line-height:1.1;margin-bottom:6px}
+.sub-lead{color:var(--muted);max-width:64ch;margin-bottom:18px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
+.g2>*,.g3>*{min-width:0}
+.panel{background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+.ticks{list-style:none;padding:0;display:grid;gap:8px}
+.ticks li{position:relative;padding-left:20px;max-width:68ch}
+.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;background:var(--line-a);border-radius:2px}
+.ticks.b li::before{background:var(--line-b)}
+.ticks.bad li::before{background:var(--bad)}
+.ticks.ok li::before{background:var(--ok)}
+h4.mini{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+.next{display:inline-flex;align-items:center;gap:10px;margin-top:56px;font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.35rem;text-decoration:none;border-bottom:2px solid var(--line-a);padding-bottom:2px}
+.next:hover{color:var(--line-a)}
+.note{font-size:.86rem;color:var(--muted);margin-top:10px;max-width:70ch}
+.tmp{display:inline-block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:1px 8px;margin-left:6px;vertical-align:middle}
+
+/* sekmeler */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.tab{font-size:.88rem;font-weight:500;padding:7px 13px;border:1px solid var(--rule);background:transparent;border-radius:999px;cursor:pointer;color:var(--ink)}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* vize */
+.vp{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding:22px 24px;border:1px solid var(--ink);background:var(--card);margin-top:28px}
+@media (max-width:640px){.vp{grid-template-columns:minmax(0,1fr)}}
+.vp .stamp{position:static;transform:rotate(-6deg);align-self:center;justify-self:start;box-shadow:inset 0 0 0 3px var(--card),inset 0 0 0 5px currentColor}
+.vp h3{font-family:var(--f-display);font-weight:700;font-size:1.6rem;line-height:1.15;margin-bottom:8px}
+.vp p{max-width:64ch;margin-bottom:12px}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:0;counter-reset:s;border-top:1px solid var(--ink)}
+.steps li{counter-increment:s;padding:16px 18px 18px 0;border-bottom:1px solid var(--rule);min-width:0}
+.steps li::before{content:counter(s);display:block;font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--ochre);margin-bottom:6px}
+.steps b{display:block;margin-bottom:4px}
+.steps p{font-size:.94rem;color:var(--muted)}
+.kv{display:grid;grid-template-columns:minmax(0,1fr) auto;margin:0;border-top:1px solid var(--rule)}
+.kv dt,.kv dd{padding:10px 0;border-bottom:1px solid var(--rule);margin:0}
+.kv dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;padding-left:16px}
+.bars{display:grid;gap:10px}
+.brow{display:grid;grid-template-columns:96px minmax(0,1fr) 3.4em;gap:10px;align-items:center;font-size:.92rem}
+.brow b{text-align:right;font-variant-numeric:tabular-nums}
+.btrack{height:14px;border-radius:999px;background:color-mix(in srgb,var(--muted) 18%,transparent);overflow:hidden}
+.bfill{display:block;height:100%;border-radius:999px;background:color-mix(in srgb,var(--muted) 70%,transparent)}
+.brow.it{font-weight:700}.brow.it .bfill{background:var(--line-b)}
+.vstat{width:100%;border-collapse:collapse;margin-top:18px;font-size:.9rem;font-variant-numeric:tabular-nums}
+.vstat caption{text-align:left;font-weight:700;margin-bottom:6px}
+.vstat th,.vstat td{padding:6px 8px;border-bottom:1px solid var(--rule);text-align:right}
+.vstat th:first-child,.vstat td:first-child{text-align:left}
+.vstat th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vstat tr.top td{font-weight:700;border-bottom:0}
+.links{list-style:none;padding:0;border-top:1px solid var(--rule)}
+.links li{border-bottom:1px solid var(--rule)}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:12px 0;text-decoration:none;flex-wrap:wrap}
+.links a:hover b{text-decoration:underline}
+.links span{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* keşfet */
+/* Maç ve spor rehberi (veri/spor.ts): Keşfet → Spor, gezilecek yerler #spor, stat sayfaları */
+.sp{display:grid;gap:16px;margin:4px 0 30px;--sp:var(--pista)}
+.sp-bas{font:800 1.3rem/1.2 var(--f-display);margin:0;text-wrap:balance}
+.sp-giris{margin:0;max-width:72ch}
+.sp-takimlar{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.sp-takim{background:var(--card);border:2px solid var(--rule);border-top:6px solid var(--sp);border-radius:22px;padding:16px 20px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+.sp-takim h4{font:800 1.35rem/1.15 var(--f-display);margin:0}
+.sp-takim p{margin:0}
+.sp-lig{font-size:.76rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.sp-not,.sp-yol{font-size:.94rem}
+.sp-not{color:var(--muted)}
+.sp-linkler{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:6px}
+.sp-linkler a{font-weight:700;overflow-wrap:anywhere}
+.sp-linkler .sp-btn{display:inline-flex;align-items:center;padding:9px 16px;border-radius:999px;background:var(--sp);color:var(--navy);font-weight:800;text-decoration:none}
+.sp-alt{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;align-items:start}
+.sp-kutu{background:var(--card);border:2px solid var(--rule);border-radius:22px;padding:16px 20px 18px;min-width:0}
+.sp-kutu h4{margin:0 0 10px;font:800 1.08rem/1.2 var(--f-display)}
+.sp-liste{margin:0;padding-left:1.1em;display:grid;gap:8px;font-size:.95rem}
+.sp-ne{font-size:.82rem;font-weight:700;color:var(--muted)}
+.sp-tur,.sp-kaynak{margin:0}
+.sp-tur a{font-weight:700;margin-right:10px}
+.sp-kaynak{font-size:.85rem;color:var(--muted)}
+.catsum{margin-bottom:12px;color:var(--muted)}
+.catsum b{color:var(--ink)}
+.places{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.pl{display:grid;grid-template-columns:132px minmax(0,1fr) minmax(0,260px) 132px;gap:14px 24px;padding-block:18px;border-bottom:1px solid var(--rule);align-items:start}
+.pl-ft{display:block;aspect-ratio:4/3;max-width:100%;border-radius:14px;background:var(--card) center/cover no-repeat;box-shadow:0 0 0 2px var(--rule)}
+.pl>div:last-child{justify-self:end}
+.pl .ac{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}.pl .ac.tam{display:block}
+.dev{border:0;background:none;padding:2px 0;margin-top:2px;font:inherit;font-size:.86rem;font-weight:700;color:var(--sky-ink,var(--ink));cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.pl h4 a{color:inherit;text-decoration:none}.pl h4 a:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:860px){.pl{grid-template-columns:96px minmax(0,1fr);gap:12px 16px}.pl>.meta,.pl>div:last-child{grid-column:1/-1;justify-self:start}}
+.pl h4{font-family:var(--f-display);font-weight:600;font-size:1.4rem;line-height:1.15}
+.pl .it{display:block;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin:3px 0 8px}
+.pl p{max-width:62ch}
+.pl .ph{font-size:.92rem;margin-top:8px;color:var(--muted)}
+.pl .ph b{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;color:var(--stamp);margin-right:6px}
+.meta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:5px 12px;margin:0;font-size:.9rem}
+.meta dt{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.meta dd{margin:0}
+.tk{display:inline-block;font-family:var(--f-mono);font-size:.64rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border:1px solid currentColor;border-radius:3px;margin-right:4px}
+.tk-sart{color:var(--bad)}.tk-oner{color:var(--warn)}.tk-gise{color:var(--muted)}.tk-free{color:var(--ok)}
+.add{font-size:.86rem;font-weight:600;padding:9px 14px;border:1.5px solid var(--ink);background:transparent;cursor:pointer;white-space:nowrap;border-radius:2px;color:var(--ink)}
+.add:hover{background:var(--ochre-soft)}
+.add[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:var(--on-ochre)}
+.planbar{position:sticky;bottom:0;margin-top:22px;background:var(--ink);color:var(--paper);display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));z-index:4}
+.planbar a{color:var(--paper);font-weight:600}
+.planbar .lab{color:var(--paper);opacity:.75}
+.tbl{overflow-x:auto;border-top:1px solid var(--ink)}
+.tbl table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+.tbl th{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:left;padding:10px 12px 8px 0;border-bottom:1px solid var(--rule)}
+.tbl td{padding:11px 12px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.tbl td b{font-weight:600}
+.tbl .rec td{background:var(--ochre-soft)}
+
+/* planla */
+.howlong{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));border-top:1px solid var(--ink)}
+.hl{padding:16px 18px 18px 0;border-bottom:1px solid var(--rule);min-width:0}
+.hl b{display:block;font-family:var(--f-display);font-weight:800;font-size:3rem;line-height:1;font-variant-numeric:lining-nums}
+.hl.you b{color:var(--ochre)}
+.hl p{font-size:.93rem;color:var(--muted);margin-top:6px}
+.wx{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:28px;align-items:end}
+@media (max-width:820px){.wx{grid-template-columns:minmax(0,1fr)}}
+.months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end;border-bottom:1px solid var(--ink)}
+.mo{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;background:none;border:0;cursor:pointer;padding:0 0 6px;min-width:0}
+.mo .t{font-family:var(--f-mono);font-size:.68rem;color:var(--muted)}
+.mo .bar{width:100%;max-width:34px;background:var(--land-2);border-radius:2px 2px 0 0;transition:background .2s}
+.mo:hover .bar{background:var(--muted)}
+.mo.on .bar{background:var(--ochre)}
+.mo.on .t{color:var(--ink);font-weight:600}
+.mo .cr{display:flex;gap:2px;height:5px}
+.mo .cr i{width:4px;height:5px;background:var(--stamp);opacity:.7}
+.mo .ab{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.04em;text-transform:uppercase}
+.mo.on .ab{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.mod h4{font-family:var(--f-display);font-weight:700;font-size:2.3rem;line-height:1}
+.mod dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:12px 0}
+.mod dt{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.mod dd{margin:0}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.day{border-top:4px solid var(--line-a);padding-top:12px;min-width:0}
+.day:nth-child(2){border-color:var(--line-b)}.day:nth-child(3){border-color:var(--line-c)}.day:nth-child(4){border-color:var(--stamp)}.day:nth-child(5){border-color:var(--ochre)}.day:nth-child(6){border-color:var(--ink)}
+.day h4{font-family:var(--f-display);font-weight:600;font-size:1.25rem;line-height:1.15;margin:4px 0 10px}
+.day ol{padding-left:20px;display:grid;gap:4px;font-size:.94rem}
+.day .x{font-size:.9rem;color:var(--muted)}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}
+.btn{font-size:.9rem;font-weight:600;padding:10px 16px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer;border-radius:2px;text-decoration:none;display:inline-block}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ochre-soft)}
+.toast{font-family:var(--f-mono);font-size:.74rem;color:var(--ok)}
+.calcf{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;margin-bottom:16px}
+.fld label{display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fld select,.fld input{width:100%;font:500 1rem var(--f-body);color:var(--ink);background:var(--card);border:1px solid var(--rule);padding:9px 10px;border-radius:2px;min-width:0}
+.seg{display:flex;border:1px solid var(--rule);background:var(--card)}
+.seg label{flex:1;text-align:center;padding:9px 6px;cursor:pointer;font-size:.9rem;border-right:1px solid var(--rule);margin:0;text-transform:none;letter-spacing:0;font-family:var(--f-body);color:var(--ink)}
+.seg label:last-child{border-right:0}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:var(--ink);color:var(--paper)}
+.seg label:has(input:focus-visible){outline:2px solid var(--stamp);outline-offset:-2px}
+.btot{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline;margin-bottom:14px}
+.btot b{font-family:var(--f-display);font-weight:800;font-size:3rem;line-height:1}
+.stack{display:flex;height:14px;margin:6px 0 12px;overflow:hidden;border-radius:2px}
+.stack span{display:block;height:100%}
+.bl{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 10px;align-items:center;font-size:.92rem}
+.bl i{width:10px;height:10px;display:inline-block}
+.bl .v{font-variant-numeric:tabular-nums;font-weight:600;text-align:right}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));border-top:1px solid var(--rule)}
+.prices div{display:flex;justify-content:space-between;gap:10px;padding:9px 14px 9px 0;border-bottom:1px solid var(--rule);font-size:.92rem}
+.prices b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.mx{border-collapse:collapse;font-size:.86rem;min-width:560px;width:100%}
+.mx th,.mx td{padding:9px 8px;border:1px solid var(--rule);text-align:center;font-variant-numeric:tabular-nums}
+.mx th{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mx td.d{color:var(--muted)}
+.ev{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.ev li{display:grid;grid-template-columns:90px 120px minmax(0,1fr) auto;gap:6px 16px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+@media (max-width:700px){.ev li{grid-template-columns:minmax(0,1fr) auto}.ev .em,.ev .ed{grid-column:1/2}}
+.ev li.now{background:var(--ochre-soft)}
+.ev .em{font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ev .ed{font-weight:600;font-size:.92rem}
+.ev .en b{display:block}
+.ev .en span{font-size:.9rem;color:var(--muted)}
+.ev .et{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;color:var(--stamp);border:1px solid currentColor;padding:1px 6px;border-radius:3px}
+.dt{border-top:1px solid var(--ink);padding-top:12px;min-width:0}
+.dt h4{font-family:var(--f-display);font-weight:700;font-size:1.45rem;line-height:1.1}
+.dt p{margin:4px 0 10px;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.84rem;padding:5px 10px;border:1px solid var(--rule);background:var(--card);border-radius:999px;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:var(--on-ochre)}
+
+/* konaklama ve haritalar */
+.rmap{width:100%;height:auto;display:block;max-width:100%;border:1px solid var(--rule)}
+.rm-bg{fill:var(--paper-2)}
+.rm-bg.su,.rr-bg.su,.rm-deniz,.rr-deniz{fill:var(--river)}
+.rm-kara,.rr-kara{fill:var(--paper-2)}
+.rm-river{fill:none;stroke:var(--river);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.rm-line{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.rm-a{stroke:var(--line-a)}.rm-b{stroke:var(--line-b)}.rm-c{stroke:var(--line-c)}
+.rm-dash{stroke-dasharray:6 5}
+.rm-st{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+.rm-stl{font:500 10px var(--f-mono);fill:var(--ink)}
+.rm-lm{font:600 9px var(--f-mono);letter-spacing:.12em;fill:var(--muted);text-anchor:middle}
+.rm-p{fill:var(--muted);opacity:.55}
+.rm-area{fill:var(--stamp);fill-opacity:.1;stroke:var(--stamp);stroke-width:1.2;cursor:pointer}
+.rm-area.on{fill-opacity:.25;stroke-width:2.6}
+.rm-al{font:600 10px var(--f-body);fill:var(--ink);text-anchor:middle;pointer-events:none}
+.rm-spoke{stroke:var(--stamp);stroke-width:1.2;stroke-opacity:.6;stroke-dasharray:3 3}
+.rm-pl{fill:var(--ochre);stroke:var(--ink);stroke-width:1.4}
+.rm-n{font:700 9px var(--f-mono);fill:var(--on-ochre);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.rm-route{fill:none;stroke-width:2.4;stroke-dasharray:5 4;stroke-linejoin:round}
+.rm-base{fill:var(--ink);stroke:var(--paper);stroke-width:2}
+.rm-ft{stroke:var(--ink);stroke-width:2.2;stroke-dasharray:5 4}
+.rm-f{fill:var(--ink)}.rm-t{fill:var(--stamp)}
+.rm-ftl{font:600 11px var(--f-body);fill:var(--ink)}
+.kmap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.kmap{grid-template-columns:minmax(0,1fr)}}
+.rank{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.rank li{border-bottom:1px solid var(--rule)}
+.rank button{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) auto;gap:12px;align-items:center;width:100%;background:none;border:0;padding:11px 0;cursor:pointer;text-align:left}
+.rank button:hover{background:var(--ochre-soft)}
+.rank .on button{background:var(--ochre-soft)}
+.rank .nm{font-weight:600;font-size:.95rem}
+.rank .best{display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.08em;color:var(--stamp);text-transform:uppercase}
+.rank .tr{height:8px;background:var(--paper-2);position:relative}
+.rank .tr i{position:absolute;inset:0 auto 0 0;background:var(--stamp);opacity:.75}
+.rank .v{font-variant-numeric:tabular-nums;font-size:.9rem;white-space:nowrap}
+.areas{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.ar{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) minmax(0,220px);gap:14px 28px;padding-block:20px;border-bottom:1px solid var(--rule)}
+@media (max-width:900px){.ar{grid-template-columns:minmax(0,1fr)}}
+.ar h4{font-family:var(--f-display);font-weight:700;font-size:1.45rem;line-height:1.1}
+.ar .for{font-size:.9rem;color:var(--muted);margin-top:4px}
+.ar .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.ar .tags span{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--rule);padding:1px 6px}
+.ar .pm{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.ar .side{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.ar .price{font-family:var(--f-display);font-weight:700;font-size:1.3rem}
+.ar.here{background:linear-gradient(90deg,var(--ochre-soft),transparent 70%)}
+
+/* ulaşım */
+.verdicts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:22px;margin-top:30px}
+.vd{border-top:1px solid var(--ink);padding-top:12px;min-width:0}
+.vd .stamp{position:static;transform:rotate(-4deg);display:inline-flex;margin:10px 0 10px 4px;padding:6px 12px;box-shadow:none;border-width:2.5px;border-radius:8px}
+.vd .stamp .s2{font-size:1.35rem}
+.vd p{font-size:.93rem;color:var(--muted)}
+.cout{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));border-top:1px solid var(--ink)}
+.cm{padding:12px 14px 14px 0;border-bottom:1px solid var(--rule);min-width:0}
+.cm b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1.1;font-variant-numeric:lining-nums}
+.cm small{display:block;font-size:.84rem;color:var(--muted);margin-top:4px}
+.cm.win b{color:var(--ochre)}
+.rec{margin-top:14px;font-size:1rem}
+.rec b{font-weight:700}
+.lines{display:grid;gap:14px}
+.ln{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.ln .sq{width:44px;height:44px;display:grid;place-items:center;color:var(--on-line);font-family:var(--f-mono);font-weight:700;font-size:1.2rem;border-radius:4px}
+.ln p{font-size:.94rem}
+.ln b{display:block}
+
+/* yerel */
+.pasta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0;border-top:1px solid var(--ink)}
+.pasta div{padding:14px 18px 16px 0;border-bottom:1px solid var(--rule);min-width:0}
+.pasta h4{font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.4rem}
+.pasta p{font-size:.92rem;color:var(--muted);margin-top:4px}
+.pasta .pork{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--bad);margin-top:8px;display:block}
+.pasta .safe{color:var(--ok)}
+.phr{width:100%;border-collapse:collapse;min-width:520px}
+.phr td{padding:10px 12px 10px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+.phr td:first-child{font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.15rem}
+.phr td:nth-child(2){font-family:var(--f-mono);font-size:.82rem;color:var(--stamp)}
+
+/* bilgi */
+.chk{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px}
+.chk>div{min-width:0}
+.chk label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--rule);cursor:pointer;font-size:.95rem}
+.chk input{accent-color:var(--ochre);width:17px;height:17px;margin-top:2px;flex:none}
+#pdf{display:none}
+@media print{body.yazdir>*:not(#pdf){display:none!important}body.yazdir{background:#fff!important}body.yazdir #pdf{display:block;color:#000;font:11pt/1.45 var(--f-body)}
+#pdf *{color:#000!important;background:transparent!important;box-shadow:none!important}#pdf h1{font:800 22pt/1.1 var(--f-display);margin:0 0 4px}#pdf h2{font:800 14pt var(--f-display);margin:18px 0 6px;border-bottom:2px solid #000}
+#pdf .dline{break-inside:avoid;margin-bottom:10px}#pdf input,#pdf button,#pdf .no-pdf{display:none!important}#pdf ul{list-style:none;padding:0;margin:0;columns:2;column-gap:24px}#pdf li{break-inside:avoid;padding:2px 0}#pdf h3{font-size:11pt;margin:10px 0 4px}}
+.chk label:has(input:checked) span{text-decoration:line-through;color:var(--muted)}
+.scams{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 28px;counter-reset:sc}
+.scams li{padding:14px 0 16px;border-top:1px solid var(--rule);min-width:0;counter-increment:sc}
+.scams b{display:block;font-size:1.02rem;margin-bottom:4px}
+.scams b::before{content:counter(sc,decimal-leading-zero);font-family:var(--f-mono);font-size:.7rem;color:var(--bad);margin-right:10px;letter-spacing:.06em}
+.scams p{font-size:.93rem;color:var(--muted)}
+.scams .do{color:var(--ink);margin-top:6px}
+.emg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));border-top:1px solid var(--ink)}
+.emg div{padding:12px 14px 14px 0;border-bottom:1px solid var(--rule)}
+.emg b{display:block;font-family:var(--f-display);font-weight:800;font-size:2rem;line-height:1.1;font-variant-numeric:lining-nums;user-select:all}
+
+/* benim roma'm */
+.rsum{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline;margin-top:24px;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.rsum b{font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1}
+.rsum span{color:var(--muted)}
+.rgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:24px;align-items:start}
+@media (max-width:900px){.rgrid{grid-template-columns:minmax(0,1fr)}}
+.dline{--c:var(--line-a);margin-bottom:26px}
+.dline.l-b{--c:var(--line-b)}.dline.l-c{--c:var(--line-c)}.dline.l-s{--c:var(--stamp)}
+.dline header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px}
+.dline header .dn{display:inline-grid;place-items:center;min-width:30px;height:24px;padding:0 6px;background:var(--c);color:var(--on-line);font-family:var(--f-mono);font-size:.74rem;font-weight:700;border-radius:3px;margin-right:8px}
+.dline header .dh{font-family:var(--f-display);font-weight:600;font-size:1.2rem}
+.dline ol{list-style:none;padding:0 0 0 22px;position:relative}
+.dline ol::before{content:"";position:absolute;left:7px;top:18px;bottom:18px;width:5px;background:var(--c);border-radius:3px}
+.dline li{position:relative;padding:6px 0}
+.dline li::before{content:"";position:absolute;left:-21px;top:16px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3.5px solid var(--c);box-sizing:border-box}
+.dline li.done::before{background:var(--c)}
+.dline .leg{display:block;font-family:var(--f-mono);font-size:.68rem;color:var(--muted);letter-spacing:.03em;min-height:1em}
+.dline .st{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.dline .st label{display:flex;gap:8px;align-items:baseline;cursor:pointer;font-weight:600}
+.dline .st input{accent-color:var(--ochre)}
+.dline li.done .nm{text-decoration:line-through;color:var(--muted)}
+.dline .rm{margin-left:auto;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;background:none;border:0;color:var(--muted);cursor:pointer;padding:4px 0;text-decoration:underline}
+.empty{padding:28px;border:1px dashed var(--muted);text-align:left}
+.empty b{display:block;font-family:var(--f-display);font-size:1.4rem;margin-bottom:6px}
+
+footer{border-top:1px solid var(--rule);padding-block:28px 40px;font-size:.86rem;color:var(--muted)}
+footer p{max-width:80ch;margin-bottom:6px}
+.credits{font-size:.76rem;margin-top:14px;max-width:none!important}.credits summary{cursor:pointer;font-weight:700;width:max-content}
+
+/* ===== v4 · canlı tatil katmanı ===== */
+[data-sec="vize"],[data-nav="vize"]{--cc:var(--sky);--on-cc:var(--white);--cc-ink:var(--sky-ink)}
+[data-sec="kesfet"],[data-nav="kesfet"]{--cc:var(--aperol);--on-cc:var(--navy);--cc-ink:var(--aperol-ink)}
+[data-sec="planla"],[data-nav="planla"]{--cc:var(--sun);--on-cc:var(--navy);--cc-ink:var(--sun-ink)}
+[data-sec="konaklama"],[data-nav="konaklama"]{--cc:var(--pink);--on-cc:var(--navy);--cc-ink:var(--pink-ink)}
+[data-sec="havalimani"],[data-nav="havalimani"]{--cc:var(--teal);--on-cc:var(--white);--cc-ink:var(--teal-ink)}
+[data-sec="ulasim"],[data-nav="ulasim"]{--cc:var(--pista);--on-cc:var(--navy);--cc-ink:var(--pista-ink)}
+[data-sec="yerel"],[data-nav="yerel"]{--cc:var(--campari);--on-cc:var(--white);--cc-ink:var(--campari-ink)}
+[data-sec="bilgi"],[data-nav="bilgi"]{--cc:var(--glicine);--on-cc:var(--navy);--cc-ink:var(--glicine-ink)}
+[data-sec="rotam"],[data-nav="rotam"]{--cc:var(--aperol);--on-cc:var(--navy);--cc-ink:var(--aperol-ink)}
+body{font-size:16.5px}
+:focus-visible{outline:3px solid var(--sky-ink);outline-offset:2px}
+.lab{font-family:var(--f-body);font-weight:700;letter-spacing:.08em}
+
+/* tente */
+.awning{height:30px;background:repeating-linear-gradient(90deg,var(--awning-1) 0 40px,var(--awning-2) 40px 80px);
+  -webkit-mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x;
+  mask:linear-gradient(#000 0 0) 0 0/100% 12px no-repeat,radial-gradient(circle 20px at 20px 0,#000 97%,transparent 100%) 0 100%/40px 18px repeat-x}
+.top{padding-block:12px 14px;flex-wrap:wrap;row-gap:8px}
+.brand{flex-wrap:wrap;row-gap:0}
+.top .geri{display:inline-flex;align-items:center;min-height:36px;padding:6px 14px;border-radius:999px;border:2px solid var(--ink);background:var(--paper,#fff);color:var(--ink);font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:2px 2px 0 var(--ink)}
+.top .geri:hover{background:var(--ochre-soft)}
+.gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.brand b{font-family:var(--f-display);font-style:normal;font-weight:800;font-size:1.8rem;letter-spacing:-.035em}
+.brand b::after{content:"";display:inline-block;width:.3em;height:.3em;border-radius:50%;background:var(--sun);margin-left:.06em}
+.brand .lab{font-family:var(--f-hand);font-size:1.3rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--aperol-ink)}
+.proto{font-family:var(--f-body);font-weight:700;border:0;background:var(--ochre-soft);color:var(--ink);border-radius:999px;padding:5px 12px}
+
+/* kapak */
+.hero{isolation:isolate;overflow:hidden;background:linear-gradient(180deg,rgba(8,22,48,.22),rgba(8,22,48,0) 35%),url(/seyyah-site/varlik/img/plzen/hero.jpg) center 42%/cover no-repeat,var(--hero-bg)}
+.hero{-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 23px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 0H96V12Q72 24 48 12T0 12Z'/%3E%3C/svg%3E") left bottom/96px 24px repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - 23px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 24'%3E%3Cpath d='M0 0H96V12Q72 24 48 12T0 12Z'/%3E%3C/svg%3E") left bottom/96px 24px repeat-x} /* alt kenar dalgalı ve saydam: arkadaki zemin kesintisiz görünür */
+.hero-in{padding-block:clamp(30px,5vw,64px) clamp(52px,7vw,84px)}
+@media (max-width:900px){.hero-in{padding-top:150px}}
+.hero-in>div:first-child{position:relative;background:var(--hero-bg);color:var(--on-photo);border-radius:28px;padding:clamp(22px,3.4vw,40px);box-shadow:0 24px 60px rgba(8,25,60,.35)}
+.hero-in>div:first-child::before{content:"";position:absolute;z-index:-1;top:-58px;right:-58px;width:156px;height:156px;border-radius:50%;
+  background:radial-gradient(circle,var(--sun) 0 33%,transparent 34%),repeating-conic-gradient(var(--sun) 0 7deg,transparent 7deg 20deg);animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+.hello{font-family:var(--f-hand);font-weight:700;font-size:clamp(1.8rem,3.2vw,2.4rem);line-height:1;color:var(--sun);transform:rotate(-5deg);transform-origin:left bottom;margin-bottom:8px}
+.h-title{font-family:var(--f-display);font-weight:800;font-size:clamp(4.8rem,12.5vw,9.4rem);line-height:.82;letter-spacing:-.055em;color:var(--white);text-shadow:.045em .045em 0 var(--aperol);margin-block:10px 14px;animation:pop .8s cubic-bezier(.2,.9,.3,1.35) both}
+@keyframes pop{0%{transform:scale(.88) rotate(-3deg)}100%{transform:none}}
+.h-coord{font-family:var(--f-body);font-weight:600;font-size:.84rem;letter-spacing:.02em}
+.h-lead{color:var(--white)}
+.now{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.now span{background:var(--glass);border-radius:999px;padding:6px 13px;font-size:.88rem;font-weight:600;color:var(--white)}
+.now b{color:var(--sun);font-variant-numeric:tabular-nums}
+.pfields{border-radius:18px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--sun)}
+.pf label{font-family:var(--f-body);font-weight:700}
+.mapbox{border:8px solid var(--card);border-radius:18px;transform:rotate(1.4deg);box-shadow:0 24px 50px rgba(8,25,60,.35)}
+.maptoggle{font-family:var(--f-body);font-weight:700;letter-spacing:.02em;text-transform:none;font-size:.82rem;background:var(--sun);color:var(--navy);border:2px solid var(--navy);border-radius:999px;padding:6px 12px}
+.mapcap{display:inline-block;background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font-family:var(--f-body);font-weight:600;font-size:.84rem;margin-top:18px;box-shadow:0 6px 18px rgba(8,25,60,.25)}
+.cty.it{fill:var(--aperol)}
+.arc{stroke:var(--pink-ink);stroke-width:2.2}
+.cdot.rm{fill:var(--campari)}
+.clab{font-family:var(--f-body);font-weight:800}
+.stamp .s2{font-family:var(--f-display);font-style:normal;font-weight:800}
+.stamp .s1,.stamp .s3{font-family:var(--f-body);font-weight:800}
+.facts{gap:10px;padding-block:20px 6px}
+.fact{border-radius:16px;padding:11px 14px;background:color-mix(in srgb,var(--fc) var(--tint),var(--paper))}
+.fact:nth-child(6n+1){--fc:var(--sky)}.fact:nth-child(6n+2){--fc:var(--sun)}.fact:nth-child(6n+3){--fc:var(--pink)}.fact:nth-child(6n+4){--fc:var(--pista)}.fact:nth-child(6n+5){--fc:var(--aperol)}.fact:nth-child(6n){--fc:var(--glicine)}
+
+/* sekmeler */
+.nav{border-block:0;box-shadow:0 1px 0 var(--rule),0 10px 22px -16px var(--shadow)}
+.nav ol{gap:4px;padding-block:8px}
+.nav a{padding:9px 15px;border-radius:999px;border-bottom:0;color:var(--ink);font-weight:700;font-size:.92rem;transition:background .2s}
+.nav a::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--cc);flex:none}
+.nav a:hover{background:color-mix(in srgb,var(--cc) 18%,transparent);color:var(--ink)}
+.nav a[aria-current="page"]{background:var(--cc);color:var(--on-cc)}
+.nav a[aria-current="page"]::before{background:var(--on-cc)}
+.nav .badge{font-family:var(--f-body);background:var(--campari);color:var(--white)}
+
+/* bölüm kapakları */
+.ch-head{min-height:clamp(270px,34vw,430px);border-radius:28px;padding:clamp(14px,2.4vw,28px);align-items:flex-start;
+  background:linear-gradient(180deg,rgba(8,20,40,0) 55%,rgba(8,20,40,.25) 100%),var(--img,none) center/cover no-repeat,var(--cc)}
+.ch-head>div{background:var(--cc);color:var(--on-cc);border-radius:22px;padding:clamp(16px,2.4vw,26px) clamp(18px,2.8vw,30px);max-width:min(100%,660px);box-shadow:0 18px 40px rgba(8,20,40,.3);transform:rotate(-.8deg)}
+.ch-head .lab{font-family:var(--f-hand);font-size:1.6rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--on-cc);line-height:1}
+.ch h2{font-weight:800;letter-spacing:-.04em;font-size:clamp(2.1rem,5vw,3.8rem);color:var(--on-cc)}
+.ch-lead{color:var(--on-cc)}
+.ctile{border-radius:18px;background:var(--img,none) center/cover no-repeat,var(--paper-2);box-shadow:0 8px 18px -10px var(--shadow);transition:transform .25s cubic-bezier(.2,.9,.3,1.4),box-shadow .25s}
+.ctile span{margin:8px;padding:5px 11px 5px 9px;background:var(--card);color:var(--ink);border-radius:12px;font-size:.8rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.ctile span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tc);flex:none}
+.ctile:nth-child(6n+1){--tc:var(--sky)}.ctile:nth-child(6n+2){--tc:var(--aperol)}.ctile:nth-child(6n+3){--tc:var(--pista)}.ctile:nth-child(6n+4){--tc:var(--pink)}.ctile:nth-child(6n+5){--tc:var(--sun)}.ctile:nth-child(6n){--tc:var(--glicine)}
+.ctile:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 16px 26px -12px var(--shadow)}
+.ctile:nth-child(even):hover{transform:translateY(-4px) rotate(1.5deg)}
+.ctile[aria-selected="true"]{outline:4px solid var(--cc);outline-offset:3px}
+.ctile[data-cat="bilet"]{grid-column:1/-1;aspect-ratio:auto;min-height:88px} /* farklı türde bir görünüm (tablo): son satırda tek kalmasın, şerit olsun */
+.ctile[aria-selected="true"] span{background:var(--cc);color:var(--on-cc)}
+.ctile[aria-selected="true"] span::before{background:var(--on-cc)}
+
+/* başlıklar, sekmeler, düğmeler */
+.sub>h3{font-weight:800;letter-spacing:-.03em;display:table;padding-inline:3px;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--cc) 40%,transparent) 58% 94%,transparent 94%)}
+h4.mini{font-family:var(--f-body);font-weight:800;color:var(--cc-ink)}
+.tab{border:2px solid var(--rule);font-weight:600}
+.tab:hover{border-color:var(--cc)}
+.tab[aria-selected="true"]{background:var(--cc);color:var(--on-cc);border-color:var(--cc)}
+.btn{background:var(--sun);color:var(--navy);border:2px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font-weight:700;transition:transform .15s,box-shadow .15s}
+.btn:hover{background:var(--sun);color:var(--navy);transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.ghost{background:var(--card);color:var(--ink)}
+.btn.ghost:hover{background:var(--ochre-soft);color:var(--ink)}
+.add{border:2px solid var(--ink);border-radius:999px;font-weight:700}
+.add:hover{background:var(--ochre-soft)}
+.add[aria-pressed="true"]{background:var(--pista);border-color:var(--ink);color:var(--navy)}
+.next{font-family:var(--f-display);font-style:normal;font-weight:800;font-size:1.2rem;border:2px solid var(--ink);border-radius:999px;padding:12px 22px;background:var(--cc);color:var(--on-cc);box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.next:hover{color:var(--on-cc);transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.chip{border-width:2px;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--cc);border-color:var(--cc);color:var(--on-cc)}
+.tk{font-family:var(--f-body);font-weight:800;border-radius:999px;border-width:1.5px;padding:1px 8px}
+.tmp{font-family:var(--f-body);font-weight:700;border-radius:999px}
+
+/* renkli çizgiler ve kutular */
+.places,.tbl,.howlong,.ev,.rank,.areas,.cout,.pasta,.emg,.links,.vd,.dt,.rsum{border-color:var(--cc)}
+.places,.tbl,.howlong,.ev,.rank,.areas,.cout,.pasta,.emg,.vd,.dt{border-top-width:3px}
+.tbl th{font-family:var(--f-body);font-weight:800;color:var(--ink);background:color-mix(in srgb,var(--cc) 13%,var(--card))}
+.tbl th:first-child,.tbl td:first-child{padding-left:12px}
+.tbl .rec td{background:color-mix(in srgb,var(--sun) 22%,var(--card))}
+.vp{border:2px solid var(--ink);border-radius:24px;box-shadow:7px 7px 0 var(--cc)}
+.vp h3{font-weight:800;letter-spacing:-.02em}
+.panel{border-radius:20px;border:2px solid color-mix(in srgb,var(--cc) 35%,var(--rule))}
+.steps{border-top:0;gap:12px}
+.steps li{border:0;border-radius:20px;padding:16px 18px;background:color-mix(in srgb,var(--cc) 11%,var(--card))}
+.steps li::before{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--cc);color:var(--on-cc);font-size:1.35rem;margin-bottom:10px}
+.pl h4{font-weight:750;letter-spacing:-.02em}
+.pl .it,.meta dt,.tbl th,.mx th,.ev .em,.mo .t,.mo .ab,.links span,.rank .best,.ar .tags span,.dline .leg,.dline .rm,.fld label,.pf label{font-family:var(--f-body)}
+.pl .ph b{color:var(--cc-ink)}
+.hl b,.btot b,.rsum b,.cm b,.emg b,.mod h4{letter-spacing:-.03em}
+.hl.you b,.cm.win b,.emg b,.rsum b,.btot b{color:var(--cc-ink)}
+.mo .bar{background:color-mix(in srgb,var(--sky) 28%,var(--paper))}
+.mo:hover .bar{background:color-mix(in srgb,var(--sky) 55%,var(--paper))}
+.mo.on .bar{background:var(--aperol)}
+.ev li.now{background:color-mix(in srgb,var(--sun) 22%,var(--card))}
+.ev .et{font-family:var(--f-body);font-weight:800;border-radius:999px;color:var(--cc-ink)}
+.rmap{border:2px solid var(--rule);border-radius:20px}
+.ar.here{background:linear-gradient(90deg,color-mix(in srgb,var(--cc) 20%,var(--card)),transparent 75%)}
+.rank button:hover,.rank .on button{background:color-mix(in srgb,var(--cc) 16%,var(--card))}
+.vd .stamp .s2{font-style:normal}
+.pasta h4{font-family:var(--f-hand);font-style:normal;font-weight:700;font-size:2rem;line-height:1;color:var(--cc-ink)}
+.phr td:first-child{font-family:var(--f-hand);font-style:normal;font-weight:700;font-size:1.55rem}
+.phr td:nth-child(2){font-family:var(--f-body);font-weight:600;color:var(--cc-ink)}
+.chk input,.dline .st input{accent-color:var(--aperol)}
+.planbar{background:var(--hero-bg);color:var(--white);border-radius:18px 18px 0 0;box-shadow:0 -10px 30px -18px var(--shadow)}
+.planbar a,.planbar .lab{color:var(--white)}
+.empty{border:2px dashed var(--cc);border-radius:20px;background:color-mix(in srgb,var(--cc) 8%,var(--card))}
+footer{border-top:0;background:var(--paper-2);border-radius:28px 28px 0 0;margin-top:24px;padding-block:30px 40px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* v5: net rota haritası */
+.dline{--c:var(--day-1);--on-c:var(--on-day)}
+.dline.l-b{--c:var(--day-2)}.dline.l-c{--c:var(--day-3)}.dline.l-s{--c:var(--day-4);--on-c:var(--on-day-4)}
+.dline header .dn{color:var(--on-c);border-radius:999px;padding:0 10px;font-family:var(--f-body);font-weight:800}
+.dline ol{padding-left:36px}
+.dline ol::before{left:9.5px}
+.dline li::before{content:attr(data-n);left:-36px;top:11px;width:24px;height:24px;border:0;background:var(--c);color:var(--on-c);display:grid;place-items:center;font:800 .72rem/1 var(--f-body);box-shadow:0 0 0 3px var(--paper)}
+.dline li.done::before{content:"✓";background:var(--paper);color:var(--c);box-shadow:inset 0 0 0 2.5px var(--c),0 0 0 3px var(--paper)}
+.dline li.hl .nm{background:color-mix(in srgb,var(--c) 24%,transparent);border-radius:4px;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 24%,transparent)}
+@media (min-width:901px){#rmapBox{position:sticky;top:72px}}
+.rmapw{display:grid;gap:12px;min-width:0}
+.rchips{display:flex;flex-wrap:wrap;gap:6px}
+.rchip{--c:var(--ink);--on-c:var(--paper);display:inline-flex;align-items:center;gap:7px;font:700 .84rem/1 var(--f-body);padding:8px 13px;border-radius:999px;border:2px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer}
+.rchip i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.rchip:hover{border-color:var(--c)}
+.rchip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--on-c)}
+.rchip[aria-pressed="true"] i{background:currentColor}
+.rr-bg{fill:var(--paper-2)}
+.rr-park{fill:var(--park)}
+.rr-parkl{font:italic 600 11px var(--f-body);fill:var(--park-ink);text-anchor:middle}
+.rr-river{fill:none;stroke:var(--river);stroke-width:13;stroke-linecap:round;stroke-linejoin:round}
+.rr-riverl{font:italic 700 11px var(--f-body);fill:var(--sky-ink)}
+.rr-metro{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.35}
+.rr-hood{font:700 9.5px var(--f-body);letter-spacing:.16em;fill:var(--muted);text-anchor:middle}
+.rr-case{fill:none;stroke:var(--paper-2);stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.rr-leg{fill:none;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}
+.rr-arw{fill:none;stroke:var(--paper-2);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rr-day,.rr-mk,.rr-lbl{transition:opacity .2s}
+.rr .dim{opacity:.18}
+.rr-pin{stroke:var(--paper-2);stroke-width:3}
+.rr-num{font:800 12px var(--f-body);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.rr-mk.hl .rr-pin{stroke:var(--ink);stroke-width:3.5}
+.rr-lbl{font:700 12.5px var(--f-body);fill:var(--ink);paint-order:stroke;stroke:var(--paper-2);stroke-width:4px;stroke-linejoin:round}
+.rr-lbl.hl{text-decoration:underline}
+.rr-hb{fill:var(--ink)}.rr-hi{fill:var(--paper)}
+.rr-scb{fill:var(--paper);fill-opacity:.92;stroke:var(--rule)}
+.rr-scl{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.rr-sct{font:700 10.5px var(--f-body);fill:var(--ink)}
+.rleg{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--muted)}
+.rleg li{display:flex;align-items:center;gap:7px}
+.rleg .sw{width:22px;height:6px;border-radius:3px;background:var(--c)}
+.rleg .sw.far{background:repeating-linear-gradient(90deg,var(--c) 0 5px,transparent 5px 9px)}
+.rleg .hs{width:14px;height:14px;border-radius:4px;background:var(--ink)}
+.rleg .mt{width:22px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--line-a) 0 33%,var(--line-b) 33% 66%,var(--line-c) 66%);opacity:.5}
+/* Çekya teması: cekya/ altındaki sayfalarda <body class="cz-tema">. Bayrak mavisi ve beyazı, Ege turkuazı,
+   begonvil pembesi, limon sarısı, zeytin yeşili. Planlayıcıda (tek dosya) seçici ':root' yapılarak eklenir (planlayici/uret.ts).
+   Fotoğrafı henüz gelmemiş şehirlerde kapak ve kartlar fotoğrafsız: mavi zemin, beyaz yazı, meandros (Yunan deseni) şeridi. */
+:root{
+  --paper-2:#FBF1F2; --rule:#EBD3D6; --guil:#EBD3D6;
+  --sky:#C8102E; --sky-ink:#9E0D24; --aperol:#11457E; --aperol-ink:#0B3260;
+  --pink:#C8102E; --pink-ink:#9E0D24; --sun:#F2C230; --sun-ink:#8A6400; --pista:#7C9A3D; --pista-ink:#4F6A1F;
+  --campari:#C8102E; --campari-ink:#9E0D24; --glicine:#D8606F; --glicine-ink:#9E0D24;
+  --hero-bg:#C8102E; --stamp:#9E0D24}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1A0F12; --paper-2:#241519; --card:#2B1A1F; --rule:#4A2A31; --guil:#4A2A31;
+  --sky:#F0707F; --sky-ink:#F7A3AD; --aperol:#6A9BE0; --aperol-ink:#9DBFF0;
+  --pink:#F0707F; --pink-ink:#F7A3AD; --campari:#F0707F; --campari-ink:#F7A3AD; --hero-bg:#8F0F25; --stamp:#F7B3BB}}
+:root[data-theme="dark"]{
+  --paper:#1A0F12; --paper-2:#241519; --card:#2B1A1F; --rule:#4A2A31; --guil:#4A2A31;
+  --sky:#F0707F; --sky-ink:#F7A3AD; --aperol:#6A9BE0; --aperol-ink:#9DBFF0;
+  --pink:#F0707F; --pink-ink:#F7A3AD; --campari:#F0707F; --campari-ink:#F7A3AD; --hero-bg:#8F0F25; --stamp:#F7B3BB}
+
+/* Meandros şeridi: rengi belirteçten (mask), koyu temada da görünür */
+:root .meandros{height:22px;margin:26px 0 4px;background:var(--sky);opacity:.85;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/22px 22px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/22px 22px repeat-x}
+/* Fotoğrafsız kapak: Ege mavisi, altta beyaz meandros */
+:root .kapak:not([style]):not(.net){background:radial-gradient(120% 90% at 85% 0%,rgba(255,255,255,.16),rgba(255,255,255,0) 60%),linear-gradient(165deg,var(--hero-bg),color-mix(in srgb,var(--hero-bg) 72%,#000))}
+:root .kapak:not([style]):not(.net)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:#fff;opacity:.9;z-index:-1;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/18px 18px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/18px 18px repeat-x}
+/* Fotoğrafsız kart: kırmızı zemin, ortada yerin adı */
+:root .kart .foto.bos{background:linear-gradient(150deg,var(--sky),color-mix(in srgb,var(--sky) 65%,#000));color:#fff;font-family:var(--f-display);font-weight:700;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;text-align:center;padding:0 18px;letter-spacing:.01em;overflow:hidden}
+:root .kart:nth-child(3n+2) .foto.bos{background:linear-gradient(150deg,var(--aperol),color-mix(in srgb,var(--aperol) 60%,#000))}
+:root .kart:nth-child(3n) .foto.bos{background:linear-gradient(150deg,#11457E,#0A2A52)}
+:root .kart.yakinda .foto.bos{background:var(--paper-2);color:var(--sky-ink);box-shadow:none}
+/* Fotoğrafsız döşeme: düz renk kutular */
+:root .doseme a:not([style]){background:linear-gradient(150deg,var(--kc),color-mix(in srgb,var(--kc) 62%,#000))}
+/* Yunanca selamlar uzun: -4 derecelik eğimde sağ ucu üstteki etikete biniyordu */
+:root .merhaba{transform:rotate(-1.5deg);margin-top:14px}
+</style>
+
+<div class="zemin" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.4" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="c"/><feDisplacementMap in="c" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+
+
+<header class="wrap top">
+  <a class="brand" href="/seyyah-site/"><b>Road is Life</b><span class="lab">seyahat dosyaları</span></a>
+  <a class="geri" href="/seyyah-site/cekya/plzen/" onclick="try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){event.preventDefault();history.back()}}catch(x){}">← Geri<span class="gizli"> · Plzeň</span></a><span class="proto">Plzeň dosyası</span>
+</header>
+
+<section class="hero" aria-label="Plzeň dosyası">
+  <div class="wrap hero-in">
+    <div>
+      <p class="lab">Seyahat dosyası · Çekya · Plzeň bölgesi</p>
+      <p class="hello">Ahoj! Vítej v</p>
+      <h1 class="h-title">Plzeň</h1>
+      <p class="h-coord">49°45′ K · 13°23′ D · ≈ 730 yaşında</p>
+      <p class="h-lead">Dünyanın en çok içilen bira tarzına adını veren şehir: ilk Pilsner'ın yapıldığı bira fabrikası, Çekya'nın en yüksek kilise kulesi, Avrupa'nın en büyük sinagoglarından biri ve şehrin altında kilometrelerce uzanan ortaçağ geçitleri. Bira turu nasıl ayırtılır, Prag'dan nasıl gelinir ve nerede kalınır, hepsi tek dosyada.</p>
+      <p class="now" id="romeNow"><span>Plzeň'de saat <b id="rnT">--:--</b></span><span id="rnV">Kışın İstanbul'dan 2 saat geri</span><span>Gün batımı <b id="rnS">--:--</b></span></p>
+      <div class="pfields" role="group" aria-label="Pasaport bilgileri">
+        <div class="pf"><label for="nat">Uyruğu <i>/ Nationality</i></label><div class="sel"><select id="nat">
+          <option value="TR" selected>Türkiye</option>
+          <option value="EU">AB ülkesi vatandaşı</option>
+          <option value="AZ">Azerbaycan</option>
+          <option value="XX">Diğer ülkeler</option>
+        </select></div></div>
+        <div class="pf"><label for="ptype">Pasaport türü <i>/ Type</i></label><div class="sel"><select id="ptype">
+          <option value="bordo" selected>Bordo · umuma mahsus</option>
+          <option value="yesil">Yeşil · hususi</option>
+          <option value="gri">Gri · hizmet</option>
+          <option value="siyah">Siyah · diplomatik</option>
+        </select></div></div>
+        <div class="pf pf-wide"><label for="dest">Varış <i>/ Destination</i></label>
+          <input id="dest" list="cities" value="Plzeň, Çekya" autocomplete="off" spellcheck="false">
+          <datalist id="cities"><option value="Prag, Çekya"><option value="Kutná Hora, Çekya"><option value="Karlovy Vary, Çekya"><option value="Mariánské Lázně, Çekya"><option value="Plzeň, Çekya"><option value="Český Krumlov, Çekya"><option value="České Budějovice ve Hluboká, Çekya"><option value="Brno, Çekya"><option value="Olomouc, Çekya"><option value="Mikulov ve Lednice–Valtice, Çekya"><option value="Paris, Fransa"><option value="Barselona, İspanya"><option value="Amsterdam, Hollanda"><option value="Prag, Çekya"><option value="Viyana, Avusturya"><option value="Atina, Yunanistan"><option value="Londra, Birleşik Krallık"><option value="Belgrad, Sırbistan"><option value="Tokyo, Japonya"><option value="New York, ABD"></datalist>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="mapbox">
+        <svg id="world" viewBox="0 -61 900 562.5" role="img" aria-label="Dünya haritası. Çekya işaretli, İstanbul'dan Plzeň'e uçuş rotası çizili."></svg>
+        <p id="mapFallback" class="mapfb" hidden></p>
+        <button class="maptoggle" id="mapToggle" type="button">Dünyayı gör</button>
+        <div class="stamp" id="stamp" aria-live="polite"><span class="s1">Çekya · Schengen</span><span class="s2">Vize gerekli</span><span class="s3">C tipi</span></div>
+      </div>
+      <p class="mapcap" id="mapCap" aria-live="polite">İstanbul → Plzeň · uçuş ≈ 2 sa 50 dk · haritada bir ülkeye dokun</p>
+    </div>
+  </div>
+</section>
+<div class="wrap"><div class="facts">
+      <div class="fact"><span class="lab">Uçuş</span><b>İstanbul–Prag ≈ 2 sa 50 dk</b><small>Prag'dan tren ≈ 1 sa 30 dk</small></div>
+      <div class="fact"><span class="lab">Saat farkı</span><b>Türkiye'den 2 sa geri</b><small>Yazın 1 saat geri</small></div>
+      <div class="fact"><span class="lab">Para</span><b>Çek korunası (Kč, CZK)</b><small>Euro geçmez ya da kötü kurla geçer</small></div>
+      <div class="fact"><span class="lab">Priz</span><b>C · E tipi, 230 V</b><small>Türkiye ve Avrupa fişleri çoğu prize uyar. ABD ve İngiltere fişlerine adaptör şart.</small></div>
+      <div class="fact"><span class="lab">Dil</span><b>Çekçe</b></div>
+      <div class="fact"><span class="lab">Acil</span><b>112</b></div>
+    </div></div>
+
+<nav class="nav" aria-label="Plzeň dosyası bölümleri">
+  <div class="wrap nav-in" id="metroIn">
+    <ol>
+      <li><a href="#vize" data-nav="vize">Vize ve giriş</a></li>
+      <li><a href="#kesfet" data-nav="kesfet">Keşfet</a></li>
+      <li><a href="#planla" data-nav="planla">Planla</a></li>
+      <li><a href="#konaklama" data-nav="konaklama">Konaklama</a></li>
+      <li><a href="#havalimani" data-nav="havalimani">Havalimanı</a></li>
+      <li><a href="#ulasim" data-nav="ulasim">Ulaşım</a></li>
+      <li><a href="#yerel" data-nav="yerel">Yerel yaşam</a></li>
+      <li><a href="#bilgi" data-nav="bilgi">Bilmen gerekenler</a></li>
+      <li class="mine"><a href="#rotam" data-nav="rotam">Benim Plzeň'im <span class="badge" id="navBadge">0</span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<main id="chapters">
+
+<!-- 01 VİZE -->
+<section class="ch wrap" data-sec="vize" aria-labelledby="h-vize">
+  <header class="ch-head"><div><p class="lab">Vize ve giriş</p><h2 id="h-vize">Plzeň'e giriş izni</h2><p class="ch-lead">Uyruğunu ve pasaport türünü yukarıdaki pasaport alanından seç. Bu bölüm sana göre değişir.</p></div></header>
+  <div class="vp" id="visaPanel"></div>
+
+  <div id="visaProc" hidden><div id="docTabs"></div><ul id="docCommon"></ul><h4 id="docProfTitle"></h4><ul id="docProf"></ul></div>
+  <div class="sub"><h3>Başvuru</h3><p class="sub-lead">Başvuru merkezi, belgeler, ücretler ve istatistikler Çekya vize rehberinde.</p><p><a class="btn ikinci" href="../../vize/">Çekya vize rehberini aç →</a></p></div>
+
+  <div class="sub"><h3>Pasaport ve sınırda giriş</h3><p class="sub-lead">Vize gereksin ya da gerekmesin, sınırda bunlar geçerli.</p>
+    <ul class="ticks">
+      <li>Pasaport son 10 yıl içinde verilmiş, Schengen'den çıkış tarihinden sonra en az 3 ay geçerli olmalı ve en az 2 boş sayfası bulunmalı.</li>
+      <li>Schengen sınırlarında artık pasaporta damga basılmıyor. Yeni giriş-çıkış sistemi (EES) ilk girişte parmak izini ve yüz fotoğrafını kaydediyor. İlk seferde pasaport sırasına fazladan zaman ayır.</li>
+      <li>Polis dönüş biletini, otel rezervasyonunu, sigortayı ve yeterli parayı sorabilir. Çıktılarını el bagajında tut.</li>
+      <li>90/180 kuralını aşmak sonraki vize başvurularını yakar. Kalış günlerini kendin say.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 KEŞFET -->
+<section class="ch wrap" data-sec="kesfet" aria-labelledby="h-kesfet" hidden>
+  <header class="ch-head"><div><p class="lab" id="kesfetCat">Şehri keşfet</p><h2 id="h-kesfet">Plzeň'de nereye gidilir</h2><p class="ch-lead">Her yer için ziyaret süresi, bilet durumu ve en iyi saat. Beğendiğin yeri rotana ekle, kaç gün süreceğini biz hesaplarız.</p></div></header>
+  <div class="sub" style="margin-top:0">
+    <div class="ctiles" role="tablist" aria-label="Kategoriler" id="catTabs"></div>
+    <div id="catBody"></div>
+    <div class="planbar" id="planbar"></div>
+  </div>
+</section>
+
+<!-- 03 PLANLA -->
+<section class="ch wrap" data-sec="planla" aria-labelledby="h-planla" hidden>
+  <header class="ch-head"><div><p class="lab">Seyahatini planla</p><h2 id="h-planla">Ne zaman, kaç gün, ne kadara</h2><p class="ch-lead">Mevsim, gün sayısı, hazır planlar, bütçe ve etkinlikler.</p></div></header>
+
+  <div class="sub"><h3>Plzeň kaç günde gezilir?</h3>
+    <div class="howlong">
+      <div class="hl"><span class="lab">Temel</span><b>1 gün</b><p>Meydana, katedralin kulesine, yeraltı geçitlerine ve bira fabrikası turuna yetişirsin. Prag'dan günübirlik gelenler çoğunlukla bunu yapar.</p></div>
+      <div class="hl"><span class="lab">Rahat</span><b>2 gün</b><p>Büyük Sinagog'u, Kukla Müzesi'ni, Batı Bohemya Müzesi'ni ve Adolf Loos'un dairelerini de gezer, akşamı Büyük Tiyatro'da ya da puplarda geçirirsin.</p></div>
+      <div class="hl"><span class="lab">Derin</span><b>3 gün</b><p>Techmania'ya, hayvanat bahçesine ya da Kladruby, Švihov ve Radyně'ye zaman kalır.</p></div>
+      <div class="hl you" id="hlYou"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Hangi ayda gidilmeli?</h3><p class="sub-lead">En iyi dönemler Mayıs, Haziran ile Eylül. Mayıs başındaki Kurtuluş Şenliği ve Ekim başındaki Pilsner Fest şehrin en kalabalık günleridir. Kapalı mekânları çok olduğu için kışın da gezilir. Bir aya dokun: sıcaklık, yağış, kalabalık ve ne giyileceği.</p>
+    <div class="wx">
+      <div><div class="months" id="months" role="group" aria-label="Aylar"></div>
+        <div class="legend"><span><i style="background:var(--land-2)"></i>Ortalama en yüksek sıcaklık</span><span><i style="background:var(--stamp);opacity:.7;width:4px"></i>Turist yoğunluğu (1–5)</span></div></div>
+      <div class="mod" id="moDetail" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Hazır gezi planları</h3><p class="sub-lead">Günler coğrafi olarak gruplanmış, aynı gün içinde yürüyerek ilerlersin.</p>
+    <div class="tabs" role="tablist" aria-label="Gün sayısı" id="tripTabs"></div>
+    <div class="days" id="tripDays"></div>
+    <div class="btnrow"><button class="btn" type="button" id="tripAdd">Bu planı rotama ekle</button><span class="toast" id="tripToast" aria-live="polite"></span></div>
+  </div>
+
+  <div class="sub"><h3>Seyahat tarzına göre</h3>
+    <div class="tabs" role="tablist" aria-label="Seyahat tarzı" id="typeTabs"></div>
+    <div id="typeBody"></div>
+  </div>
+
+  <div class="sub"><h3>Günlük bütçe</h3><p class="sub-lead">Uçak bileti hariç tahmini harcama, Euro olarak.</p>
+    <div class="g2">
+      <div>
+        <div class="calcf">
+          <div class="fld"><label for="bDays">Gün</label><input id="bDays" type="number" min="1" max="21" value="3"></div>
+          <div class="fld"><label for="bPeople">Kişi</label><input id="bPeople" type="number" min="1" max="8" value="2"></div>
+        </div>
+        <div class="fld"><label>Tarz</label><div class="seg" id="bStyle">
+          <label><input type="radio" name="bstyle" value="eko">Ekonomik</label>
+          <label><input type="radio" name="bstyle" value="orta" checked>Orta</label>
+          <label><input type="radio" name="bstyle" value="konfor">Konforlu</label>
+        </div></div>
+      </div>
+      <div id="budgetOut" aria-live="polite"></div>
+    </div>
+    <h4 class="mini" style="margin-top:30px">Ortalama fiyatlar <span class="tmp">son kontrol 7 Kasım 2026</span></h4>
+    <div class="prices">
+      <div><span>Espresso</span><b>≈ 55–85 Kč</b></div>
+      <div><span>Pilsner Urquell, 0,5 L, pub</span><b>≈ 60–90 Kč</b></div>
+      <div><span>Guláš ya da svíčková, yerel pub</span><b>≈ 200–320 Kč</b></div>
+      <div><span>Günlük menü, öğle</span><b>≈ 160–240 Kč</b></div>
+      <div><span>Bira fabrikası turu</span><b>430 Kč</b></div>
+      <div><span>Yeraltı geçitleri</span><b>250 Kč</b></div>
+      <div><span>Techmania</span><b>280 Kč</b></div>
+      <div><span>Konaklama vergisi</span><b>35 Kč/kişi/gün</b></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Turistik yerler arası yürüme süreleri</h3><p class="sub-lead">Dakika cinsinden. Metro ve taksiyle karşılaştırmak için Ulaşım bölümündeki hesaplayıcıyı kullan.</p>
+    <div class="tbl" id="matrix"></div>
+  </div>
+
+  <div class="sub"><h3>Etkinlik takvimi</h3><p class="sub-lead">Her yıl tekrarlanan etkinlikler. Kesin tarihler her yıl değişir. Bulunduğun ay vurgulu görünür.</p>
+    <ul class="ev" id="events"></ul>
+  </div>
+
+  <div class="sub"><h3>Plzeň'den günübirlik geziler</h3>
+    <div class="g3" id="daytrips"></div>
+  </div>
+
+  <div class="sub"><h3>Kaçınılması gerekenler</h3>
+    <ul class="ticks bad">
+      <li>Bira fabrikası turuna yazın biletsiz gitme. Turlar dolar, bileti prazdrojvisit.cz'den önceden al.</li>
+      <li>Büyük Sinagog cuma ve cumartesi kapalıdır. Planını buna göre yap.</li>
+      <li>Patton Müzesi 2026'da kalıcı olarak kapandı. Yerine 2027'de yeni bir kurtuluş müzesi açılacak.</li>
+      <li>Pazartesi gelirsen müzelerin çoğu kapalıdır.</li>
+    </ul>
+    <p class="note">Tam liste: <a href="#bilgi">Bilmen gerekenler → Dolandırıcılıklar ve turist tuzakları</a></p>
+  </div>
+</section>
+
+<!-- 04 KONAKLAMA -->
+<section class="ch wrap" data-sec="konaklama" aria-labelledby="h-konak" hidden>
+  <header class="ch-head"><div><p class="lab">Konaklama</p><h2 id="h-konak">Nerede kalınır</h2><p class="ch-lead">Otelin yeri, rotanın kaç saatini yolda geçireceğini belirler. Aşağıdaki sıralama senin rotana göre hesaplanıyor.</p></div></header>
+
+  <div class="sub"><h3>Rotana göre en iyi bölge</h3><p class="sub-lead" id="rankLead"></p>
+    <div class="kmap">
+      <ul class="rank" id="rank"></ul>
+      <div id="kMap"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Bölgeler</h3>
+    <div class="tabs" role="tablist" aria-label="Konaklama türü" id="areaTabs"></div>
+    <ul class="areas" id="areas"></ul>
+    <p class="note">Gecelik fiyatlar iki kişilik oda için yaklaşık aralıklardır, sezona ve etkinliklere göre değişir. Son kontrol 7 Kasım 2026.</p>
+  </div>
+
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Hangi bölgede kalınmamalı?</h3>
+      <ul class="ticks bad">
+        <li><b>Ana istasyonun hemen önü.</b> Akşamları sakin değildir.</li>
+        <li><b>Kurtuluş Şenliği ya da Pilsner Fest haftasonu son dakika.</b> Odalar haftalar önce dolar.</li>
+        <li><b>Araçla gelip meydanın içinde otel.</b> Park yeri sınırlı ve ücretlidir.</li>
+      </ul>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Otel seçerken</h3>
+      <ul class="ticks">
+        <li>Bir gece kalırsan akşamı meydandaki puplarda ve Büyük Tiyatro'da geçirirsin.</li>
+        <li>Merkezdeki oteller bira fabrikasına ve istasyona ≈ 10 dakika yürüyüştür.</li>
+        <li>Konaklama vergisi kişi başı her gün için 35 Kč'dir (giriş günü sayılmaz). Tesis fiyata katmıyorsa girişte ödenir.</li>
+        <li>Çocukluysan Techmania'ya yakın güney mahalleleri daha uygun fiyatlıdır.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 HAVALİMANI -->
+<section class="ch wrap" data-sec="havalimani" aria-labelledby="h-hav" hidden>
+  <header class="ch-head"><div><p class="lab">Havalimanı transferi</p><h2 id="h-hav">Havalimanından şehre</h2><p class="ch-lead">Plzeň'in tarifeli uçuşu olan havalimanı yoktur. Gezginler Prag Václav Havel Havalimanı'na (PRG) iner ve Prag ana istasyonundan (Praha hl. n.) trenle yaklaşık bir buçuk saatte gelir. Prag'dan otobüs seferleri de vardır.</p></div></header>
+  <div class="sub" style="margin-top:28px">
+    <div class="tabs" role="tablist" aria-label="Havalimanı" id="apTabs">
+      <button class="tab" type="button" role="tab" data-ap="prg" aria-selected="true">Prag (PRG) ve ana istasyon</button>
+      <button class="tab" type="button" role="tab" data-ap="bati" aria-selected="false">Batı Bohemya ve Almanya</button>
+    </div>
+    <div data-apsec="prg">
+      <div class="tbl"><table>
+        <thead><tr><th>Seçenek</th><th>Nereye</th><th>Süre</th><th>Ücret</th><th>Kime uygun</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td><b>Tren, Praha hl. n.</b><br><span class="lab">Önerimiz</span></td><td>Plzeň hl. n.</td><td>≈ 1 sa 25–35 dk</td><td>≈ 145–180 Kč</td><td>Çoğu gezgin</td></tr>
+          <tr><td><b>Otobüs, Praha Zličín</b></td><td>Plzeň otogarı</td><td>≈ 1 sa</td><td>≈ 100–200 Kč</td><td>Havalimanından gelenler</td></tr>
+          <tr><td><b>Özel transfer</b></td><td>Otel kapısı</td><td>≈ 1 sa</td><td>≈ 2.500–3.500 Kč</td><td>Gruplar, bavullular</td></tr>
+        </tbody></table></div>
+    </div>
+    <div data-apsec="bati" hidden>
+      <div class="tbl"><table>
+        <thead><tr><th>Seçenek</th><th>Nereye</th><th>Süre</th><th>Ücret</th><th>Kime uygun</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td><b>Tren, Mariánské Lázně ya da Cheb</b><br><span class="lab">Önerimiz</span></td><td>Plzeň hl. n.</td><td>≈ 1–1 sa 30 dk</td><td>≈ 150–250 Kč</td><td>Kaplıca şehirlerinden gelenler</td></tr>
+          <tr><td><b>Tren, Münih–Prag hattı</b></td><td>Plzeň hl. n.</td><td>≈ 4 sa</td><td>Bilete göre</td><td>Almanya'dan gelenler</td></tr>
+        </tbody></table></div>
+    </div>
+    <p class="note">Prag ile Plzeň arasında trenler gün boyu sık çalışır. Fiyatlar ve süreler yaklaşıktır, erken alınan biletler daha ucuzdur. ČD'nin sitesinden ya da IDOS'tan güncel tarifeye bak. Son kontrol 7 Kasım 2026.</p>
+  </div>
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Varınca</h3>
+      <ul class="ticks">
+        <li>Ana istasyon (Plzeň hl. n.) merkezin doğusundadır. Cumhuriyet Meydanı'na yaklaşık 15 dakika yürürsün ya da tramvaya binersin.</li>
+        <li>Bira fabrikası istasyonla meydan arasındadır, istasyondan yaklaşık 10 dakikadır.</li>
+        <li>Otogar merkezin batısındadır, meydana tramvayla birkaç durak gidersin.</li>
+        <li>Tramvay biletini duraktaki makineden ya da kartla araç içinden al.</li>
+      </ul>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Bölgene göre en kolay yol</h3>
+      <dl class="kv">
+        <dt>Cumhuriyet Meydanı</dt><dd>Ana istasyondan ≈ 15 dk yürüyüş</dd>
+        <dt>Bira fabrikası</dt><dd>Ana istasyondan ≈ 10 dk yürüyüş</dd>
+        <dt>Techmania</dt><dd>Meydandan tramvay ≈ 10 dk</dd>
+        <dt>Hayvanat bahçesi</dt><dd>Meydandan tramvay ≈ 15 dk</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="sub g2" id="biletAra">
+    <div><h3>Uçak bileti ara</h3>
+      <p class="note">Kalkış şehrini ve havalimanını seç, uçuşlar ve fiyatlar Google Flights'ta yeni sekmede açılır.</p>
+      <label class="lab">Nereden<select id="baK" style="display:block;width:100%;margin:4px 0 12px;padding:8px;font:inherit;font-size:1rem;font-weight:400;text-transform:none;letter-spacing:normal;border:1.5px solid var(--ink);border-radius:2px;background:transparent;color:inherit"><option value="Istanbul">İstanbul</option><option value="Ankara">Ankara</option><option value="Izmir">İzmir</option><option value="Antalya">Antalya</option></select></label>
+      <label class="lab">Nereye<select id="baV" style="display:block;width:100%;margin:4px 0 12px;padding:8px;font:inherit;font-size:1rem;font-weight:400;text-transform:none;letter-spacing:normal;border:1.5px solid var(--ink);border-radius:2px;background:transparent;color:inherit"><option value="Plzeň">Plzeň</option></select></label>
+      <a class="btn" id="baU" href="https://www.google.com/travel/flights?hl=tr&amp;q=Flights%20from%20Istanbul%20to%20Plze%C5%88" target="_blank" rel="noopener">Uçuşları gör ↗</a>
+    </div>
+    <div><h3>Tren bileti ara</h3>
+      <p class="note">Gideceğin yeri seç, trenlerin saatleri ve aktarmalar Google Haritalar'da açılır. Bileti demiryolu şirketinin kendi sitesinden alırsın.</p>
+      <label class="lab">Nereye<select id="baT" style="display:block;width:100%;margin:4px 0 12px;padding:8px;font:inherit;font-size:1rem;font-weight:400;text-transform:none;letter-spacing:normal;border:1.5px solid var(--ink);border-radius:2px;background:transparent;color:inherit"><option value="Prag">Prag</option><option value="Kutná Hora">Kutná Hora</option><option value="Karlovy Vary">Karlovy Vary</option><option value="Mariánské Lázně">Mariánské Lázně</option><option value="Český Krumlov">Český Krumlov</option><option value="České Budějovice ve Hluboká">České Budějovice ve Hluboká</option><option value="Brno">Brno</option><option value="Olomouc">Olomouc</option><option value="Mikulov ve Lednice–Valtice">Mikulov ve Lednice–Valtice</option></select></label>
+      <a class="btn" id="baTr" href="https://www.google.com/maps/dir/?api=1&amp;hl=tr&amp;travelmode=transit&amp;origin=Plze%C5%88%2C%20%C3%87ekya&amp;destination=Prag%2C%20%C3%87ekya" target="_blank" rel="noopener">Saatleri gör ↗</a>
+      <p style="margin-top:12px"><a class="btn ghost" href="https://www.cd.cz" target="_blank" rel="noopener" style="margin:0 8px 8px 0">České dráhy ↗</a><a class="btn ghost" href="https://regiojet.com" target="_blank" rel="noopener" style="margin:0 8px 8px 0">RegioJet ↗</a></p>
+    </div>
+  </div>
+  <script>(function(){var g=function(i){return document.getElementById(i)};
+  function u(){g("baU").href="https://www.google.com/travel/flights?hl=tr&q="+encodeURIComponent("Flights from "+g("baK").value+" to "+g("baV").value);
+  if(g("baT"))g("baTr").href="https://www.google.com/maps/dir/?api=1&hl=tr&travelmode=transit&origin="+encodeURIComponent("Plzeň, Çekya")+"&destination="+encodeURIComponent(g("baT").value+", "+"Çekya");}
+  ["baK","baV","baT"].forEach(function(i){if(g(i))g(i).addEventListener("change",u);});})();</script>
+</section>
+
+<!-- 06 ULAŞIM -->
+<section class="ch wrap" data-sec="ulasim" aria-labelledby="h-ul" hidden>
+  <header class="ch-head"><div><p class="lab">Şehirde ulaşım</p><h2 id="h-ul">Plzeň'de nasıl dolaşılır</h2><p class="ch-lead">Kısa cevap: tarihî merkezi yürü, Techmania, hayvanat bahçesi ve Bolevec Gölü için tramvaya bin. Bira fabrikası ve ana istasyon meydana yürüme mesafesindedir.</p></div></header>
+  <div class="verdicts">
+    <div class="vd"><span class="lab">Araç kiralamak</span><br><span class="stamp"><span class="s2">Gerekmez</span></span><p>Şehirde park sınırlıdır. Kladruby ve Švihov için düşünebilirsin.</p></div>
+    <div class="vd"><span class="lab">Tramvay</span><br><span class="stamp"><span class="s2">Merkezin dışına</span></span><p>Üç hat şehrin ana yönlerini bağlar.</p></div>
+    <div class="vd"><span class="lab">En iyi yol</span><br><span class="stamp"><span class="s2">Yürü</span></span><p>Tarihî merkez düz ve küçüktür.</p></div>
+    <div class="vd"><span class="lab">Taksi</span><br><span class="stamp"><span class="s2">Gece ve bavulla</span></span><p>Fiyatı binmeden önce sor ya da uygulamayla çağır.</p></div>
+  </div>
+
+  <div class="sub"><h3>Mesafe ve süre hesaplayıcı</h3><p class="sub-lead">Ana istasyondan Cumhuriyet Meydanı'na, bira fabrikasından Techmania'ya: iki yer seç, yürüyerek, tramvayla ve taksiyle süre ve masrafı karşılaştır.</p>
+    <div class="kmap">
+      <div>
+        <div class="calcf">
+          <div class="fld"><label for="cFrom">Nereden</label><select id="cFrom"></select></div>
+          <div class="fld"><label for="cTo">Nereye</label><select id="cTo"></select></div>
+        </div>
+        <div id="calcOut" aria-live="polite"></div>
+        <p class="note">Süreler tahminidir. Yürüme süresi saatte 4,8 km hızla ve sokakların dolambacı hesaba katılarak, metro süresi bekleme ve aktarma payıyla, taksi süresi ortalama trafikle hesaplanır.</p>
+      </div>
+      <div id="calcMap"></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>İşine yarayacak bağlantılar</h3><p class="sub-lead">Plzeň'de metro yoktur. Tramvay, troleybüs ve otobüs ağını şehir işletmesi PMDP çalıştırır. Tarihî merkez yürünür.</p>
+    <div class="kmap">
+      <div class="lines">
+      </div>
+      <div id="metroMap"></div>
+    </div>
+  </div>
+
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Biletler ve kartlar</h3>
+      <div class="tbl"><table style="min-width:0">
+        <thead><tr><th>Bilet</th><th>Geçerlilik</th><th>Ücret</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td><b>Prag treni</b></td><td>≈ 1 sa 25–35 dk</td><td>≈ 145–180 Kč</td></tr>
+          <tr><td><b>Tramvay, tek bilet (SMS)</b></td><td>35 dk</td><td>28 Kč</td></tr>
+          <tr><td><b>Tramvay, günlük bilet (SMS)</b></td><td>24 sa</td><td>99 Kč</td></tr>
+          <tr><td><b>Günlük bilet</b></td><td>24 saat</td><td>≈ 100–130 Kč</td></tr>
+          <tr><td><b>Taksi, ana istasyondan meydana</b></td><td>≈ 5 dk</td><td>≈ 150–250 Kč</td></tr>
+        </tbody></table></div>
+      <p class="note">Fiyatlar yaklaşıktır. Tren fiyatı bilete ve saate göre değişir, ČD'nin sitesinden ya da IDOS'tan kontrol et. Tramvay biletini kartla araç içindeki okuyucudan da alırsın. Son kontrol 7 Kasım 2026.</p>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Tren ve otobüs</h3>
+      <dl class="kv">
+        <dt><b>Praha hl. n.</b> · Plzeň hl. n.</dt><dd>Tren, ≈ 1 sa 25–35 dk</dd>
+        <dt><b>Praha Zličín</b> · Plzeň otogarı</dt><dd>Otobüs, ≈ 1 sa</dd>
+        <dt><b>Plzeň hl. n.</b> · Mariánské Lázně</dt><dd>Tren, ≈ 1 sa</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="sub"><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Kart mı, temassız mı?</h3><ul class="ticks">
+        <li>Tarihî merkezde bütün yerlere yürüyerek ulaşırsın. Meydan ve çevresindeki sokaklar düzdür.</li>
+        <li>Park kuşağı eski surların yerindedir ve merkezi çevreler. Müzeler ve tiyatro bu kuşağın üstündedir.</li>
+        <li>Tramvaylar meydanın yakınından geçer ve Techmania'ya, hayvanat bahçesine ve ana istasyona gider.</li>
+        <li>Araçla geldiysen merkezin kenarındaki otoparkları kullan.</li>
+        <li>Euro dışında bir para birimiyle çalışan bir banka kartıyla ödediğinde bankan her işleme döviz çevirme ücreti ya da komisyon ekleyebilir. Yola çıkmadan kartının yurt dışı koşullarına bak. Yurt dışı harcamalarından ücret almayan bir kart ya da euro hesabına bağlı bir banka kartı bu farkı ortadan kaldırır.</li>
+      </ul></div>
+
+  <div class="sub g3">
+    <div><h4 class="mini">Taksi</h4><ul class="ticks">
+        <li>Taksiyi otelinden ya da uygulamayla çağır. Fiyatı binmeden önce sor.</li>
+        <li>Gece geç saatte istasyondan otele taksi kullanmak pratiktir.</li>
+      </ul></div>
+    <div><h4 class="mini">Araç kiralama</h4><ul class="ticks">
+        <li>Şehir içinde araca ihtiyacın olmaz. Kladruby ve Švihov için işine yarar.</li>
+        <li>Çekya'da otoyol kullanmak için dijital vinyeta (e-známka) satın almak gerekir.</li>
+      </ul></div>
+    <div><h4 class="mini">Danışma</h4><ul class="ticks">
+        <li>Şehrin danışma ofisi Cumhuriyet Meydanı'ndaki İmparatorluk Evi'ndedir.</li>
+        <li>Harita, bilet ve Adolf Loos turlarının ayırtması buradan yapılır.</li>
+      </ul></div>
+  </div>
+</section>
+
+<!-- 07 YEREL YAŞAM -->
+<section class="ch wrap" data-sec="yerel" aria-labelledby="h-yerel" hidden>
+  <header class="ch-head"><div><p class="lab">Yerel yaşam</p><h2 id="h-yerel">Plzeňli gibi yaşamak</h2><p class="ch-lead">Plzeň, Çekya'nın dördüncü büyük şehridir ve Škoda fabrikalarıyla büyümüş bir sanayi ve öğrenci şehridir. Bu bölüm, bira turunun ötesinde şehrin gündelik ritmini anlatır.</p></div></header>
+
+  <div class="sub"><h3>Biranın şehrinin sofrası</h3><p class="sub-lead">Batı Bohemya mutfağı doyurucudur: et, sos, ekmek köftesi ve elbette bira. Öğle yemeğinde pubların günlük menüsü hem ucuz hem doyurucudur.</p>
+    <div class="pasta">
+      <div><h4>Svíčková</h4><p>Marine edilmiş dana bel eti, kök sebzelerden yapılan kremalı bir sosla, ekmek köftesi ve tatlı krema ile servis edilir.</p><span class="pork safe">Süt ürünü ve gluten içerir</span></div>
+      <div><h4>Guláš</h4><p>Macar usulü yahni, genellikle dana ya da domuz etiyle yapılır ve ekmek köftesiyle yenir. Pilsner'la en sık yenen yemektir.</p><span class="pork safe">Dana ya da domuz</span></div>
+      <div><h4>Smažený sýr</h4><p>Kızarmış peynir, ekmek kırıntısı kaplı ve tartar sosla servis edilir. Vejetaryen yemeklerin en sevileni budur.</p><span class="pork safe">Et içermez</span></div>
+      <div><h4>Pivní sýr</h4><p>Birayla ezilmiş yumuşak peynir, soğan ve hardalla ekmeğe sürülür. Pubların klasik meze tabağıdır.</p><span class="pork safe">Süt ürünü ve gluten içerir</span></div>
+    </div>
+    <p class="note">Çek mutfağında domuz eti çok yaygındır. Domuz yemiyorsan menüde “vepřové” kelimesini ara ve garsona sor.</p>
+  </div>
+
+  <div class="sub g2">
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Restoranda</h3>
+      <ul class="ticks">
+        <li>Çek pubunda (hospoda) garson masana bira getirir ve masadaki kâğıda çizgi çeker. Yeni bira istemiyorsan 'Už ne, děkuji' de.</li>
+        <li>Plzeň'de “tankové pivo” yazan puplarda bira, fabrikadan pastörize edilmeden tanklarla gelir ve daha tazedir.</li>
+        <li>Hesabı masada ödersin. Garsona 'Zaplatím, prosím' de. Bahşiş genellikle hesabı yuvarlayarak ya da yüzde 10 civarı bırakılır.</li>
+        <li>Öğle yemeği (polední menu) 11:00 ile 14:00 arasında sunulur ve ucuzdur.</li>
+        <li>Su masaya gelmez ve ücretlidir. Musluk suyu için “vodu z kohoutku” iste.</li>
+      </ul>
+    </div>
+    <div><h3 style="font-family:var(--f-display);font-weight:600;font-size:1.7rem;margin-bottom:12px">Kahve kültürü</h3>
+      <ul class="ticks">
+        <li>Park kuşağında ve meydanın çevresinde kafeler çoktur. Pasta ve kahve öğleden sonranın klasiğidir.</li>
+        <li>Bir espresso yerel kafede ≈ 55–85 Kč'dir.</li>
+        <li>DEPO2015'in kafesi şehrin genç ve yaratıcı kesiminin buluşma yeridir.</li>
+      </ul>
+      <h4 class="mini" style="margin-top:22px">Bahşiş</h4>
+      <ul class="ticks"><li>Bahşiş zorunlu değildir ama beklenir. Hesabı yüzde 10 civarı yuvarlamak yaygındır. Kartla ödüyorsan bahşişin tutarını ödemeden önce söyle.</li></ul>
+    </div>
+  </div>
+
+  <div class="sub g3">
+    <div><h4 class="mini">Bira şehri</h4><ul class="ticks">
+        <li>“Pilsner” adı Plzeň'in Almanca adı Pilsen'den gelir ve “Plzeňli” demektir. 1842'de burada yapılan açık renkli lager dünyaya yayıldı.</li>
+        <li>“Urquell” Almanca “ilk kaynak” demektir. Çekçe adı Prazdroj da aynı anlamı taşır.</li>
+        <li>Plzeň'de Gambrinus da aynı fabrikada yapılır. Yerel küçük bira imalathaneleri de vardır.</li>
+      </ul></div>
+    <div><h4 class="mini">Škoda ve futbol</h4><ul class="ticks">
+        <li>Emil Škoda 1869'da Plzeň'deki bir makine fabrikasını satın aldı. Škoda fabrikaları silah, lokomotif ve makine üreterek şehri büyüttü.</li>
+        <li>Bugünkü Škoda otomobilleri Mladá Boleslav'da yapılır, Plzeň'deki Škoda ayrı bir sanayi şirketidir.</li>
+        <li>Şehrin futbol takımı Viktoria Plzeň, Çekya liginin en başarılı takımlarından biridir ve Doosan Arena'da oynar.</li>
+      </ul></div>
+    <div><h4 class="mini">Günlük hayat</h4><ul class="ticks">
+        <li>Şehir kalabalık değildir ve Prag'dan çok daha ucuzdur.</li>
+        <li>Çekçede merhaba ve teşekkür etmek önemlidir: “Dobrý den” (iyi günler), “Děkuji” (teşekkürler).</li>
+        <li>Şehir ABD ordusunun 1945'teki kurtarışını her yıl anar. Kurtuluş Şenliği Plzeňliler için çok önemlidir.</li>
+      </ul></div>
+  </div>
+
+  <div class="sub"><h3>Gece hayatı</h3>
+    <div class="g3">
+      <div><h4 class="mini">Büyük Tiyatro</h4><p>Opera, operet ve bale. Program djkt.eu'da.</p></div>
+      <div><h4 class="mini">Büyük Sinagog</h4><p>Akşam konserleri, program danışma ofisinde.</p></div>
+      <div><h4 class="mini">Restaurace U Salzmannů</h4><p>Şehrin en eski pubunda akşam birası.</p></div>
+      <div><h4 class="mini">Doosan Arena</h4><p>Viktoria Plzeň maçı varsa futbol.</p></div>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Nerede yenir, nerede içilir?</h3><p class="sub-lead">Yıllardır açık olan ve yerlilerin de gittiği yerleri seçtik. Mekânlar kapanabilir ya da saatlerini değiştirebilir. Gitmeden önce adına dokunup haritada güncel saatlerine bak.</p>
+    <div class="g3">
+      <div><h4 class="mini">Yemek</h4><ul class="ticks"><li><b><a href="https://www.google.com/maps/search/?api=1&query=Na%20Spilce%2C%20Plze%C5%88" target="_blank" rel="noopener">Na Spilce</a></b> · <span class="muted">U Prazdroje · Bira fabrikası</span><br>Bira fabrikasının içindeki büyük bira salonu. Çek mutfağını fabrikanın tanktan gelen birasıyla yersin.</li><li><b><a href="https://www.google.com/maps/search/?api=1&query=Restaurace%20U%20Salzmann%C5%AF%2C%20Plze%C5%88" target="_blank" rel="noopener">Restaurace U Salzmannů</a></b> · <span class="muted">Pražská · Eski şehir</span><br>1637'den beri bira sunduğu anlatılan, şehrin en eski pubu. Klasik Çek yemekleri ve Pilsner.</li></ul></div>
+      <div><h4 class="mini">Kahve ve tatlı</h4><ul class="ticks"><li><b><a href="https://www.google.com/maps/search/?api=1&query=Kav%C3%A1rna%20M%C4%9B%C5%A1%C5%A5ansk%C3%A1%20beseda%2C%20Plze%C5%88" target="_blank" rel="noopener">Kavárna Měšťanská beseda</a></b> · <span class="muted">Kopeckého sady · Park kuşağı</span><br>19. yüzyıl sonundan kalma Měšťanská beseda binasındaki kafe. Yüksek tavanlı salonda kahve ve pasta.</li></ul></div>
+    </div>
+    <p class="note"><a href="../mekanlar/">Mekânların tam listesi ve gezginlerin notları →</a></p>
+  </div>
+  <div class="sub"><h3>Fotoğraf için en güzel yerler</h3><p class="sub-lead">Manzara, gün batımı ve kalabalıksız kareler için nereye, hangi saatte gidileceği.</p>
+    <div class="g3">
+      <div><h4 class="mini">Katedral kulesi</h4><p><b>Açık bir öğle</b></p><p>Meydanın kare planını ve kızıl çatıları tepeden çekersin.</p></div>
+      <div><h4 class="mini">Cumhuriyet Meydanı</h4><p><b>Sabah</b></p><p>Altın çeşmelerden birini katedralle aynı karede çekersin.</p></div>
+      <div><h4 class="mini">Bira fabrikası</h4><p><b>Öğleden önce</b></p><p>Jübile kapısının çift kemerini avludan çekersin.</p></div>
+      <div><h4 class="mini">Büyük Sinagog</h4><p><b>Öğleden önce</b></p><p>İki kuleli cepheyi parktan geniş açıyla çekersin.</p></div>
+      <div><h4 class="mini">Belediye Binası</h4><p><b>Öğleden sonra</b></p><p>Sgraffito cepheyi Veba Anıtı'yla birlikte çekersin.</p></div>
+      <div><h4 class="mini">Büyük Tiyatro</h4><p><b>Akşam</b></p><p>Işıklandırılmış cepheyi parkın kenarından çekersin.</p></div>
+    </div>
+  </div>
+  <div class="sub"><h3>Temel İtalyanca</h3>
+    <div class="tbl"><table class="phr">
+      <tbody>
+        <tr><td>Buongiorno</td><td>buonciorno</td><td>Günaydın, iyi günler</td></tr>
+        <tr><td>Buonasera</td><td>buonasera</td><td>İyi akşamlar</td></tr>
+        <tr><td>Grazie</td><td>gratsiye</td><td>Teşekkürler</td></tr>
+        <tr><td>Per favore</td><td>per favore</td><td>Lütfen</td></tr>
+        <tr><td>Scusi</td><td>skuzi</td><td>Affedersiniz</td></tr>
+        <tr><td>Quanto costa?</td><td>kuanto kosta</td><td>Ne kadar?</td></tr>
+        <tr><td>Il conto, per favore</td><td>il konto per favore</td><td>Hesap lütfen</td></tr>
+        <tr><td>Un caffè</td><td>un kaffe</td><td>Bir espresso</td></tr>
+        <tr><td>Senza carne di maiale</td><td>senza karne di mayale</td><td>Domuz eti olmadan</td></tr>
+        <tr><td>Na zdraví</td><td>na zdravi</td><td>Sağlığına.</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<!-- 08 BİLGİ -->
+<section class="ch wrap" data-sec="bilgi" aria-labelledby="h-bilgi" hidden>
+  <header class="ch-head"><div><p class="lab">Bilmen gerekenler</p><h2 id="h-bilgi">Yola çıkmadan</h2><p class="ch-lead">İnternete nasıl bağlanacaksın, kartla her yerde ödeyebilecek misin, başın sıkışırsa kimi arayacaksın? Hepsinin cevabı, bavul listesiyle birlikte burada.</p></div></header>
+  <div class="sub"><h3>Acil numaralar</h3>
+    <div class="emg">
+      <div><span class="lab">Tek acil numara</span><b>112</b><span class="muted">Polis, ambulans, itfaiye</span></div>
+      <div><span class="lab">Ambulans</span><b>155</b><span class="muted">Doğrudan ambulans</span></div>
+      <div><span class="lab">Türk vatandaşları</span><b style="font-size:1.2rem;line-height:1.5">konsolosluk.gov.tr</b><span class="muted">Türkiye'nin Prag Büyükelçiliği'nin iletişim bilgileri</span></div>
+    </div>
+  </div>
+
+  <div class="sub g3">
+    <div><h4 class="mini">İnternet, eSIM ve SIM kart</h4><ul class="ticks">
+        <li>AB dışından bir hatla Çekya'da internete girmek ve konuşmak çok pahalıya gelebilir. AB'de verilmiş hatlarda ise dolaşım ücreti alınmaz. Telefonun eSIM destekliyorsa yola çıkmadan bir haftalık eSIM paketi al. Yaklaşık 5–10 € tutar ve uçak iner inmez internetin olur.</li>
+        <li>Yerel SIM kart istersen pasaportunla bir O2, T-Mobile ya da Vodafone mağazasına git. Ön ödemeli paketler genellikle 300–600 Kč tutar.</li>
+      </ul></div>
+    <div><h4 class="mini">Elektrik prizi</h4><ul class="ticks">
+        <li>Çekya'da elektrik, Türkiye'deki gibi 230 volttur. Prizler C ve E tipindedir.</li>
+        <li>Türkiye'deki fişler adaptörsüz takılır. ABD ve İngiltere fişleri için adaptör şart.</li>
+      </ul></div>
+    <div><h4 class="mini">Para ve ödeme</h4><ul class="ticks">
+        <li>Çekya Schengen ülkesi ama euro kullanmaz: para birimi Çek korunasıdır (Kč, CZK). Kartla ve temassız ödeme neredeyse her yerde geçer. Küçük kafeler, pazar tezgâhları ve bazı pubların bahşişi için cebinde biraz nakit koruna bulunsun.</li>
+        <li>Bazı turistik dükkânlar euroyla ödemeyi kabul eder ama kuru kötüdür. Kartla öderken cihaz kendi para biriminle mi koruna ile mi ödemek istediğini sorarsa her zaman korunayı seç. Kendi para birimini seçersen tutar kötü bir kurdan çevrilir.</li>
+        <li>Şehirde “0% komisyon” yazan döviz büroları genellikle çok kötü kur uygular. Döviz bozdurmak yerine bir bankanın ATM'sinden koruna çek. Euronet gibi bağımsız ATM'ler yüksek komisyon alır ve bu ATM'ler Prag'ın turistik meydanlarında çoktur.</li>
+        <li>Yola çıkmadan önce bankana kartının yurt dışında kullanıma açık olduğunu ve komisyon oranlarını sor.</li>
+      </ul></div>
+    <div><h4 class="mini">Hastane ve eczane</h4><ul class="ticks">
+        <li>Plzeň'de büyük bir üniversite hastanesi (Fakultní nemocnice Plzeň) ve çok sayıda eczane vardır. Ciddi durumda 155'i ya da 112'yi ara. Eczaneye “lékárna” denir ve yeşil haç işaretiyle tanınır.</li>
+      </ul></div>
+    <div><h4 class="mini">Seyahat sigortası</h4><ul class="ticks">
+        <li>Vizeyle gidiyorsan seyahat sağlık sigortası zaten zorunludur. Poliçe en az 30.000 € teminatlı olmalı ve bütün Schengen ülkelerinde geçerli olmalıdır.</li>
+        <li>Vizesiz seyahat ediyor olsan da sigorta yaptır. Çekya'da yabancılara özel hastane masrafları yüksektir ve küçük bir kaza bile bütçeni sarsabilir.</li>
+        <li>Poliçenin bir çıktısını yanında taşı. Sigorta şirketinin acil yardım hattını da telefonuna kaydet.</li>
+      </ul></div>
+    <div><h4 class="mini">Erişilebilirlik ve çocuklar</h4><ul class="ticks">
+        <li>Tarihî merkez düzdür, bebek arabasıyla rahat gezilir.</li>
+        <li>Yeraltı geçitlerine 3 yaşından küçük çocuklar giremez. Dar ve serin geçitler kapalı alan korkusu olanlara önerilmez.</li>
+        <li>Bira fabrikası turunda çocuklar da katılır, tadım yalnız 18 yaş üstünedir.</li>
+      </ul></div>
+  </div>
+
+  <div class="sub"><h3>Bavul listesi</h3><p class="sub-lead">Gideceğin ayı ve kaç gün kalacağını seç. Giysiler o ayın havasına, adetler de gün sayısına göre ayarlanır. İşaretlediklerin bu cihazda saklanır. Listeye sonra döndüğünde kaldığın yerden devam edersin.</p>
+    <div class="calcf" style="max-width:640px"><div class="fld"><label for="bagAy">Gideceğin ay</label><select id="bagAy"></select></div><div class="fld"><label for="bagGun">Kaç gün</label><input id="bagGun" type="number" min="1" max="30" inputmode="numeric"></div><div class="fld" style="align-self:end"><button class="btn ghost" type="button" data-pdf>PDF indir</button></div></div>
+    <div class="chk" id="bag"></div>
+  </div>
+
+  <div class="sub" id="valiz"><h3>Valiz ölçüleri ve kilo sınırları</h3><p class="sub-lead">Ucuz biletin sürprizi çoğu zaman kapıda çıkar: Çantan ölçü kutusuna sığmazsa ücret ödeyip onu uçak altına verirsin. Uçak altı bagaj hakkın ise bilet paketine göre değişir ve biletinde yazar.</p>
+    <div class="tbl"><table><thead><tr><th>Havayolu</th><th>Her bilette ücretsiz</th><th>Kabin valizi</th></tr></thead><tbody>
+      <tr><td><b><a href="https://www.turkishairlines.com/tr-tr/any-questions/carry-on-baggage/" target="_blank" rel="noopener">Türk Hava Yolları</a></b></td><td>40 × 30 × 15 cm, en fazla 4 kg kişisel eşya.</td><td>Ekonomi sınıfında bir adet 55 × 40 × 23 cm, en fazla 8 kg valiz bilete dahildir. Business sınıfında iki adet dahildir.</td></tr>
+      <tr><td><b><a href="https://www.flypgs.com/pegasus-bagaj-kurallari" target="_blank" rel="noopener">Pegasus</a></b></td><td>Koltuk altına sığan 40 × 30 × 15 cm, en fazla 3 kg çanta.</td><td>55 × 40 × 23 cm, en fazla 8 kg valiz Süper Eko, Avantaj ve Comfort Flex paketlerine dahildir. Yurt dışı uçuşlardaki Light paketinde kabin valizi yoktur.</td></tr>
+      <tr><td><b><a href="https://ajet.com/" target="_blank" rel="noopener">AJet</a></b></td><td>40 × 30 × 15 cm, en fazla 4 kg kişisel eşya.</td><td>55 × 40 × 23 cm, en fazla 8 kg valiz. Yurt dışı uçuşlarda en ucuz pakette (Basic) dahil değildir. Bileti alırken paket ayrıntısına bak.</td></tr>
+      <tr><td><b><a href="https://help.ryanair.com/hc/en-gb/articles/12888036565521-Ryanair-s-Bag-Policy" target="_blank" rel="noopener">Ryanair</a></b></td><td>Koltuk altına sığan 40 × 30 × 20 cm küçük çanta.</td><td>55 × 40 × 20 cm, en fazla 10 kg valiz yalnızca ücretli Priority hizmetiyle alınabilir.</td></tr>
+      <tr><td><b><a href="https://www.wizzair.com/en-gb/help-centre/booking-information-and-services/baggage/baggage-allowance/cabin-baggage" target="_blank" rel="noopener">Wizz Air</a></b></td><td>Koltuk altına sığan 40 × 30 × 20 cm küçük çanta.</td><td>55 × 40 × 23 cm, en fazla 10 kg valiz yalnızca ücretli WIZZ Priority hizmetiyle alınabilir.</td></tr>
+    </tbody></table></div>
+    <p class="sub-lead" style="margin-top:12px">THY, Pegasus, Ryanair ve Wizz Air bilgilerini havayollarının kendi sayfalarından, AJet bilgisini bilet satış sitelerinden aldık. Son kontrolü 10 Kasım 2026'da yaptık. Kurallar sık değişir. Uçmadan önce bileti aldığın havayolunun sayfasına bir kez daha bak.</p>
+  </div>
+
+  <div class="sub" id="scams"><h3>Dolandırıcılıklar ve turist tuzakları</h3><p class="sub-lead">Plzeň güvenli ve sakin bir şehirdir. Turistlerin en sık karşılaştığı sorunlar hesaba eklenen kalemler, döviz bürolarının kurları ve kur dönüştürme oyunlarıdır.</p>
+    <ul class="scams">
+      <li><b>Hesaba eklenen kalemler</b><p>Bazı restoranlar istenmeyen ekmek ya da servis ücretini hesaba ekler.</p><p class="do">Menüdeki fiyatı ve hesabı kalem kalem kontrol et.</p></li>
+      <li><b>Döviz bürosu</b><p>Bazı döviz bürolarında vitrindeki kur ile ödenen tutar farklıdır ya da yüksek komisyon kesilir.</p><p class="do">Bankamatikten korunaya çek ya da çevirmeden önce eline geçecek tutarı sor.</p></li>
+      <li><b>Kur dönüştürme oyunu</b><p>Kart makinesi ödemeyi “kendi para biriminle” yapmayı önerir. Bu seçenek kolay görünür ama tutar kötü bir kurdan çevrilir.</p><p class="do">Her zaman korunayı (Kč) seç.</p></li>
+      <li><b>Taksi fiyatı</b><p>İstasyon önündeki bazı taksiler turistlerden fazla ücret ister.</p><p class="do">Fiyatı binmeden önce sor ya da uygulamayla çağır.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CAPOLINEA: KİŞİSEL ROTA -->
+<section class="ch wrap" data-sec="rotam" aria-labelledby="h-rotam" hidden>
+  <header class="ch-head"><div><p class="lab">Kişisel rota</p><h2 id="h-rotam">Benim Plzeň'im</h2><p class="ch-lead">Kaydettiğin yerler, konaklama bölgene göre en kısa sırayla günlere bölündü. Gittiğin yeri işaretle.</p></div></header>
+  <div class="rsum" id="rsum"></div>
+  <div class="calcf" style="margin-top:18px;max-width:640px">
+    <div class="fld"><label for="baseSel">Konakladığım bölge</label><select id="baseSel"></select></div>
+    <div class="fld" style="align-self:end"><button class="btn ghost" type="button" id="clearPlan">Rotayı temizle</button></div>
+    <div class="fld" style="align-self:end"><button class="btn" type="button" data-pdf>Planı PDF indir</button></div>
+  </div>
+  <div class="rgrid">
+    <div id="rdays"></div>
+    <div id="rmapBox"></div>
+  </div>
+</section>
+
+</main>
+<div id="pdf" aria-hidden="true"></div>
+
+<footer class="wrap">
+  <p><b>Road is Life</b> · Plzeň dosyası · <i>“The road is life.”</i> Jack Kerouac</p>
+  <p>Fiyatlar, saatler ve kurallar yaklaşık değerlerdir. Son kontrol 7 Kasım 2026. Yola çıkmadan önce resmi sitelerden teyit et.</p>
+  <details class="credits"><summary>Fotoğraf künyeleri</summary><p></p></details>
+</footer>
+
+<script>window.jsVectorMap={addMap:function(n,d){window.__WORLD=d;}};</script>
+<script src="/seyyah-site/varlik/dunya.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s);};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ============ VERİ TABLOLARI ============
+   Her tablo ayrı: yerler, bölgeler, aylar, etkinlikler, günübirlikler, hazır planlar, metro hatları.
+   Gerçek sitede her biri veritabanında ayrı tablo olacak; yeni şehir = aynı tabloları doldurmak. */
+
+var C={"id":"plzen","ad":"Plzeň","it":"Plzeň","ulke":"cekya","ulkeAd":"Çekya","bolge":"Plzeň bölgesi","tz":"Europe/Prague","la":49.7473,"lo":13.3776,"koordinat":"49°45′ K · 13°23′ D","yas":"≈ 730 yaşında","merhaba":"Ahoj! Vítej v","oneCikan":["prazdroj","katedrala","podzemi","synagoga","namesti","loos"],"ozet":"21 yer, Pilsner Urquell Bira Fabrikası, Aziz Bartolomeus Katedrali'nin kulesi, ortaçağ yeraltı geçitleri, Büyük Sinagog, Adolf Loos'un daireleri ve Techmania","aciklama":"Plzeň için tek dosya: 21 yer, bira fabrikası ve yeraltı turları, katedral kulesi, Büyük Sinagog, Adolf Loos'un daireleri, rota planlayıcı, nerede kalınır ve Prag'dan trenle ulaşım.","gizliLead":"Bira kuyruğunun ötesinde, Adolf Loos'un mermer daireleri, Spejbl ile Hurvínek'in doğduğu kukla şehri, Fransiskenlerin Gotik şapeli ve eski otobüs garajında kurulan sanat merkezi seni bekliyor.","ek":{"da":"Plzeň'de","ya":"Plzeň'e","yi":"Plzeň'i","m":"Plzeň'im","nin":"Plzeň'in","dan":"Plzeň'den"},"ucus":"≈ 2 sa 50 dk","harita":{"la0":49.76,"la1":49.736,"lo0":13.354,"lo1":13.392},"us":"merkez","hesap":["prazdroj","katedrala"],"ornekPlan":["namesti","katedrala","radnice","podzemi","prazdroj","synagoga"],"aktarma":[],"taksi":{"ad":"Taksi","acilis":60,"km":35,"min":80,"hiz":20,"ek":5},"toplu":{"ad":"Tramvay","kisa":"tramvay","fiil":"Tramvaya bin","bilet":"≈ 24–30 Kč","harita":"PMDP tramvay haritası","yok":"Yürü. Tarihî merkez küçüktür ve bira fabrikası ile ana istasyon meydana ≈ 10 dakikadır. Techmania ve hayvanat bahçesi için tramvaya bin."},"etiket":[["ESKİ ŞEHİR",49.749,13.376],["BİRA FABRİKASI",49.7458,13.388],["ANA İSTASYON",49.742,13.3895],["TECHMANIA",49.7392,13.362],["ZOO",49.7592,13.357]],"ekAlan":[],"matris":[["namesti","Cumhuriyet Meydanı"],["katedrala","Katedral"],["podzemi","Yeraltı geçitleri"],["prazdroj","Bira fabrikası"],["synagoga","Büyük Sinagog"],["techmania","Techmania"]],"sehirler":[{"id":"prag","ad":"Prag","url":"/seyyah-site/cekya/prag/planla/"},{"id":"kutna-hora","ad":"Kutná Hora","url":"/seyyah-site/cekya/kutna-hora/planla/"},{"id":"karlovy-vary","ad":"Karlovy Vary","url":"/seyyah-site/cekya/karlovy-vary/planla/"},{"id":"marianske-lazne","ad":"Mariánské Lázně","url":"/seyyah-site/cekya/marianske-lazne/planla/"},{"id":"plzen","ad":"Plzeň","url":"/seyyah-site/cekya/plzen/planla/"},{"id":"cesky-krumlov","ad":"Český Krumlov","url":"/seyyah-site/cekya/cesky-krumlov/planla/"},{"id":"ceske-budejovice","ad":"České Budějovice ve Hluboká","url":"/seyyah-site/cekya/ceske-budejovice/planla/"},{"id":"brno","ad":"Brno","url":"/seyyah-site/cekya/brno/planla/"},{"id":"olomouc","ad":"Olomouc","url":"/seyyah-site/cekya/olomouc/planla/"},{"id":"mikulov","ad":"Mikulov ve Lednice–Valtice","url":"/seyyah-site/cekya/mikulov/planla/"}]};
+var CATS=[["tarihi","Tarihi yerler ve anıtlar"],["muze","Müzeler ve galeriler"],["dini","Kiliseler ve dini yapılar"],["meydan","Meydanlar ve çeşmeler"],["mimari","Mimari yapılar"],["foto","Manzara ve fotoğraf noktaları"],["doga","Parklar ve doğa"],["mahalle","Yerel mahalleler"],["gizli","Gizli kalmış yerler"],["gece","Akşam ve gece hayatı"],["moda","Alışveriş ve moda"],["spor","Spor ve stadyumlar"],["bilet","Bilet ve rezervasyon"]];
+var CIMG={"meydan":"meydan","tarihi":"tarihi","muze":"muze","mimari":"mimari","dini":"dini","gizli":"gizli","doga":"doga","moda":"moda","spor":"spor","gece":"gece","foto":"foto","mahalle":"mahalle","bilet":"hero"};
+var SIMG={"vize":"vize","kesfet":"tarihi","planla":"planla","konaklama":"konaklama","havalimani":"havalimani","ulasim":"ulasim","yerel":"yerel","bilgi":"bilgi","rotam":"rotam"};
+var BGIMG={"vize":"hero","kesfet":"foto","planla":"mimari","konaklama":"mahalle","havalimani":"doga","ulasim":"hero","yerel":"gece","bilgi":"foto","rotam":"doga"};
+var TK={"sart":"Rezervasyon şart","oner":"Online önerilir","gise":"Gişede","free":"Ücretsiz"};
+var TKNOT={"sart":"Bileti mutlaka internetten, günler önceden al. Giriş saatli ve kontenjanlı, gişede aynı gün için bilet çoğu zaman kalmıyor.","oner":"Bileti internetten almak daha avantajlı. Saatli bilet gişe sırasını atlatır. Yoğun saatlerde gişe kuyruğu uzun olabiliyor. İnternetten alırken küçük bir rezervasyon ücreti eklenebilir.","gise":"Bileti gişeden almak yeterli. Sıra genelde kısa, önceden internetten almanın belirgin bir avantajı yok.","free":"Giriş ücretsiz, bilet gerekmez."};
+var ATAGS=[["all","Hepsi"],["butce","Bütçe dostu"],["lux","Lüks"],["butik","Butik"],["aile","Aileler için"],["cift","Çiftler için"],["havalimani","Havalimanına yakın"]];
+var MAB=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+var LEVEL=["","çok az","az","orta","yüksek","en yüksek"];
+var BLAB={"konak":["Konaklama","var(--stamp)"],"yemek":["Yeme içme","var(--ochre)"],"ulasim":["Şehir içi ulaşım","var(--line-b)"],"giris":["Müze ve girişler","var(--line-c)"],"vergi":["Konaklama vergisi","var(--muted)"]};
+var BAG=[["Belgeler",["Pasaport ve vize","Sigorta poliçesi çıktısı","Uçak ve otel rezervasyonları","Kimlik kartı","Yurt dışı çıkış harcı ödendi"]],["Elektronik",["Küçük priz çevirici (bazı eski prizler üç delikli L tipi)","Powerbank (el bagajında)","eSIM yüklendi ve denendi","Kulaklık"]],["Giyim",["Rahat yürüyüş ayakkabısı","Omuz ve dizi kapatan kıyafet","Şal ya da ince hırka"]],["Pratik",["Matara","Önde taşınacak küçük çanta","Biraz nakit euro","İlaçlar ve reçeteleri"]]];
+var PLACES=[{"id":"katedrala","n":"Aziz Bartolomeus Katedrali","it":"Katedrála sv. Bartoloměje","t":["dini","mimari","tarihi","foto"],"la":49.74748,"lo":13.37751,"h":1,"tk":"gise","p":"İçerisi bağışla · kule ücretli, gişede güncel fiyat","url":"https://www.visitplzen.eu","best":"Öğleden önce, kuleye açık havada","acik":"Aziz Bartolomeus Katedrali, kral II. Václav'ın 1295'te Plzeň'i kurmasından kısa süre sonra yapımına başlanan Gotik bir kilisedir ve şehrin ortasında, Cumhuriyet Meydanı'nın tam merkezinde durur. Kulesi yaklaşık 103 metredir ve Çekya'nın en yüksek kilise kulesidir. Sunakta 1390 civarına tarihlenen Plzeň Madonnası, Çek Gotik heykelinin en güzel örneklerinden biri sayılır. Yan taraftaki Šternberk Şapeli Geç Gotik tonozlarıyla bilinir. Kilise 1993'te Plzeň piskoposluğu kurulunca katedral oldu. Üç yıllık onarımdan sonra 2021'de yeniden açıldı ve çatı katına katedralin ve çanlarının tarihini anlatan bir sergi eklendi.","tip":"Katedralin içine giriş bağışladır, kule ile çatı katı sergisi ücretlidir. Kuleye yaklaşık 300 basamakla çıkılır. İç mekân hafta içi 10:00–18:00, hafta sonu ve bayramlarda 13:00–18:00 açıktır. Kuzey taraftaki parmaklıkta duran küçük meleğe dokunup dilek tutmak gelenektir.","ph":"Kuleden meydanın kare planını ve kızıl çatıları tepeden çekersin. Açık havada Šumava dağları da görünür.","s":"aziz-bartolomeus-katedrali"},{"id":"namesti","n":"Cumhuriyet Meydanı","it":"náměstí Republiky","t":["tarihi","foto","mimari"],"la":49.74725,"lo":13.37759,"h":0.5,"tk":"free","p":"Ücretsiz","best":"Sabah ya da akşam","acik":"Cumhuriyet Meydanı, Plzeň'in ana meydanıdır ve Çekya'nın en büyük tarihî meydanlarından biridir. Şehir 1295'te düzgün bir ızgara planıyla kurulduğu için meydan neredeyse kusursuz bir dikdörtgendir ve ortasında katedral durur. Çevresinde Gotik, Rönesans ve Barok cepheli evler sıralanır. Meydanın köşelerine 2010'da Çek mimar Ondřej Císler'in tasarladığı üç altın çeşme kondu. Çeşmeler şehrin armasındaki deveyi, tazıyı ve meleği simgeler.","tip":"Şehrin danışma ofisi meydanın kuzey tarafındaki İmparatorluk Evi'ndedir (Císařský dům). Harita, bilet ve rehberli tur bilgisini buradan alırsın.","ph":"Altın çeşmelerden birini ön plana alıp arkasındaki katedrali çekersin.","s":"cumhuriyet-meydani"},{"id":"radnice","n":"Belediye Binası","it":"Radnice","t":["tarihi","mimari"],"la":49.74815,"lo":13.3774,"h":0.25,"tk":"free","p":"Dışarıdan ücretsiz","best":"Öğleden sonra","acik":"Plzeň Belediye Binası, 1554 ile 1558 arasında İtalyan mimar Giovanni de Statia'nın planıyla yapılmış bir Rönesans binasıdır. Cephesi sgraffito süslemeleri ve tepedeki kademeli alınlıklarla meydanın en dikkat çeken binasıdır. İmparator II. Rudolf 1599 ile 1600 arasında Prag'daki vebadan kaçıp yaklaşık dokuz ay Plzeň'de yaşadı. O dönemde Plzeň kısa bir süre imparatorluğun başkenti gibi oldu. Belediye binasının yanındaki İmparatorluk Evi bu döneme adını verir.","tip":"Bina bugün de belediye olarak kullanılır ve gezmek için açık değildir. Danışma ofisi yanındaki İmparatorluk Evi'ndedir.","ph":"Sgraffito cepheyi Veba Anıtı'yla birlikte meydanın karşı köşesinden çekersin.","s":"belediye-binasi"},{"id":"morovy","n":"Veba Anıtı","it":"Morový sloup","t":["tarihi","mimari"],"la":49.74794,"lo":13.37728,"h":0.25,"tk":"free","p":"Ücretsiz","best":"Her saat","acik":"Veba Anıtı, 1681'de şehri vuran veba salgınından sonra dikilen Barok bir sütundur. Tepesinde Meryem heykeli, kaidesinde vebaya karşı yardım istenen azizler durur. Anıt, Belediye Binası'nın hemen önündedir.","tip":"Meydanı gezerken yolun üstündedir, ayrıca zaman ayırman gerekmez.","ph":"Sütunu Belediye Binası'nın cephesiyle aynı karede çekersin.","s":"veba-aniti"},{"id":"prazdroj","n":"Pilsner Urquell Bira Fabrikası","it":"Plzeňský Prazdroj","t":["tarihi","bilet","yemek"],"la":49.74649,"lo":13.38626,"h":1.75,"tk":"oner","p":"430 Kč","url":"https://www.prazdrojvisit.cz/en/","best":"Öğleden önce","acik":"Plzeň'in şehir halkı 1839'da kendi bira fabrikasını kurmaya karar verdi ve 5 Ekim 1842'de Bavyeralı bira ustası Josef Groll burada ilk açık renkli, berrak lager birayı yaptı. Bu biraya şehrin adıyla “Pilsner” dendi ve bugün dünyada içilen biraların büyük bölümü bu tarzdadır. Fabrikanın girişindeki çift kemerli kapı 1892'de, fabrikanın 50. yılı için yapıldı. Yaklaşık 100 dakikalık turda dolum tesisini, eski bakır kazanların bulunduğu bira evini ve bir film ile malzeme sergisini gezersin. Tur, serin mahzenlerde meşe fıçıdan dökülen filtrelenmemiş ve pastörize edilmemiş bir bardak birayla biter.","tip":"Turlar Çekçe, Almanca ve İngilizce yapılır. Bileti önceden prazdrojvisit.cz'den al, yazın turlar dolar. Mahzenlerde tadım yalnız 18 yaş üstüne yapılır. Fabrika 24, 25, 26 Aralık ve 1 Ocak dışında yıl boyu açıktır. Mahzenler serindir, yanına ceket al.","ph":"Jübile kapısını avlunun içinden, kemerlerin ikisini birden sığdırarak çekersin.","s":"pilsner-urquell-bira-fabrikasi"},{"id":"podzemi","n":"Plzeň Tarihî Yeraltı Geçitleri","it":"Plzeňské historické podzemí","t":["tarihi","bilet","gizli"],"la":49.74875,"lo":13.38059,"h":1,"tk":"oner","p":"250 Kč","url":"https://www.prazdrojvisit.cz/en/","best":"Öğleden sonra ya da yağmurlu bir gün","acik":"Plzeň'in tarihî merkezinin altında 13 kilometreden uzun bir mahzen, kuyu ve geçit ağı vardır. Bunları 14. yüzyıldan başlayarak şehrin evleri yiyecek ve bira saklamak, kuşatmalarda saklanmak ve su toplamak için kazdı. Turda yaklaşık 800 metrelik bölümü, yerin 5 ile 7 metre altında gezersin. Rehber eski su kuyularını, ahşap su borularını ve geçitlerden çıkan buluntuları anlatır.","tip":"Tur yaklaşık 60 dakika sürer ve Çekçe, Almanca ve İngilizce yapılır. Aşağıda sıcaklık yaklaşık 10 °C'dir, ceket al. 3 yaşından küçük çocuklar güvenlik nedeniyle tura katılamaz. Geçitler 4–29 Ocak 2027 arasında bakım için kapalıdır.","ph":"Işık azdır. Dar tonozlu geçitleri rehberin fenerlerinin aydınlattığı anda çekersin.","s":"plze-tarihi-yeralti-gecitleri"},{"id":"pivmuzeum","n":"Bira Müzesi","it":"Pivovarské muzeum","t":["muze","tarihi","gizli"],"la":49.74885,"lo":13.3803,"h":1,"tk":"gise","p":"150 Kč","url":"https://www.prazdrojvisit.cz/en/","best":"Öğleden sonra, yeraltı turundan önce ya da sonra","acik":"Bira Müzesi, ortaçağda bira yapma hakkı olan bir şehir evinin Gotik binasındadır. Ev bir zamanlar malt kurutma yeri ve meyhaneydi. Müze, Pilsner'dan önceki yüzyılları da kapsayarak bira yapımının tarihini anlatır: eski malt evi, fıçıcı atölyesi, ortaçağ meyhanesi ve dünyanın dört yanından bira bardakları ve şişeleri.","tip":"Müze ve yeraltı geçitleri aynı sokaktadır, ikisini aynı öğleden sonra gezersin. Gezi yaklaşık 60 dakika sürer.","ph":"Eski meyhane odasını ve bira bardağı koleksiyonunu yakından çekersin.","s":"bira-muzesi"},{"id":"synagoga","n":"Büyük Sinagog","it":"Velká synagoga","t":["dini","mimari","tarihi"],"la":49.74667,"lo":13.37276,"h":0.75,"tk":"gise","p":"140 Kč · 10 yaş altı ücretsiz","url":"https://www.visitplzen.eu/en/visit-pilsen/the-best-of-pilsen/great-synagogue","best":"Öğleden önce","acik":"Büyük Sinagog, 1888 ile 1893 arasında Mağribi ve Romanesk üslupları birleştirerek yapıldı. Çekya'nın en büyük sinagogudur ve Avrupa'nın en büyük sinagogları arasında sayılır. Cephesindeki iki kule yaklaşık 45 metredir. İkinci Dünya Savaşı'nda Plzeň'in Yahudi topluluğunun büyük bölümü öldürüldü ve sinagog uzun yıllar boş kaldı. 1990'lardaki onarımdan sonra yeniden açıldı. Bugün sergiler ve konserler için kullanılır, içindeki akustik çok iyidir.","tip":"Sinagog pazar ile perşembe arasında 10:00–17:00 açıktır. Cuma, cumartesi ve Yahudi bayramlarında kapalıdır. Akşam konseri olan günlerde erken kapanabilir. Kuleye çıkılan rehberli turların tarihleri danışma ofisinde ve plzenskavstupenka.cz'de duyurulur.","ph":"İki kuleli cepheyi caddenin karşısındaki parktan geniş açıyla çekersin.","s":"buyuk-sinagog"},{"id":"loutky","n":"Kukla Müzesi","it":"Muzeum loutek","t":["muze","gizli"],"la":49.74638,"lo":13.37694,"h":1,"tk":"gise","p":"Gişede güncel fiyat","url":"https://www.muzeumloutek.cz","best":"Öğleden sonra","acik":"Plzeň, Çek kuklacılığının başkenti sayılır. Kuklacı Josef Skupa, Çekya'nın en ünlü kukla ikilisi baba Spejbl ile oğlu Hurvínek'i 1920'lerde burada yarattı. Kukla Müzesi, Cumhuriyet Meydanı'ndaki tarihî bir evde Çek kukla geleneğini, Skupa'nın kuklalarını ve dünyanın farklı yerlerinden kuklaları gösterir. Ziyaretçilerin kuklaları oynatabildiği bölümler de vardır.","tip":"Müze çocuklu aileler için şehrin en eğlenceli yerlerinden biridir. Pazartesi kapalı olabilir, sitesinden kontrol et.","ph":"Spejbl ile Hurvínek'in vitrinini yakından çekersin.","s":"kukla-muzesi"},{"id":"zcm","n":"Batı Bohemya Müzesi","it":"Západočeské muzeum","t":["muze","mimari","tarihi"],"la":49.74497,"lo":13.37928,"h":1.5,"tk":"gise","p":"Gişede güncel fiyat","url":"https://www.zcm.cz","best":"Öğleden önce","acik":"Batı Bohemya Müzesi 1878'de kuruldu ve 1890'larda bunun için yapılan Neo-Rönesans bir binaya taşındı. Bina, eski şehir surlarının yerine kurulan park kuşağının içindedir. Müzede bölgenin tarihini, doğasını ve sanatını anlatan sergiler vardır. En bilinen parçası, şehrin eski cephaneliğinden kalan ve Orta Avrupa'nın en büyük şehir silah koleksiyonlarından biri sayılan silahlıktır.","tip":"Pazartesi kapalıdır. Müzenin önündeki Kopecký parkı katedralden birkaç dakikalık yürüyüştür.","ph":"Neo-Rönesans cepheyi parkın ağaçlarının arasından çekersin.","s":"bati-bohemya-muzesi"},{"id":"masne","n":"Kasap Dükkânları (Batı Bohemya Galerisi)","it":"Masné krámy","t":["muze","mimari"],"la":49.74744,"lo":13.38014,"h":0.75,"tk":"gise","p":"Sergiye göre, gişede güncel fiyat","url":"https://www.zpc-galerie.cz","best":"Öğleden sonra","acik":"Masné krámy, şehrin ortaçağdan beri kasapların et sattığı uzun binadır. Bugünkü bina 1856'da yeniden yapıldı ve içi tek büyük salondur. Bina bugün Batı Bohemya Galerisi'nin sergi salonudur ve değişen sanat sergilerine ev sahipliği yapar.","tip":"Sergiler arasında bina kapalı olabilir. Galerinin sitesinden güncel sergiyi kontrol et.","ph":"Uzun cepheyi Pražská caddesinden, yanındaki Su Kulesi'yle birlikte çekersin.","s":"kasap-dukkanlari-bati-bohemya-galerisi"},{"id":"frantisk","n":"Fransisken Manastırı ve Aziz Barbara Şapeli","it":"Františkánský klášter","t":["dini","tarihi","gizli"],"la":49.74535,"lo":13.37869,"h":0.75,"tk":"gise","p":"Gişede güncel fiyat","best":"Öğleden önce","acik":"Fransisken Manastırı, şehrin kuruluşuyla aynı dönemde, 13. yüzyılın sonunda kuruldu ve Plzeň'in en eski binalarından biridir. Gotik avlusunun yanındaki Aziz Barbara Şapeli'nde 15. yüzyıl duvar resimleri korunmuştur. Manastırın bir bölümünde Plzeň piskoposluğunun dinî sanat müzesi vardır.","tip":"Manastır meydandan iki sokak güneydedir. Açık olduğu günler mevsime göre değişir, danışma ofisine sor.","ph":"Gotik avlunun kemerlerini köşeden çekersin.","s":"fransisken-manastiri-ve-aziz-barbara-sapeli"},{"id":"loos","n":"Adolf Loos İç Mekânları","it":"Loosovy interiéry","t":["mimari","gizli","bilet"],"la":49.74613,"lo":13.36423,"h":1.5,"tk":"oner","p":"Rehberli tur · önceden ayırt","url":"https://www.visitplzen.eu","best":"Öğleden sonra","acik":"Modern mimarinin öncülerinden Adolf Loos, 1907 ile 1932 arasında Plzeň'deki varlıklı, çoğu Yahudi ailelerin evleri için on üçten fazla iç mekân tasarladı. Mermer, ahşap ve aynalarla döşenmiş bu daireler, Loos'un süsü azaltıp malzemeyi öne çıkaran anlayışının en iyi örnekleri arasındadır. Ailelerin çoğu Holokost'ta öldü ve daireler uzun yıllar unutuldu. Bugün onarılan dairelerin bir bölümü, örneğin Husova caddesindeki Brummel Evi, rehberli turla gezilir.","tip":"Daireler yalnız rehberli turla gezilir. Tur tarihlerini, dilini ve fiyatını danışma ofisinden ya da visitplzen.eu'dan öğren ve önceden ayırt.","ph":"Mermer kaplı oturma odasını kapı eşiğinden, aynaların derinliğini sığdırarak çekersin.","s":"adolf-loos-ic-mekanlari"},{"id":"divadlo","n":"J. K. Tyl Tiyatrosu (Büyük Tiyatro)","it":"Divadlo J. K. Tyla · Velké divadlo","t":["mimari","gece"],"la":49.74542,"lo":13.37329,"h":0.25,"tk":"free","p":"Dışarıdan ücretsiz · gösteri bileti ayrı","url":"https://www.djkt.eu","best":"Akşam","acik":"Büyük Tiyatro, 1902'de mimar Antonín Balšánek'in planıyla açılan Neo-Rönesans bir tiyatro binasıdır. Adını, Çek millî marşının sözlerini yazan ve hayatının sonunu Plzeň'de geçiren oyun yazarı Josef Kajetán Tyl'dan alır. Binada opera, operet ve bale sahnelenir.","tip":"Gösterileri ve bilet fiyatlarını tiyatronun sitesinden kontrol et. Akşam ışıklandırılan cepheye bakmak için gösteri bileti gerekmez.","ph":"Işıklandırılmış cepheyi akşam parkın kenarından çekersin.","s":"j-k-tyl-tiyatrosu-buyuk-tiyatro"},{"id":"techmania","n":"Techmania Bilim Merkezi","it":"Techmania Science Center","t":["muze","bilet"],"la":49.74017,"lo":13.36207,"h":3,"tk":"gise","p":"280 Kč · aile (4 kişi) 1.040 Kč","url":"https://techmania.cz/en/","best":"Yağmurlu bir gün, öğleden önce","acik":"Techmania, eski Škoda fabrikasının büyük üretim salonlarında kurulmuş bir bilim merkezidir. Yüzlerce dokunarak denenen deney düzeneği, fizik, insan vücudu ve teknik konularında sergiler ve üç boyutlu bir planetaryum vardır. Škoda'nın 19. yüzyıldan beri Plzeň'de yaptığı lokomotiflerden ve makinelerden örnekler de görürsün.","tip":"Temel bilet bütün sergileri ve planetaryum gösterilerini kapsar. Planetaryumda koltuk ayırtmak 30 Kč ektir. Merkezden yürümek yaklaşık 20 dakikadır, tramvayla da gidersin.","ph":"Eski fabrika salonunun çelik çatısını içeriden geniş açıyla çekersin.","s":"techmania-bilim-merkezi"},{"id":"depo","n":"DEPO2015","it":"DEPO2015","t":["gece","gizli"],"la":49.73777,"lo":13.38237,"h":1,"tk":"free","p":"Ücretsiz · etkinliğe göre bilet","url":"https://www.depo2015.cz","best":"Akşamüstü","acik":"DEPO2015, eski bir şehir otobüsü garajının Plzeň'in 2015 Avrupa Kültür Başkenti olduğu yıl için yaratıcı bir merkeze dönüştürülmüş hâlidir. Büyük salonda sergiler, atölyeler, pazarlar ve konserler yapılır. Yerel tasarımcıların dükkânları ve bir kafe de vardır.","tip":"Programı DEPO2015'in sitesinden kontrol et. Hafta sonu pazarları ve açık hava etkinlikleri yazın çok canlıdır.","ph":"Eski garajın sanayi cephesini avludan çekersin.","s":"depo2015"},{"id":"zoo","n":"Plzeň Hayvanat ve Botanik Bahçesi","it":"Zoologická a botanická zahrada města Plzně","t":["doga"],"la":49.75821,"lo":13.35609,"h":3,"tk":"gise","p":"240 Kč","url":"https://www.zooplzen.cz","best":"Öğleden önce","acik":"Plzeň Hayvanat ve Botanik Bahçesi, Mže nehrinin kıyısındaki yamaçta kurulmuştur. Hayvanlar kıtalara göre düzenlenmiş bölümlerde yaşar ve bahçede binlerce bitki türü vardır. Yanındaki DinoPark'ta gerçek boyutlu dinozor modelleri bulunur.","tip":"Hayvanat bahçesi yılın 365 günü açıktır. Kasım ile Şubat arasında 9:00–17:00 açıktır, gişe 16:30'da kapanır. DinoPark yalnız Nisan ile Ekim arasında açıktır ve ortak bilet ayrıdır.","ph":"Yamacın tepesinden nehir vadisine doğru çekersin.","s":"plze-hayvanat-ve-botanik-bahcesi"},{"id":"bolevak","n":"Bolevec Gölü","it":"Velký Bolevecký rybník","t":["doga","gizli"],"la":49.77452,"lo":13.39614,"h":2,"tk":"free","p":"Ücretsiz","best":"Yaz öğleden sonra","far":true,"acik":"Bolevec Gölü, şehrin kuzeyindeki ormanlık alanda, 15. yüzyılda kazılmış göletler zincirinin en büyüğüdür. Plzeňliler yazın burada yüzer, gölün çevresindeki yaklaşık 4 kilometrelik yolda yürür ve bisiklete biner.","tip":"Merkezden tramvay ve otobüsle yaklaşık 20 dakikadır. Yazın plajda büfeler açılır, kışın sessizdir.","ph":"Göl kıyısındaki çamları akşam ışığında suyla birlikte çekersin.","s":"bolevec-golu"},{"id":"radyne","n":"Radyně Kalesi","it":"Hrad Radyně","t":["tarihi","doga","foto"],"la":49.681,"lo":13.46511,"h":2,"tk":"gise","p":"Gişede güncel fiyat","best":"Açık bir öğleden sonra","far":true,"acik":"Radyně, kral ve imparator IV. Karl'ın 1356 ile 1361 arasında Plzeň'in güneydoğusundaki bir tepenin üstüne yaptırdığı Gotik bir kaledir. Bugün harabedir ama kulesine çıkılır ve tepeden Plzeň havzasının geniş manzarası görülür.","tip":"Kale Starý Plzenec'in üstündedir. Plzeň'den trenle Starý Plzenec'e gidip tepeye yaklaşık 45 dakika yürürsün. Kule genellikle yaz sezonunda açıktır.","ph":"Kulenin tepesinden Plzeň'e doğru panorama çekersin.","s":"radyn-kalesi"},{"id":"kladruby","n":"Kladruby Manastırı","it":"Klášter Kladruby","t":["dini","mimari","tarihi"],"la":49.71163,"lo":12.99555,"h":2.5,"tk":"gise","p":"Gişede güncel fiyat","url":"https://www.klaster-kladruby.cz","best":"Mayıs–Eylül","far":true,"acik":"Kladruby Manastırı, 1115'te Bohemya prensi I. Vladislav'ın kurduğu bir Benedikten manastırıdır. Manastır kilisesini 18. yüzyılın başında Jan Blažej Santini-Aichel, Gotik ve Barok üslupları birleştiren kendine özgü tarzıyla yeniden yaptı. Kutná Hora'daki Sedlec Katedrali'ni yapan da aynı mimardır. Manastır devlete aittir ve rehberli turla gezilir.","tip":"Kladruby, Plzeň'in yaklaşık 40 km batısındadır ve araçla gidilir. Turlar genellikle Nisan ile Ekim arasında yapılır, sitesinden kontrol et.","ph":"Santini'nin yıldız tonozlu kubbesini kilisenin ortasından yukarı doğru çekersin.","s":"kladruby-manastiri"},{"id":"svihov","n":"Švihov Su Kalesi","it":"Vodní hrad Švihov","t":["tarihi","mimari","foto"],"la":49.47874,"lo":13.28532,"h":2,"tk":"gise","p":"Gişede güncel fiyat","url":"https://www.hrad-svihov.cz","best":"Mayıs–Eylül","far":true,"acik":"Švihov, 15. yüzyılın sonunda Rýzmberk ailesi için yapılan ve çevresi suyla dolu hendeklerle korunan Geç Gotik bir kaledir. Çekya'daki su kalelerinin en iyi korunanlarından biridir. Kale devlete aittir ve rehberli turla gezilir.","tip":"Švihov, Plzeň'in yaklaşık 35 km güneyindedir. Klatovy yönündeki trenle gidebilirsin. Turlar Nisan ile Ekim arasında yapılır, sitesinden kontrol et.","ph":"Kalenin hendekteki yansımasını karşı kıyıdan çekersin.","s":"vihov-su-kalesi"}];
+var AREAS=[{"id":"merkez","n":"Tarihî Merkez","la":49.7473,"lo":13.3776,"q":"náměstí Republiky, Plzeň","tags":["cift","butik","solo"],"price":"≈ 70–150 €","fr":"İlk kez gelenler, akşamı meydanda ve pubda geçirmek isteyenler","plus":["Katedral, yeraltı geçitleri ve müzeler yürüme mesafesinde","Pub ve restoran çok"],"minus":["Hafta sonu akşamları gürültülü olabilir","Otopark sınırlı ve ücretli"],"metro":"Yürüme · tramvay"},{"id":"istasyon","n":"Ana İstasyon ve Bira Fabrikası","la":49.744,"lo":13.386,"q":"Plzeň hlavní nádraží","tags":["butce","grup","solo"],"price":"≈ 50–110 €","fr":"Trenle gelip gidenler, bira fabrikasına yakın kalmak isteyenler","plus":["Ana istasyon ve bira fabrikası yakında","Meydana ≈ 10 dk yürüyüş"],"minus":["İstasyon çevresi akşam sakin değil","Tarihî doku az"],"metro":"Yürüme · tramvay · tren"},{"id":"jizni","n":"Güney Mahalleleri (Jižní Předměstí)","la":49.74,"lo":13.372,"q":"Jižní Předměstí, Plzeň","tags":["aile","butce"],"price":"≈ 45–100 €","fr":"Çocuklu aileler, Techmania'ya ve DEPO2015'e yakın olmak isteyenler","plus":["Fiyatlar merkezden düşük","Techmania ve DEPO2015 yakında"],"minus":["Meydana tramvay ya da ≈ 15 dk yürüyüş","Akşam seçenekleri az"],"metro":"Tramvay · otobüs"}];
+var MONTHS=[{"m":"Ocak","hi":1,"lo":-4,"rain":7,"crowd":1,"price":1,"wear":"Kalın mont, bere, eldiven","note":"Şehir sessizdir. Yeraltı geçitleri Ocak'ta bakım için birkaç hafta kapanabilir."},{"m":"Şubat","hi":3,"lo":-3,"rain":6,"crowd":1,"price":1,"wear":"Kalın mont, bere, eldiven","note":"Kapalı mekânlar (Techmania, bira fabrikası, müzeler) gezmek için idealdir."},{"m":"Mart","hi":8,"lo":0,"rain":7,"crowd":2,"price":2,"wear":"Mont, katmanlı kıyafet","note":"Kalabalık azdır, havalar ısınmaya başlar."},{"m":"Nisan","hi":14,"lo":3,"rain":6,"crowd":3,"price":3,"wear":"Ceket, şemsiye","note":"Kaleler ve manastırlar sezonu açar. DinoPark yeniden açılır."},{"m":"Mayıs","hi":19,"lo":7,"rain":8,"crowd":4,"price":4,"wear":"Tişört, akşam için ceket","note":"Mayıs başında Kurtuluş Şenliği yapılır. Şehir 1945'i anan askerî araç kortejleriyle dolar."},{"m":"Haziran","hi":22,"lo":11,"rain":9,"crowd":4,"price":4,"wear":"Hafif kıyafet, şemsiye","note":"Pubların bahçeleri açılır, Bolevec Gölü'nde yüzme sezonu başlar."},{"m":"Temmuz","hi":24,"lo":13,"rain":9,"crowd":5,"price":4,"wear":"Hafif kıyafet, şapka","note":"Bira fabrikası turları dolar, bileti önceden al."},{"m":"Ağustos","hi":24,"lo":13,"rain":8,"crowd":5,"price":4,"wear":"Hafif kıyafet, şapka","note":"Açık hava konserleri ve DEPO2015'te yaz etkinlikleri vardır."},{"m":"Eylül","hi":19,"lo":9,"rain":6,"crowd":4,"price":3,"wear":"Ceket, tişört","note":"Hava ılıktır, kalabalık azalır. Kaleleri gezmek için iyi bir aydır."},{"m":"Ekim","hi":13,"lo":5,"rain":6,"crowd":3,"price":3,"wear":"Mont, şemsiye","note":"Ekim başında Pilsner Fest yapılır. Kaleler Ekim sonunda sezonu kapatır."},{"m":"Kasım","hi":6,"lo":1,"rain":7,"crowd":2,"price":2,"wear":"Mont, bere, eldiven","note":"Gri ve sakindir. Kapalı mekânlarda kuyruk yoktur."},{"m":"Aralık","hi":2,"lo":-2,"rain":7,"crowd":3,"price":3,"wear":"Kalın mont, bere, eldiven","note":"Advent boyunca Cumhuriyet Meydanı'nda Noel pazarı kurulur. Bira fabrikası 24–26 Aralık'ta kapalıdır."}];
+var EVENTS=[[4,"Mayıs başı","Kurtuluş Şenliği","Plzeň, 6 Mayıs 1945'te General George S. Patton komutasındaki ABD ordusu tarafından kurtarıldı. Her yıl Mayıs'ın ilk günlerinde yapılan şenlikte İkinci Dünya Savaşı'ndan kalma askerî araçlar şehirde geçit yapar, konserler ve anma törenleri olur. Tarihler şehrin sitesinde açıklanır.","GELENEK"],[9,"Ekim başı","Pilsner Fest","İlk Pilsner'ın yapıldığı 5 Ekim 1842'yi kutlayan bira şenliği. Bira fabrikasının avlusunda ve şehirde konserler ve tadımlar olur. Tarihler bira fabrikasının sitesinde açıklanır.","FESTİVAL"],[11,"Advent","Noel pazarı","Advent haftalarında Cumhuriyet Meydanı'nda Noel pazarı kurulur. Sıcak şarap, trdelník ve el yapımı süsler satılır.","FESTİVAL"]];
+var DAYTRIPS=[{"n":"Kladruby Manastırı","w":"Santini'nin Gotik ve Barok üslupları birleştirdiği manastır kilisesi.","how":"Araç","t":"≈ 40 dk","c":"Tur ücreti ayrı"},{"n":"Švihov Su Kalesi","w":"Hendeklerle çevrili, iyi korunmuş Geç Gotik kale.","how":"Tren ya da araç","t":"≈ 40 dk","c":"≈ 70–110 Kč tren"},{"n":"Radyně Kalesi","w":"IV. Karl'ın tepe kalesi ve Plzeň havzasına bakan kule.","how":"Tren ve yürüyüş","t":"≈ 15 dk tren + 45 dk yürüyüş","c":"≈ 30–50 Kč tren"},{"n":"Mariánské Lázně ve Karlovy Vary","w":"Batı Bohemya'nın ünlü kaplıca şehirleri.","how":"Tren","t":"≈ 1–1 sa 30 dk","c":"≈ 150–250 Kč"},{"n":"Prag","w":"Plzeň'e çoğu gezgin Prag'dan gelir. Günübirlik gelip akşam dönmek de olur.","how":"Tren ya da otobüs","t":"≈ 1 sa 25–35 dk","c":"≈ 145–180 Kč"}];
+var TRIPS={"1":[{"t":"Plzeň tek günde","s":["namesti","katedrala","radnice","podzemi","prazdroj","synagoga"]}],"2":[{"t":"Meydan, katedral ve yeraltı","s":["namesti","katedrala","radnice","morovy","loutky","pivmuzeum","podzemi","masne"]},{"t":"Bira, sinagog ve parklar","s":["prazdroj","synagoga","divadlo","zcm","frantisk","depo"]}],"3":[{"t":"Meydan, katedral ve yeraltı","s":["namesti","katedrala","radnice","morovy","loutky","pivmuzeum","podzemi","masne"]},{"t":"Bira, sinagog ve parklar","s":["prazdroj","synagoga","divadlo","zcm","frantisk","depo"]},{"t":"Loos, Techmania ve hayvanat bahçesi","s":["loos","techmania","zoo"]}]};
+var TYPES={"aile":{"n":"Aile","area":"jizni","tips":["Techmania'da bütün gün geçirilir, planetaryum gösterileri bilete dahildir.","Kukla Müzesi'nde Spejbl ile Hurvínek'i görür, kuklaları oynatırsınız.","Hayvanat bahçesi yılın her günü açıktır, yazın DinoPark'la birlikte gezin.","Yeraltı geçitlerine 3 yaşından küçük çocuklar giremez."],"p":["techmania","loutky","zoo","katedrala"]},"cift":{"n":"Romantik","area":"merkez","tips":["Katedralin kulesine çıkıp şehri tepeden izleyin.","Büyük Sinagog'daki konserlerden birine gidin.","Akşam Büyük Tiyatro'da bir opera izleyin.","Bira fabrikasının mahzeninde filtrelenmemiş birayı birlikte tadın."],"p":["katedrala","synagoga","divadlo","prazdroj"]},"solo":{"n":"Solo","area":"merkez","tips":["Adolf Loos'un dairelerini rehberli turla gez, şehrin en az bilinen hazinesidir.","Yeraltı turunu ve Bira Müzesi'ni aynı öğleden sonra yap.","DEPO2015'in programına bak, akşam etkinliği olabilir.","Öğle yemeğini pubların günlük menüsünden ye."],"p":["loos","podzemi","pivmuzeum","depo"]},"grup":{"n":"Arkadaş grubu","area":"istasyon","tips":["Bira fabrikası turunu grup için önceden aynı saate ayırtın.","Akşam tarihî meydandaki puplarda tankova (tanktan) Pilsner için.","Viktoria Plzeň'in maçı varsa Doosan Arena'da futbol izleyin.","Yazın Bolevec Gölü'nde yüzün."],"p":["prazdroj","podzemi","namesti","bolevak"]},"butce":{"n":"Düşük bütçe","area":"istasyon","tips":["Meydan, Belediye Binası, Veba Anıtı ve parklar ücretsizdir.","Katedralin içine giriş bağışladır.","Öğle yemeğini pubların günlük menüsünden (polední menu) ye.","Prag'dan erken alınan tren biletleri çok daha ucuzdur."],"p":["namesti","katedrala","radnice","depo"]}};
+var BUDGET={"eko":{"konak":45,"yemek":20,"ulasim":3,"giris":15,"vergi":1},"orta":{"konak":85,"yemek":40,"ulasim":5,"giris":25,"vergi":1},"konfor":{"konak":170,"yemek":80,"ulasim":15,"giris":40,"vergi":1}};
+var HATLAR=[];
+var SU=[];
+var PARKS=[];
+var VISA={"bordo":{"s1":"Çekya · Schengen","s2":"Vize gerekli","s3":"C tipi","h":"Bordo pasaportla Schengen vizesi gerekiyor.","b":"Kısa süreli (C tipi) Schengen vizesi, 180 günde 90 güne kadar kalmana izin verir ve bütün Schengen ülkelerinde geçerlidir. Başvuru adımları, belgeler ve ücretler Çekya vize rehberinde.","pts":["Başvuru: en erken 6 ay, en geç 15 gün önce","Karar: genelde 15 gün","Ücret: 90 € + başvuru merkezinin hizmet bedeli"],"proc":false,"mrz":"TUR"},"yesil":{"s1":"Çekya · Schengen","s2":"Vizesiz","s3":"90 gün / 180 gün","h":"Yeşil (hususi) pasaportla vize gerekmez.","b":"Hususi pasaport sahipleri Schengen bölgesine vizesiz girer. Yine de 180 günde 90 gün kuralı ve sınırdaki biyometrik kayıt geçerli.","pts":["Pasaportun son 10 yılda verilmiş ve dönüşten sonra 3 ay geçerli olmalı","Sınırda dönüş bileti ve konaklama sorulabilir","Seyahat sigortası zorunlu değil ama şiddetle önerilir"],"proc":false,"mrz":"TUR"},"gri":{"s1":"Çekya · Schengen","s2":"Vizesiz","s3":"90 gün / 180 gün","h":"Gri (hizmet) pasaportla vize gerekmez.","b":"Hizmet pasaportu sahipleri Schengen bölgesine vizesiz girer. Görev seyahatinde kurum yazısını yanında taşı. Durumu seyahatten önce konsolosluktan teyit et.","pts":["180 günde en fazla 90 gün","Sınırda seyahat amacı sorulabilir","Biyometrik giriş kaydı (EES) yapılır"],"proc":false,"mrz":"TUR"},"siyah":{"s1":"Çekya · Schengen","s2":"Vizesiz","s3":"Diplomatik","h":"Diplomatik pasaportla vize gerekmez.","b":"Diplomatik pasaport sahipleri vizesiz girer. Görevli olarak gidiyorsan ayrıca akreditasyon kuralları uygulanır.","pts":["180 günde en fazla 90 gün","Görev seyahatinde nota ve akreditasyon","Biyometrik giriş kaydı (EES) yapılır"],"proc":false,"mrz":"TUR"},"EU":{"s1":"Çekya · AB","s2":"Vize yok","s3":"Kimlik kartı yeterli","h":"AB vatandaşı olarak vize gerekmez.","b":"Geçerli kimlik kartı ya da pasaportla serbestçe girersin. Üç aya kadar kalmak için hiçbir işlem gerekmez, daha uzun kalacaksan oturma kaydı yaptırman gerekir. Avrupa Sağlık Sigortası Kartını (EHIC) yanına al.","pts":["Kimlik kartı ya da pasaport yeterli","EES kaydı AB vatandaşlarına uygulanmaz","Çifte vatandaşsan AB belgenle gir"],"proc":false,"mrz":"EUE"},"AZ":{"s1":"Dosya hazırlanıyor","s2":"Yakında","s3":"Azerbaycan pasaportu","h":"Azerbaycan pasaportu için dosya hazırlanıyor.","b":"Şimdilik vize bilgisi yalnızca Türkiye ve AB vatandaşları için hazır. Her uyruğun kendi vize sayfası hazırlanıyor.","pts":["Azerbaycan vatandaşları Schengen vizesine tabidir","Başvuru merkezi ve belge listesi hazırlanıyor"],"proc":false,"mrz":"AZE"},"XX":{"s1":"Dosya hazırlanıyor","s2":"Yakında","s3":"Diğer uyruklar","h":"Bu uyruk için dosya hazırlanıyor.","b":"Şimdilik vize bilgisi yalnızca Türkiye ve AB vatandaşları için hazır. Her uyruğun kendi vize sayfası hazırlanıyor.","pts":[],"proc":false,"mrz":"XXX"}};
+var DOCS={"common":[],"calisan":[],"isveren":[],"ogrenci":[],"emekli":[]};
+var DOCT={};
+var SPOR="";
+
+var HAT={};HATLAR.forEach(function(L){HAT[L.id]=L;});
+var byId={};PLACES.forEach(function(p){byId[p.id]=p;});
+var areaById={};AREAS.forEach(function(a){areaById[a.id]=a;});
+
+/* ============ DURUM ============ */
+var LS="seyyah-"+C.id+"-v1";
+var S={plan:C.ornekPlan.slice(),visited:[],base:C.us,sample:true,bag:[],bagMo:new Date().getMonth(),bagGun:0};
+try{var saved=JSON.parse(localStorage.getItem(LS));if(saved&&Array.isArray(saved.plan)){S=Object.assign(S,saved);}}catch(e){}
+function save(){try{localStorage.setItem(LS,JSON.stringify(S));}catch(e){}}
+function inPlan(id){return S.plan.indexOf(id)>-1;}
+function togglePlan(id){var i=S.plan.indexOf(id);if(i>-1){S.plan.splice(i,1);S.visited=S.visited.filter(function(v){return v!==id;});}else{S.plan.push(id);}S.sample=false;save();update();}
+
+/* ============ BİÇİMLEME ============ */
+function fmtMin(m){m=Math.round(m);if(m<60)return m+" dk";var h=Math.floor(m/60),r=m%60;return r?h+" sa "+r+" dk":h+" sa";}
+function fmtH(h){return fmtMin(h*60);}
+function dec(n,d){return n.toFixed(d==null?1:d).replace(".",",");}
+function fmtDays(d){return d<=0.5?"yarım gün":dec(d,d%1?1:0)+" gün";}
+function eur(n){return Math.round(n).toLocaleString("tr-TR")+" €";}
+
+/* ============ COĞRAFYA VE SÜRE HESABI ============ */
+function km(a,b){var R=6371,d=Math.PI/180,dla=(b.la-a.la)*d,dlo=(b.lo-a.lo)*d;var x=Math.pow(Math.sin(dla/2),2)+Math.cos(a.la*d)*Math.cos(b.la*d)*Math.pow(Math.sin(dlo/2),2);return 2*R*Math.asin(Math.sqrt(x));}
+function walkMin(k){return k*(C.dolam||1.3)/4.8*60;}
+function nearest(L,pt){var best=null;HAT[L].d.forEach(function(s,i){var k=km(pt,{la:s[1],lo:s[2]});if(!best||k<best.k)best={i:i,k:k,name:s[0]};});return best;}
+function stIdx(L,ad){var d=HAT[L].d;for(var i=0;i<d.length;i++)if(d[i][0]===ad)return i;return -1;}
+function travel(a,b){
+  var k=km(a,b),walk=walkMin(k),opts=[];
+  HATLAR.forEach(function(L){if(!L.d.length)return;var sa=nearest(L.id,a),sb=nearest(L.id,b);if(sa.i!==sb.i){opts.push({min:walkMin(sa.k)+(L.bekle||4)+Math.abs(sa.i-sb.i)*(L.dk||2)+walkMin(sb.k),w:Math.max(walkMin(sa.k),walkMin(sb.k)),desc:sa.name+" → "+L.et+" → "+sb.name});}});
+  (C.aktarma||[]).forEach(function(t){[[t[0],t[1]],[t[1],t[0]]].forEach(function(pr){var A=HAT[pr[0]],B=HAT[pr[1]],ia=stIdx(pr[0],t[2]),ib=stIdx(pr[1],t[2]);if(ia<0||ib<0)return;var sa=nearest(pr[0],a),sb=nearest(pr[1],b);if(sa.i!==ia&&sb.i!==ib){opts.push({min:walkMin(sa.k)+(A.bekle||4)+Math.abs(sa.i-ia)*(A.dk||2)+(t[4]||5)+Math.abs(sb.i-ib)*(B.dk||2)+walkMin(sb.k),w:Math.max(walkMin(sa.k),walkMin(sb.k)),desc:sa.name+" → "+A.et+" → "+t[3]+" "+B.etA+" aktarma → "+sb.name});}});});
+  var ok=opts.filter(function(o){return o.w<=18;}).sort(function(x,y){return x.min-y.min;});
+  var metro=(ok.length&&ok[0].min<walk-5)?ok[0]:null;
+  var T=C.taksi,road=k*1.35,taxi=road/(T.hiz||17)*60+(T.ek||4),fare=T.acilis+road*T.km;
+  return {k:k,walk:walk,metro:metro,taxi:taxi,fareLo:Math.max(T.min,Math.round(fare)),fareHi:Math.round(fare*1.3)+2,best:Math.min(walk,metro?metro.min:Infinity)};
+}
+function itinerary(ids,baseId){
+  var pts=ids.map(function(id){return byId[id];}).filter(Boolean);
+  var near=pts.filter(function(p){return !p.far;}),far=pts.filter(function(p){return p.far;});
+  var start=areaById[baseId]&&!areaById[baseId].far?areaById[baseId]:areaById[C.us];
+  var cur=start,rest=near.slice(),order=[];
+  while(rest.length){var bi=0,bd=Infinity;rest.forEach(function(p,i){var d=km(cur,p);if(d<bd){bd=d;bi=i;}});cur=rest.splice(bi,1)[0];order.push(cur);}
+  var days=[],day=[],hrs=0,prev=start;
+  order.forEach(function(p){var leg=travel(prev,p);if(day.length&&hrs+leg.best/60+p.h>8){days.push(day);day=[];hrs=0;prev=start;leg=travel(prev,p);}day.push({p:p,leg:leg});hrs+=leg.best/60+p.h;prev=p;});
+  if(day.length)days.push(day);
+  far.forEach(function(p){days.push([{p:p,leg:null}]);});
+  return days;
+}
+
+/* ============ ŞEHİR ŞEMATİK HARİTASI ============ */
+var RB=(function(g){var W=546;return {la0:g.la0,la1:g.la1,lo0:g.lo0,lo1:g.lo1,W:W,H:Math.round(W*(g.la0-g.la1)/((g.lo1-g.lo0)*Math.cos(C.la*Math.PI/180)))};})(C.harita);
+function xy(la,lo){return [(lo-RB.lo0)/(RB.lo1-RB.lo0)*RB.W,(RB.la0-la)/(RB.la0-RB.la1)*RB.H];}
+function cxy(la,lo){var p=xy(la,lo);return [Math.min(RB.W-10,Math.max(10,p[0])),Math.min(RB.H-10,Math.max(10,p[1]))];}
+function pts(arr){return arr.map(function(q){var p=xy(q[0],q[1]);return p[0].toFixed(1)+","+p[1].toFixed(1);}).join(" ");}
+var DAYC=["var(--line-a)","var(--line-b)","var(--line-c)","var(--stamp)"];
+function zemin(P,cls){var s="";(C.kara||[]).forEach(function(k){s+='<polygon class="'+cls+'-kara" points="'+P(k)+'"/>';});(C.deniz||[]).forEach(function(k){s+='<polygon class="'+cls+'-deniz" points="'+P(k)+'"/>';});return s;}
+function sular(P,cls){var s="";SU.forEach(function(r){s+='<polyline class="'+cls+'"'+(r.w?' style="stroke-width:'+r.w+'"':'')+' points="'+P(r.p)+'"/>';});return s;}
+function hatlar(P,cls){var s="";HATLAR.forEach(function(L){var st=' style="stroke:'+L.renk+'"';if(L.d.length)s+='<polyline class="'+cls+'"'+st+' points="'+P(L.d.map(function(x){return [x[1],x[2]];}))+'"/>';(L.yol||[]).forEach(function(y){s+='<polyline class="'+cls+(L.kesik?' rm-dash':'')+'"'+st+' points="'+P(y)+'"/>';});});return s;}
+function romeMap(o){
+  o=o||{};
+  var s='<svg class="rmap" viewBox="0 0 '+RB.W+' '+RB.H+'" role="img" aria-label="'+esc(o.label||C.ad+" merkezinin şematik haritası")+'">';
+  s+='<rect class="rm-bg'+(C.kara?' su':'')+'" x="0" y="0" width="'+RB.W+'" height="'+RB.H+'"/>';
+  s+=zemin(pts,"rm")+sular(pts,"rm-river");
+  s+=hatlar(pts,"rm-line");
+  if(o.stations){var seen={};HATLAR.forEach(function(L){L.d.forEach(function(st){if(seen[st[0]])return;seen[st[0]]=1;var p=xy(st[1],st[2]);var right=st[3]==null?p[0]>RB.W*0.66:st[3]===1,dik=st[3]===2?-9:st[3]===3?14:0;s+='<circle class="rm-st" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="5"/>'+(st[3]===4?'':'<text class="rm-stl" x="'+(p[0]+(dik?0:right?-9:9)).toFixed(1)+'" y="'+(p[1]+(dik||3.5)).toFixed(1)+'" text-anchor="'+(dik?"middle":right?"end":"start")+'">'+esc(st[0])+'</text>');});});}
+  if(o.landmarks!==false){C.etiket.forEach(function(l){var p=xy(l[1],l[2]);s+='<text class="rm-lm" x="'+p[0].toFixed(1)+'" y="'+p[1].toFixed(1)+'">'+l[0]+'</text>';});}
+  if(o.all){PLACES.forEach(function(p){if(p.far)return;var q=xy(p.la,p.lo);if(q[0]<0||q[1]<0||q[0]>RB.W||q[1]>RB.H)return;s+='<circle class="rm-p" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="2.8"/>';});}
+  if(o.areas){o.areas.forEach(function(a){var p=xy(a.la,a.lo);s+='<circle class="rm-area'+(a.id===o.sel?" on":"")+'" data-area="'+a.id+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="24"><title>'+esc(a.n)+'</title></circle>';});}
+  if(o.spoke&&o.plan){var c=xy(o.spoke.la,o.spoke.lo);o.plan.forEach(function(p){if(p.far)return;var q=cxy(p.la,p.lo);s+='<line class="rm-spoke" x1="'+c[0].toFixed(1)+'" y1="'+c[1].toFixed(1)+'" x2="'+q[0].toFixed(1)+'" y2="'+q[1].toFixed(1)+'"/>';});}
+  if(o.areas){o.areas.forEach(function(a){var p=xy(a.la,a.lo);s+='<text class="rm-al" x="'+p[0].toFixed(1)+'" y="'+(p[1]+3.5).toFixed(1)+'">'+esc(a.n.split(" ")[0])+'</text>';});}
+  if(o.plan&&!o.route){o.plan.forEach(function(p){if(p.far)return;var q=cxy(p.la,p.lo);s+='<circle class="rm-pl" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="6"><title>'+esc(p.n)+'</title></circle>';});}
+  if(o.route){
+    var b=o.base?xy(o.base.la,o.base.lo):null,num=0,marks="";
+    o.route.forEach(function(d,i){var line=b?[b[0].toFixed(1)+","+b[1].toFixed(1)]:[];d.forEach(function(x){if(x.p.far)return;var q=cxy(x.p.la,x.p.lo);line.push(q[0].toFixed(1)+","+q[1].toFixed(1));});if(line.length>1)s+='<polyline class="rm-route" style="stroke:'+DAYC[i%4]+'" points="'+line.join(" ")+'"/>';d.forEach(function(x){num++;if(x.p.far)return;var q=cxy(x.p.la,x.p.lo);marks+='<circle class="rm-pl" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="9"><title>'+esc(x.p.n)+'</title></circle><text class="rm-n" x="'+q[0].toFixed(1)+'" y="'+q[1].toFixed(1)+'">'+num+'</text>';});});
+    s+=marks;
+    if(b)s+='<rect class="rm-base" x="'+(b[0]-7).toFixed(1)+'" y="'+(b[1]-7).toFixed(1)+'" width="14" height="14"><title>Konaklama</title></rect>';
+  }
+  if(o.from&&o.to){var f=cxy(o.from.la,o.from.lo),t=cxy(o.to.la,o.to.lo);s+='<line class="rm-ft" x1="'+f[0].toFixed(1)+'" y1="'+f[1].toFixed(1)+'" x2="'+t[0].toFixed(1)+'" y2="'+t[1].toFixed(1)+'"/><circle class="rm-f" cx="'+f[0].toFixed(1)+'" cy="'+f[1].toFixed(1)+'" r="8"/><circle class="rm-t" cx="'+t[0].toFixed(1)+'" cy="'+t[1].toFixed(1)+'" r="8"/>';
+    var lf=f[0]>RB.W*0.6,lt=t[0]>RB.W*0.6;s+='<text class="rm-ftl" x="'+(f[0]+(lf?-13:13)).toFixed(1)+'" y="'+(f[1]+4).toFixed(1)+'" text-anchor="'+(lf?"end":"start")+'">'+esc(o.from.n)+'</text><text class="rm-ftl" x="'+(t[0]+(lt?-13:13)).toFixed(1)+'" y="'+(t[1]+4).toFixed(1)+'" text-anchor="'+(lt?"end":"start")+'">'+esc(o.to.n)+'</text>';}
+  return s+"</svg>";
+}
+
+/* ============ ROTA HARİTASI: NET GÖRÜNÜM ============ */
+var DAYV=["var(--day-1)","var(--day-2)","var(--day-3)","var(--day-4)"],DAYON=["var(--on-day)","var(--on-day)","var(--on-day)","var(--on-day-4)"];
+var rFocus=-1;
+function shortN(p){var n=p.n.split(" ve ")[0];return n.length>22?n.slice(0,21)+"…":n;}
+function routeMap(o){
+  var days=o.route||[],fx=o.focus==null?-1:o.focus,vis=o.visited||{},OW=440,OH=500,asp=OW/OH,FW=RB.W,FH=RB.H;
+  var fit=[];if(o.base)fit.push(xy(o.base.la,o.base.lo));
+  days.forEach(function(d,i){if(fx>-1&&i!==fx)return;d.forEach(function(x){if(!x.p.far)fit.push(xy(x.p.la,x.p.lo));});});
+  var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9,w,h,cx,cy;
+  fit.forEach(function(p){x0=Math.min(x0,p[0]);x1=Math.max(x1,p[0]);y0=Math.min(y0,p[1]);y1=Math.max(y1,p[1]);});
+  if(fit.length<2){cx=fit.length?fit[0][0]:FW/2;cy=fit.length?fit[0][1]:FH/2;w=FW*.62;h=w/asp;}
+  else{cx=(x0+x1)/2;cy=(y0+y1)/2;w=Math.max((x1-x0)*1.25+120,210);h=Math.max((y1-y0)*1.25+100,210/asp);if(w/h<asp)w=h*asp;else h=w/asp;}
+  if(w>FW){w=FW;h=w/asp;}if(h>FH){h=FH;w=h*asp;}
+  var vx=Math.min(Math.max(cx-w/2,0),FW-w),vy=Math.min(Math.max(cy-h/2,0),FH-h),k=OW/w;
+  function L(la,lo){var p=xy(la,lo);return [(p[0]-vx)*k,(p[1]-vy)*k];}
+  function LC(la,lo){var p=L(la,lo);return [Math.min(OW-18,Math.max(18,p[0])),Math.min(OH-18,Math.max(18,p[1]))];}
+  function LP(a){return a.map(function(q){var p=L(q[0],q[1]);return p[0].toFixed(1)+","+p[1].toFixed(1);}).join(" ");}
+  function inV(p,m){return p[0]>m&&p[1]>m&&p[0]<OW-m&&p[1]<OH-m;}
+  function f1(n){return n.toFixed(1);}
+  var s='<svg class="rmap rr" viewBox="0 0 '+OW+' '+OH+'" role="img" aria-label="'+esc(o.label||"Rota haritası")+'"><rect class="rr-bg'+(C.kara?' su':'')+'" width="'+OW+'" height="'+OH+'"/>';
+  s+=zemin(LP,"rr");PARKS.forEach(function(pk){s+='<polygon class="rr-park" points="'+LP(pk.p)+'"/>';});
+  s+=sular(LP,"rr-river");
+  s+=hatlar(LP,"rr-metro");
+  // günler: çizgi, yön oku, işaret
+  var B=o.base?LC(o.base.la,o.base.lo):null,lines="",mk=[],num=0,samp=[];
+  days.forEach(function(d,i){
+    var dim=fx>-1&&fx!==i,col=DAYV[i%4],pp=B?[B]:[],arw="";
+    d.forEach(function(x){num++;if(x.p.far)return;var q=LC(x.p.la,x.p.lo);pp.push(q);mk.push({x:q[0],y:q[1],n:num,p:x.p,i:i,dim:dim});});
+    if(pp.length<2)return;
+    for(var si=1;si<pp.length;si++){var sa=pp[si-1],sb=pp[si],sn=Math.ceil(Math.hypot(sb[0]-sa[0],sb[1]-sa[1])/6);for(var sk=0;sk<=sn;sk++)samp.push([sa[0]+(sb[0]-sa[0])*sk/sn,sa[1]+(sb[1]-sa[1])*sk/sn]);}
+    for(var j=1;j<pp.length;j++){var a=pp[j-1],b=pp[j],dx=b[0]-a[0],dy=b[1]-a[1];if(Math.sqrt(dx*dx+dy*dy)<48)continue;arw+='<path class="rr-arw" d="M-3.5 -4 L2 0 L-3.5 4" transform="translate('+f1((a[0]+b[0])/2)+','+f1((a[1]+b[1])/2)+') rotate('+f1(Math.atan2(dy,dx)*180/Math.PI)+')"/>';}
+    var str=pp.map(function(q){return f1(q[0])+","+f1(q[1]);}).join(" ");
+    lines+='<g class="rr-day'+(dim?" dim":"")+'"><polyline class="rr-case" points="'+str+'"/><polyline class="rr-leg" style="stroke:'+col+'" points="'+str+'"/>'+arw+'</g>';
+  });
+  var marks="";mk.forEach(function(m){var done=vis[m.p.id];marks+='<g class="rr-mk'+(m.dim?" dim":"")+(done?" done":"")+'" data-pid="'+m.p.id+'" transform="translate('+f1(m.x)+','+f1(m.y)+')"><circle class="rr-pin" r="13" style="fill:'+DAYV[m.i%4]+'"/><text class="rr-num" style="fill:'+DAYON[m.i%4]+'">'+(done?"✓":m.n)+'</text><title>'+m.n+'. '+esc(m.p.n)+'</title></g>';});
+  var home=B?'<g transform="translate('+f1(B[0])+','+f1(B[1])+')"><rect class="rr-hb" x="-14" y="-14" width="28" height="28" rx="8"/><path class="rr-hi" d="M0 -8 L8.5 -0.5 H5.5 V7.5 H-5.5 V-0.5 H-8.5 Z"/><rect class="rr-hb" x="-1.9" y="2.2" width="3.8" height="5.3"/><title>Konaklama: '+esc(o.base.n)+'</title></g>':"";
+  // ölçek çubuğu
+  var pxkm=k*FW/((RB.lo1-RB.lo0)*111.32*Math.cos(C.la*Math.PI/180)),opts=[[2,"2 km"],[1,"1 km"],[.5,"500 m"],[.25,"250 m"],[.1,"100 m"]],sc=opts[opts.length-1];
+  for(var oi=0;oi<opts.length;oi++){if(opts[oi][0]*pxkm<=120){sc=opts[oi];break;}}
+  var sl=sc[0]*pxkm,sbar='<g transform="translate(16,'+(OH-14)+')"><rect class="rr-scb" x="-7" y="-27" width="'+f1(sl+14)+'" height="34" rx="9"/><path class="rr-scl" d="M0 -6 V0 H'+f1(sl)+' V-6"/><text class="rr-sct" x="0" y="-11">'+sc[1]+'</text></g>';
+  // etiketler: çakışmayan yere yerleştir
+  var boxes=[[6,OH-44,f1(sl+30)*1,OH-4]],lbl="",bg="";
+  mk.forEach(function(m){boxes.push([m.x-15,m.y-15,m.x+15,m.y+15]);});
+  if(B)boxes.push([B[0]-16,B[1]-16,B[0]+16,B[1]+16]);
+  function cost(r){if(r[0]<6||r[1]<6||r[2]>OW-6||r[3]>OH-6)return 1e9;var c=0,i;for(i=0;i<boxes.length;i++){var b=boxes[i];if(r[0]<b[2]&&r[2]>b[0]&&r[1]<b[3]&&r[3]>b[1])c+=20;}for(i=0;i<samp.length;i++){var p=samp[i];if(p[0]>r[0]-3&&p[0]<r[2]+3&&p[1]>r[1]-3&&p[1]<r[3]+3)c+=1;}return c;}
+  function hit(r){return cost(r)>0;}
+  function place(x,y,t,cls,attr){var tw=t.length*6.8+2,th=14,c=[[x+18,y-th/2],[x-18-tw,y-th/2],[x-tw/2,y+17],[x-tw/2,y-17-th],[x+13,y-th-9],[x+13,y+9],[x-13-tw,y-th-9],[x-13-tw,y+9]],r=null;
+    var best=1e12;for(var i=0;i<c.length;i++){var q=[c[i][0],c[i][1],c[i][0]+tw,c[i][1]+th],v=cost(q)+i*.01;if(v<best){best=v;r=q;}if(v<1)break;}
+    boxes.push(r);return '<text class="'+cls+'"'+(attr||"")+' x="'+f1(r[0])+'" y="'+f1(r[3]-3)+'">'+esc(t)+'</text>';}
+  if(B)lbl+=place(B[0],B[1],"Otelin · "+o.base.n.split(" ve ")[0],"rr-lbl");
+  mk.forEach(function(m){lbl+=place(m.x,m.y,shortN(m.p),"rr-lbl"+(m.dim?" dim":""),' data-pid="'+m.p.id+'"');});
+  function bgText(t,x,y,cls,cw){var tw=t.length*cw,r=[x-tw/2,y-10,x+tw/2,y+3];if(!inV([x,y],24)||hit(r))return;boxes.push(r);bg+='<text class="'+cls+'" x="'+f1(x)+'" y="'+f1(y)+'">'+esc(t)+'</text>';}
+  PARKS.forEach(function(pk){if(pk.n){var c=L(pk.c[0],pk.c[1]);bgText(pk.n,c[0],c[1],"rr-parkl",6.2);}});
+  AREAS.concat(C.ekAlan||[]).forEach(function(a){if(a.far||(o.base&&a.id===o.base.id))return;var c=L(a.la,a.lo);bgText(a.n.split(" ve ")[0].toUpperCase(),c[0],c[1],"rr-hood",8.3);});
+  SU.forEach(function(r){if(!r.ad)return;var tv=r.p.map(function(q){return L(q[0],q[1]);}).filter(function(p){return inV(p,50);});if(tv.length){var tp=tv[Math.floor(tv.length/2)];bgText(r.ad,tp[0]+26,tp[1]+4,"rr-riverl",6.4);}});
+  return s+bg+lines+home+marks+lbl+sbar+"</svg>";
+}
+function drawRotaMap(st){
+  var vis={};S.visited.forEach(function(v){vis[v]=1;});
+  var it=st.n?st.it:[],bA=areaById[S.base]&&!areaById[S.base].far?areaById[S.base]:areaById[C.us],mapDays=[];
+  it.forEach(function(d,i){if(d.some(function(x){return !x.p.far;}))mapDays.push(i);});
+  if(mapDays.indexOf(rFocus)<0)rFocus=-1;
+  var chips=mapDays.length>1?'<div class="rchips" role="group" aria-label="Haritada gün seç"><button class="rchip" type="button" data-rday="-1" aria-pressed="'+(rFocus<0)+'">Tüm günler</button>'+mapDays.map(function(i){return '<button class="rchip" type="button" data-rday="'+i+'" aria-pressed="'+(rFocus===i)+'" style="--c:'+DAYV[i%4]+';--on-c:'+DAYON[i%4]+'"><i></i>'+(i+1)+'. gün</button>';}).join("")+'</div>':"";
+  var leg='<ul class="rleg">'+it.map(function(d,i){var far=d.every(function(x){return x.p.far;});return '<li style="--c:'+DAYV[i%4]+'"><span class="sw'+(far?" far":"")+'"></span>'+(i+1)+'. gün'+(far?': '+esc(d.map(function(x){return shortN(x.p);}).join(", "))+' (şehir dışı, haritada yok)':' · '+d.length+' yer')+'</li>';}).join("")+'<li><span class="hs"></span>Otelin: '+esc(bA.n)+'</li><li><span class="mt"></span>'+esc(C.toplu.harita.charAt(0).toLocaleUpperCase("tr")+C.toplu.harita.slice(1))+'</li></ul>';
+  $("#rmapBox").innerHTML='<div class="rmapw">'+chips+routeMap({base:bA,route:it,focus:rFocus,visited:vis,label:st.n?"Rotanın haritası. Numaralar ziyaret sırasını, renkler günleri gösterir.":"Rota haritası"})+leg+'</div>';
+}
+function rHl(e,on){var t=e.target.closest&&e.target.closest("[data-pid]");if(!t)return;var id=t.getAttribute("data-pid");$$('#rdays [data-pid="'+id+'"],#rmapBox [data-pid="'+id+'"]').forEach(function(g){g.classList.toggle("hl",on);});}
+
+/* ============ HERO: GÜVENLİK DESENİ ============ */
+function drawGuil(){
+  var c=$("#guil");if(!c||!c.getContext)return;var r=c.getBoundingClientRect();if(!r.width)return;
+  var dpr=Math.min(2,window.devicePixelRatio||1);c.width=Math.round(r.width*dpr);c.height=Math.round(r.height*dpr);
+  var g=c.getContext("2d");g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,r.width,r.height);
+  g.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue("--guil").trim()||"#BFD4C9";g.lineWidth=0.7;
+  var W=r.width,H=r.height,y0=H*0.84,i,x,y,t;
+  for(i=0;i<24;i++){g.beginPath();for(x=0;x<=W;x+=4){y=y0+Math.sin(x/58+i*0.26)*16*Math.sin(x/320+i*0.05)+(i-12)*1.7;if(x)g.lineTo(x,y);else g.moveTo(x,y);}g.stroke();}
+  var cx=Math.min(W*0.2,220),cy=Math.min(170,H*0.28),R=100,rr=29,d=66;g.lineWidth=0.5;g.beginPath();
+  for(t=0;t<=Math.PI*2*29;t+=0.035){x=cx+(R-rr)*Math.cos(t)+d*Math.cos((R-rr)/rr*t);y=cy+(R-rr)*Math.sin(t)-d*Math.sin((R-rr)/rr*t);if(t)g.lineTo(x,y);else g.moveTo(x,y);}g.stroke();
+}
+
+/* ============ HERO: DÜNYA HARİTASI ============ */
+var TRN={IT:"İtalya",TR:"Türkiye",FR:"Fransa",ES:"İspanya",DE:"Almanya",GR:"Yunanistan",NL:"Hollanda",GB:"Birleşik Krallık",US:"ABD",JP:"Japonya",PT:"Portekiz",AT:"Avusturya",CZ:"Çekya",CH:"İsviçre",HU:"Macaristan",PL:"Polonya",RS:"Sırbistan",BA:"Bosna-Hersek",GE:"Gürcistan",AZ:"Azerbaycan",EG:"Mısır",AE:"BAE",TH:"Tayland",BE:"Belçika",HR:"Hırvatistan",BG:"Bulgaristan",RO:"Romanya",RU:"Rusya",UA:"Ukrayna",CN:"Çin",BR:"Brezilya",CA:"Kanada",MA:"Fas",TN:"Tunus",SE:"İsveç",NO:"Norveç",DK:"Danimarka",FI:"Finlandiya",IE:"İrlanda",AL:"Arnavutluk",MK:"Kuzey Makedonya",ME:"Karadağ",SI:"Slovenya",SK:"Slovakya",CY:"Kıbrıs",IR:"İran",IQ:"Irak",SY:"Suriye",SA:"Suudi Arabistan",IN:"Hindistan",MX:"Meksika",AR:"Arjantin",AU:"Avustralya",KR:"Güney Kore",ID:"Endonezya",QA:"Katar",LB:"Lübnan",JO:"Ürdün",IL:"İsrail",DZ:"Cezayir",LY:"Libya",KZ:"Kazakistan",UZ:"Özbekistan",TM:"Türkmenistan",AM:"Ermenistan",MD:"Moldova",BY:"Belarus",LT:"Litvanya",LV:"Letonya",EE:"Estonya",IS:"İzlanda",LU:"Lüksemburg",ZA:"Güney Afrika"};
+var VW=[0,-61,900,562.5],VE=[386,112,170,106.25],curVB=VE.slice(),zoomed=true;
+function setVB(v){curVB=v;var w=$("#world");if(w)w.setAttribute("viewBox",v.map(function(n){return n.toFixed(2);}).join(" "));}
+function animVB(to,ms){var from=curVB.slice();if(reduce){setVB(to);return;}var t0=performance.now();function f(t){var k=Math.min(1,(t-t0)/ms),e=k<0.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;setVB(from.map(function(a,i){return a+(to[i]-a)*e;}));if(k<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+function mapFb(){var f=$("#mapFallback");f.textContent="Harita yüklenemedi. Gideceğin şehri varış alanından seçebilirsin.";f.hidden=false;}
+function renderWorld(){
+  var W=window.__WORLD,svg=$("#world");
+  if(!W||!W.paths){mapFb();$("#mapToggle").hidden=true;return;}
+  var ins=W.insets[0],bb=ins.bbox,Rr=6381372,c=(W.projection&&W.projection.centralMeridian)||11.5,dg=Math.PI/180;
+  function proj(lat,lng){var x=Rr*(lng-c)*dg,y=-Rr*Math.log(Math.tan((45+0.4*lat)*dg))/0.8;return [(x-bb[0].x)/(bb[1].x-bb[0].x)*ins.width+(ins.left||0),(y-bb[0].y)/(bb[1].y-bb[0].y)*ins.height+(ins.top||0)];}
+  var s="";Object.keys(W.paths).forEach(function(code){var p=W.paths[code];s+='<path class="cty'+(code==="CZ"?" it":"")+(code==="TR"?" tr":"")+'" data-c="'+code+'" data-n="'+esc(TRN[code]||p.name)+'" d="'+p.path+'"/>';});
+  var a=proj(41.01,28.97),b=proj(C.la,C.lo),mx=(a[0]+b[0])/2,my=Math.min(a[1],b[1])-12;
+  s+='<path class="arc" id="arc" d="M'+a[0].toFixed(2)+","+a[1].toFixed(2)+" Q"+mx.toFixed(2)+","+my.toFixed(2)+" "+b[0].toFixed(2)+","+b[1].toFixed(2)+'"/>';
+  s+='<circle class="cdot" cx="'+a[0].toFixed(2)+'" cy="'+a[1].toFixed(2)+'" r="1.3"/><circle class="cdot rm" cx="'+b[0].toFixed(2)+'" cy="'+b[1].toFixed(2)+'" r="1.6"/>';
+  s+='<text class="clab" x="'+(a[0]+2).toFixed(2)+'" y="'+(a[1]+4.2).toFixed(2)+'">İSTANBUL</text><text class="clab" x="'+(b[0]-2.5).toFixed(2)+'" y="'+(b[1]+5).toFixed(2)+'" text-anchor="end">'+esc(C.ad.toLocaleUpperCase("tr"))+'</text>';
+  svg.innerHTML=s;
+  if(!reduce){zoomed=false;setVB(VW);svg.classList.remove("z");$("#mapToggle").textContent=C.ek.ya+" yakınlaş";setTimeout(function(){zoomTo(true);},700);}else{svg.classList.add("z");}
+}
+function zoomTo(z){zoomed=z;animVB(z?VE:VW,1500);var svg=$("#world");if(z)setTimeout(function(){svg.classList.add("z");},900);else svg.classList.remove("z");$("#mapToggle").textContent=z?"Dünyayı gör":C.ek.ya+" yakınlaş";}
+
+/* ============ PASAPORT KİŞİSELLEŞTİRME ============ */
+function visaKey(){var n=$("#nat").value;return n==="TR"?$("#ptype").value:n;}
+function applyPassport(anim){
+  var n=$("#nat").value;$("#ptype").disabled=n!=="TR";
+  var v=VISA[visaKey()],st=$("#stamp");
+  st.innerHTML='<span class="s1">'+v.s1+'</span><span class="s2">'+v.s2+'</span><span class="s3">'+v.s3+'</span>';
+  if(anim&&!reduce){st.classList.remove("thump");void st.offsetWidth;st.classList.add("thump");}
+  $("#visaPanel").innerHTML='<div class="stamp"><span class="s1">'+v.s1+'</span><span class="s2">'+v.s2+'</span><span class="s3">'+v.s3+'</span></div><div><h3>'+v.h+'</h3><p>'+v.b+'</p>'+(v.pts.length?'<ul class="ticks">'+v.pts.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul>':"")+'</div>';
+  $("#visaProc").hidden=!v.proc;
+}
+
+/* ============ KEŞFET ============ */
+var cat="tarihi";
+function placeRow(p){
+  var on=inPlan(p.id);
+  var ft=p.f?"url(/seyyah-site/varlik/img/plzen/y-"+p.id+"-k.jpg)":"url(/seyyah-site/varlik/img/plzen/"+(CIMG[p.t[0]]||"hero")+".jpg)";
+  return '<li class="pl"><a class="pl-ft" href="../'+p.s+'/" style="background-image:'+ft+'" aria-hidden="true" tabindex="-1"></a><div><h4><a href="../'+p.s+'/">'+esc(p.n)+'</a></h4><span class="it">'+esc(p.it)+'</span>'+(p.acik?'<p class="ac" id="ac-'+p.id+'">'+esc(p.acik)+'</p><button class="dev" type="button" data-dev="ac-'+p.id+'" aria-expanded="false">Devamını oku</button>':"")+'<p class="ph"><b>İPUCU</b>'+esc(p.tip)+'</p>'+(p.ph&&cat==="foto"?'<p class="ph"><b>KARE</b>'+esc(p.ph)+'</p>':"")+'</div>'+
+  '<dl class="meta"><dt>Süre</dt><dd>'+fmtH(p.h)+'</dd><dt>Bilet</dt><dd><span class="tk tk-'+p.tk+'">'+TK[p.tk]+'</span> '+esc(p.p)+'</dd><dt>En iyi</dt><dd>'+esc(p.best)+'</dd></dl>'+
+  '<div><button class="add" type="button" data-add="'+p.id+'" aria-pressed="'+on+'">'+(on?"Rotanda ✓":"+ Rotama ekle")+'</button></div></li>';
+}
+function renderKesfet(){
+  $("#catTabs").innerHTML=CATS.map(function(c){return '<button class="ctile" type="button" role="tab" data-cat="'+c[0]+'" aria-selected="'+(c[0]===cat)+'" style="--img:url(/seyyah-site/varlik/img/plzen/'+CIMG[c[0]]+'.jpg)"><span>'+c[1]+'</span></button>';}).join("");
+  var hd=$('[data-sec="kesfet"] .ch-head');if(hd)hd.style.setProperty("--img","url(/seyyah-site/varlik/img/plzen/"+CIMG[cat]+".jpg)");
+  var cn=CATS.filter(function(c){return c[0]===cat;})[0];$("#kesfetCat").textContent="Şehri keşfet · "+cn[1];
+  var box=$("#catBody");
+  if(cat==="bilet"){
+    var ord={sart:0,oner:1,gise:2};
+    var rows=PLACES.filter(function(p){return p.tk!=="free";}).sort(function(a,b){return ord[a.tk]-ord[b.tk];});
+    box.innerHTML='<p class="catsum">Hangi yer için önceden bilet almalısın? <b>'+rows.filter(function(p){return p.tk==="sart";}).length+' yerde rezervasyon şart.</b></p><div class="tbl"><table><thead><tr><th>Yer</th><th>Durum</th><th>Ücret</th><th>Süre</th><th>Resmi bilet</th><th></th></tr></thead><tbody>'+
+      rows.map(function(p){var on=inPlan(p.id);return '<tr><td><b>'+esc(p.n)+'</b></td><td><span class="tk tk-'+p.tk+'">'+TK[p.tk]+'</span><br><small class="muted">'+TKNOT[p.tk]+'</small></td><td>'+esc(p.p)+'</td><td>'+fmtH(p.h)+'</td><td>'+(p.url?'<a href="'+p.url+'" target="_blank" rel="noopener">'+p.url.replace(/^https?:\/\/(www\.)?/,"")+' ↗</a>':'<span class="muted">Gişede</span>')+'</td><td><button class="add" type="button" data-add="'+p.id+'" aria-pressed="'+on+'">'+(on?"✓":"+")+'</button></td></tr>';}).join("")+'</tbody></table></div><p class="note">Ücretler yaklaşık, gitmeden resmi siteden kontrol et. Biletleri yalnızca tabloda bağlantısı verilen resmi sitelerden al. Aracı sitelerde aynı bilet daha pahalıya satılabiliyor.</p>';
+    return;
+  }
+  var list=PLACES.filter(function(p){return p.t.indexOf(cat)>-1;});
+  var hrs=list.reduce(function(a,p){return a+p.h;},0);
+  var days=Math.max(0.5,Math.ceil(hrs*1.3/7*2)/2);
+  box.innerHTML=(cat==="spor"&&SPOR?SPOR:"")+'<p class="catsum"><b>'+list.length+' yer</b> · toplam ziyaret süresi '+fmtH(hrs)+' · hepsini gezmek ≈ <b>'+fmtDays(days)+'</b></p><ul class="places">'+list.map(placeRow).join("")+'</ul>';
+}
+function planStats(){var days=itinerary(S.plan,S.base);var hrs=S.plan.reduce(function(a,id){return a+(byId[id]?byId[id].h:0);},0);return {n:S.plan.length,hrs:hrs,days:days.length,it:days};}
+function renderPlanbar(st){
+  $("#planbar").innerHTML=st.n?'<span><span class="lab">Rotan</span>&nbsp; <b>'+st.n+' yer</b> · ziyaret '+fmtH(st.hrs)+' · ≈ <b>'+st.days+' gün</b>'+(S.sample?' <span class="lab">(örnek)</span>':"")+'</span><a href="#rotam">Rotamı gör →</a>':'<span>Rotan boş. Beğendiğin yerleri ekle, kaç gün süreceğini hesaplayalım.</span>';
+  $("#navBadge").textContent=st.n;$("#navBadge").hidden=!st.n;
+}
+
+/* ============ PLANLA ============ */
+var mo=new Date().getMonth(),tripN=3,ttype="aile",budgetTouched=false;
+function renderMonths(){
+  $("#months").innerHTML=MONTHS.map(function(m,i){var cr="";for(var k=0;k<m.crowd;k++)cr+="<i></i>";return '<button type="button" class="mo'+(i===mo?" on":"")+'" data-mo="'+i+'" aria-pressed="'+(i===mo)+'" aria-label="'+m.m+', en yüksek '+m.hi+' derece"><span class="t">'+m.hi+'°</span><span class="bar" style="height:'+Math.round(m.hi/33*150)+'px"></span><span class="cr">'+cr+'</span><span class="ab">'+MAB[i]+'</span></button>';}).join("");
+  var m=MONTHS[mo];
+  $("#moDetail").innerHTML='<span class="lab">'+(mo===new Date().getMonth()?"Bu ay":"Seçilen ay")+'</span><h4>'+m.m+'</h4><dl><dt>Sıcaklık</dt><dd>'+m.hi+'° / '+m.lo+'° ortalama</dd><dt>Yağış</dt><dd>Ayda ≈ '+m.rain+' yağışlı gün</dd><dt>Kalabalık</dt><dd>'+LEVEL[m.crowd]+'</dd><dt>Fiyatlar</dt><dd>'+LEVEL[m.price]+'</dd><dt>Ne giyilir</dt><dd>'+m.wear+'</dd></dl><p>'+m.note+'</p>';
+}
+function renderTrips(){
+  $("#tripTabs").innerHTML=Object.keys(TRIPS).map(Number).map(function(n){return '<button class="tab" type="button" role="tab" data-trip="'+n+'" aria-selected="'+(n===tripN)+'">'+n+' gün</button>';}).join("");
+  $("#tripDays").innerHTML=TRIPS[tripN].map(function(d,i){var h=d.s.reduce(function(a,id){return a+byId[id].h;},0);return '<div class="day"><span class="lab">'+(i+1)+'. gün'+(h?' · ziyaret ≈ '+fmtH(h):"")+'</span><h4>'+d.t+'</h4>'+(d.s.length?'<ol>'+d.s.map(function(id){return "<li>"+esc(byId[id].n)+"</li>";}).join("")+'</ol>':'<p class="x">'+d.x+'</p>')+'</div>';}).join("");
+  $("#tripToast").textContent="";
+}
+function renderTypes(){
+  $("#typeTabs").innerHTML=Object.keys(TYPES).map(function(k){return '<button class="tab" type="button" role="tab" data-type="'+k+'" aria-selected="'+(k===ttype)+'">'+TYPES[k].n+'</button>';}).join("");
+  var t=TYPES[ttype],a=areaById[t.area];
+  $("#typeBody").innerHTML='<div class="g2"><div><h4 class="mini">Önerilerimiz</h4><ul class="ticks">'+t.tips.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div><div><h4 class="mini">Kalmak için</h4><p style="margin-bottom:14px"><b style="font-family:var(--f-display);font-size:1.4rem">'+a.n+'</b><br><span class="muted">'+a.fr+'</span></p><h4 class="mini">Sana uygun yerler</h4><div class="chips">'+t.p.map(function(id){var on=inPlan(id);return '<button class="chip" type="button" data-add="'+id+'" aria-pressed="'+on+'">'+(on?"✓ ":"+ ")+esc(byId[id].n)+'</button>';}).join("")+'</div></div></div>';
+}
+function renderBudget(st){
+  if(!budgetTouched){$("#bDays").value=Math.max(1,Math.min(21,st&&st.days?st.days:3));}
+  var days=Math.max(1,Math.min(21,parseInt($("#bDays").value,10)||1)),ppl=Math.max(1,Math.min(8,parseInt($("#bPeople").value,10)||1));
+  var sty=(document.querySelector('input[name="bstyle"]:checked')||{}).value||"orta",B=BUDGET[sty];
+  var parts={},tot=0;Object.keys(B).forEach(function(k){var v=B[k]*days*ppl;if(k==="konak"&&ppl===1)v*=1.6;parts[k]=v;tot+=v;});
+  $("#budgetOut").innerHTML='<div class="btot"><div><span class="lab">Toplam</span><br><b>'+eur(tot)+'</b></div><div><span class="lab">Kişi başı</span><br><b style="font-size:1.8rem">'+eur(tot/ppl)+'</b></div><div><span class="lab">Kişi başı günlük</span><br><b style="font-size:1.8rem">'+eur(tot/ppl/days)+'</b></div></div>'+
+    '<div class="stack" aria-hidden="true">'+Object.keys(parts).map(function(k){return '<span style="width:'+(parts[k]/tot*100).toFixed(1)+'%;background:'+BLAB[k][1]+'"></span>';}).join("")+'</div>'+
+    '<div class="bl">'+Object.keys(parts).map(function(k){return '<i style="background:'+BLAB[k][1]+'"></i><span>'+BLAB[k][0]+'</span><span class="v">'+eur(parts[k])+'</span>';}).join("")+'</div><p class="note">'+days+' gün, '+ppl+' kişi. Tutarlar yaklaşık: konaklama, yemek, şehir içi ulaşım, giriş ücretleri ve konaklama vergisi.</p>';
+}
+function renderMatrix(){
+  var ids=C.matris.map(function(x){return x[0];}),sh={};C.matris.forEach(function(x){sh[x[0]]=x[1];});
+  var max=0,M=ids.map(function(a){return ids.map(function(b){var v=a===b?0:walkMin(km(byId[a],byId[b]));if(v>max)max=v;return v;});});
+  $("#matrix").innerHTML='<table class="mx"><thead><tr><th></th>'+ids.map(function(i){return "<th>"+sh[i]+"</th>";}).join("")+'</tr></thead><tbody>'+ids.map(function(a,i){return '<tr><th>'+sh[a]+'</th>'+M[i].map(function(v,j){return i===j?'<td class="d">—</td>':'<td style="background:color-mix(in srgb,var(--ochre) '+Math.round(v/max*55)+'%,transparent)">'+Math.round(v)+'</td>';}).join("")+'</tr>';}).join("")+'</tbody></table>';
+}
+function renderEvents(){var now=new Date().getMonth();$("#events").innerHTML=EVENTS.map(function(e){return '<li'+(e[0]===now?' class="now"':"")+'><span class="em">'+MONTHS[e[0]].m+'</span><span class="ed">'+e[1]+'</span><span class="en"><b>'+e[2]+'</b><span>'+e[3]+'</span></span><span class="et">'+e[4]+'</span></li>';}).join("");}
+function renderDaytrips(){$("#daytrips").innerHTML=DAYTRIPS.map(function(d){return '<div class="dt"><h4>'+d.n+'</h4><p>'+d.w+'</p><dl class="meta"><dt>Nasıl</dt><dd>'+d.how+'</dd><dt>Süre</dt><dd>'+d.t+'</dd><dt>Maliyet</dt><dd>'+d.c+'</dd></dl></div>';}).join("");}
+function renderHowLong(st){$("#hlYou").innerHTML='<span class="lab">Senin rotan</span><b>'+(st.n?st.days+" gün":"—")+'</b><p>'+(st.n?st.n+" yer, ziyaret süresi "+fmtH(st.hrs)+". <a href=\"#rotam\">Gün gün gör</a>":"Henüz yer eklemedin. <a href=\"#kesfet\">Keşfet'ten ekle</a>")+'</p>';}
+
+/* ============ KONAKLAMA ============ */
+var aTag="all",selArea=null;
+function renderAreas(){
+  $("#areaTabs").innerHTML=ATAGS.map(function(t){return '<button class="tab" type="button" role="tab" data-atag="'+t[0]+'" aria-selected="'+(t[0]===aTag)+'">'+t[1]+'</button>';}).join("");
+  var list=AREAS.filter(function(a){return aTag==="all"||a.tags.indexOf(aTag)>-1;});
+  var tl={};ATAGS.forEach(function(t){tl[t[0]]=t[1];});
+  $("#areas").innerHTML=list.map(function(a){var here=S.base===a.id;return '<li class="ar'+(here?" here":"")+'"><div><h4>'+a.n+'</h4><p class="for">'+a.fr+'</p><div class="tags">'+a.tags.map(function(t){return "<span>"+tl[t]+"</span>";}).join("")+'</div></div><div class="pm"><div><h4 class="mini">Artıları</h4><ul class="ticks ok">'+a.plus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div><div><h4 class="mini">Eksileri</h4><ul class="ticks bad">'+a.minus.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul></div></div><div class="side"><span class="lab">Gecelik, yaklaşık</span><span class="price">'+a.price+'</span><span class="lab">'+a.metro+'</span><a class="btn" href="https://www.booking.com/searchresults.tr.html?ss='+encodeURIComponent(a.q)+'" target="_blank" rel="noopener">Otelleri gör ↗</a>'+(a.far?"":'<button class="btn ghost" type="button" data-base="'+a.id+'">'+(here?"Burada kalıyorum ✓":"Burada kalacağım")+'</button>')+'</div></li>';}).join("");
+}
+function renderRank(){
+  var plan=S.plan.map(function(id){return byId[id];}).filter(function(p){return p&&!p.far;});
+  var cands=AREAS.filter(function(a){return !a.far;});
+  if(!selArea)selArea=S.base;
+  if(!plan.length){$("#rankLead").textContent="Rotana yer ekleyince her bölgenin rotana ortalama uzaklığını burada hesaplarız.";$("#rank").innerHTML="";$("#kMap").innerHTML=romeMap({areas:cands,sel:selArea,all:true,landmarks:false,label:"Konaklama bölgeleri haritası"});return;}
+  var rows=cands.map(function(a){var tot=plan.reduce(function(s,p){return s+travel(a,p).best;},0);return {a:a,avg:tot/plan.length};}).sort(function(x,y){return x.avg-y.avg;});
+  var max=rows[rows.length-1].avg;
+  $("#rankLead").innerHTML="Rotandaki "+plan.length+" yere ortalama ulaşım süresi, yürüme ya da metroyla hangisi kısaysa. En iyi seçenek: <b>"+rows[0].a.n+"</b>.";
+  $("#rank").innerHTML=rows.map(function(r,i){return '<li class="'+(r.a.id===selArea?"on":"")+'"><button type="button" data-sel="'+r.a.id+'"><span><span class="nm">'+r.a.n+'</span>'+(i===0?'<span class="best">Rotana en uygun</span>':"")+(r.a.id===S.base?'<span class="best" style="color:var(--ochre)">Konaklaman</span>':"")+'</span><span class="tr"><i style="width:'+(r.avg/max*100).toFixed(1)+'%"></i></span><span class="v">ort. '+fmtMin(r.avg)+'</span></button></li>';}).join("");
+  $("#kMap").innerHTML=romeMap({areas:cands,sel:selArea,spoke:areaById[selArea],plan:plan,landmarks:false,label:areaById[selArea].n+" ile rotandaki yerler arası bağlantılar"});
+}
+
+/* ============ ULAŞIM ============ */
+function calcOpts(){var s='<optgroup label="Yerler">'+PLACES.filter(function(p){return !p.far;}).map(function(p){return '<option value="p:'+p.id+'">'+esc(p.n)+'</option>';}).join("")+'</optgroup><optgroup label="Konaklama bölgeleri">'+AREAS.filter(function(a){return !a.far;}).map(function(a){return '<option value="a:'+a.id+'">'+esc(a.n)+'</option>';}).join("")+'</optgroup>';$("#cFrom").innerHTML=s;$("#cTo").innerHTML=s;$("#cFrom").value="p:"+C.hesap[0];$("#cTo").value="p:"+C.hesap[1];}
+function pick(v){var k=v.split(":");return k[0]==="p"?byId[k[1]]:areaById[k[1]];}
+function renderCalc(){
+  var a=pick($("#cFrom").value),b=pick($("#cTo").value);if(!a||!b)return;
+  if(a===b){$("#calcOut").innerHTML='<p class="rec">Aynı yeri seçtin. Başka bir varış noktası seç.</p>';$("#calcMap").innerHTML=romeMap({stations:true,label:C.ad+" "+C.toplu.harita});return;}
+  var r=travel(a,b),w=r.walk<=22?"walk":(r.metro&&r.metro.min<=r.taxi+20?"metro":"taxi");
+  var rec=w==="walk"?"Yürü. "+fmtMin(r.walk)+" sürer ve yol boyunca "+C.ek.yi+" görürsün.":w==="metro"?C.toplu.fiil+" ("+fmtMin(r.metro.min)+", "+C.toplu.bilet+"): "+r.metro.desc+".":r.metro?C.taksi.ad+" en hızlısı ("+fmtMin(r.taxi)+"). Bütçen dar ise "+C.toplu.kisa+": "+r.metro.desc+".":C.toplu.yok;
+  $("#calcOut").innerHTML='<div class="cout"><div class="cm"><span class="lab">Kuş uçuşu</span><b>'+dec(r.k)+' km</b><small>Yürüme yolu ≈ '+dec(r.k*1.3)+' km</small></div><div class="cm'+(w==="walk"?" win":"")+'"><span class="lab">Yürüyerek</span><b>'+fmtMin(r.walk)+'</b></div><div class="cm'+(w==="metro"?" win":"")+'"><span class="lab">'+esc(C.toplu.ad)+'</span><b>'+(r.metro?fmtMin(r.metro.min):"—")+'</b><small>'+(r.metro?esc(r.metro.desc):"Yakın istasyon yok ya da yürümek daha hızlı")+'</small></div><div class="cm'+(w==="taxi"?" win":"")+'"><span class="lab">'+esc(C.taksi.ad)+'</span><b>'+fmtMin(r.taxi)+'</b><small>≈ '+r.fareLo+'–'+r.fareHi+' €</small></div></div><p class="rec"><b>Önerimiz:</b> '+rec+'</p>';
+  $("#calcMap").innerHTML=romeMap({stations:false,from:a,to:b,label:a.n+" ile "+b.n+" arası"});
+}
+
+/* ============ BİLGİ ============ */
+function bagGroups(){
+  var m=MONTHS[S.bagMo]||MONTHS[0],g=S.bagGun||Math.max(3,planStats().days||4),giy=[];
+  m.wear.split(/,\s*/).forEach(function(w){giy.push(w.charAt(0).toLocaleUpperCase("tr")+w.slice(1));});
+  giy.push(["camasir",Math.min(g+1,8)+" takım iç çamaşırı ve çorap"],["ust",Math.min(Math.ceil(g*0.7)+1,7)+" tişört ya da gömlek"],"Rahat yürüyüş ayakkabısı","Omuz ve dizi kapatan kıyafet (kiliselere girerken)");
+  if(m.hi>=25)giy.push("Şapka ve güneş gözlüğü","Güneş kremi");
+  if(m.lo<=8&&!/bere|atkı/i.test(m.wear))giy.push("Atkı ve bere");
+  if(m.rain>=7&&!/şemsiye/i.test(m.wear))giy.push("Katlanır şemsiye");
+  if(g>7)giy.push("Seyahat deterjanı (çamaşır için)");
+  return BAG.map(function(b){return b[0]==="Giyim"?[b[0]+" · "+m.m+", "+m.lo+"–"+m.hi+" °C",giy]:b;});
+}
+function renderBag(){
+  $("#bagAy").innerHTML=MONTHS.map(function(m,i){return '<option value="'+i+'"'+(i===S.bagMo?" selected":"")+'>'+m.m+'</option>';}).join("");
+  $("#bagGun").value=S.bagGun||Math.max(3,planStats().days||4);
+  var n=0;$("#bag").innerHTML=bagGroups().map(function(g){return '<div><h4 class="mini">'+esc(g[0])+'</h4>'+g[1].map(function(x){var k=Array.isArray(x)?x[0]:x,t=Array.isArray(x)?x[1]:x,id="bag"+(n++),on=S.bag.indexOf(k)>-1;return '<label for="'+id+'"><input type="checkbox" id="'+id+'" data-bag="'+esc(k)+'"'+(on?" checked":"")+'><span>'+esc(t)+'</span></label>';}).join("")+'</div>';}).join("");
+}
+function printPdf(){
+  var st=planStats(),d=new Date().toLocaleDateString("tr-TR");
+  var bag=bagGroups().map(function(g){return '<h3>'+esc(g[0])+'</h3><ul>'+g[1].map(function(x){var k=Array.isArray(x)?x[0]:x,t=Array.isArray(x)?x[1]:x;return '<li>'+(S.bag.indexOf(k)>-1?"☑":"☐")+' '+esc(t)+'</li>';}).join("")+'</ul>';}).join("");
+  $("#pdf").innerHTML='<h1>'+esc(C.ad)+' seyahat planı</h1><p>'+st.n+' yer · '+(st.n?st.days:0)+' gün · Road is Life, '+d+'</p>'+(st.n?'<h2>Günler</h2>'+$("#rdays").innerHTML:"")+'<h2>Bavul listesi</h2>'+bag+'<p style="margin-top:16px;font-size:9pt">Fiyat ve saatler yaklaşıktır. Yola çıkmadan resmi sitelerden teyit et.</p>';
+  document.body.classList.add("yazdir");
+  var bit=function(){document.body.classList.remove("yazdir");window.removeEventListener("afterprint",bit);};
+  window.addEventListener("afterprint",bit);window.print();
+}
+
+/* ============ BENİM ROMA'M ============ */
+function renderRotam(st){
+  var vis={};S.visited.forEach(function(v){vis[v]=1;});
+  var done=S.plan.filter(function(id){return vis[id];}).length;
+  $("#rsum").innerHTML='<div><b>'+st.n+'</b> <span>yer</span></div><div><b>'+(st.n?st.days:0)+'</b> <span>gün</span></div><div><b>'+fmtH(st.hrs)+'</b> <span>ziyaret</span></div><div><b>'+done+'/'+st.n+'</b> <span>gezildi</span></div>'+(S.sample?'<span class="tmp">örnek rota</span>':"");
+  $("#baseSel").innerHTML=AREAS.filter(function(a){return !a.far;}).map(function(a){return '<option value="'+a.id+'"'+(a.id===S.base?" selected":"")+'>'+esc(a.n)+'</option>';}).join("");
+  if(!st.n){$("#rdays").innerHTML='<div class="empty"><b>Rotan boş.</b><p>Keşfet bölümünden yer ekle ya da hazır bir planı rotana aktar.</p><div class="btnrow"><a class="btn" href="#kesfet">Keşfet\'e git</a><a class="btn ghost" href="#planla">Hazır planlar</a></div></div>';drawRotaMap(st);return;}
+  var cls=["","l-b","l-c","l-s"];
+  $("#rdays").innerHTML=st.it.map(function(d,i){var n0=st.it.slice(0,i).reduce(function(a,dd){return a+dd.length;},0);var hrs=d.reduce(function(a,x){return a+x.p.h+(x.leg?x.leg.best/60:0);},0);var title=d.length===1&&d[0].p.far?"Şehir dışı":"Gün planı";return '<section class="dline '+cls[i%4]+'"><header><span><span class="dn">'+(i+1)+'. gün</span><span class="dh">'+title+'</span></span><span class="lab">≈ '+fmtH(hrs)+'</span></header><ol>'+d.map(function(x,j){var leg="";if(x.leg){var m=x.leg.metro&&x.leg.metro.min<x.leg.walk;leg=(j===0?"Konaklamadan ":"")+(m?"metroyla "+fmtMin(x.leg.metro.min):"yürüyerek "+fmtMin(x.leg.walk));}else{leg="Yarım gün ayır";}return '<li class="'+(vis[x.p.id]?"done":"")+'" data-pid="'+x.p.id+'" data-n="'+(n0+j+1)+'"><span class="leg">'+leg+'</span><div class="st"><label><input type="checkbox" data-visit="'+x.p.id+'"'+(vis[x.p.id]?" checked":"")+'><span class="nm">'+esc(x.p.n)+'</span></label><span class="lab">'+fmtH(x.p.h)+' · '+TK[x.p.tk]+'</span><button class="rm" type="button" data-add="'+x.p.id+'">Çıkar</button></div></li>';}).join("")+'</ol></section>';}).join("");
+  drawRotaMap(st);
+}
+
+/* ============ GÜNCELLEME VE YÖNLENDİRME ============ */
+function update(){var st=planStats();renderKesfet();renderPlanbar(st);renderHowLong(st);renderTypes();renderBudget(st);renderAreas();renderRank();renderRotam(st);renderBag();}
+var CH=["vize","kesfet","planla","konaklama","havalimani","ulasim","yerel","bilgi","rotam"];
+function route(scroll){
+  var h=location.hash.slice(1);if(CH.indexOf(h)<0)h="vize";
+  $$("[data-sec]").forEach(function(s){s.hidden=s.getAttribute("data-sec")!==h;});
+  var z=$(".zemin"),b=BGIMG[h];if(z)z.style.setProperty("--zemin",b?"url(/seyyah-site/varlik/img/plzen/z-"+b+".jpg)":"none");
+  $$("[data-nav]").forEach(function(a){if(a.getAttribute("data-nav")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  var a=$('[data-nav="'+h+'"]'),mi=$("#metroIn");if(a&&mi){var li=a.parentNode;mi.scrollTo({left:li.offsetLeft-mi.clientWidth/2+li.clientWidth/2,behavior:reduce?"auto":"smooth"});}
+  if(scroll){var nav=$(".nav"),y=$("#chapters").getBoundingClientRect().top+window.scrollY-(nav?nav.offsetHeight:0)+1;if(window.scrollY>y-2||scroll==="force")window.scrollTo({top:y,behavior:reduce?"auto":"smooth"});}
+}
+
+/* ============ OLAYLAR ============ */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-add]");if(t){togglePlan(t.getAttribute("data-add"));return;}
+  var dv=e.target.closest("[data-dev]");if(dv){var ac=document.getElementById(dv.getAttribute("data-dev")),ac2=ac&&ac.classList.toggle("tam");dv.setAttribute("aria-expanded",ac2?"true":"false");dv.textContent=ac2?"Kısalt":"Devamını oku";return;}
+  t=e.target.closest("[data-rday]");if(t){rFocus=+t.getAttribute("data-rday");drawRotaMap(planStats());return;}
+  t=e.target.closest("[data-cat]");if(t){cat=t.getAttribute("data-cat");renderKesfet();return;}
+  t=e.target.closest("[data-mo]");if(t){mo=+t.getAttribute("data-mo");renderMonths();return;}
+  t=e.target.closest("[data-trip]");if(t){tripN=+t.getAttribute("data-trip");renderTrips();return;}
+  t=e.target.closest("[data-type]");if(t){ttype=t.getAttribute("data-type");renderTypes();return;}
+  t=e.target.closest("[data-atag]");if(t){aTag=t.getAttribute("data-atag");renderAreas();return;}
+  t=e.target.closest("[data-sel]");if(t){selArea=t.getAttribute("data-sel");renderRank();return;}
+  t=e.target.closest("[data-area]");if(t){selArea=t.getAttribute("data-area");renderRank();return;}
+  t=e.target.closest("[data-base]");if(t){S.base=t.getAttribute("data-base");selArea=S.base;save();update();return;}
+  t=e.target.closest("[data-doc]");if(t){renderDocs(t.getAttribute("data-doc"));return;}
+  t=e.target.closest("[data-ap]");if(t){var ap=t.getAttribute("data-ap");$$("[data-ap]").forEach(function(b){b.setAttribute("aria-selected",String(b===t));});$$("[data-apsec]").forEach(function(s){s.hidden=s.getAttribute("data-apsec")!==ap;});return;}
+  t=e.target.closest(".cty");if(t){var c=t.getAttribute("data-c"),n=t.getAttribute("data-n");$("#mapCap").textContent=c==="CZ"?"Çekya · "+C.ad+" dosyası açık":c==="TR"?"Türkiye · çıkış noktası":n+" · dosya hazırlanıyor";if(c==="CZ"){location.hash="vize";}return;}
+});
+$("#world").addEventListener("mouseover",function(e){var t=e.target.closest(".cty");if(!t)return;var c=t.getAttribute("data-c");$("#mapCap").textContent=t.getAttribute("data-n")+(c==="CZ"?" · "+C.ad+" dosyası hazır":c==="TR"?" · çıkış":" · yakında");});
+$("#mapToggle").addEventListener("click",function(){zoomTo(!zoomed);});
+$("#nat").addEventListener("change",function(){applyPassport(true);});
+$("#ptype").addEventListener("change",function(){applyPassport(true);});
+$("#dest").addEventListener("change",function(){var v=this.value.trim().toLocaleLowerCase("tr");var hit=null;(C.sehirler||[]).forEach(function(x){if(v&&x.ad.toLocaleLowerCase("tr").indexOf(v.split(",")[0].trim())===0)hit=x;});if(!v||hit&&hit.id===C.id){$("#mapCap").textContent="İstanbul → "+C.ad+" · uçuş "+C.ucus;}else if(hit&&hit.url){$("#mapCap").textContent=hit.ad+" dosyası açılıyor…";location.href=hit.url;}else{$("#mapCap").textContent=this.value+" · bu şehrin dosyası hazırlanıyor. Şimdilik "+C.ek.nin+" dosyasına bak.";}});
+$("#tripAdd").addEventListener("click",function(){var add=[];TRIPS[tripN].forEach(function(d){d.s.forEach(function(id){if(!inPlan(id)&&add.indexOf(id)<0)add.push(id);});});S.plan=S.plan.concat(add);S.sample=false;save();update();$("#tripToast").textContent=add.length?add.length+" yer rotana eklendi.":"Bu plandaki yerler zaten rotanda.";});
+$("#bDays").addEventListener("input",function(){budgetTouched=true;renderBudget();});
+$("#bPeople").addEventListener("input",function(){renderBudget();});
+$("#bStyle").addEventListener("change",function(){renderBudget();});
+$("#cFrom").addEventListener("change",renderCalc);$("#cTo").addEventListener("change",renderCalc);
+$("#baseSel").addEventListener("change",function(){S.base=this.value;selArea=S.base;save();update();});
+["#rdays","#rmapBox"].forEach(function(q){$(q).addEventListener("mouseover",function(e){rHl(e,true);});$(q).addEventListener("mouseout",function(e){rHl(e,false);});});
+$("#clearPlan").addEventListener("click",function(){S.plan=[];S.visited=[];S.sample=false;save();update();});
+document.addEventListener("change",function(e){
+  var t=e.target;
+  if(t.hasAttribute("data-visit")){var id=t.getAttribute("data-visit");if(t.checked){if(S.visited.indexOf(id)<0)S.visited.push(id);}else S.visited=S.visited.filter(function(v){return v!==id;});save();renderRotam(planStats());}
+  if(t.hasAttribute("data-bag")){var x=t.getAttribute("data-bag");if(t.checked){if(S.bag.indexOf(x)<0)S.bag.push(x);}else S.bag=S.bag.filter(function(v){return v!==x;});save();}
+});
+function renderDocs(k){$$("[data-doc]").forEach(function(b){b.setAttribute("aria-selected",String(b.getAttribute("data-doc")===k));});$("#docCommon").innerHTML=DOCS.common.map(function(x){return "<li>"+x+"</li>";}).join("");$("#docProf").innerHTML=DOCS[k].map(function(x){return "<li>"+x+"</li>";}).join("");$("#docProfTitle").textContent=DOCT[k];}
+window.addEventListener("hashchange",function(){route(true);});
+$("#bagAy").addEventListener("change",function(e){S.bagMo=+e.target.value;save();renderBag();});
+$("#bagGun").addEventListener("change",function(e){var v=Math.max(1,Math.min(30,parseInt(e.target.value,10)||1));S.bagGun=v;save();renderBag();});
+document.addEventListener("click",function(e){if(e.target.closest("[data-pdf]"))printPdf();});
+
+/* ============ BAŞLAT ============ */
+applyPassport(false);renderDocs("calisan");renderMonths();renderTrips();renderMatrix();renderEvents();renderDaytrips();renderBag();calcOpts();renderCalc();
+$("#metroMap").innerHTML=romeMap({stations:true,landmarks:true,label:C.ad+" "+C.toplu.harita});
+$$("[data-sec]").forEach(function(sec){var h=$(".ch-head",sec);if(h)h.style.setProperty("--img","url(/seyyah-site/varlik/img/plzen/"+SIMG[sec.getAttribute("data-sec")]+".jpg)");});
+update();route(false);
+try{renderWorld();}catch(err){mapFb();}
+var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawGuil,150);});
+try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",drawGuil);}catch(e){}
+new MutationObserver(drawGuil).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(drawGuil);
+})();
+</script>
+
+<script>
+(function(){
+  var V=[[8,"Cumhuriyet Meydanı'nda kahvaltı, altın çeşmelerin başında ilk turistler"],[10,"Katedralin kulesine ilk çıkanlar, açık havada Šumava görünüyor"],[12,"Pubların günlük menüsü: çorba, ana yemek ve bir bardak Pilsner"],[14,"Bira fabrikasının jübile kapısında tur grupları toplanıyor"],[16,"Mahzende meşe fıçıdan filtrelenmemiş bira"],[18,"Yeraltı geçitlerinin son turu, yukarıda meydan ışıklanıyor"],[20,"Büyük Tiyatro'da opera, puplarda tanktan bira"]];
+  function vibe(h){var t=V[V.length-1][1];for(var i=0;i<V.length;i++){if(h>=V[i][0])t=V[i][1];}return t;}
+  function fmt(d){return new Intl.DateTimeFormat("tr-TR",{timeZone:"Europe/Prague",hour:"2-digit",minute:"2-digit",hour12:false}).format(d);}
+  function sunset(d){
+    var y=d.getUTCFullYear(),mo=d.getUTCMonth(),da=d.getUTCDate(),day0=Date.UTC(y,mo,da);
+    var n=Math.round((day0-Date.UTC(y,0,0))/864e5),r=Math.PI/180,lat=49.7473,lng=13.3776;
+    var dec=23.44*Math.sin(2*Math.PI*(284+n)/365),B=2*Math.PI*(n-81)/364;
+    var E=9.87*Math.sin(2*B)-7.53*Math.cos(B)-1.5*Math.sin(B);
+    var c=(Math.sin(-0.833*r)-Math.sin(lat*r)*Math.sin(dec*r))/(Math.cos(lat*r)*Math.cos(dec*r));
+    var H=Math.acos(Math.max(-1,Math.min(1,c)))/r;
+    return new Date(day0+(720-4*lng-E+4*H)*6e4);
+  }
+  function tick(){
+    try{
+      var d=new Date(),t=fmt(d),h=parseInt(t.slice(0,2),10)%24;
+      document.getElementById("rnT").textContent=t;
+      document.getElementById("rnV").textContent=vibe(h);
+      document.getElementById("rnS").textContent=fmt(sunset(d));
+    }catch(e){}
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+
+</body>
+</html>

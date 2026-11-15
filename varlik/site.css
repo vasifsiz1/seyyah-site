@@ -75,6 +75,80 @@
   --sky:#2BB673; --sky-ink:#5CD394; --aperol:#FF5A63; --aperol-ink:#FF7B83;
   --pink:#E07A5F; --pink-ink:#F0957C; --hero-bg:#0E5530; --stamp:#6FD49B}
 
+/* Yunanistan teması: yunanistan/ altındaki sayfalarda <body class="gr-tema">. Bayrak mavisi ve beyazı, Ege turkuazı,
+   begonvil pembesi, limon sarısı, zeytin yeşili. Planlayıcıda (tek dosya) seçici ':root' yapılarak eklenir (planlayici/uret.ts).
+   Fotoğrafı henüz gelmemiş şehirlerde kapak ve kartlar fotoğrafsız: mavi zemin, beyaz yazı, meandros (Yunan deseni) şeridi. */
+.gr-tema{
+  --paper-2:#EEF4FC; --rule:#D5E2F3; --guil:#D5E2F3;
+  --sky:#0D5EAF; --sky-ink:#0B4F94; --aperol:#1A9BB5; --aperol-ink:#0E6F82;
+  --pink:#C2306E; --pink-ink:#9E2058; --sun:#F2C230; --sun-ink:#8A6400; --pista:#7C9A3D; --pista-ink:#4F6A1F;
+  --campari:#0D5EAF; --campari-ink:#0B4F94; --glicine:#5B8FD9; --glicine-ink:#2F62AE;
+  --hero-bg:#0D5EAF; --stamp:#0B4F94}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .gr-tema{
+  --paper:#0B1626; --paper-2:#102038; --card:#132744; --rule:#21395E; --guil:#21395E;
+  --sky:#4D9BEF; --sky-ink:#7FB8F5; --aperol:#3FC3DC; --aperol-ink:#72D6E8;
+  --pink:#E86A9E; --pink-ink:#F28DB6; --campari:#4D9BEF; --campari-ink:#7FB8F5; --hero-bg:#0A4A8C; --stamp:#8CC0F7}}
+:root[data-theme="dark"] .gr-tema{
+  --paper:#0B1626; --paper-2:#102038; --card:#132744; --rule:#21395E; --guil:#21395E;
+  --sky:#4D9BEF; --sky-ink:#7FB8F5; --aperol:#3FC3DC; --aperol-ink:#72D6E8;
+  --pink:#E86A9E; --pink-ink:#F28DB6; --campari:#4D9BEF; --campari-ink:#7FB8F5; --hero-bg:#0A4A8C; --stamp:#8CC0F7}
+
+/* Meandros şeridi: rengi belirteçten (mask), koyu temada da görünür */
+.gr-tema .meandros{height:22px;margin:26px 0 4px;background:var(--sky);opacity:.85;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/22px 22px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/22px 22px repeat-x}
+/* Fotoğrafsız kapak: Ege mavisi, altta beyaz meandros */
+.gr-tema .kapak:not([style]):not(.net){background:radial-gradient(120% 90% at 85% 0%,rgba(255,255,255,.16),rgba(255,255,255,0) 60%),linear-gradient(165deg,var(--hero-bg),color-mix(in srgb,var(--hero-bg) 72%,#000))}
+.gr-tema .kapak:not([style]):not(.net)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:#fff;opacity:.9;z-index:-1;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/18px 18px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/18px 18px repeat-x}
+/* Fotoğrafsız kart: mavi zemin, ortada yerin Yunanca adı */
+.gr-tema .kart .foto.bos{background:linear-gradient(150deg,var(--sky),color-mix(in srgb,var(--sky) 65%,#000));color:#fff;font-family:var(--f-display);font-weight:700;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;text-align:center;padding:0 18px;letter-spacing:.01em;overflow:hidden}
+.gr-tema .kart:nth-child(3n+2) .foto.bos{background:linear-gradient(150deg,var(--aperol),color-mix(in srgb,var(--aperol) 60%,#000))}
+.gr-tema .kart:nth-child(3n) .foto.bos{background:linear-gradient(150deg,#123E73,#0A2547)}
+.gr-tema .kart.yakinda .foto.bos{background:var(--paper-2);color:var(--sky-ink);box-shadow:none}
+/* Fotoğrafsız döşeme: düz renk kutular */
+.gr-tema .doseme a:not([style]){background:linear-gradient(150deg,var(--kc),color-mix(in srgb,var(--kc) 62%,#000))}
+/* Yunanca selamlar uzun: -4 derecelik eğimde sağ ucu üstteki etikete biniyordu */
+.gr-tema .merhaba{transform:rotate(-1.5deg);margin-top:14px}
+
+/* Çekya teması: cekya/ altındaki sayfalarda <body class="cz-tema">. Bayrak mavisi ve beyazı, Ege turkuazı,
+   begonvil pembesi, limon sarısı, zeytin yeşili. Planlayıcıda (tek dosya) seçici ':root' yapılarak eklenir (planlayici/uret.ts).
+   Fotoğrafı henüz gelmemiş şehirlerde kapak ve kartlar fotoğrafsız: mavi zemin, beyaz yazı, meandros (Yunan deseni) şeridi. */
+.cz-tema{
+  --paper-2:#FBF1F2; --rule:#EBD3D6; --guil:#EBD3D6;
+  --sky:#C8102E; --sky-ink:#9E0D24; --aperol:#11457E; --aperol-ink:#0B3260;
+  --pink:#C8102E; --pink-ink:#9E0D24; --sun:#F2C230; --sun-ink:#8A6400; --pista:#7C9A3D; --pista-ink:#4F6A1F;
+  --campari:#C8102E; --campari-ink:#9E0D24; --glicine:#D8606F; --glicine-ink:#9E0D24;
+  --hero-bg:#C8102E; --stamp:#9E0D24}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cz-tema{
+  --paper:#1A0F12; --paper-2:#241519; --card:#2B1A1F; --rule:#4A2A31; --guil:#4A2A31;
+  --sky:#F0707F; --sky-ink:#F7A3AD; --aperol:#6A9BE0; --aperol-ink:#9DBFF0;
+  --pink:#F0707F; --pink-ink:#F7A3AD; --campari:#F0707F; --campari-ink:#F7A3AD; --hero-bg:#8F0F25; --stamp:#F7B3BB}}
+:root[data-theme="dark"] .cz-tema{
+  --paper:#1A0F12; --paper-2:#241519; --card:#2B1A1F; --rule:#4A2A31; --guil:#4A2A31;
+  --sky:#F0707F; --sky-ink:#F7A3AD; --aperol:#6A9BE0; --aperol-ink:#9DBFF0;
+  --pink:#F0707F; --pink-ink:#F7A3AD; --campari:#F0707F; --campari-ink:#F7A3AD; --hero-bg:#8F0F25; --stamp:#F7B3BB}
+
+/* Meandros şeridi: rengi belirteçten (mask), koyu temada da görünür */
+.cz-tema .meandros{height:22px;margin:26px 0 4px;background:var(--sky);opacity:.85;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/22px 22px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/22px 22px repeat-x}
+/* Fotoğrafsız kapak: Ege mavisi, altta beyaz meandros */
+.cz-tema .kapak:not([style]):not(.net){background:radial-gradient(120% 90% at 85% 0%,rgba(255,255,255,.16),rgba(255,255,255,0) 60%),linear-gradient(165deg,var(--hero-bg),color-mix(in srgb,var(--hero-bg) 72%,#000))}
+.cz-tema .kapak:not([style]):not(.net)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:#fff;opacity:.9;z-index:-1;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/18px 18px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 2H24M0 22H24M3 22V7H17V17H9V11H13' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3C/svg%3E") 0 0/18px 18px repeat-x}
+/* Fotoğrafsız kart: kırmızı zemin, ortada yerin adı */
+.cz-tema .kart .foto.bos{background:linear-gradient(150deg,var(--sky),color-mix(in srgb,var(--sky) 65%,#000));color:#fff;font-family:var(--f-display);font-weight:700;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;text-align:center;padding:0 18px;letter-spacing:.01em;overflow:hidden}
+.cz-tema .kart:nth-child(3n+2) .foto.bos{background:linear-gradient(150deg,var(--aperol),color-mix(in srgb,var(--aperol) 60%,#000))}
+.cz-tema .kart:nth-child(3n) .foto.bos{background:linear-gradient(150deg,#11457E,#0A2A52)}
+.cz-tema .kart.yakinda .foto.bos{background:var(--paper-2);color:var(--sky-ink);box-shadow:none}
+/* Fotoğrafsız döşeme: düz renk kutular */
+.cz-tema .doseme a:not([style]){background:linear-gradient(150deg,var(--kc),color-mix(in srgb,var(--kc) 62%,#000))}
+/* Yunanca selamlar uzun: -4 derecelik eğimde sağ ucu üstteki etikete biniyordu */
+.cz-tema .merhaba{transform:rotate(-1.5deg);margin-top:14px}
+
 /* Road is Life sitesi bileşenleri: tatil kartpostalı. Belirteçler _belirtec.css'te. Derlemede ikisi birleşip site.css olur. */
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -429,13 +503,28 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 /* Şehir kartları üçlü sıra (5 kart 3+2, 6 kart 3+3) */
 .kartlar.uclu{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
 /* İtalya teması: üst menü bayrak yeşili, bilgi şeridi yeşil-okr-kırmızı */
-.it-tema .ust-in{background:var(--hero-bg);box-shadow:0 0 0 100vmax var(--hero-bg);clip-path:inset(0 -100vmax)}
-.it-tema .logo b,.it-tema .ust-nav a:not(.cta){color:#fff}
+/* şerit yanlara border-image ile taşar; clip-path açılan Ülkeler panelini kesiyordu */
+.it-tema .ust-in{border-image:conic-gradient(var(--hero-bg) 0 0) fill 0/0/0 100vmax}
+.it-tema .logo b,.it-tema .ust-nav a:not(.cta),.it-tema .ust-ulke>summary{color:#fff}
 .it-tema .logo .el{color:var(--sun)}
-.it-tema .ust-nav a:not(.cta):hover{background:rgba(255,255,255,.14)}
+.it-tema .ust-nav a:not(.cta):hover,.it-tema .ust-ulke>summary:hover,.it-tema .ust-ulke[open]>summary{background:rgba(255,255,255,.14)}
+.it-tema .ust-panel a:not(.cta){color:var(--ink)}
+.it-tema .ust-panel a:not(.cta):hover{background:var(--paper-2)}
 .it-tema .ust-nav a.cta{border-color:#fff;box-shadow:2px 2px 0 rgba(0,0,0,.35)}
 .it-tema .serit div:nth-child(3n+1){--fc:var(--sky)}.it-tema .serit div:nth-child(3n+2){--fc:var(--sun)}.it-tema .serit div:nth-child(3n){--fc:var(--aperol)}
 .kunye summary{cursor:pointer;font-weight:700;width:max-content}
+/* Şehirler arası: nereden–nereye kutusu ve bütün güzergahlar */
+.hat-ara{max-width:760px;margin-bottom:22px}
+.hat-kart{width:100%}
+.hat-kart h3{margin:0;font-size:1.3rem}
+.hat-kart .hat-tur{margin:2px 0 10px;font-weight:700;color:var(--muted)}
+.hat-kart dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;margin:0 0 10px}
+.hat-kart dt{font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.hat-kart dd{margin:0;font-weight:700}
+.hat-kart .hat-not{margin:0 0 12px;font-weight:400}
+.hat-kart .dip{margin:10px 0 0;font-weight:400}
+.hat-hepsi>summary{list-style:none;width:max-content;max-width:100%}
+.hat-hepsi>summary::-webkit-details-marker{display:none}
 
 /* evlilik */
 .adimlar b a{color:inherit}
@@ -497,3 +586,72 @@ a.kart:nth-child(even):hover{transform:translateY(-4px) rotate(.8deg)}
 .rota-ulke h2 a{color:inherit;text-decoration:none}
 .kure-zar{align-self:center}
 .kure-zar::before{content:"";width:16px;height:16px;border:2px solid currentColor;border-radius:4px;background:radial-gradient(circle,currentColor 1.6px,transparent 2.2px) 0 0/50% 50%;transform:rotate(12deg)}
+
+/* Mekânlar sayfası (madde 11): editörün seçtikleri + gezgin notları */
+.mekan-izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:14px}
+.mk .g2{align-items:start}
+.mk .kutu h3{font-size:1.15rem;font-weight:800}
+.mk .kutu h3 a{color:inherit;text-decoration-thickness:2px;text-underline-offset:3px}
+.mekan{scroll-margin-top:16px}
+.mekan .semt{font:700 .84rem/1.2 var(--f-body);color:var(--muted)}
+.mekan .bag{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem}
+.gnotlar{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:12px}
+.gnot{background:var(--card);border:2px solid var(--rule);border-radius:22px;padding:16px 20px;display:grid;gap:8px}
+.gnot.one{border-color:var(--sun)}
+.gnot .rozet{justify-self:start;font:700 .78rem/1 var(--f-body);padding:6px 10px;border-radius:999px;background:var(--sun);color:var(--navy)}
+.gnot .kim{font-size:.88rem;color:var(--muted)}
+.not-form,.not-form fieldset{display:grid;gap:14px;min-width:0}
+.not-form fieldset{border:0;padding:0;margin:0}
+.not-form fieldset:disabled{opacity:.55}
+.not-form .fld{display:grid;gap:6px}
+.not-form .ikili{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.not-form .fld[hidden],.not-form .ikili[hidden]{display:none}
+.not-form label{font-weight:700}
+.not-form input,.not-form select,.not-form textarea{font:1rem/1.4 var(--f-body);color:var(--ink);background:var(--paper);border:2px solid var(--rule);border-radius:14px;padding:10px 12px;width:100%}
+.not-form select option{background:#fff;color:#1d1d1f}
+.not-form textarea{resize:vertical}
+.not-form small{color:var(--muted);font-size:.84rem}
+.not-form .onay{display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.not-form .onay input{width:auto;margin-top:4px}
+.not-form .btn{justify-self:start}
+/* Ne zaman gidilir: ay ay sıcaklık ve kalabalık tablosu */
+.tablo.nz table{min-width:760px;font-size:.86rem}
+.tablo.nz th,.tablo.nz td{padding:8px 6px;text-align:center}
+.tablo.nz th[scope=row]{text-align:left;white-space:nowrap;padding-left:14px}
+.tablo.nz td b{display:block;font-size:.95rem}
+.tablo.nz td small{display:block;opacity:.7}
+.nz .k1,.nz-lej .k1{background:color-mix(in srgb,var(--sky) 6%,var(--card))}
+.nz .k2,.nz-lej .k2{background:color-mix(in srgb,var(--sky) 16%,var(--card))}
+.nz .k3,.nz-lej .k3{background:color-mix(in srgb,var(--sky) 28%,var(--card))}
+.nz .k4,.nz-lej .k4{background:color-mix(in srgb,var(--sky) 42%,var(--card))}
+.nz .k5,.nz-lej .k5{background:color-mix(in srgb,var(--sky) 58%,var(--card))}
+.nz-lej{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:.8rem}
+.nz-lej span{padding:3px 10px;border-radius:99px;border:1px solid var(--rule)}
+.nz-tatil{list-style:none;padding:0;margin:0}
+.nz-tatil li{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule)}
+.nz-tatil li:last-child{border-bottom:0}
+.kutu h2 small{font-weight:400;opacity:.65;font-size:.7em;margin-left:6px}
+/* Sekmeler: ülke sayfasında bölgeler, gezilecek yerlerde kategoriler. Yalnız tıklanan sekmenin paneli görünür (15 Kas 2026) */
+.sekmeler>.sk-r{position:absolute;opacity:0;pointer-events:none}
+.sekme-bas{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.sekme-bas label{cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:2px solid var(--rule);border-radius:999px;background:var(--card);color:var(--ink);font-weight:700;font-size:.92rem;transition:border-color .2s,background .2s}
+.sekme-bas label:hover{border-color:var(--aperol)}
+.sekme-bas label small{font-weight:400;opacity:.65;font-size:.8em}
+.sekmeler>.sekme-ic{display:none}
+.kat.sekme-ic+.kat{margin-top:0}
+.sekmeler>.sk-r:nth-of-type(1):checked~.sekme-ic:nth-of-type(1){display:block}.sekmeler>.sk-r:nth-of-type(1):checked~.sekme-bas label:nth-of-type(1){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(1):focus-visible~.sekme-bas label:nth-of-type(1){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(2):checked~.sekme-ic:nth-of-type(2){display:block}.sekmeler>.sk-r:nth-of-type(2):checked~.sekme-bas label:nth-of-type(2){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(2):focus-visible~.sekme-bas label:nth-of-type(2){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(3):checked~.sekme-ic:nth-of-type(3){display:block}.sekmeler>.sk-r:nth-of-type(3):checked~.sekme-bas label:nth-of-type(3){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(3):focus-visible~.sekme-bas label:nth-of-type(3){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(4):checked~.sekme-ic:nth-of-type(4){display:block}.sekmeler>.sk-r:nth-of-type(4):checked~.sekme-bas label:nth-of-type(4){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(4):focus-visible~.sekme-bas label:nth-of-type(4){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(5):checked~.sekme-ic:nth-of-type(5){display:block}.sekmeler>.sk-r:nth-of-type(5):checked~.sekme-bas label:nth-of-type(5){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(5):focus-visible~.sekme-bas label:nth-of-type(5){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(6):checked~.sekme-ic:nth-of-type(6){display:block}.sekmeler>.sk-r:nth-of-type(6):checked~.sekme-bas label:nth-of-type(6){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(6):focus-visible~.sekme-bas label:nth-of-type(6){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(7):checked~.sekme-ic:nth-of-type(7){display:block}.sekmeler>.sk-r:nth-of-type(7):checked~.sekme-bas label:nth-of-type(7){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(7):focus-visible~.sekme-bas label:nth-of-type(7){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(8):checked~.sekme-ic:nth-of-type(8){display:block}.sekmeler>.sk-r:nth-of-type(8):checked~.sekme-bas label:nth-of-type(8){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(8):focus-visible~.sekme-bas label:nth-of-type(8){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(9):checked~.sekme-ic:nth-of-type(9){display:block}.sekmeler>.sk-r:nth-of-type(9):checked~.sekme-bas label:nth-of-type(9){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(9):focus-visible~.sekme-bas label:nth-of-type(9){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(10):checked~.sekme-ic:nth-of-type(10){display:block}.sekmeler>.sk-r:nth-of-type(10):checked~.sekme-bas label:nth-of-type(10){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(10):focus-visible~.sekme-bas label:nth-of-type(10){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(11):checked~.sekme-ic:nth-of-type(11){display:block}.sekmeler>.sk-r:nth-of-type(11):checked~.sekme-bas label:nth-of-type(11){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(11):focus-visible~.sekme-bas label:nth-of-type(11){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(12):checked~.sekme-ic:nth-of-type(12){display:block}.sekmeler>.sk-r:nth-of-type(12):checked~.sekme-bas label:nth-of-type(12){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(12):focus-visible~.sekme-bas label:nth-of-type(12){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(13):checked~.sekme-ic:nth-of-type(13){display:block}.sekmeler>.sk-r:nth-of-type(13):checked~.sekme-bas label:nth-of-type(13){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(13):focus-visible~.sekme-bas label:nth-of-type(13){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(14):checked~.sekme-ic:nth-of-type(14){display:block}.sekmeler>.sk-r:nth-of-type(14):checked~.sekme-bas label:nth-of-type(14){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(14):focus-visible~.sekme-bas label:nth-of-type(14){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(15):checked~.sekme-ic:nth-of-type(15){display:block}.sekmeler>.sk-r:nth-of-type(15):checked~.sekme-bas label:nth-of-type(15){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(15):focus-visible~.sekme-bas label:nth-of-type(15){outline:2px solid var(--ink);outline-offset:2px}
+.sekmeler>.sk-r:nth-of-type(16):checked~.sekme-ic:nth-of-type(16){display:block}.sekmeler>.sk-r:nth-of-type(16):checked~.sekme-bas label:nth-of-type(16){background:var(--aperol);border-color:var(--aperol);color:#fff}.sekmeler>.sk-r:nth-of-type(16):focus-visible~.sekme-bas label:nth-of-type(16){outline:2px solid var(--ink);outline-offset:2px}
